@@ -11,11 +11,8 @@ production_url : http://robinsonraju.github.io
 title: Your awesome title
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, My name is Robinson (people call me Robin). 
-  I'm a Software Engineer working in San Jose, Calif, United States.
+  Welcome to my site. 
   
-  Other than programming, I love traveling - mainly to historic landmarks,  reading (poetry, classics, sci-fi, technical and semi-technical books) and doing research on topics that interest me, though 'research' is limited to Wikipedia reading nowadays. 
-
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://robinsonraju.github.io" # the base hostname & protocol for your site
 twitter_username: robinsonraju
