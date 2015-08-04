@@ -9,13 +9,13 @@ keywords: Robinson Raju, ebay, Paypal, UVCE, SJSU, BITS Pilani, Cognizant, Java,
   <div class="navbar-inner">
       <ul class="nav">
           <li><a href="https://github.com/robinsonraju">github</a></li>
-          <li><a href="https://twitter.com/robinsonraju">@kwbroman</a></li>
+          <li><a href="https://twitter.com/robinsonraju">@robinsonraju</a></li>
       </ul>
   </div>
 </div>
 
 <table class="wide">
-<tr>
+<!--<tr>
   <td class="left">
     <a href="pages/publpics/iplotCorr.html">
         <img src="assets/publpics/iplotCorr.png" alt="R/qtlcharts example" title="R/qtlcharts example"/>
@@ -38,13 +38,8 @@ keywords: Robinson Raju, ebay, Paypal, UVCE, SJSU, BITS Pilani, Cognizant, Java,
         <img src="assets/publpics/isletc6_fig4.png" alt="Tian et al. (2015) Fig 4" title="Tian et al. (2015) Fig 4"/>
     </a>
   </td>
-</tr>
+</tr>-->
 </table>
 
-<div class="navbar">
-  <div class="navbar-inner">
-      <ul class="nav">
-          <li><a href="morefigs.html">see more figures</a></li>
-      </ul>
-  </div>
+
 </div>
