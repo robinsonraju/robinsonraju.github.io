@@ -1,23 +1,18 @@
 # Site settings
-title : Robinson Raju
-author :
-  name : Robinson Raju
-  email : robinson.raju@gmail.com
-  github : robinsonraju
-  twitter : robinsonraju
-
-production_url : http://robinsonraju.github.io
-
 title: Robinson Raju
+header-img: img/home-bg.jpg
 email: robinson.raju@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my site. 
-  
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://robinsonraju.github.io" # the base hostname & protocol for your site
+description: "Welcome to my site. "
+baseurl: ""
+url: "http://robinsonraju.github.io"
 twitter_username: robinsonraju
 github_username:  robinsonraju
+facebook_username:  robinson.raju.165
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 

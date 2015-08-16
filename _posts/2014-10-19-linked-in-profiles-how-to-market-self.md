@@ -3,8 +3,9 @@ layout: post
 title:  "LinkedIn profiles, how to use them, how to market yourself, how to network"
 date:   2014-10-19 22:02:12
 categories: Social Network 
+author:     "Robinson Raju"
+header-img: "img/blog5/linkedin.jpg"
 ---
-<img src="/images/blog5/linkedin2.jpg" width="620"/>
 
 In this post, we take a segway from discussions around Agile methodology and focus on something that is very important for everyone’s career – to have an online professional profile, something that someone can look at and find out about your career, capabilities and achievements.
 

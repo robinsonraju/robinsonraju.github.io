@@ -2,9 +2,10 @@
 layout: post
 title:  "Agile tasks lists, what does “done” mean in Agile?"
 date:   2014-10-07 21:10:13
+author:     "Robinson Raju"
+header-img: "img/blog4/scrum-framework2.jpg"
 categories: Agile 
 ---
-<img src="/images/blog4/scrum-framework2.png" width="620"/>
 
 This is the fourth post in this series of “Introduction to Agile methodology”. The topic of this blog is “Agile task lists, what does “done” mean in Agile?”.
 
@@ -12,7 +13,7 @@ Teams change their methodology to agile with the lofty goal of getting great res
 
 One way of listing down a task for the User Story is to go over a **“done thinking grid“**. A sample one is below:
 
-<img src="/images/blog4/done-thinking-grid.png" width="420"/>
+<img src="/img/blog4/done-thinking-grid.png" width="420"/>
 
 
 **Column 1**: Make sure that the **User Stories** for a sprint are **clear** and understood by the team. Also make sure that the acceptance criteria are validated by the product owner. Make sure that the **tasks** for the Stories have been **identified**. Estimation will not be accurate if the tasks were not clearly understood by the team. Communicate **build and package changes** to the build master if you have one. Make sure that there is enough time for the **product owner to sign off** the User Stories after the User Acceptance Test. Also ensure that the features **not done** during the sprint are **added back to the product backlog**.
