@@ -4,7 +4,7 @@ title:  "The Agile Team and the backlog"
 date:   2014-09-16 19:34:23
 author:     "Robinson Raju"
 categories: Agile 
-header-img: "img/blog2/backlogs.jpg"
+header-img: "img/blog2/backlog.jpg"
 ---
 
 This blog continues on the last week’s blog about introducing Agile to newcomers to the practice. The focus this week is on 2 things – The agile team and the artifacts that they work on, namely “backlogs”.
