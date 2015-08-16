@@ -2,18 +2,18 @@
 layout: post
 title:  "The Agile Sprint Retrospective"
 date:   2014-09-21 21:24:13
+author:     "Robinson Raju"
 categories: Agile 
+header-img: "img/blog3/sprint-retro.png"
 ---
 
 # Agile Sprint Retrospective
-
-<img src="/images/blog3/sprint-retro.png" width="520"/>
 
 This is the third post in this series of “Introduction to Agile methodology”. The topic of this blog is “Agile Sprint Retrospective”.
 
 **Overview:**  Agile Sprint Retrospective is a meeting that happens after a Sprint to evaluate how the last one went. The Team, the Scrum Master and the Product Owner attends this meeting in Scrum. The objective of the meeting is to reflect on the current process and determine what steps could be taken to make corrections and adapt to future sprints.
 
-<img src="/images/blog3/scrum-ceremonies.png" width="320"/>
+<img src="/img/blog3/scrum-ceremonies.png" width="320"/>
 
 *Figure 1   Sprint Meetings – Sprint Retrospective highlighted*
 
@@ -46,6 +46,7 @@ In summary, the retrospective is a very good mechanism to keep the team agile an
 
 ## References
 
-* Schwaber, K. (2004). Appendix A. In Agile project management with Scrum. Redmond, Wash.: Microsoft Press.
-* Agile Methodology. (2014, July 1). Retrieved September 10, 2014, from http://agilemethodology.org
+* [1] Schwaber, K. (2004). Appendix A. In Agile project management with Scrum. Redmond, Wash.: Microsoft Press.
+
+* [2] Agile Methodology. (2014, July 1). Retrieved September 10, 2014, from http://agilemethodology.org
 
