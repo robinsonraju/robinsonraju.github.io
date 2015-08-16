@@ -2,9 +2,10 @@
 layout: post
 title:  "The Agile Team and the backlog"
 date:   2014-09-16 19:34:23
+author:     "Robinson Raju"
 categories: Agile 
+header-img: "img/blog2/backlogs.jpg"
 ---
-<img src="/images/blog2/backlog.jpg" width="320"/>
 
 This blog continues on the last week’s blog about introducing Agile to newcomers to the practice. The focus this week is on 2 things – The agile team and the artifacts that they work on, namely “backlogs”.
 
@@ -14,9 +15,9 @@ Agile team is a self contained team that can by itself complete a user story in 
 
 Typically a Scrum team consists of the following roles
 
-* Scrum Master – Person who is in charge of the sprints
-* Product Owner – Person who represents the stakeholders
-* Team – Consists of different people who collectively have skills to complete tasks in the backlog.
+* **Scrum Master** – Person who is in charge of the sprints
+* **Product Owner** – Person who represents the stakeholders
+* **Team** – Consists of different people who collectively have skills to complete tasks in the backlog.
 
 Below is a short summary of responsibilities for each role.
 
@@ -59,7 +60,8 @@ The product backlog in Scrum is a list of features that are desired for a produc
 
 # References
 
-* [1] – Sanders, A. (2008, August 12). Agile Team Members : Roles and Responsibilities. Retrieved September 16, 2014, from http://aaron.sanders.name/agile-team-members-roles-and-responsibilities/
-* [2] – Cohn, M. (n.d.). Topics in Scrum. Retrieved September 18, 2014, from http://www.mountaingoatsoftware.com/agile/scrum/product-backlog
+* [1] – Sanders, A. (2008, August 12). Agile Team Members : Roles and Responsibilities. Retrieved September 16, 2014, from [http://aaron.sanders.name/agile-team-members-roles-and-responsibilities](http://aaron.sanders.name/agile-team-members-roles-and-responsibilities/)
+
+* [2] – Cohn, M. (n.d.). Topics in Scrum. Retrieved September 18, 2014, from [http://www.mountaingoatsoftware.com/agile/scrum/product-backlog](http://www.mountaingoatsoftware.com/agile/scrum/product-backlog)
 
 
