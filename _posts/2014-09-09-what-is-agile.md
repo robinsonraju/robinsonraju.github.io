@@ -2,9 +2,10 @@
 layout: post
 title:  "What is agile and what are user stories"
 date:   2014-09-09 22:54:56
+author:     "Robinson Raju"
 categories: Agile 
+header-img: "img/blog1/agile-development.jpg"
 ---
-<img src="/images/blog1/agile-development.jpg" width="320"/>
 
 # Introduction
 
@@ -69,7 +70,7 @@ Epics are large user stories, typically ones which are too big to implement in a
 
 User Stories in the backlog
 
-<img src="/images/blog1/agile-epics.png" width="420"/>
+<img src="/img/blog1/agile-epics.png" width="420"/>
 
 ## Conclusion
 
