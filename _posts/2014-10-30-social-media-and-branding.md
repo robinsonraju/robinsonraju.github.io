@@ -21,7 +21,7 @@ Social media marketing industry report done by Social Media Examiner in 2013 cam
 
 <img src="/img/blog6/benefits-social-marketing.png" width="520"/>
 
-_Figure 1: Image. Retrieved October 30, 2014. From: http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013/_
+_Figure 1: Image. Retrieved October 30, 2014. From: [http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013](http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013/)_
 
 There are clearly a lot of benefits of doing marketing through social media.
 
@@ -33,7 +33,7 @@ The diagram below shows the most commonly used social media platforms:
 
 <img src="/img/blog6/benefits-social-marketing.png" width="520"/>
 
-_Figure 2: Image. Retrieved October 30, 2014. From: http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013/_
+_Figure 2: Image. Retrieved October 30, 2014. From: [http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013](http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013/)_
 
 So, what can be done to improve your brand ?
 This can be done in several stages:
@@ -47,9 +47,9 @@ If you keep practicing it, you will notice that your brand will improve, more pe
 
 # References:
 
-* [1] Stelzner, M. (2013, May 21). 2013 Social Media Marketing Industry Report. Retrieved November 4, 2014, from http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013/
+* [1] Stelzner, M. (2013, May 21). 2013 Social Media Marketing Industry Report. Retrieved November 4, 2014, from [http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013](http://www.socialmediaexaminer.com/social-media-marketing-industry-report-2013/)
 
-* [2] MIKOLUK, K. (2013, July 25). Advantages and Disadvantages of Social Networking: Should You Spend More Time Connecting Online? Retrieved November 4, 2014, from https://www.udemy.com/blog/advantages-and-disadvantages-of-social-networking/
+* [2] MIKOLUK, K. (2013, July 25). Advantages and Disadvantages of Social Networking: Should You Spend More Time Connecting Online? Retrieved November 4, 2014, from [https://www.udemy.com/blog/advantages-and-disadvantages-of-social-networking](https://www.udemy.com/blog/advantages-and-disadvantages-of-social-networking/)
 
 * [3] Kievman, N. (2007). Take Control of Your Image and Brand. In LinkedIn Quick Start Guide (1st ed.). LinkedStrategies.com.
 
