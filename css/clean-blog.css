@@ -243,6 +243,11 @@ hr.small {
     font-size: 36px;
   }
 }
+.archive-title {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
 .section-heading {
   font-size: 36px;
   margin-top: 60px;
