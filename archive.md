@@ -13,10 +13,10 @@ header-img: "img/archive-bg.jpg"
         <ul class="posts">
         {% capture year %}{{currentyear}}{% endcapture %} 
       {% endif %}
-    <li><a href="{{ post.url | prepend: site.baseurl }}"><b>{{ post.title }} </b> | {{ post.date | date: "%b %-d, %Y" }}  </a></li>
+    <li><a href="{{ post.url | prepend: site.baseurl }}"><b>{{ post.title }} </b> | <i>{{ post.date | date: "%b %-d, %Y" }} </i>  </a></li>
 {% endfor %}
 </div>
 
 <br><br>
 
-<i>Image - <b>"Oldfashioned archiving of drawings"</b> by <b>Pieter van Marion</b> via <a href="https://flic.kr/p/p3rDGd">Flickr</a><i> <br>
+<i>Header Image - "<b>Oldfashioned archiving of drawings</b>" by <b>Pieter van Marion</b> via <a href="https://flic.kr/p/p3rDGd"><u>Flickr</u></a><i> <br>
