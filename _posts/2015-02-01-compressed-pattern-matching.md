@@ -7,7 +7,7 @@ categories: Data Compression
 header-img: "img/pres1/sleeping.jpg"
 ---
 
-This is a review of the paper on Pattern matching in Z-compressed files. I'd done a project last year to implement LZW compression and chanced upon this paper while I was googling for some information on LZW. I'd helped build a search engine using Lucene 10 yrs back (2004) and used Solr for another project a few years back (2009-2010). To see two areas that I was attracted to - Data Search and Data Compression come together, to know that we could be able to index data and search from compressed files without decompressing them, was very intersting and I wanted to find more information and see some implementation of this.  
+This is a review of the paper on Pattern matching in Z-compressed files. I'd done a project last year to implement LZW compression and chanced upon this paper while I was googling for some information on LZW. To see two areas that I'd worked on in the past - Data Search (Had helped build a search engine using Lucene 10 yrs back and used Solr for another project a few years back) and Data Compression come together, to know that we would be able to index data and search from compressed files without decompressing them, was very intersting and I wanted to find more information and see some implementation of this.  
 The review of the paper was presented to some students at SJSU. 
 
 **Paper reviewed**:
@@ -15,11 +15,12 @@ The review of the paper was presented to some students at SJSU.
 > Amir, A., Benson, G., & Farach, M. (1996). Let sleeping files lie: Pattern matching in Z-compressed file. Journal of System Sciences, 52, 299-307.
 
 The presetation had the following sections - 
+
 * Overview of Data compression
 * Details about LZW compression
 * Compressed Pattern Matching
 
-**TBD** Hope to put the ppt here. 
+**TBD** Hope to put the ppt here (once I learn to use reveal.js here!) 
 
 
 ## References:
