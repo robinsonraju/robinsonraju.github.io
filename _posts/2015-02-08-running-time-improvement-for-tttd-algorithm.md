@@ -4,7 +4,7 @@ title:  "A Running Time Improvement for TTTD Algorithm"
 date:   2015-02-08 11:33:21
 author:     "Robinson Raju"
 categories: Data Compression 
-header-img: "img/pres2/videogram.jpg"
+header-img: "img/pres2/blocks.jpg"
 ---
 
 
@@ -20,7 +20,7 @@ I still need to find a better system to embed a presentation in a static page. F
 <div data-configid="18778196/14985334" style="width:625px; height:500px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script> 
 
 ---
-_Header Image - "**Videogram of hi-speed hand motion**" by Alexander Refsum Jensenius via [Flickr](https://flic.kr/p/a3hTFu)_
+_Header Image - "**Curiousity**" by Thomas Hawk via [Flickr](https://flic.kr/p/dSuxV1)_
 
 
 
