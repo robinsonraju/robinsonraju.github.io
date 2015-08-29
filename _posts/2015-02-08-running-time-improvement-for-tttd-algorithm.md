@@ -17,6 +17,7 @@ Before trying to dedupe data, it needs to be chunked. There are many algorithms 
 This paper proposes an improvement over the TTTD algorithm. 
 
 I still need to find a better system to embed a presentation in a static page. For now using issuu. 
+
 <div data-configid="18778196/14985334" style="width:625px; height:500px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script> 
 
 ---
