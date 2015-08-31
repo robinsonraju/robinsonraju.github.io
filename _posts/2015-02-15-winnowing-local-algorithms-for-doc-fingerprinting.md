@@ -11,7 +11,7 @@ header-img: "img/pres3/winnowing.jpg"
 
 > Schleimer, S., Wilkerson, D. S., and Aiken, A. 2003. Winnowing: local algorithms for document fingerprinting. In Proceedings of the 2003 ACM SIGMOD International Conference on Management of Data (San Diego, California, USA, June 09 – 12, 2003). 
 
-My focus area right now is data chunking alogrithms. I'd jumped right into data chunking using hashing and finger-printing algorithms since those are popular and there are multiple papers on them. 
+My focus area right now is data chunking alogrithms. I'd jumped right into data chunking using hashing algorithms since those are popular and there are multiple papers on them. 
 This week I thought I'd take a step back and review some other techniques. 
 
 Here is a high level overview of different chunking algorithms - 
