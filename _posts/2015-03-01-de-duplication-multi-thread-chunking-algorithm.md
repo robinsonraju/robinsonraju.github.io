@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Enhance Data De-Duplication Performance With Multi-Thread Chunking Algorithm"
+title:  "Data De-Duplication Performance With Multi-Threaded FBC Algorithm"
 date:   2015-03-01 23:13:21
 author:     "Robinson Raju"
 categories: Data Compression 
