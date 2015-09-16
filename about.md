@@ -84,4 +84,7 @@ Once you learn that, you'll never be the same again."
 
 > "Look at the clock when you waste your time, Running in it is not pin of the clock but your life."
 
+> "Gratitude is not only the greatest of virtues, but the parent of all others." 
+~ Cicero 
+
 ---
