@@ -7,6 +7,15 @@ categories: Big Data
 header-img: "img/hadoop/words.jpg"
 ---
 
+### Prerequisites
+* Download and install [**Virtualbox**](https://www.virtualbox.org/wiki/Downloads). 
+* Download [**Cloudera VM**](http://cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html) and import into VirtualBox. 
+
+In the cloudera VM, go to the directory that contains hadoop library. 
+```
+cd /usr/lib/hadoop-mapreduce/
+```
+
 ### Create Sample files
 ```
 echo "Hello world in HDFS" > /home/cloudera/testfile1
@@ -45,5 +54,9 @@ hdfs dfs -ls /user/cloudera/output
 hdfs dfs -cat /user/cloudera/output/part-r-00000
 ```
 
+**Output**
+
+> <img src="/img/hadoop/wc-output.png" width="520"/>
+
 ---
-_Header Image - "**n1atsigns2 (Network graph of people on twitter connecting to the topics of Big Data, infochimps or Hadoop)**" by Philip Kromer via [Flickr](https://flic.kr/p/8R7PyB)_
+_Header Image - "**n1atsigns2 (Network graph of people on twitter connecting to the topics of Big Data, infochimps or Hadoop)**" by Philip Kromer via [Flickr](https://flic.kr/p/8R7PyB). Inverterd colors using Photoshop_
