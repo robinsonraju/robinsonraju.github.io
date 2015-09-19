@@ -75,6 +75,14 @@ ssh –p 2222 user01@localhost
 
 ### Create Sample files
 ```
+mkdir input
+```
+
+```
+cd input
+```
+
+```
 echo "Hello world in HDFS" > testfile1
 ```
 
@@ -87,9 +95,9 @@ echo "Hadoop word count example in HDFS" > testfile2
 hadoop jar /opt/mapr/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.0-mapr-1506.jar wordcount /user/user01/input /user/user01/output
 ```
 
-### After completion view the output directory 
+### After completion, view the output directory 
 ```
-hadoop fs -ls output
+hadoop fs -ls /user/user01/output
 ```
 
 ### Check the output file to see the results 
