@@ -7,6 +7,8 @@ categories: Big Data
 header-img: "img/hadoop/words.jpg"
 ---
 
+Here is a small example to run Wordcount program on hadoop. I've tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal..etc. MapR Sandbox doesnt come with GUI, so you'd have to ssh into the machine to work on it. You can open [https://localhost:8443](https://localhost:8443) in a browser to see Hue to see FileBrowser, DataBrowser, JobBrowser ..etc. 
+
 ## Using Cloudera VM
 
 ### Prerequisites
