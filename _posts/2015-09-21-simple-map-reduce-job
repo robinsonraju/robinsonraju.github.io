@@ -11,6 +11,8 @@ We'll use [Iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) to 
 The program would take the dataset, extract Sepal length and calculate the mean Sepal length for each type of flower. 
 We'll start with pre-written templates and put in our code in it and understand key concepts as we go along. 
 
+## Mapper
+
 	package edu.sjsu.iris;
 
 	import org.apache.hadoop.mapreduce.Mapper;
@@ -28,6 +30,34 @@ We'll start with pre-written templates and put in our code in it and understand 
 		String flowerId = columns[4];
 		context.write(new Text(flowerId), new Text(sepal_l));
 	   }
+	}
+
+## Reducer
+
+	package edu.sjsu.iris;
+
+	import org.apache.hadoop.mapreduce.Reducer;
+	import org.apache.hadoop.io.Text;
+	import org.apache.hadoop.io.FloatWritable;
+	import java.io.IOException;
+	import java.lang.Float;
+
+	public class IrisReducer extends Reducer<Text, Text, Text, Text> {
+		float totalSepalLength;
+
+		public void reduce(Text key, Iterable<Text> values, Context context)
+				throws IOException, InterruptedException {
+
+			int count = 0;
+			for (Text value : values) {
+				totalSepalLength += Float.parseFloat(value.toString());
+				++count;
+			}
+
+			// Emit output to context
+			context.write(key, new Text(totalSepalLength / count));
+
+		}
 	}
 
 ---
