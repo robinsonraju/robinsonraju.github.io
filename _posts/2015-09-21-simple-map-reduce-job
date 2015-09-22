@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "A Simple MapReduce Job"
+date:   2015-09-21 23:50:11
+author:     "Robinson Raju"
+categories: Big Data 
+header-img: "img/hadoop/iris.jpg"
+---
+
+We'll use [Iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) to do a simple MapReduce program. 
+The program would take the dataset, extract Sepal length and calculate the mean Sepal length for each type of flower. 
+We'll start with pre-written templates and put in our code in it and understand key concepts as we go along. 
+
+	package edu.sjsu.iris;
+
+	import org.apache.hadoop.mapreduce.Mapper;
+	import org.apache.hadoop.io.Text;
+	import org.apache.hadoop.io.LongWritable;
+
+	import java.io.IOException;
+	import java.util.StringTokenizer;
+
+	public class IrisMapper extends Mapper <LongWritable,Text,Text,Text> {
+	   public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+	      
+		String[] columns = value.toString().split("\\s+");
+		String sepal_l = columns[0];
+		String flowerId = columns[4];
+		context.write(new Text(flowerId), new Text(sepal_l));
+	   }
+	}
+
+---
+_Header Image - "**Iris**" by Pauline Rosenberg via [Flickr](https://flic.kr/p/6sZzjm)._
