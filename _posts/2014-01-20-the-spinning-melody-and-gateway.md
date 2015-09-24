@@ -32,6 +32,7 @@ Some chapters had very good quotes at the beginning. I felt that the chapter hea
 "There are only two ways to live your life. One is as though nothing is a miracle. The other is as if everything is." — ALBERT EINSTEIN 
 
 "If you would be a real seeker after truth, it is necessary that at least once in your life you doubt, as far as possible, all things." — RENÉ DESCARTES 
+
 "I must be willing to give up what I am in order to become what I will be." — ALBERT EINSTEIN 
 
 "Gratitude is not only the greatest of virtues, but the parent of all others." — CICERO 
