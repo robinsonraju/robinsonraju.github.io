@@ -15,6 +15,7 @@ Found that [Hadoop wiki](https://wiki.apache.org/hadoop/WordCount) already has t
 At a high level, Mapper just assigns 1 to each word, Reducer adds up the count. 
 
 ## Mapper
+The map method takes key, value and context as inputs. The key represents the name of a document and the value is the contents of the document. For e.g, a record in a file. The map method below uses StringTokenizer to split the record into words, loops through the words and writes a 2-tuple (word, 1) into the context. Each mapper does this and what we get in the end is a list of key-value pairs. 
 
 	import java.io.IOException;
 	import java.util.StringTokenizer;
@@ -45,6 +46,8 @@ At a high level, Mapper just assigns 1 to each word, Reducer adds up the count.
 
 
 ## Reducer
+A reducer takes an input of a key and list of values associated with the key, adds the counts and writes the output to the context. 
+For e.g, input of (world, 1), (world, 1) gives output as (world, 2). 
 
 	import java.io.IOException;
 
