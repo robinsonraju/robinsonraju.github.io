@@ -7,12 +7,11 @@ categories: Big Data
 header-img: "img/hadoop/words2.jpg"
 ---
 
-In the last blog we saw how to run wordcount using the "hadoop-mapreduce-examples.jar" that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this? I searched a bit for an eclipse plugin to be able to create a MR project through eclipse that would have the template for Mapper and Reducer and I would just write the implementation. Found some plugins (e.g HDT) and some screencasts but didn't take me far. Remembered that there was an eclipse icon in the Cloudera VM. Started the VM, clicked on the icon and viola ! there was a sample project with Stubs for Mapper, Reducer and Driver. Exactly what I needed!
+The last blog was about how to run wordcount using the "hadoop-mapreduce-examples.jar" that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this? I searched a bit for an eclipse plugin to be able to create a MR project through eclipse that would have the template for Mapper and Reducer and I would just write the implementation. Found some plugins (e.g HDT) and some screencasts but didn't take me far. Remembered that there was an eclipse icon in the Cloudera VM. Started the VM, clicked on the icon and viola ! there was a sample project with Stubs for Mapper, Reducer and Driver. Exactly what I needed!
+
 <img src="/img/hadoop/Stubs.png" width="420"/>
 
-Found that [Hadoop wiki](https://wiki.apache.org/hadoop/WordCount) already has the code for WordCount. Used the code to plugin into the Stubs in the workspace and it worked like a charm. 
-
-At a high level, Mapper just assigns 1 to each word, Reducer adds up the count. 
+Put in the code for Mapper, Reducer and Driver in the Stub classes and ran the Driver. It worked like a charm. Here is the code for it. 
 
 ## Mapper
 The map method takes key, value and context as inputs. The key represents the name of a document and the value is the contents of the document. For e.g, a record in a file. The map method below uses StringTokenizer to split the record into words, loops through the words and writes a 2-tuple (word, 1) into the context. Each mapper does this and what we get in the end is a list of key-value pairs. 
@@ -133,14 +132,18 @@ For e.g, input of (world, 1), (world, 1) gives output as (world, 2).
 
 ## How to Run
 
-	Create a input directory named "input"
+	Create an input directory named "input"
 	
 	Run As > Java Application (give 2 arguments "input" and "output")
 
-Look at the output (part-r-00000) in the output director. 
+Look at the the file 'part-r-00000' in the output directory
 	<img src="/img/hadoop/wc-output-eclipse.png" width="320"/>
 
 ---
 
+References
+* WordCount. (n.d.). Retrieved September 27, 2015, from [https://wiki.apache.org/hadoop/WordCount](https://wiki.apache.org/hadoop/WordCount)  
+
+---
 
 _Header Image - "**Words**" by Cayce Newell via [Flickr](https://flic.kr/p/4BsjLY)._
