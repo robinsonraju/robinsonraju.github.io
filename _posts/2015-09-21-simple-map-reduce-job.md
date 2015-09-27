@@ -141,8 +141,10 @@ Look at the the file 'part-r-00000' in the output directory
 
 ---
 
-References
-* WordCount. (n.d.). Retrieved September 27, 2015, from [https://wiki.apache.org/hadoop/WordCount](https://wiki.apache.org/hadoop/WordCount)  
+### References
+
+* QuickStart VMs for CDH 5.4.x. (n.d.). Retrieved September 21, 2015, from [http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html](http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html)
+* WordCount. (n.d.). Retrieved September 21, 2015, from [https://wiki.apache.org/hadoop/WordCount](https://wiki.apache.org/hadoop/WordCount)   
 
 ---
 
