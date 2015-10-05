@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Astral Blueberries"
-date:   2007-11-13 01:49:31
+title:  "A Poet's Corner"
+date:   2007-08-07 01:49:31
 author:     "Robinson Raju"
 categories: General 
 header-img: "img/general/blog_astral.jpg"
