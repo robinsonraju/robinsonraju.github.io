@@ -4,10 +4,10 @@ title:  "A Poet's Corner"
 date:   2007-08-07 01:49:31
 author:     "Robinson Raju"
 categories: General 
-header-img: "img/general/blog_astral.jpg"
+header-img: "img/general/blog_flute.jpg"
 ---
 
-Relived a wonderful moment when I accidentally read one of my old scribblings.
+Re-lived a wonderful moment when I accidentally read one of my old scribblings.
 
 <i>
 There are some places where the moment you go, you feel completely at ease ; you’d stay, transfixed with a longing in your heart to be left there forever! It could be a library, a church, a temple, top of a mountain, a beach, an island, a hut in the middle of a forest, a river bank .. it could even be someone’s house.
@@ -34,7 +34,7 @@ When I think back, there is much more to describe. Much more beyond description.
 
 
 ---
-_Header Image - "**astral_projection_by_tahyon**" by tanner.marlow via [Flickr](https://flic.kr/p/maa11d)._
+_Header Image - "**hand-carved flutes**" by Kristen Burns via [Flickr](https://flic.kr/p/cBiy83)._
 
 
 
