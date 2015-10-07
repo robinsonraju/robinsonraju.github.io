@@ -7,7 +7,20 @@ categories: Big Data
 header-img: "img/hadoop/iris.jpg"
 ---
 
-This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter. 
+This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter. The objective is to read data from Iris dataset - [https://archive.ics.uci.edu/ml/datasets/Iris](https://archive.ics.uci.edu/ml/datasets/Iris) and calculate the mean sepal length of each class of the flower. 
+The data is here -> [https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). 
+
+Sample record : `` 5.1,3.5,1.4,0.2,Iris-setosa ``
+
+Attribute Information:
+   1. sepal length in cm
+   2. sepal width in cm
+   3. petal length in cm
+   4. petal width in cm
+   5. class: 
+      -- Iris Setosa
+      -- Iris Versicolour
+      -- Iris Virginica
 
 In the last blog on wordcount, I used an eclipse project that was bundled automatically with the Cloudera VM and just modified the StubMapper, StubReducer and Driver to plugin the code for wordcount. In this, I thought I'll create one from scratch and see how it works. 
 
@@ -34,6 +47,8 @@ Now the compilation issues would be resolved.
 ## Step 3: Add code for Mapper and Reducer
 
 The objective is to read the records from the data and compute the mean sepal length of each class of the Iris flower. 
+map() function in the Mapper gets each row and splits the columns to extract out the key (flower class) and the value (sepal length). 
+The reduce() function is the Reducer is simple as well. It iterates through the values for each key, computes sum, maintains count and computes mean after the loop ends.  
 
 ### Mapper 
 
@@ -47,20 +62,6 @@ The objective is to read the records from the data and compute the mean sepal le
 
 	public class IrisMapper extends Mapper<LongWritable, Text, Text, FloatWritable> {
 
-		/**
-		 * Iris data : http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data 
-		 * Sample record: 5.1,3.5,1.4,0.2,Iris-setosa
-		 * Attribute Information:
-			   1. sepal length in cm
-			   2. sepal width in cm
-			   3. petal length in cm
-			   4. petal width in cm
-			   5. class: 
-			      -- Iris Setosa
-			      -- Iris Versicolour
-			      -- Iris Virginica
-		 * 
-		 */
 		@Override
 		public void map(LongWritable key, Text value, Context context)
 				throws IOException, InterruptedException {
