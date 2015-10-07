@@ -7,20 +7,21 @@ categories: Big Data
 header-img: "img/hadoop/iris.jpg"
 ---
 
-This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter. The objective is to read data from Iris dataset - [https://archive.ics.uci.edu/ml/datasets/Iris](https://archive.ics.uci.edu/ml/datasets/Iris) and calculate the mean sepal length of each class of the flower. 
+This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.
+
+The objective is to read data from Iris dataset - [https://archive.ics.uci.edu/ml/datasets/Iris](https://archive.ics.uci.edu/ml/datasets/Iris) and calculate the mean sepal length of each class of the flower. 
+
 The data is here -> [https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data). 
 
 Sample record : `` 5.1,3.5,1.4,0.2,Iris-setosa ``
 
 Attribute Information:
+
    1. sepal length in cm
    2. sepal width in cm
    3. petal length in cm
    4. petal width in cm
-   5. class: 
-      -- Iris Setosa
-      -- Iris Versicolour
-      -- Iris Virginica
+   5. class: a) Iris Setosa, b) Iris Versicolour, c) Iris Virginica
 
 In the last blog on wordcount, I used an eclipse project that was bundled automatically with the Cloudera VM and just modified the StubMapper, StubReducer and Driver to plugin the code for wordcount. In this, I thought I'll create one from scratch and see how it works. 
 
