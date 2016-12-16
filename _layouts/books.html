@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head2.html %}
+
+<body>
+
+    {% include nav.html %}
+    
+    <main class="shelf">
+	  {% for book in site.data.books  %}
+	  <article class="book">
+	  	<div class="caption">{{ book.date }}</div>
+	  	<figure class="book-cover">
+	  	  <a href="{{ book.link }}">
+	        <img src="../img/books/{{ book.image }}" alt="{{ book.title }}">
+	      </a>
+	    </figure>
+	    <div class="book-info">
+	      <h4><a href="{{ book.link }}">{{ book.title }}</a></h4>
+	      <p>{{ book.author }}</p>
+	    </div>
+	  </article>
+	  {% endfor %}
+	</main>
+
+    {% include footer.html %}
+
+</body>
+
+</html>
+

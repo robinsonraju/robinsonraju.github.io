@@ -3,7 +3,7 @@ layout: post
 title:  "Running Hadoop WordCount example"
 date:   2015-09-15 22:50:11
 author:     "Robinson Raju"
-categories: Big Data 
+categories: tutorial big-data
 header-img: "img/hadoop/words.jpg"
 ---
 

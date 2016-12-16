@@ -3,7 +3,7 @@ layout: post
 title:  "A Simple MapReduce Job for Iris Dataset"
 date:   2015-09-30 22:50:11
 author:     "Robinson Raju"
-categories: Big Data 
+categories: tutorial big-data 
 header-img: "img/hadoop/iris.jpg"
 ---
 

@@ -15,14 +15,17 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="{{ site.baseurl }}/">Home</a>
-                </li>
-                {% for page in site.pages %}{% if page.title %}
+                <li><a href="{{ site.baseurl }}/">About</a></li>
+                <li><a href="{{ site.baseurl }}/books">Books</a></li>
+                <li><a href="{{ site.baseurl }}/tutorials">Tutorials</a></li>
+                <li><a href="{{ site.baseurl }}/papers">Papers</a></li>
+                <li><a href="{{ site.baseurl }}/blog">General</a></li>
+                <li><a href="{{ site.baseurl }}/quotes">Quotes</a></li>
+                <!--{% for page in site.pages %}{% if page.title %}
                 <li>
                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>
-                {% endif %}{% endfor %}
+                {% endif %}{% endfor %}-->
             </ul>
         </div>
         <!-- /.navbar-collapse -->

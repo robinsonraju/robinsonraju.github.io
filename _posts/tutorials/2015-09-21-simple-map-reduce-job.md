@@ -3,7 +3,7 @@ layout: post
 title:  "Writing a simple Mapper and Reducer for Wordcount"
 date:   2015-09-21 23:50:11
 author:     "Robinson Raju"
-categories: Big Data 
+categories: tutorial big-data
 header-img: "img/hadoop/words2.jpg"
 ---
 
