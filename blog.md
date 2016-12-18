@@ -14,7 +14,6 @@ header-img: "img/archive-bg.jpg"
       {% endif %}
     <li><a href="{{ post.url | prepend: site.baseurl }}"><b>{{ post.title }} </b> | <i>{{ post.date | date: "%b %-d, %Y" }} </i>  </a></li>
 {% endfor %}
-</div>
 
 <br><br>
 

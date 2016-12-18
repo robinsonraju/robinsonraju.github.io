@@ -1,8 +1,27 @@
-- title: Clojure prog..
-  author: Emerick ..et al
-  image: wool.jpg
+
+- title: Blink 
+  author: Malcolm Gladwell
+  image: blink.jpg
   link:
-  date: June 05, 2016
+  date: December 15, 2016
+
+- title: The One Thing
+  author: Gary Keller
+  image: TheOneThing.jpg
+  link:
+  date: November 26, 2016
+
+- title: Functional Thinking 
+  author: Neal Ford
+  image: FunctionalThinking.jpg
+  link:
+  date: October 26, 2016
+
+- title: Outliers 
+  author: Malcolm Gladwell
+  image: Outliers.jpg
+  link:
+  date: July 15, 2016
 
 - title: The Golem's Eye 
   author: Jonathan Stroud
@@ -22,11 +41,23 @@
   link:
   date: May 05, 2016
 
+- title: The Way of a ..
+  author: R. M. French
+  image: TheWayPilgrim.jpg
+  link:
+  date: January 12, 2016
+
 - title: The Checklist ..
   author: Atul Gawande
   image: ChecklistManifesto.jpg
-  link: 2015/09/06/The-Checklist-Manifesto
+  link: 
   date: September 6, 2015
+
+- title: The Better Angels ..
+  author: Steven Pinker
+  image: TheBetterAngels.jpg
+  link: 
+  date: April 12, 2015
 
 - title: The End of Power
   author: Moses Naim
@@ -37,20 +68,26 @@
 - title: Become CEO
   author: Jeffrey J. Fox
   image: HowToBecomeCEO.jpg
-  link: 2014/06/21/How-to-become-CEO
+  link: 
   date: June 21, 2014
 
 - title: Quiet
   author: Susan Cain
   image: Quiet.jpg
-  link: 2014/03/10/Quiet
+  link: 
   date: March 10, 2014
 
 - title: The Signal and ..
   author: Nate Silver
   image: TheSignalandNoise.jpg
-  link: 2013/12/20/the-signal-and-the-noise
+  link: 
   date: December 20, 2013
+
+- title: The Passionate ..
+  author: Chad Fowler
+  image: PassionateProgrammer.jpg
+  link: 
+  date: September 12, 2009
 
 - title: The 7 Habits of ..
   author: Steven Covey

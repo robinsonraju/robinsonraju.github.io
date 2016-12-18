@@ -3,7 +3,7 @@ layout: post
 title:  "Distributional Stability of Chunk Sizes in Data Chunking"
 date:   2015-02-22 09:13:21
 author:     "Robinson Raju"
-categories: Data Compression 
+categories: paper 
 header-img: "img/pres4/stability.jpg"
 ---
 

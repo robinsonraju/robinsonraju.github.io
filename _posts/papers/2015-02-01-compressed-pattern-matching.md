@@ -3,7 +3,7 @@ layout: post
 title:  "Let sleeping files lie: Pattern matching in Z-compressed file"
 date:   2015-02-01 04:35:12
 author:     "Robinson Raju"
-categories: Data Compression 
+categories: paper
 header-img: "img/pres1/sleeping.jpg"
 ---
 

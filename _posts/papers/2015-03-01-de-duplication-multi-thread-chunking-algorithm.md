@@ -3,7 +3,7 @@ layout: post
 title:  "Data De-Duplication Performance With Multi-Threaded FBC Algorithm"
 date:   2015-03-01 23:13:21
 author:     "Robinson Raju"
-categories: Data Compression 
+categories: paper 
 header-img: "img/pres5/nasa_comp.jpg"
 ---
 

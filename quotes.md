@@ -3,7 +3,7 @@ layout: page
 title: ""
 permalink: /quotes/
 description: "Notable Quotes"
-header-img: ""
+header-img: "img/quotes-bg.jpg"
 ---
 > "Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. Persistence and determination alone are omnipotent. The slogan 'Press On' has solved and always will solve the problems of the human race." ~ **Calvin Coolidge**
 
@@ -54,3 +54,6 @@ Once you learn that, you'll never be the same again."
 
 
 ---
+
+<i>Header Image - "<b>Famous Ben Okri quote</b>" by <b>Alessandro Lucia</b> via <a href="https://flic.kr/p/64DwYM"><u>Flickr</u></a><i> <br>
+

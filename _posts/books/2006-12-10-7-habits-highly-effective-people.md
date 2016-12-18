@@ -11,27 +11,71 @@ There are many books that when I think back on them, I have this lingering feeli
 
 It is one of those books which the moment you finish reading, you will feel inspired, to do more, to yearn to lead a more fulfilling life. You will see the world in a new perspective with a feeling within you that things are more in your control than not. 
 
-**Habit 1 - Be Proactive**
-This is the ability to control one's environment, rather than have it control you, as is so often the case. Self determination, choice, and the power to decide response to stimulus, conditions and circumstances
+### PART 1 - Paradigms and principles
+* Inside-out
 
-**Habit 2 - begin with the end in mind**
-Covey calls this the habit of personal leadership - leading oneself that is, towards what you consider your aims. By developing the habit of concentrating on relevant activities you will build a platform to avoid distractions and become more productive and successful.
+> _"There is no real excellence in all this world which can be separated from right living.""
+> ~ David Starr Jordan_
 
-**Habit 3 - put first things first**
-Covey calls this the habit of personal management. This is about organising and implementing activities in line with the aims established in habit 2. Covey says that habit 2 is the first, or mental creation; habit 3 is the second, or physical creation. (See the section on time management.)
+* The Seven Habits : an overview
 
-**Habit 4 - think win-win**
-Covey calls this the habit of interpersonal leadership, necessary because achievements are largely dependent on co-operative efforts with others. He says that win-win is based on the assumption that there is plenty for everyone, and that success follows a co-operative approach more naturally than the confrontation of win-or-lose.
+> _"We are what we repeatedly do. Excellence, then, is not an act, but a habit."
+> ~ Aristotle_
 
-**Habit 5 - seek first to understand and then to be understood**
-One of the great maxims of the modern age. This is Covey's habit of communication, and it's extremely powerful. Covey helps to explain this in his simple analogy 'diagnose before you prescribe'. Simple and effective, and essential for developing and maintaining positive relationships in all aspects of life. (See the associated sections on Empathy, Transactional Analysis, and the Johari Window.)
+### PART 2 - Private victory
+**Habit 1 - Be Proactive** - Principles of personal vision
 
-**Habit 6 - synergize**
-Covey says this is the habit of creative co-operation - the principle that the whole is greater than the sum of its parts, which implicitly lays down the challenge to see the good and potential in the other person's contribution.
+> _"I know of no more encouraging fact than the unquestionable ability of man to elevate his life by conscious endeavor."
+> ~ Henry David Thoreau_
 
-**Habit 7 - sharpen the saw**
-This is the habit of self renewal, says Covey, and it necessarily surrounds all the other habits, enabling and encouraging them to happen and grow. Covey interprets the self into four parts: the spiritual, mental, physical and the social/emotional, which all need feeding and developing.
+Be proactive and have control over the outcomes rather than being reactive to everything around you. 
 
+**Habit 2 - Begin with the End in Mind**- Principles of personal leadership
+
+> "What lies behind us and what lies before us are tiny matters compared to what lies within us."
+> ~ Oliver Wendell Holmes
+
+Always visualize the end before starting something and this habit will help you focus better towards the goal. 
+
+**Habit 3 - Put First Things First** - Principles of personal management
+
+> "Things which matter most must never be at the mercy of things which matter least."
+> ~ Goethe
+
+Once you begin with end in mind and start implementing things, prioritize so that you always put most important things first. 
+
+### PART 3 - Public victory - Paradigms on interdependence
+**Habit 4 - Think Win-Win** - Principles of interpersonal leadership
+
+> "There can be no friendship without confidence, and no confidence without integrity." ~ Samuel Johnson
+> "We have committed the Golden Rule to memory; let us now commit it to life."" ~ Edwin Markha
+
+_Most things in life don't have to be a zero sum game. Win-Win is based on the assumption that there is plenty for everyone, and that success follows a co-operative approach more naturally than the confrontation of win-or-lose._
+
+**Habit 5 - Seek First to Understand and then to be Understood** - Principles of empathic communication
+
+> "The heart has its reasons which reason knows not of." ~ Pascal
+
+**Habit 6 - Synergize** - Principles of creative cooperation
+
+> "I take as my guide the hope of a saint <br>
+> in crucial things, unity -- <br>
+> in important things, diversity -- <br>
+> in all things, generosity"
+> ~ Inaugural Address of President George Bush
+
+_Synergy means that 1 + 1 may equal 8, 16, or even 1,600._
+
+### PART 4 - Renewal
+**Habit 7 - Sharpen the Saw** - Principles of balanced self-renewal
+
+> "Sometimes when I consider what tremendous consequences come from little things.... I am tempted to think...there are no little things."
+> ~ Bruce Barton
+
+* Inside-out again
+
+> "The Lord works from the inside out. The world works from the outside in. The world would take people out of the slums. Christ takes the slums out of people, and then they take themselves out of the slums. The world would mold men by changing their environment. Christ changes men, who then change their environment. The world would  shape human behavior, but Christ can change human nature.
+> ~ Ezra Taft Benson
 
 
 

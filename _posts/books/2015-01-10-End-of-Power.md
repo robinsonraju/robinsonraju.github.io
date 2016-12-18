@@ -7,30 +7,61 @@ categories: books
 header-img: ""
 ---
 
-There are many books that when I think back on them, I have this lingering feeling that either due to reading quickly or not taking notes, I didn't really take in the full essence of the book. There is more to be understood and when there is time, I need to get back to it. "7 Habits of Highly Effective People" by Steven Covey is one such book. My classmate from school, RR, was probably the first person to recommend the book to me. I have probably read the first chapter at least 5 or 6 times before I finally was able to finish reading the book around 2002 when I was working in Chennai. This is the second time I've read this book. 
+_Mark Zuckerberg posts a public challenge/goal for himself at the beginning of every year and in 2015 it was to [read a new book every two weeks](https://www.facebook.com/ayearofbooks/)._
 
-It is one of those books which the moment you finish reading, you will feel inspired, to do more, to yearn to lead a more fulfilling life. You will see the world in a new perspective with a feeling within you that things are more in your control than not. 
+> "Power no longer buys as much as it did in the past. In the 21st century, power is easy to get, harder to use - and easy to lose."
 
-**Habit 1 - Be Proactive**
-This is the ability to control one's environment, rather than have it control you, as is so often the case. Self determination, choice, and the power to decide response to stimulus, conditions and circumstances
+_['The End of Power'](https://www.amazon.com/End-Power-Boardrooms-Battlefields-Churches/dp/0465065694) was the first book chosen. The theme of the book is that power is not what it used to be. People in power are not as powerful as in the past and not as much as we sometimes think them to be. Power has weakened because barriers to power have reduced by the **"More", "Mobility"** and **"Mentality"** revolution. The book makes one think about the world around us. In a way, the world has become more democratic and ordinary people have access/chance to rise to the top but when one looks at the world from the top, it is more chaotic and difficult to manage. One might choose to not get into management/leadership positions because of this._
 
-**Habit 2 - begin with the end in mind**
-Covey calls this the habit of personal leadership - leading oneself that is, towards what you consider your aims. By developing the habit of concentrating on relevant activities you will build a platform to avoid distractions and become more productive and successful.
+#### Chapter 1	: The Decay of Power
+> "Power is the ability to direct or prevent the current or future actions of other groups and individuals."
 
-**Habit 3 - put first things first**
-Covey calls this the habit of personal management. This is about organising and implementing activities in line with the aims established in habit 2. Covey says that habit 2 is the first, or mental creation; habit 3 is the second, or physical creation. (See the section on time management.)
+_This chapter gives the example of James Black Jr., a 12 yr old from a working class family in Brooklyn, NY who becomes a Chess Grandmaster at the age of 12. It is a global trend. More players are learning the game and achieving mastery sooner than their predecesors, many of them on their own!. The reason is because the easier access to knowledge - of millions of games by other Grandmasters or computer simulation of moves, made by digital revolution and the internet. The author goes on to say that the similar trend is seen in all the other aspects of life. The chapter also gives us an overview of what the book's is going to talk about._
 
-**Habit 4 - think win-win**
-Covey calls this the habit of interpersonal leadership, necessary because achievements are largely dependent on co-operative efforts with others. He says that win-win is based on the assumption that there is plenty for everyone, and that success follows a co-operative approach more naturally than the confrontation of win-or-lose.
 
-**Habit 5 - seek first to understand and then to be understood**
-One of the great maxims of the modern age. This is Covey's habit of communication, and it's extremely powerful. Covey helps to explain this in his simple analogy 'diagnose before you prescribe'. Simple and effective, and essential for developing and maintaining positive relationships in all aspects of life. (See the associated sections on Empathy, Transactional Analysis, and the Johari Window.)
+#### Chapter 2	: Making Sense of Power: How It Works and How to Keep It
+> "Identify the barriers to power and whether they are coming up or going down, and you can solve a large part of the puzzle of power."
 
-**Habit 6 - synergize**
-Covey says this is the habit of creative co-operation - the principle that the whole is greater than the sum of its parts, which implicitly lays down the challenge to see the good and potential in the other person's contribution.
+_The main theme of this chapter is extend the definition of power in the first chapter. Power is expressed through four different means - The Muscle, The Code, The Pitch, The Reward._
 
-**Habit 7 - sharpen the saw**
-This is the habit of self renewal, says Covey, and it necessarily surrounds all the other habits, enabling and encouraging them to happen and grow. Covey interprets the self into four parts: the spiritual, mental, physical and the social/emotional, which all need feeding and developing.
+_**MacMillan's Taxonomy of Power**_
+
+|| Outcome seen as improvement | Outcome seen as nonimprovement | 
+| :-------------: |:-------------:| :-----:|
+| Change incentives  | Inducement via reward: Increase the salary, lower a price | Coercion via muscle: Law enforcement, repression, violence |
+| Change preferences | Persuasion via pitch: Advertising, campaigning    | Obligation via code: Religious or traditional duty, moral suasion      |  
+
+#### Chapter 3	: How Power Got Big: An Assumption's Unquestioned Rise
+> "Weber’s central message was that without a reliable, well-functioning organization, or, to use his term, without a bureaucracy, power could not be effectively wielded."
+
+_The main theme of this chapter is to about how companies throughout the world became huge, especially after the World War II. Huge companies could be managed only via hierarchies and bureaucracy. The author talks in depth about Max Weber, German sociologist who analyzed Western economies and wrote about bureaucracy and how it would lead to power being managed by big corporations._
+
+#### Chapter 4	: How Power Lost Its Edge: The More, Mobility, and Mentality Revolutions
+> "The decoupling of power from size, and thus the decoupling of the capacity to use power effectively from the control of a large Weberian bureaucracy, is changing the world."
+
+* _The **More** revolution - Overwhelming the means of control_
+* _The **Mobility** revolution - The end of captive audiences_
+* _The **Mentality** revolution - Taking nothing for granted anymore_
+
+_**Power and the three revolutions:**_
+![alt text](/img/books/EndOfPower-ch4.png "Power and the 3 revolutions")
+
+#### Chapter 5	: Why Are Landslides, Majorities, and Mandates Endangered Species? The Decay of Power in National Politics
+> "Accordingly, the noble art of governing now depends more heavily on a much dirtier, hands-on skill: forming and maintaining a coalition."
+
+_The main theme of this chapter is the before and after contrast of the governments across the world - number of sovereign nations has quadrupled since 1945, democracies have increased, autocracies have gone down, there are more hung parliaments now, very few landslide victories, etc._
+
+#### Chapter 6	: Pentagons Versus Pirates: The Decaying Power of Large Armies
+
+#### Chapter 7	: Whose World Will It Be? Vetoes, Resistance, and Leaks-or Why Geopolitics Is Turning Upside Down	
+
+#### Chapter 8	: Business as Unusual: Corporate Dominance Under Siege
+
+#### Chapter 9	: Hyper-Competition for Your Soul, Heart, and Brain	
+
+#### Chapter 10 : The Decay of Power: Is the Glass Half-Full or Half-Empty?
+
+#### Chapter 11 : Power Is Decaying: So What? What to Do?	
 
 
 

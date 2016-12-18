@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tutorials
-header-img: "img/archive-bg.jpg"
+header-img: "img/tutorials-bg.jpg"
 ---
 <div class="page-content wc-container">
   	{% for post in site.posts %}

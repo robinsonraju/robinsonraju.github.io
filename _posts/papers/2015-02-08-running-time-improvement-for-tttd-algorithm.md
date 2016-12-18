@@ -3,7 +3,7 @@ layout: post
 title:  "A Running Time Improvement for TTTD Algorithm"
 date:   2015-02-08 11:33:21
 author:     "Robinson Raju"
-categories: Data Compression 
+categories: paper 
 header-img: "img/pres2/blocks.jpg"
 ---
 

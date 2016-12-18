@@ -3,7 +3,7 @@ layout: post
 title:  "Winnowing: local algorithms for document fingerprinting"
 date:   2015-02-15 01:23:11
 author:     "Robinson Raju"
-categories: Data Compression 
+categories: paper
 header-img: "img/pres3/winnowing.jpg"
 ---
 
