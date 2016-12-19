@@ -23,15 +23,15 @@
   link:
   date: July 15, 2016
 
-- title: The Golem's Eye 
-  author: Jonathan Stroud
-  image: TheGolemsEye.jpg
-  link:
-  date: May 20, 2016
-
 - title: Ptolemy's gate
   author: Jonathan Stroud
   image: PtolemysGate.jpg
+  link:
+  date: May 20, 2016
+
+- title: The Golem's Eye 
+  author: Jonathan Stroud
+  image: TheGolemsEye.jpg
   link:
   date: May 10, 2016
 
