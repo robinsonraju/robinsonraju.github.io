@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to my site. ">
+
+    <title>A Running Time Improvement for TTTD Algorithm - Rob's Notes</title>
+
+    <link rel="canonical" href="http://robinsonraju.github.io/paper/2015/02/08/running-time-improvement-for-tttd-algorithm/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Rob's Notes</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">About</a></li>
+                <li><a href="/books">Books</a></li>
+                <li><a href="/tutorials">Tutorials</a></li>
+                <li><a href="/papers">Papers</a></li>
+                <li><a href="/blog">General</a></li>
+                <li><a href="/quotes">Quotes</a></li>
+                <!--
+                <li>
+                    <a href="/about/">rr</a>
+                </li>
+                
+                <li>
+                    <a href="/blog/">Blog Archive</a>
+                </li>
+                
+                <li>
+                    <a href="/books/">Books</a>
+                </li>
+                
+                <li>
+                    <a href="/">rr</a>
+                </li>
+                
+                <li>
+                    <a href="/papers/">Papers</a>
+                </li>
+                
+                <li>
+                    <a href="/quotes/"></a>
+                </li>
+                
+                <li>
+                    <a href="/tutorials/">Tutorials</a>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    
+    <header class="intro-header" style="background-image: url('/img/pres2/blocks.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>A Running Time Improvement for TTTD Algorithm</h1>
+                    <hr class="small">
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p><strong>Paper reviewed</strong>:</p>
+
+<blockquote>
+  <p>Moh, T., &amp; Chang, B. (2010). A Running Time Improvement for the Two Thresholds Two Divisors Algorithm. ACM SE ’10 Proceedings of the 48th Annual Southeast Regional Conference.</p>
+</blockquote>
+
+<p>Last week I spent some time understanding hash-based data deduplication systems. It felt great to revisit Rabin-Karp Algorithm for string matching. This algorithm was my focus in CS 255 and I had implemented it using Monte Carlo and Las Vegas approaches (A Monte Carlo algorithm has a guaranteed completion time but fails to output a correct answer with a small probability, A Las Vegas algorithm has guaranteed correctness but fails to complete with a small probability). 
+Before trying to dedupe data, it needs to be chunked. There are many algorithms to do that. The Basic Sliding Window (BSW) algorithm is one of the earliest and widely used. The Two Thresholds Two Divisors (TTTD) algorithm is an improvement over this. 
+This paper proposes an improvement over the TTTD algorithm.</p>
+
+<p>I still need to find a better system to embed a presentation in a static page. For now using issuu.</p>
+
+<div data-configid="18778196/14985334" style="width:625px; height:500px;" class="issuuembed"></div>
+<script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+
+<hr />
+<p><em>Header Image - “<strong>Curiousity</strong>” by Thomas Hawk via <a href="https://flic.kr/p/dSuxV1">Flickr</a></em></p>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/paper/2015/01/31/compressed-pattern-matching/" data-toggle="tooltip" data-placement="top" title="Let sleeping files lie: Pattern matching in Z-compressed file">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/paper/2015/02/14/winnowing-local-algorithms-for-doc-fingerprinting/" data-toggle="tooltip" data-placement="top" title="Winnowing: local algorithms for document fingerprinting">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/robinsonraju">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/robinson.raju.165">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/robinsonraju">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Rob's Notes 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>

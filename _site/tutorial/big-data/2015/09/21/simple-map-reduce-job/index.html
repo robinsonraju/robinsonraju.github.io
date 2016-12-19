@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to my site. ">
+
+    <title>Writing a simple Mapper and Reducer for Wordcount - Rob's Notes</title>
+
+    <link rel="canonical" href="http://robinsonraju.github.io/tutorial/big-data/2015/09/21/simple-map-reduce-job/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Rob's Notes</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">About</a></li>
+                <li><a href="/books">Books</a></li>
+                <li><a href="/tutorials">Tutorials</a></li>
+                <li><a href="/papers">Papers</a></li>
+                <li><a href="/blog">General</a></li>
+                <li><a href="/quotes">Quotes</a></li>
+                <!--
+                <li>
+                    <a href="/about/">rr</a>
+                </li>
+                
+                <li>
+                    <a href="/blog/">Blog Archive</a>
+                </li>
+                
+                <li>
+                    <a href="/books/">Books</a>
+                </li>
+                
+                <li>
+                    <a href="/">rr</a>
+                </li>
+                
+                <li>
+                    <a href="/papers/">Papers</a>
+                </li>
+                
+                <li>
+                    <a href="/quotes/"></a>
+                </li>
+                
+                <li>
+                    <a href="/tutorials/">Tutorials</a>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    
+    <header class="intro-header" style="background-image: url('/img/hadoop/words2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Writing a simple Mapper and Reducer for Wordcount</h1>
+                    <hr class="small">
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p>The last blog was about how to run wordcount using the “hadoop-mapreduce-examples.jar” that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this? I searched a bit for an eclipse plugin to be able to create a MR project through eclipse that would have the template for Mapper and Reducer and I would just write the implementation. Found some plugins (e.g HDT) and some screencasts but didn’t take me far. Remembered that there was an eclipse icon in the Cloudera VM. Started the VM, clicked on the icon and viola ! there was a sample project with Stubs for Mapper, Reducer and Driver. Exactly what I needed!</p>
+
+<p><img src="/img/hadoop/Stubs.png" width="420" /></p>
+
+<p>Put in the code for Mapper, Reducer and Driver in the Stub classes and ran the Driver. It worked like a charm. Here is the code for it.</p>
+
+<h2 id="mapper">Mapper</h2>
+<p>The map method takes key, value and context as inputs. The key represents the name of a document and the value is the contents of the document. For e.g, a record in a file. The map method below uses StringTokenizer to split the record into words, loops through the words and writes a 2-tuple (word, 1) into the context. Each mapper does this and what we get in the end is a list of key-value pairs.</p>
+
+<pre><code>import java.io.IOException;
+import java.util.StringTokenizer;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class StubMapper extends Mapper&lt;LongWritable, Text, Text, IntWritable&gt; {
+
+	private final static IntWritable one = new IntWritable(1);
+	private Text word = new Text();
+
+	@Override
+	public void map(LongWritable key, Text value, Context context)
+			throws IOException, InterruptedException {
+
+		String line = value.toString();
+		StringTokenizer tokenizer = new StringTokenizer(line);
+		while (tokenizer.hasMoreTokens()) {
+			word.set(tokenizer.nextToken());
+			context.write(word, one);
+		}
+
+	}
+}
+</code></pre>
+
+<h2 id="reducer">Reducer</h2>
+<p>A reducer takes an input of a key and list of values associated with the key, adds the counts and writes the output to the context. 
+For e.g, input of (world, 1), (world, 1) gives output as (world, 2).</p>
+
+<pre><code>import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class StubReducer extends
+		Reducer&lt;Text, IntWritable, Text, IntWritable&gt; {
+
+	@Override
+	public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+			throws IOException, InterruptedException {
+
+		int sum = 0;
+		for (IntWritable val : values) {
+			sum += val.get();
+		}
+		context.write(key, new IntWritable(sum));
+	}
+}
+</code></pre>
+
+<h2 id="driver">Driver</h2>
+
+<pre><code>import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+
+public class StubDriver {
+
+	public static void main(String[] args) throws Exception {
+
+		/*
+		 * Validate that two arguments were passed from the command line.
+		 */
+		if (args.length != 2) {
+			System.out.printf("Usage: StubDriver &lt;input dir&gt; &lt;output dir&gt;\n");
+			System.exit(-1);
+		}
+
+		/*
+		 * Instantiate a Job object for your job's configuration.
+		 */
+		Job job = new Job();
+
+		/*
+		 * Specify the jar file that contains your driver, mapper, and reducer.
+		 * Hadoop will transfer this jar file to nodes in your cluster running
+		 * mapper and reducer tasks.
+		 */
+		// job.setJarByClass(StubDriver.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(IntWritable.class);
+
+		job.setMapperClass(StubMapper.class);
+		job.setReducerClass(StubReducer.class);
+
+		job.setInputFormatClass(TextInputFormat.class);
+		job.setOutputFormatClass(TextOutputFormat.class);
+
+		FileInputFormat.addInputPath(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
+		/*
+		 * Specify an easily-decipherable name for the job. This job name will
+		 * appear in reports and logs.
+		 */
+		job.setJobName("Stub Driver");
+
+		/*
+		 * Start the MapReduce job and wait for it to finish. If it finishes
+		 * successfully, return 0. If not, return 1.
+		 */
+		boolean success = job.waitForCompletion(true);
+		System.exit(success ? 0 : 1);
+	}
+}
+</code></pre>
+
+<h2 id="how-to-run">How to Run</h2>
+
+<pre><code>Create an input directory named "input"
+
+Run As &gt; Java Application (give 2 arguments "input" and "output")
+</code></pre>
+
+<p>Look at the the file ‘part-r-00000’ in the output directory
+	<img src="/img/hadoop/wc-output-eclipse.png" width="320" /></p>
+
+<hr />
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li>QuickStart VMs for CDH 5.4.x. (n.d.). Retrieved September 21, 2015, from <a href="http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html">http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html</a></li>
+  <li>WordCount. (n.d.). Retrieved September 21, 2015, from <a href="https://wiki.apache.org/hadoop/WordCount">https://wiki.apache.org/hadoop/WordCount</a></li>
+</ul>
+
+<hr />
+
+<p><em>Header Image - “<strong>Words</strong>” by Cayce Newell via <a href="https://flic.kr/p/4BsjLY">Flickr</a>.</em></p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/tutorial/big-data/2015/09/15/wordcount-on-hadoop/" data-toggle="tooltip" data-placement="top" title="Running Hadoop WordCount example">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/tutorial/big-data/2015/09/30/mapreducejob-iris/" data-toggle="tooltip" data-placement="top" title="A Simple MapReduce Job for Iris Dataset">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/robinsonraju">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/robinson.raju.165">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/robinsonraju">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Rob's Notes 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
