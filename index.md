@@ -1,10 +1,9 @@
 ---
 layout: page
-title: rr
+title: "rr"
 description: "Luminous Infinitus"
+header-img: "img/home-bg.jpg"
 ---
-
-{% markdown %}
 
 Hi there! I'm **Robinson**. 
 I also go by **Robin** or sometimes **Rob**. 
@@ -33,8 +32,5 @@ _The photo is called "**Dandelion In The Rain**" by [George Hodan](http://www.pu
 ### Website
 _This website is a collection of my writings on several topics, ranging from books read, places travelled, technologies learnt and some notes on software. It has taken different shapes over the years. The content has been in blogger, wordpress, google sites ..etc. So the site is also an avenue to try some new techology for me. The current site (2015) is a static site built on Jekyll & bootstrap. It uses "[Clean blog](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)" theme from [startbootstrap](http://startbootstrap.com)._
 
-{% endmarkdown %}
 
 
-
-<br><br>
