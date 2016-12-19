@@ -21,6 +21,5 @@ header-img: "img/tutorials-bg.jpg"
 
 <br>
 
-<i>Header Image - "<b>Oldfashioned archiving of drawings</b>" by <b>Pieter van Marion</b> via <a href="https://flic.kr/p/p3rDGd"><u>Flickr</u></a><i> <br>
-
+<i>Header Image - "<b>LEARN</b>" by <b>Dushan Hanuska</b> via <a href="https://flic.kr/p/sKyrAp"><u>Flickr</u></a><i> <br>
 
