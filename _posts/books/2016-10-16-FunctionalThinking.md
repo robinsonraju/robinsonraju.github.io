@@ -26,6 +26,11 @@ _This chapter provides a broad overview and shows some examples of the mental sh
 * Example 1-5. Scala version of firstIndexOfAny()
 * Example 1-6. Returning a lazy list of matches
 
+**_Excercise to self_**
+
+1. Write a program in Java 8 or Clojure which takens in a String of words separated by space ("a quick brown fox") and returns a map of word frequencies. 
+2. Write a program in Java 8 or Clojure that mimics 'indexOfAny() from Apache Commons StringUtils'. This method accepts a String and an array and returns the index of the first occurrence in the String of any of the characters in the array. 
+
 ### Chapter 2 : Shift
 > "Once garbage collection became mainstream, it simultaneously eliminated entire categories of hard-to-debug problems and allowed the runtime to manage a process that is complex and error-prone for developers. Functional programming aims to do the same thing for the algorithms you write, allowing you to work at a higher level of abstraction while freeing the runtime to perform sophisticated optimizations.""
 
@@ -57,6 +62,12 @@ _This chapter provides a broad overview and shows some examples of the mental sh
 * Example 2-20. foldLeft() with user-supplied criteria
 
 _The last part of the chapter is a quick overview of **3 key 'functions'** in functional programming languages - **filter**, **map** and **reduce**. The author shows code in Scala, Groovy and Clojure._
+
+**_Excercise to self_**
+
+1. Write a program that takes in input as 'a list of names, some of which consist of a single character' and returns 'a comma-delimited string with the single letter names removed, with each name capitalized'.
+2. 
+
 
 ### Chapter 3 : Cede
 > "Confession: I never want to work in a non-garbage-collected language again. I paid my dues in languages like C++ for too many years, and I don’t want to surrender the conveniences of modern languages. That’s the story of how software development progresses."
@@ -102,10 +113,40 @@ _In this chapter, the author shows five ways developers in functional languages 
 
 _A note on Erlang's tail-call optimization._
 
-> Given Erlang’s impressive fault-tolerance capabilities, there are likely tail-recursive loops in production that have run for **years** (!) uninterrupted.
+> "Given Erlang’s impressive fault-tolerance capabilities, there are likely tail-recursive loops in production that have run for **years** (!) uninterrupted."
+[`emphasis and exclamation added by self. `]
 
 
 ### Chapter 4 : Smarter, Not Harder
+> "Even if you don’t care about functional languages such as Scala or Clojure, functional programming will enter your life through the langauge(s) you now use as they evolve."
+
+_In this chapter Ford discusses two features common in functional languages: memoization (function level caching) and laziness (Lazy evaluation — deferral of expression evaluation for as long as possible)._ 
+
+* Example 4-1. Caching sum
+* Example 4-2. Testing nonoptimized speed
+* Example 4-3. Caching everything
+* Example 4-4. Memoizing sum
+* Example 4-5. Memoizing everything
+* Example 4-6. Inline memoization in Groovy
+* Example 4-7. Testing memoized hashing function
+* Example 4-8. Memoization in Clojure
+* Example 4-9. Memoization implementation in Scala
+* Example 4-10. Pseudocode illustrating nonstrict evaluation
+* Example 4-11. Prime number finder in Java
+* Example 4-12. Prime iterator in Java
+* Example 4-13. Number classifier using the Totally Lazy Java framework
+* Example 4-14. Using lazy lists in Groovy
+* Example 4-15. LazyList implementation
+* Example 4-16. Pared-down version of perfect-number classifier in Groovy
+* Example 4-17. Lazily initialized list of perfect numbers
+* Example 4-18. Building a lazy list in Groovy
+* Example 4-19. Exercising lazy lists
+* Example 4-20. Finding palindromes in Groovy
+* Example 4-21. Clojure’s palindromes
+* Example 4-22. Scala palindromes
+* Example 4-23. Lazy fields in Groovy
+
+### Chapter 5 : Evolve
 
 
 
