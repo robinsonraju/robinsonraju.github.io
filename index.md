@@ -19,7 +19,7 @@ For work and education related details, please checkout my [LinkedIn profile](ht
 
 ### Who am I ?
 _Though born and brought up in [Bangalore](https://en.wikipedia.org/wiki/Bangalore) as a [Keralite](https://en.wikipedia.org/wiki/Kerala) practicing [Orthodox](https://en.wikipedia.org/wiki/Malankara_Orthodox_Syrian_Church) faith, I've been influenced by multiple people and ideas. I don't quite believe in rebirth though I wish humans could be reborn and be able to download and upload memories like Cylons do in [Battlestar Galactica](https://en.wikipedia.org/wiki/Battlestar_Galactica_%282004_TV_series%29). 
-But if you think about it, we could say that we are reborn continually as life throws similar scenarios at us so that we get a chance to do better next time. Everything - days, months, years, birthdays, anniversaries, festivals - happen in cycles and we get to relive similar moments as wiser people with time._  
+But if you think about it, we could say that we are reborn continually as life throws similar scenarios at us so that we get a chance to do better next time. Everything - days, months, years, birthdays, anniversaries, festivals - happen in cycles and we get to re-live similar moments as wiser people with time._  
 
 _I'm grateful for having been surrounded by people and places that brought out the best in me. If you knew me many years back and find me changed with better abilities and more knowledge than before, thank the people I've had the chance to be with. I also feel very lucky for being alive at this point in time in the history of mankind. It is arguably the best era so far._ 
 

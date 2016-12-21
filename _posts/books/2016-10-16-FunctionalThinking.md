@@ -7,9 +7,9 @@ categories: books
 header-img: ""
 ---
 
-_For someone who has been doing Java programming and reading through lot of OO codebase over a decade, functional programming is truly a paradigm shift. It is not like learning a different language or different version of Java from Java 2 (1.2) to Java 8. The first time I was exposed to functional programming is probably around 2012 when I had to do a project for an ML course using R language. It was refreshing to do things differently for sure. Thanks to [RV](http://rovarghe.blogspot.com), I learnt the basics of Clojure last year. I'm at a stage where I can read Clojure code and understand and may be write very simple programs but not beyond that. Anyway, the paradigm shift that Ford talks about can be summarized in the example that he gives in the first chapter of the book._
+_For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift. It is not like learning a different language or different version of Java from Java 2 (1.2) to Java 8. The first time I was exposed to functional programming is probably around 2012 when I had to do a project for an ML course using R language. It was refreshing to do things differently for sure. Thanks to [RV](http://rovarghe.blogspot.com), I learnt the basics of Clojure last year. I'm at a stage where I can read Clojure code and understand and may be write very simple programs but not beyond that. Anyway, the paradigm shift that Ford talks about can be summarized in the example that he gives in the first chapter of the book._
 
-> Let’s say for a moment that you are a lumberjack. You have the best axe in the forest, which makes you the most productive lumberjack in the camp. Then one day someone shows up and extols the virtues of a new tree-cutting paradigm, the chainsaw. The sales guy is persuasive, so you buy a chainsaw, but you don’t know how it works. Demon‐ strating your expertise with the previous tree-cutting paradigm, you swing it vigorously at a tree—without cranking it. You quickly conclude that this newfangled chainsaw is a fad, and you return to your axe. Then, someone appears and shows you how to crank the chainsaw.
+> Let’s say for a moment that you are a lumberjack. You have the best axe in the forest, which makes you the most productive lumberjack in the camp. Then one day someone shows up and extols the virtues of a new tree-cutting paradigm, the chainsaw. The sales guy is persuasive, so you buy a chainsaw, but you don’t know how it works. Demonstrating your expertise with the previous tree-cutting paradigm, you swing it vigorously at a tree—without cranking it. You quickly conclude that this newfangled chainsaw is a fad, and you return to your axe. Then, someone appears and shows you how to crank the chainsaw.
 
 _The best thing about the book is that he gives a lot of code examples. So one needs to just think of how to solve these examples and get the gist of what is being talked about._
 
@@ -152,9 +152,13 @@ _In this chapter Ford discusses two features common in functional languages: mem
 
 **_Excercise to self_**
 
-1. Implement 
+1. Implement caching (using memoization) for Number Classifier built in Chapter 3. Cache factors and sum of factors for each number. 
+2. Given an input string, produce the rot 13 version of the string. \"hello\" -> \"uryyb\". Implement memoized version in Clojure. 
+3. Write a Clojure function to find palindromes in a String of words. 
 
 ### Chapter 5 : Evolve
+> "It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures." ~ Alan Perlis
+
 
 
 
