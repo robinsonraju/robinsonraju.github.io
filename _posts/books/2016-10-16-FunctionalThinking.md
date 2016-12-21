@@ -28,7 +28,7 @@ _This chapter provides a broad overview and shows some examples of the mental sh
 
 **_Excercise to self_**
 
-1. Write a program in Java 8 or Clojure which takens in a String of words separated by space ("a quick brown fox") and returns a map of word frequencies. 
+1. Write a program in Java 8 or Clojure which takes in a String of words separated by space ("a quick brown fox") and returns a map of word frequencies. 
 2. Write a program in Java 8 or Clojure that mimics 'indexOfAny() from Apache Commons StringUtils'. This method accepts a String and an array and returns the index of the first occurrence in the String of any of the characters in the array. 
 
 ### Chapter 2 : Shift
@@ -65,9 +65,9 @@ _The last part of the chapter is a quick overview of **3 key 'functions'** in fu
 
 **_Excercise to self_**
 
-1. Write a program that takes in input as 'a list of names, some of which consist of a single character' and returns 'a comma-delimited string with the single letter names removed, with each name capitalized'.
-2. 
-
+1. Write a progam in Java 8 or Clojure that, given a list of names, some of which consist of a single character, returns a comma-delimited string with the single letter names removed, with each name capitalized. 
+2. Write a program in Java 8 or Clojure that implements Number Classification. i.e, given a number, the program outputs if the number is perfect, abundant or deficient. 
+3. Write a program in Clojure that takes in a range of numbers and returns numbers that are divisible by 3. 
 
 ### Chapter 3 : Cede
 > "Confession: I never want to work in a non-garbage-collected language again. I paid my dues in languages like C++ for too many years, and I don’t want to surrender the conveniences of modern languages. That’s the story of how software development progresses."
@@ -116,6 +116,10 @@ _A note on Erlang's tail-call optimization._
 > "Given Erlang’s impressive fault-tolerance capabilities, there are likely tail-recursive loops in production that have run for **years** (!) uninterrupted."
 [`emphasis and exclamation added by self. `]
 
+**_Excercise to self_**
+
+1. Write a closure (function that returns a function) in Clojure. 
+2. Write a function in Clojure that uses partial function. (partial is a function which takes a function f and a fewer-than-required number of arguments and returns a partially applied function that’s invokable when you supply the remaining arguments)
 
 ### Chapter 4 : Smarter, Not Harder
 > "Even if you don’t care about functional languages such as Scala or Clojure, functional programming will enter your life through the langauge(s) you now use as they evolve."
@@ -145,6 +149,10 @@ _In this chapter Ford discusses two features common in functional languages: mem
 * Example 4-21. Clojure’s palindromes
 * Example 4-22. Scala palindromes
 * Example 4-23. Lazy fields in Groovy
+
+**_Excercise to self_**
+
+1. Implement 
 
 ### Chapter 5 : Evolve
 
