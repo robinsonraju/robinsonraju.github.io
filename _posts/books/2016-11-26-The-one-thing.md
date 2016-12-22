@@ -11,6 +11,8 @@ header-img: ""
 
 > "If you chase two rabbits, you will not catch either one." ~ Russian Proverb
 
+_This is the first book that I'm reading after Amazon launched ["Prime Reading"](https://www.amazon.com/kindle-dbs/fd/prime-pr/ref=sv_kstore_2). Wohoo! I always felt that kindle lending wasn't that great. You never got the book that you wanted, there were restrictions around one per month..etc. I thought I will stop my prime membership next year since I'm not using prime much and haven't had a lot of time to view movies or TV series off late. But due to "Prime Reading", I'll continue with prime for a long time, I'm sure. It doesn't have a great collection yet, but I think it will come. Looking forward to a day where I can borrow books from my local library through kindle. I can borrow e-books and read from 'Overdrive' app on my phone but still nothing matches the experience of reading from a kindle._
+
 _My impression of reading this book was that it was very inspiring. It is an easy, fast read, one feels like the author is an inspiring preacher who talks to you from a podium and you're listening to him with rapt attention. You would love the idea of focusing on one thing, timeblocking (4 hours !) and other practical steps to make life more streamlined. After reading the book, you walk away with a feeling that you've gained an insight and will transform your life to follow what was said. Of course, after a few days, you go back to being the old self, being reactive to everything around and multi-tasking and not have time for anything. I think reading the notes again will re-inforce the learning and will slowly change the way you do things._
 
 ## Highlights from my Kindle 
