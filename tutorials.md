@@ -8,7 +8,7 @@ header-img: "img/tutorials-bg.jpg"
   		{% if post.categories contains 'tutorial' %}
 		    {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
 		    {% if currentyear != year %}
-		      {% unless forloop.first %}</ul>{% endunless %}
+		      {% unless forloop.first %}{% endunless %}
 		        <h4>{{ currentyear }}</h4>
 		        <ul class="posts">
 		        {% capture year %}{{currentyear}}{% endcapture %} 
