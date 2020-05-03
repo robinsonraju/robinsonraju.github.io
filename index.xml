@@ -6,7 +6,7 @@
     <description>Recent content on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>About</title>
       <link>https://robinsonraju.github.io/about/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.github.io/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
+      <description>Hi there! I&amp;rsquo;m Robinson. I also go by Robin or sometimes Rob.</description>
     </item>
     
     <item>
