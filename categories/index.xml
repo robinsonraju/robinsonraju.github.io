@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Rob&#39;s Notes</title>
-    <link>http://robinsonraju.info/categories/</link>
+    <link>https://robinsonraju.info/categories/</link>
     <description>Recent content in Categories on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://robinsonraju.info/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>syntax</title>
-      <link>http://robinsonraju.info/categories/syntax/</link>
+      <link>https://robinsonraju.info/categories/syntax/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://robinsonraju.info/categories/syntax/</guid>
+      <guid>https://robinsonraju.info/categories/syntax/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>http://robinsonraju.info/categories/themes/</link>
+      <link>https://robinsonraju.info/categories/themes/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://robinsonraju.info/categories/themes/</guid>
+      <guid>https://robinsonraju.info/categories/themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project Management</title>
-      <link>http://robinsonraju.info/categories/project-management/</link>
+      <link>https://robinsonraju.info/categories/project-management/</link>
       <pubDate>Tue, 18 Nov 2014 23:15:14 +0000</pubDate>
       
-      <guid>http://robinsonraju.info/categories/project-management/</guid>
+      <guid>https://robinsonraju.info/categories/project-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General</title>
-      <link>http://robinsonraju.info/categories/general/</link>
+      <link>https://robinsonraju.info/categories/general/</link>
       <pubDate>Mon, 20 Jan 2014 16:35:56 +0000</pubDate>
       
-      <guid>http://robinsonraju.info/categories/general/</guid>
+      <guid>https://robinsonraju.info/categories/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Book Notes</title>
-      <link>http://robinsonraju.info/categories/book-notes/</link>
+      <link>https://robinsonraju.info/categories/book-notes/</link>
       <pubDate>Sun, 02 Jul 2006 23:44:13 +0000</pubDate>
       
-      <guid>http://robinsonraju.info/categories/book-notes/</guid>
+      <guid>https://robinsonraju.info/categories/book-notes/</guid>
       <description></description>
     </item>
     
