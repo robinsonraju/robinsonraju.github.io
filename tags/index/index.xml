@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>index on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.github.io/tags/index/</link>
+    <link>http://robinsonraju.info/tags/index/</link>
     <description>Recent content in index on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="https://robinsonraju.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://robinsonraju.info/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Posts</title>
-      <link>https://robinsonraju.github.io/post/</link>
+      <link>http://robinsonraju.info/post/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.github.io/post/</guid>
+      <guid>http://robinsonraju.info/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project Management</title>
-      <link>https://robinsonraju.github.io/proj-mgmt/</link>
+      <link>http://robinsonraju.info/proj-mgmt/</link>
       <pubDate>Tue, 18 Nov 2014 23:15:14 +0000</pubDate>
       
-      <guid>https://robinsonraju.github.io/proj-mgmt/</guid>
+      <guid>http://robinsonraju.info/proj-mgmt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General Posts</title>
-      <link>https://robinsonraju.github.io/blog/</link>
+      <link>http://robinsonraju.info/blog/</link>
       <pubDate>Mon, 20 Jan 2014 16:35:56 +0000</pubDate>
       
-      <guid>https://robinsonraju.github.io/blog/</guid>
+      <guid>http://robinsonraju.info/blog/</guid>
       <description></description>
     </item>
     

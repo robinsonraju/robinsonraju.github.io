@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>privacy on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.github.io/tags/privacy/</link>
+    <link>http://robinsonraju.info/tags/privacy/</link>
     <description>Recent content in privacy on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 10 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.github.io/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://robinsonraju.info/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rich Content</title>
-      <link>https://robinsonraju.github.io/post/rich-content/</link>
+      <link>http://robinsonraju.info/post/rich-content/</link>
       <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.github.io/post/rich-content/</guid>
+      <guid>http://robinsonraju.info/post/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
     </item>
     
