@@ -19,5 +19,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Project Management</title>
+      <link>https://robinsonraju.github.io/proj-mgmt/</link>
+      <pubDate>Tue, 18 Nov 2014 23:15:14 +0000</pubDate>
+      
+      <guid>https://robinsonraju.github.io/proj-mgmt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General Posts</title>
+      <link>https://robinsonraju.github.io/blog/</link>
+      <pubDate>Mon, 20 Jan 2014 16:35:56 +0000</pubDate>
+      
+      <guid>https://robinsonraju.github.io/blog/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
