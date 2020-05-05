@@ -21,49 +21,48 @@
     </item>
     
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://robinsonraju.info/post/markdown-syntax/</link>
-      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      <title>Blink</title>
+      <link>https://robinsonraju.info/books/2016-12-15-blink/</link>
+      <pubDate>Thu, 15 Dec 2016 15:18:21 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/post/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <guid>https://robinsonraju.info/books/2016-12-15-blink/</guid>
+      <description>blink: The Power of Thinking Without Thinking by Malcom Gladwell</description>
     </item>
     
     <item>
-      <title>Placeholder Text</title>
-      <link>https://robinsonraju.info/post/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <title>The One Thing</title>
+      <link>https://robinsonraju.info/books/2016-11-26-the-one-thing/</link>
+      <pubDate>Sat, 26 Nov 2016 18:17:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/post/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
-pectora summo.&lt;/p&gt;</description>
+      <guid>https://robinsonraju.info/books/2016-11-26-the-one-thing/</guid>
+      <description>The ONE Thing: The Surprisingly Simple Truth Behind Extraordinary Result by Gary Keller with Jay Papapsan</description>
     </item>
     
     <item>
-      <title>Math Typesetting</title>
-      <link>https://robinsonraju.info/post/math-typesetting/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Functional Thinking</title>
+      <link>https://robinsonraju.info/books/2016-10-16-functionalthinking/</link>
+      <pubDate>Sun, 16 Oct 2016 09:27:14 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/post/math-typesetting/</guid>
-      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+      <guid>https://robinsonraju.info/books/2016-10-16-functionalthinking/</guid>
+      <description>For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift.</description>
     </item>
     
     <item>
-      <title>Emoji Support</title>
-      <link>https://robinsonraju.info/post/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <title>The Checklist Manifesto</title>
+      <link>https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/</link>
+      <pubDate>Sun, 06 Sep 2015 08:17:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/post/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+      <guid>https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Rich Content</title>
-      <link>https://robinsonraju.info/post/rich-content/</link>
-      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      <title>The End of Power</title>
+      <link>https://robinsonraju.info/books/2015-01-10-end-of-power/</link>
+      <pubDate>Sat, 10 Jan 2015 10:17:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/post/rich-content/</guid>
-      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+      <guid>https://robinsonraju.info/books/2015-01-10-end-of-power/</guid>
+      <description>Mark Zuckerberg posts a public challenge/goal for himself at the beginning of every year and in 2015 it was to read a new book every two weeks.</description>
     </item>
     
     <item>
@@ -148,6 +147,15 @@ pectora summo.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Introduction to Data Mining</title>
+      <link>https://robinsonraju.info/books/2014-02-16-datamining-tsk/</link>
+      <pubDate>Sun, 16 Feb 2014 18:17:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2014-02-16-datamining-tsk/</guid>
+      <description>&amp;ldquo;Introduction to Data Mining&amp;rdquo; by Pang-Ning Tan, Michael Steinbach and Vipin Kumar has been recommended to me as a great book to learn about Data Mining.</description>
+    </item>
+    
+    <item>
       <title>The Spinning Melody and the Gateway</title>
       <link>https://robinsonraju.info/blog/2014-01-20-the-spinning-melody-and-gateway/</link>
       <pubDate>Mon, 20 Jan 2014 16:35:56 +0000</pubDate>
@@ -226,6 +234,15 @@ pectora summo.&lt;/p&gt;</description>
       
       <guid>https://robinsonraju.info/blog/2007-04-19-the-blue-lenses/</guid>
       <description>A recent trip to Mount Shasta became more memorable due to me losing my glasses.</description>
+    </item>
+    
+    <item>
+      <title>7 Habits of Highly Effective People</title>
+      <link>https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/</link>
+      <pubDate>Sun, 10 Dec 2006 10:27:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/</guid>
+      <description>There are many books that when I think back on them, I have this lingering feeling that either due to reading quickly or not taking notes, I didn&amp;rsquo;t really take in the full essence of the book.</description>
     </item>
     
     <item>
@@ -343,6 +360,33 @@ pectora summo.&lt;/p&gt;</description>
       
       <guid>https://robinsonraju.info/blog/2006-01-23-all-charged-up-for-nothing/</guid>
       <description>Ever started your day in the office with a rude shock?</description>
+    </item>
+    
+    <item>
+      <title>My Cousin Rachel</title>
+      <link>https://robinsonraju.info/books/2005-06-17-my-cousin-rachel-daphne-du-maurier/</link>
+      <pubDate>Fri, 17 Jun 2005 12:17:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2005-06-17-my-cousin-rachel-daphne-du-maurier/</guid>
+      <description>6/17 It was Krishna’s wedding. Krishna, my closest pal during childhood; my first best friend (first best friend !</description>
+    </item>
+    
+    <item>
+      <title>Makar Chudra</title>
+      <link>https://robinsonraju.info/books/2005-06-15-makar-chudra-maxim-gorky/</link>
+      <pubDate>Wed, 15 Jun 2005 01:29:31 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2005-06-15-makar-chudra-maxim-gorky/</guid>
+      <description>The story starts with Makar , an aged gypsy conversing with the author.</description>
+    </item>
+    
+    <item>
+      <title>The King&#39;s General</title>
+      <link>https://robinsonraju.info/books/2005-06-11-kings-general-dumaurier/</link>
+      <pubDate>Sat, 11 Jun 2005 23:25:41 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2005-06-11-kings-general-dumaurier/</guid>
+      <description>The “The Kings General” is unlike any novel that I’ve read.</description>
     </item>
     
     <item>

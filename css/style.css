@@ -13,10 +13,6 @@ body {
   background-color: #fff;
 }
 
-table {
-  border: 0px ;
-}
-
 td {
   vertical-align: top;
   padding: 15px;
@@ -66,14 +62,24 @@ pre {
   margin-right: 5px;
 }
 
-a:link, a:visited {
+a:link {
   opacity: 1;
   -webkit-transition: all .15s linear;
   -moz-transition: all .15s linear;
   -o-transition: all .15s linear;
   -ms-transition: all .15s linear;
   transition: all .15s linear;
-  color: #424242;
+  color: #007aa5;
+}
+
+a:visited {
+  opacity: 1;
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  -o-transition: all .15s linear;
+  -ms-transition: all .15s linear;
+  transition: all .15s linear;
+  color: #915c83;
 }
 
 a:hover, a:active {
@@ -460,7 +466,7 @@ a:hover, a:active {
 }
 
 .list-with-title {
-  font-size: 14px;
+  font-size: 15px;
   margin: 30px;
   padding: 0;
 }
@@ -482,13 +488,17 @@ a:hover, a:active {
 }
 .list-with-title .listing .listing-post .post-time {
   float: right;
-  color: #C5C5C5;
+  color: #007aa5;
 }
 .list-with-title .listing .listing-post a {
-  color: #8F8F8F;
+  color: #007aa5;
 }
 .list-with-title .listing .listing-post a:hover {
   color: #4786D6;
+}
+
+.list-with-title .listing .listing-post a:visited {
+  color: #915c83;
 }
 
 /* share */
