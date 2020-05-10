@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>General</title>
+      <link>https://robinsonraju.info/categories/general/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/categories/general/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Book Notes</title>
@@ -17,15 +26,6 @@
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.info/categories/book-notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>General</title>
-      <link>https://robinsonraju.info/categories/general/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://robinsonraju.info/categories/general/</guid>
       <description></description>
     </item>
     

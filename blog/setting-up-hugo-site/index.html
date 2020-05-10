@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title> Robinson Raju | Setting up Hugo Site and Migrating from Jekyll </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Robinson Raju">
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://robinsonraju.info">
+    
+    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://robinsonraju.info/blog/setting-up-hugo-site/">
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture" style="width:127px;border-radius: 50%;">
+        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
+        <div class="description">
+          <p>Robinson Raju</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <a href="https://linkedin.com/in/robinsonraju" rel="me" >
+          <i class="fa fa-linkedin" aria-hidden="true" title="Linkedin"></i>
+        </a>
+        
+        <a href="https://github.com/robinsonraju" rel="me" >
+          <i class="fa fa-github" aria-hidden="true" title="GitHub"></i>
+        </a>
+        
+        <a href="https://instagram.com/luminous_infinitus" rel="me" >
+          <i class="fa fa-instagram" aria-hidden="true" title="instagram"></i>
+        </a>
+        
+        <a href="mailto:robinson.raju@gmail.com" rel="me" >
+          <i class="fa fa-envelope" aria-hidden="true" title="e-mail"></i>
+        </a>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Robinson Raju 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <div class="nav">
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+
+        
+        <li><a  href="/about/" title="About">About</a></li>
+
+        
+    </div>
+</div>
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+  <table>
+    <tr>
+      <td style='width:70%'>
+        <div class="post-content">
+
+          <div class="post-title">
+            <h3>Setting up Hugo Site and Migrating from Jekyll</h3>
+            
+              <h4></h4>
+              <div class="info">
+                <i class="fa fa-sun-o"></i><span class="date">Mon, May 4, 2020</span>
+                <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
+              </div>
+            
+          </div>
+        <p>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using <a href="https://ghost.org/">Ghost</a>. That made me think if I should explore moving from <a href="https://jekyllrb.com/">Jekyll</a> to something newer. New frameworks keep coming up and it probably is a good idea to shift to keep up. So googled for static website generators to see comparisons to products similar to Jekyll. Found that there are many. Hugo caught my attention and I&rsquo;d wanted to migrate my site to Hugo since then. All that was needed was couple of hours or so but I think I probably spent more time exploring through <a href="https://themes.gohugo.io/">Hugo Themes</a> for many days and months. My initial thought was to have a theme similar to the one that I had with Jekyll, which was the <a href="http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a> theme. What I had liked the most about the theme was the font, especially the italics version. But I didn&rsquo;t like banner images. Thinking of choosing the right image for an article itself seemed like a chore. I&rsquo;d rather prefer just typing text. My first choice was to go with a theme called <a href="https://themes.gohugo.io/hugo-theme-even/">Even</a>. It didn&rsquo;t quite workout the way I intended it to. I wanted to have a left-nav and also a starting page which was not a list of blog entries. After a couple of tries, used a theme called <a href="https://themes.gohugo.io/anatole/">Anatole</a>. It was super simple to set up and modify.</p>
+<h2 id="setting-up-the-hugo-site">Setting up the Hugo Site</h2>
+<p>The steps to set up are pretty simple like Jekyll. Hugo&rsquo;s <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> page covers the basics very clearly. I&rsquo;ll review what I did in addition to setting up the Hugo site.</p>
+<h3 id="1-install-hugo--create-a-new-site">1. Install hugo &amp; Create a new site</h3>
+<p>The first step is to install hugo. It is pretty simple on the Mac if you already have <code>brew</code> installed. Installation steps for other OSs are in the <a href="https://gohugo.io/getting-started/installing/">hugo-install</a> site.</p>
+<pre><code>brew install hugo
+</code></pre><p>You can use <code>hugo version</code> to check if the insallation was done.</p>
+<pre><code>hugo new site rr_site
+</code></pre><p>It is that simple. This creates a new site with all the default code that is needed. You can start the server by <code>hugo server -D</code> but it would be an empty site. In this step it differs from Jekyll where you get a ready made site right away. In order to view something meaningful, you need to configure your site with a theme.</p>
+<h3 id="2-configure-the-site-with-a-theme">2. Configure the site with a theme</h3>
+<pre><code>cd rr_site
+
+git init
+
+git submodule add https://github.com/lxndrblz/anatole.git themes/anatole
+
+cp themes/anatole/exampleSite/config.toml .
+</code></pre><p>This steps assumes that you already know about <code>git</code> and you have it installed.
+Change the directory to the directory of your site. Initialize it as a git repository. Add the theme as a <code>git submodule</code>. After this, copy the config.toml from the examplesite in the theme to the main folder. The other option is to append the theme using <code>echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml</code> to the default <code>config.toml</code> that was added when the site was created. But this option would be a bare config without much in it. In order to leverage the theme better, it is a good idea to copy the config.toml over and modify it.</p>
+<h3 id="3-add-content--start-the-server">3. Add Content &amp; Start the server</h3>
+<p>All the content for the site are expected to be in <code>content</code> folder as markdown files. For the first try, you can either add content by using hugo command <code>hugo new posts/my-first-post.md</code>, or copy sample content from the example site within the theme folder <code>./themes/anatole/exampleSite/content</code>.</p>
+<pre><code>hugo server -D
+</code></pre><p>This starts the server and you&rsquo;d be able to view it at <a href="http://localhost:1313">http://localhost:1313</a>.</p>
+<p>You can modify the content and the site will automatically rebuild. You can manually rebuild by simply typing <code>hugo</code> command on the command prompt.</p>
+<h2 id="migrate-content-from-jekyll">Migrate content from Jekyll</h2>
+<h3 id="1-content">1. Content</h3>
+<p>I initially thought I&rsquo;d just move all the files from <code>_posts</code> directory in Jekyll root folder to <code>content</code> folder in Hugo root folder. But that gave a lot of parsing errors. Got to know that Hugo support <code>toml</code> format where metadata is enclosed with 2 lines of +++ and has <!-- raw HTML omitted --> = &ldquo;<!-- raw HTML omitted -->&rdquo; structure and also <code>yaml</code> format where metadata is enclosed with 2 lines of &mdash; and has <!-- raw HTML omitted -->: <!-- raw HTML omitted --> structure. So it should support Jekyll&rsquo;s yaml structure automatically. One of the keys &lsquo;category&rsquo; was a String in my yaml file and in the new theme, it was an array. So changing that to array, fixed the issue and I was able to copy over all the content.</p>
+<h3 id="2-static-files---images-css">2. Static files - images, css</h3>
+<p>My Jekyll set up had specific folders named <code>css</code>, <code>js</code>, <code>img</code>, etc. under the <code>root</code> folder to store static data. In Hugo, it is all in <code>static</code> folder under the <code>root</code> folder .
+I copied over css from the theme folder to override. Also copied over some template HTMLs from theme to <code>layouts</code> folder.</p>
+<p><img src="/images/screenshot-layouts.png" alt="layouts folder"></p>
+<p><img src="/images/screenshot-static.png" alt="static folder"></p>
+<h2 id="deploying-to-github-pages">Deploying to Github pages</h2>
+<p>Github pages natively support Jekyll but not Hugo. So if I just replaced my github.io content with all the files from Hugo, it would not work at all.</p>
+
+        </div>
+        <div class="post-footer">
+          <div class="info">
+            
+<span class="separator"><a class="category" href="/categories/general/">General</a></span>
+
+            
+          </div>
+        </div>
+
+        
+      </td>
+      <td>
+        <div>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#setting-up-the-hugo-site">Setting up the Hugo Site</a>
+      <ul>
+        <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#1-install-hugo--create-a-new-site">1. Install hugo &amp; Create a new site</a></li>
+        <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#2-configure-the-site-with-a-theme">2. Configure the site with a theme</a></li>
+        <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#3-add-content--start-the-server">3. Add Content &amp; Start the server</a></li>
+      </ul>
+    </li>
+    <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#migrate-content-from-jekyll">Migrate content from Jekyll</a>
+      <ul>
+        <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#1-content">1. Content</a></li>
+        <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#2-static-files---images-css">2. Static files - images, css</a></li>
+      </ul>
+    </li>
+    <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#deploying-to-github-pages">Deploying to Github pages</a></li>
+  </ul>
+</nav>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery-appear.min.js"></script></html></body>
+
+</html>
