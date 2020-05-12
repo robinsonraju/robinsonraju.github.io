@@ -715,6 +715,86 @@ a.btn {
   padding-top: 50px;
 }
 
+/* Div table */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableCell {
+	border: 0px ;
+	display: table-cell;
+	padding: 3px 10px;
+  scroll-behavior: smooth;
+}
+
+/* 1. Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+    font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+    padding-left: 0;
+    border-left: 1px solid #efefef;
+    float: right;
+}
+
+.section-nav a {
+    text-decoration: none;
+    display: block;
+    padding: .125rem 0;
+    transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    color: #666;
+}
+
+/** Poor man's reset **/
+* {
+    box-sizing: border-box;
+}
+
+/** page layout **/
+main {
+    display: grid;
+    grid-template-columns: 1fr 15em;
+    max-width: 100em;
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+}
+
+.homeleft {
+  width: 40%;
+  float: left;
+  padding-right: 10px;
+}
+
+.homeright {
+  width: 60%;
+  float: right;
+}
+
+.wrap {
+  display: flex;
+}
 
 
 @media screen and (max-width: 960px) {
@@ -756,68 +836,22 @@ a.btn {
   .share {
     display: grid;
   }
-}
 
-/* Div table */
-.divTable{
-	display: table;
-	width: 100%;
-}
-.divTableRow {
-	display: table-row;
-}
-.divTableCell, .divTableHead {
-	border: 0px ;
-	display: table-cell;
-	padding: 3px 10px;
-  scroll-behavior: smooth;
-}
+  .wrap {
+  flex-direction: column-reverse;
+  }
+  .homeleft,
+  .homeright {
+    width: auto;
+  }
 
-/* 1. Enable smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
+  main {
+      display: block;
+      width: 100%;
+  }
 
-/* 2. Make nav sticky */
-main > nav {
-    position: sticky;
-    top: 2rem;
-    align-self: start;
-}
+  .section-nav {
+    display: none;
+  }
 
-/* 3. ScrollSpy active styles (see JS tab for activation) */
-.section-nav li.active > a {
-    font-weight: 500;
-}
-
-/* Sidebar Navigation */
-.section-nav {
-    padding-left: 0;
-    border-left: 1px solid #efefef;
-}
-
-.section-nav a {
-    text-decoration: none;
-    display: block;
-    padding: .125rem 0;
-    transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
-}
-
-.section-nav a:hover,
-.section-nav a:focus {
-    color: #666;
-}
-
-/** Poor man's reset **/
-* {
-    box-sizing: border-box;
-}
-
-/** page layout **/
-main {
-    display: grid;
-    grid-template-columns: 1fr 15em;
-    max-width: 100em;
-    width: 100%;
-    margin: 0 auto;
 }
