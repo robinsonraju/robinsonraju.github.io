@@ -6,7 +6,7 @@
     <description>Recent content on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 May 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>About</title>
       <link>https://robinsonraju.info/about/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.info/about/</guid>
       <description>Hi there! I&amp;rsquo;m Robinson. I also go by Robin or sometimes Rob.</description>
@@ -36,16 +36,6 @@
       
       <guid>https://robinsonraju.info/books/2020-04-28-great-mental-models/</guid>
       <description>I was introduced to The Knowledge Project by AJ last year during one of our 1-1 walks around the campus.</description>
-    </item>
-    
-    <item>
-      <title>Reading List</title>
-      <link>https://robinsonraju.info/blog/reading-list/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://robinsonraju.info/blog/reading-list/</guid>
-      <description>Last Updated - 05/02/2020
-List of books that I have read, started to read, heard a lot about and want to read.</description>
     </item>
     
     <item>
@@ -118,6 +108,16 @@ List of books that I have read, started to read, heard a lot about and want to r
       
       <guid>https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Reading List</title>
+      <link>https://robinsonraju.info/blog/reading-list/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/blog/reading-list/</guid>
+      <description>Last Updated - 05/02/2020
+List of books that I have read, started to read, heard a lot about and want to read.</description>
     </item>
     
     <item>

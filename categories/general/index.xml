@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://robinsonraju.info/about/</link>
+      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/about/</guid>
+      <description>Hi there! I&amp;rsquo;m Robinson. I also go by Robin or sometimes Rob.</description>
+    </item>
+    
+    <item>
       <title>Setting up Hugo Site and Migrating from Jekyll</title>
       <link>https://robinsonraju.info/blog/setting-up-hugo-site/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
@@ -23,7 +32,7 @@
     <item>
       <title>Reading List</title>
       <link>https://robinsonraju.info/blog/reading-list/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.info/blog/reading-list/</guid>
       <description>Last Updated - 05/02/2020

@@ -75,7 +75,7 @@
                     <h4></h4>
                     <div class="info">
                       <i class="fa fa-sun-o"></i><span class="date">Mon, May 4, 2020</span>
-                      <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">6-minute read</span>
                     </div>
                   
               </div>
@@ -111,8 +111,38 @@ Change the directory to the directory of your site. Initialize it as a git repos
 I copied over css from the theme folder to override. Also copied over some template HTMLs from theme to <code>layouts</code> folder.</p>
 <p><img src="/images/screenshot-layouts.png" alt="layouts folder"></p>
 <p><img src="/images/screenshot-static.png" alt="static folder"></p>
-<h2 id="deploying-to-github-pages">Deploying to Github pages</h2>
+<h2 id="3-deploying-to-github-pages">3. Deploying to Github pages</h2>
 <p>Github pages natively support Jekyll but not Hugo. So if I just replaced my github.io content with all the files from Hugo, it would not work at all.</p>
+<p>I already had my static page on <a href="https://github.com/robinsonraju/robinsonraju.github.io">https://github.com/robinsonraju/robinsonraju.github.io</a>. Github automatically builds Jekyll pages, and puts the static files into <code>_site</code> directory. So we need to do the same. i.e., do a build, generate static files and put them into <code>_site</code> directory in <code>&lt;user&gt;.github.io repo</code>. The first thing I did was to take a backup of the contents inside <code>&lt;user&gt;.github.io</code> repo and delete everything in it. After that, went through the process to generate static files with hugo.</p>
+<p>The process is pretty simple.</p>
+<ol>
+<li>Add the github repo as a submodule of the project repo.</li>
+</ol>
+<pre><code>git submodule add https://github.com/&lt;user&gt;/&lt;user&gt;.github.io.git &lt;user&gt;.github.io
+</code></pre><ol start="2">
+<li>Change config.toml and update the publish directory - <code>publishDir = &quot;&lt;user&gt;.github.io&quot;</code></li>
+</ol>
+<pre><code>baseURL = &quot;https://&lt;user&gt;.github.io/&quot;
+title = &quot;Website Title&quot;
+theme = &quot;anatole&quot;
+publishDir = &quot;&lt;user&gt;.github.io&quot;
+</code></pre><ol start="3">
+<li>Do a build using the command <code>hugo</code> in the command line. This updates <code>_site</code> folder in the publish directory which is our submodule.</li>
+</ol>
+<pre><code>hugo
+</code></pre><ol start="4">
+<li>Push the changes in the submodule to github.</li>
+</ol>
+<pre><code>cd &lt;user&gt;.github.io
+git add .
+git commit -m &quot;Initial commit of HTML generated from hugo.&quot;
+git push -u origin master
+</code></pre><p>A few other files that I had to copy over from my backup to the github.io repo were CNAME, google site verification html and favicon.ico. Otherwise, it worked as is.</p>
+<h2 id="4-customizations-optional">4. Customizations (Optional)</h2>
+<p>You might notice that the website (<a href="https://robinsonraju.info">https://robinsonraju.info</a>) is different from anatole theme. It has 3 columns, the left nav is not as wide, the font is different, etc.
+As I mentioned earlier, I copied over css from the theme folder to override and changed a bunch of them.
+I wanted to have a TOC on the posts and followed instructions from <a href="https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/">https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/</a> to achieve that. Copied over <code>single.html</code> from themes layouts into the local <code>layouts/_default</code> folder and modified it.</p>
+<p>That&rsquo;s it. All the best on your Hugo site.</p>
 
             </div>
             <div class="post-footer">
@@ -142,7 +172,8 @@ I copied over css from the theme folder to override. Also copied over some templ
         <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#2-static-files---images-css">2. Static files - images, css</a></li>
       </ul>
     </li>
-    <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#deploying-to-github-pages">Deploying to Github pages</a></li>
+    <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#3-deploying-to-github-pages">3. Deploying to Github pages</a></li>
+    <li><a href="https://robinsonraju.info/blog/setting-up-hugo-site/#4-customizations-optional">4. Customizations (Optional)</a></li>
   </ul>
 </nav>
             </div>
