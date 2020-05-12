@@ -726,7 +726,7 @@ a.btn {
 .divTableCell {
 	border: 0px ;
 	display: table-cell;
-	padding: 3px 10px;
+	padding: 0px 10px;
   scroll-behavior: smooth;
 }
 
