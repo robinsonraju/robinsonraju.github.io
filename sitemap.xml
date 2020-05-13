@@ -18,17 +18,17 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/blog/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/blog/2020-05-04-setting-up-hugo-site/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.info/categories/technical-notes/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,6 +93,11 @@
   </url>
   
   <url>
+    <loc>https://robinsonraju.info/blog/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://robinsonraju.info/blog/reading-list/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -114,11 +119,6 @@
   
   <url>
     <loc>https://robinsonraju.info/categories/project-management/</loc>
-    <lastmod>2014-11-18T23:15:14+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/tech-notes/</loc>
     <lastmod>2014-11-18T23:15:14+00:00</lastmod>
   </url>
   

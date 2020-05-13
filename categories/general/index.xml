@@ -13,10 +13,10 @@
     
     <item>
       <title>Setting up Hugo Site and Migrating from Jekyll</title>
-      <link>https://robinsonraju.info/blog/2020-05-04-setting-up-hugo-site/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/blog/2020-05-04-setting-up-hugo-site/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</guid>
       <description>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost.</description>
     </item>
     
