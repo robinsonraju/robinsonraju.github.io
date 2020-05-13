@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://robinsonraju.info/about/</loc>
-    <lastmod>2016-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,8 +23,18 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/blog/setting-up-hugo-site/</loc>
+    <loc>https://robinsonraju.info/blog/2020-05-04-setting-up-hugo-site/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/categories/technical-notes/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -43,17 +53,17 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/books/2019-12-31-21-lessons/</loc>
+    <loc>https://robinsonraju.info/books/2020-01-15-factfulness/</loc>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/books/2019-12-31-21lessons/</loc>
     <lastmod>2019-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/books/2019-12-31-factfulness/</loc>
-    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/books/of-love-and-other-demons/</loc>
+    <loc>https://robinsonraju.info/books/2019-10-15-of-love-and-other-demons/</loc>
     <lastmod>2019-10-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,11 +93,6 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/</loc>
-    <lastmod>2016-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://robinsonraju.info/blog/reading-list/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -103,7 +108,7 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-11-18-presenting-to-a-multi-level-audience/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-11-18-presenting-to-a-multi-level-audience/</loc>
     <lastmod>2014-11-18T23:15:14+00:00</lastmod>
   </url>
   
@@ -113,47 +118,47 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/</loc>
+    <loc>https://robinsonraju.info/tech-notes/</loc>
     <lastmod>2014-11-18T23:15:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-11-12-handing-off-a-project-to-a-client/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-11-12-handing-off-a-project-to-a-client/</loc>
     <lastmod>2014-11-12T06:25:44+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-11-03-five-technical-skills-are-employers-seeking/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-11-03-five-technical-skills-are-employers-seeking/</loc>
     <lastmod>2014-11-03T05:19:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-10-30-social-media-and-branding/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-10-30-social-media-and-branding/</loc>
     <lastmod>2014-10-30T20:12:19+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-10-19-linked-in-profiles-how-to-market-self/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-10-19-linked-in-profiles-how-to-market-self/</loc>
     <lastmod>2014-10-19T22:02:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-10-07-agile-task-list-what-does-done-mean/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-10-07-agile-task-list-what-does-done-mean/</loc>
     <lastmod>2014-10-07T21:10:13+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-09-21-agile-sprint-retrospective/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-09-21-agile-sprint-retrospective/</loc>
     <lastmod>2014-09-21T21:24:13+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-09-16-agile-and-backlog/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-09-16-agile-and-backlog/</loc>
     <lastmod>2014-09-16T19:34:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/proj-mgmt/2014-09-09-what-is-agile/</loc>
+    <loc>https://robinsonraju.info/tech-notes/2014-09-09-what-is-agile/</loc>
     <lastmod>2014-09-09T22:54:56+00:00</lastmod>
   </url>
   
@@ -293,12 +298,12 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/blog/about-not-wanting-to-buy-so-many-books/</loc>
+    <loc>https://robinsonraju.info/blog/2005-06-10-about-not-wanting-to-buy-so-many-books/</loc>
     <lastmod>2005-06-10T11:30:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/blog/here-cometh-time-to-blog/</loc>
+    <loc>https://robinsonraju.info/blog/2005-06-07-here-cometh-time-to-blog/</loc>
     <lastmod>2005-06-07T03:16:41+00:00</lastmod>
   </url>
   
