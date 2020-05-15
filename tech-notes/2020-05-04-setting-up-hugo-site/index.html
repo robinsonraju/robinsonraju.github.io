@@ -79,69 +79,66 @@
                     </div>
                   
               </div>
-              <p>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using <a href="https://ghost.org/">Ghost</a>. That made me think if I should explore moving from <a href="https://jekyllrb.com/">Jekyll</a> to something newer. New frameworks keep coming up and it probably is a good idea to shift to keep up. So googled for static website generators to see comparisons to products similar to Jekyll. Found that there are many. Hugo caught my attention and I&rsquo;d wanted to migrate my site to Hugo since then. All that was needed was couple of hours or so but I think I probably spent more time exploring through <a href="https://themes.gohugo.io/">Hugo Themes</a> for many days and months. My initial thought was to have a theme similar to the one that I had with Jekyll, which was the <a href="http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a> theme. What I had liked the most about the theme was the font, especially the italics version. But I didn&rsquo;t like banner images. Thinking of choosing the right image for an article itself seemed like a chore. I&rsquo;d rather prefer just typing text. My first choice was to go with a theme called <a href="https://themes.gohugo.io/hugo-theme-even/">Even</a>. It didn&rsquo;t quite workout the way I intended it to. I wanted to have a left-nav and also a starting page which was not a list of blog entries. After a couple of tries, used a theme called <a href="https://themes.gohugo.io/anatole/">Anatole</a>. It was super simple to set up and modify.</p>
+              <p>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using <a href="https://ghost.org/">Ghost</a>. That made me think if I should explore moving from <a href="https://jekyllrb.com/">Jekyll</a> to something newer. New frameworks keep coming up and it probably is a good idea to shift to keep up. So googled for static website generators to see comparisons to products similar to Jekyll. Found that there are many. Hugo caught my attention and I had wanted to migrate my site to Hugo since then. All that was needed was couple of hours or so but I think I probably spent more time exploring through <a href="https://themes.gohugo.io/">Hugo Themes</a> for many days and months. My initial thought was to have a theme similar to the one that I had with Jekyll, which was the <a href="http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a> theme. What I had liked the most about the theme was the font, especially the italics version. But I didn&rsquo;t like banner images. Thinking of choosing the right image for an article itself seemed like a chore. I&rsquo;d rather prefer just typing text. My first choice was to go with a theme called <a href="https://themes.gohugo.io/hugo-theme-even/">Even</a>. It didn&rsquo;t quite workout the way I intended it to. I wanted to have a left-nav and also a starting page which was not a list of blog entries. After a couple of tries, used a theme called <a href="https://themes.gohugo.io/anatole/">Anatole</a>. It was super simple to set up and modify.</p>
 <h2 id="setting-up-the-hugo-site">Setting up the Hugo Site</h2>
 <p>The steps to set up are pretty simple like Jekyll. Hugo&rsquo;s <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> page covers the basics very clearly. I&rsquo;ll review what I did in addition to setting up the Hugo site.</p>
 <h3 id="1-install-hugo--create-a-new-site">1. Install hugo &amp; Create a new site</h3>
-<p>The first step is to install hugo. It is pretty simple on the Mac if you already have <code>brew</code> installed. Installation steps for other OSs are in the <a href="https://gohugo.io/getting-started/installing/">hugo-install</a> site.</p>
-<pre><code>brew install hugo
-</code></pre><p>You can use <code>hugo version</code> to check if the insallation was done.</p>
-<pre><code>hugo new site rr_site
-</code></pre><p>It is that simple. This creates a new site with all the default code that is needed. You can start the server by <code>hugo server -D</code> but it would be an empty site. In this step it differs from Jekyll where you get a ready made site right away. In order to view something meaningful, you need to configure your site with a theme.</p>
+<p>The first step is to install hugo. It is pretty simple on the Mac if you already have <strong><code>brew</code></strong> installed. Installation steps for other OSs are in the <a href="https://gohugo.io/getting-started/installing/">hugo-install</a> site.</p>
+<p><strong><code>brew install hugo</code></strong></p>
+<p>You can use <strong><code>hugo version</code></strong> to check if the insallation was done.</p>
+<p><strong><code>hugo new site rr_site</code></strong></p>
+<p>It is that simple. This creates a new site with all the default code that is needed. You can start the server by <strong><code>hugo server -D</code></strong> but it would be an empty site. In this step it differs from Jekyll where you get a ready made site right away. In order to view something meaningful, you need to configure your site with a theme.</p>
 <h3 id="2-configure-the-site-with-a-theme">2. Configure the site with a theme</h3>
-<pre><code>cd rr_site
-
-git init
-
-git submodule add https://github.com/lxndrblz/anatole.git themes/anatole
-
-cp themes/anatole/exampleSite/config.toml .
-</code></pre><p>This steps assumes that you already know about <code>git</code> and you have it installed.
-Change the directory to the directory of your site. Initialize it as a git repository. Add the theme as a <code>git submodule</code>. After this, copy the config.toml from the examplesite in the theme to the main folder. The other option is to append the theme using <code>echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml</code> to the default <code>config.toml</code> that was added when the site was created. But this option would be a bare config without much in it. In order to leverage the theme better, it is a good idea to copy the config.toml over and modify it.</p>
+<p><strong><code>cd rr_site</code></strong></p>
+<p><strong><code>git init</code></strong></p>
+<p><strong><code>git submodule add https://github.com/lxndrblz/anatole.git themes/anatole</code></strong></p>
+<p><strong><code>cp themes/anatole/exampleSite/config.toml .</code></strong></p>
+<p>This steps assumes that you already know about <strong><code>git</code></strong> and you have it installed.
+Change the directory to the directory of your site. Initialize it as a git repository. Add the theme as a <strong><code>git submodule</code></strong>. After this, copy the config.toml from the examplesite in the theme to the main folder. The other option is to append the theme using <strong><code>echo 'theme = &quot;anatole&quot;' &gt;&gt; config.toml</code></strong> to the default <strong><code>config.toml</code></strong> that was added when the site was created. But this option would be a bare config without much in it. In order to leverage the theme better, it is a good idea to copy the config.toml over and modify it.</p>
 <h3 id="3-add-content--start-the-server">3. Add Content &amp; Start the server</h3>
-<p>All the content for the site are expected to be in <code>content</code> folder as markdown files. For the first try, you can either add content by using hugo command <code>hugo new posts/my-first-post.md</code>, or copy sample content from the example site within the theme folder <code>./themes/anatole/exampleSite/content</code>.</p>
-<pre><code>hugo server -D
-</code></pre><p>This starts the server and you&rsquo;d be able to view it at <a href="http://localhost:1313">http://localhost:1313</a>.</p>
-<p>You can modify the content and the site will automatically rebuild. You can manually rebuild by simply typing <code>hugo</code> command on the command prompt.</p>
+<p>All the content for the site are expected to be in <strong><code>content</code></strong> folder as markdown files. For the first try, you can either add content by using hugo command <strong><code>hugo new posts/my-first-post.md</code></strong>, or copy sample content from the example site within the theme folder <strong><code>./themes/anatole/exampleSite/content</code></strong>.</p>
+<p><strong><code>hugo server -D</code></strong></p>
+<p>This starts the server and you&rsquo;d be able to view it at <a href="http://localhost:1313">http://localhost:1313</a>.</p>
+<p>You can modify the content and the site will automatically rebuild. You can manually rebuild by simply typing <strong><code>hugo</code></strong> command on the command prompt.</p>
 <h2 id="migrate-content-from-jekyll">Migrate content from Jekyll</h2>
 <h3 id="1-content">1. Content</h3>
-<p>I initially thought I&rsquo;d just move all the files from <code>_posts</code> directory in Jekyll root folder to <code>content</code> folder in Hugo root folder. But that gave a lot of parsing errors. Got to know that Hugo support <code>toml</code> format where metadata is enclosed with 2 lines of +++ and has <!-- raw HTML omitted --> = &ldquo;<!-- raw HTML omitted -->&rdquo; structure and also <code>yaml</code> format where metadata is enclosed with 2 lines of &mdash; and has <!-- raw HTML omitted -->: <!-- raw HTML omitted --> structure. So it should support Jekyll&rsquo;s yaml structure automatically. One of the keys &lsquo;category&rsquo; was a String in my yaml file and in the new theme, it was an array. So changing that to array, fixed the issue and I was able to copy over all the content.</p>
+<p>I initially thought I&rsquo;d just move all the files from <strong><code>_posts</code></strong> directory in Jekyll root folder to <strong><code>content</code></strong> folder in Hugo root folder. But that gave a lot of parsing errors. Got to know that Hugo support <strong><code>TOML</code></strong> format where metadata is enclosed with 2 lines of +++ and has <em>key = &ldquo;<!-- raw HTML omitted -->&rdquo;</em> structure and also <strong><code>YAML</code></strong> format where metadata is enclosed with 2 lines of &mdash; and has <em>key : value</em> structure. So it should support Jekyll&rsquo;s YAML structure automatically. One of the keys &lsquo;category&rsquo; was a String in my yaml file and in the new theme, it was an array. So changing that to array, fixed the issue and I was able to copy over all the content.</p>
 <h3 id="2-static-files---images-css">2. Static files - images, css</h3>
-<p>My Jekyll set up had specific folders named <code>css</code>, <code>js</code>, <code>img</code>, etc. under the <code>root</code> folder to store static data. In Hugo, it is all in <code>static</code> folder under the <code>root</code> folder .
-I copied over css from the theme folder to override. Also copied over some template HTMLs from theme to <code>layouts</code> folder.</p>
+<p>My Jekyll set up had specific folders named <strong><code>css, js, img</code></strong>, etc. under the <strong><code>root</code></strong> folder to store static data. In Hugo, it is all in <strong><code>static</code></strong> folder under the <strong><code>root</code></strong> folder .
+I copied over css from the theme folder to override. Also copied over some template HTMLs from theme to <strong><code>layouts</code></strong> folder.</p>
 <p><img src="/images/screenshot-layouts.png" alt="layouts folder"></p>
 <p><img src="/images/screenshot-static.png" alt="static folder"></p>
 <h2 id="3-deploying-to-github-pages">3. Deploying to Github pages</h2>
 <p>Github pages natively support Jekyll but not Hugo. So if I just replaced my github.io content with all the files from Hugo, it would not work at all.</p>
-<p>I already had my static page on <a href="https://github.com/robinsonraju/robinsonraju.github.io">https://github.com/robinsonraju/robinsonraju.github.io</a>. Github automatically builds Jekyll pages, and puts the static files into <code>_site</code> directory. So we need to do the same. i.e., do a build, generate static files and put them into <code>_site</code> directory in <code>&lt;user&gt;.github.io repo</code>. The first thing I did was to take a backup of the contents inside <code>&lt;user&gt;.github.io</code> repo and delete everything in it. After that, went through the process to generate static files with hugo.</p>
+<p>I already had my static page on <a href="https://github.com/robinsonraju/robinsonraju.github.io">https://github.com/robinsonraju/robinsonraju.github.io</a>. Github automatically builds Jekyll pages, and puts the static files into <strong><code>_site</code></strong> directory. So we need to do the same. i.e., do a build, generate static files and put them into <strong><code>_site</code></strong> directory in <strong><code>&lt;user&gt;.github.io repo</code></strong>. The first thing I did was to take a backup of the contents inside <strong><code>&lt;user&gt;.github.io</code></strong> repo and delete everything in it. After that, went through the process to generate static files with hugo.</p>
 <p>The process is pretty simple.</p>
 <ol>
 <li>Add the github repo as a submodule of the project repo.</li>
 </ol>
-<pre><code>git submodule add https://github.com/&lt;user&gt;/&lt;user&gt;.github.io.git &lt;user&gt;.github.io
-</code></pre><ol start="2">
-<li>Change config.toml and update the publish directory - <code>publishDir = &quot;&lt;user&gt;.github.io&quot;</code></li>
+<p><strong><code>git submodule add https://github.com/&lt;user&gt;/&lt;user&gt;.github.io.git &lt;user&gt;.github.io</code></strong></p>
+<ol start="2">
+<li>Change config.toml and update the publish directory - <strong><code>publishDir = &quot;&lt;user&gt;.github.io&quot;</code></strong></li>
 </ol>
-<pre><code>baseURL = &quot;https://&lt;user&gt;.github.io/&quot;
-title = &quot;Website Title&quot;
-theme = &quot;anatole&quot;
-publishDir = &quot;&lt;user&gt;.github.io&quot;
-</code></pre><ol start="3">
-<li>Do a build using the command <code>hugo</code> in the command line. This updates <code>_site</code> folder in the publish directory which is our submodule.</li>
+<p><strong><code>baseURL = &quot;https://&lt;user&gt;.github.io/&quot;</code></strong></p>
+<p><strong><code>title = &quot;Website Title&quot;</code></strong></p>
+<p><strong><code>theme = &quot;anatole&quot;</code></strong></p>
+<p><strong><code>publishDir = &quot;&lt;user&gt;.github.io&quot;</code></strong></p>
+<ol start="3">
+<li>Do a build using the command <strong><code>hugo</code></strong> in the command line. This updates <strong><code>_site</code></strong> folder in the publish directory which is our submodule.</li>
 </ol>
-<pre><code>hugo
-</code></pre><ol start="4">
+<p><strong><code>hugo</code></strong></p>
+<ol start="4">
 <li>Push the changes in the submodule to github.</li>
 </ol>
-<pre><code>cd &lt;user&gt;.github.io
-git add .
-git commit -m &quot;Initial commit of HTML generated from hugo.&quot;
-git push -u origin master
-</code></pre><p>A few other files that I had to copy over from my backup to the github.io repo were CNAME, google site verification html and favicon.ico. Otherwise, it worked as is.</p>
+<p><strong><code>cd &lt;user&gt;.github.io</code></strong></p>
+<p><strong><code>git add .</code></strong></p>
+<p><strong><code>git commit -m &quot;Initial commit of HTML generated from hugo.&quot;</code></strong></p>
+<p><strong><code>git push -u origin master</code></strong></p>
+<p>A few other files that I had to copy over from my backup to the github.io repo were CNAME, google site verification html and favicon.ico. Otherwise, it worked as is.</p>
 <h2 id="4-customizations-optional">4. Customizations (Optional)</h2>
 <p>You might notice that the website (<a href="https://robinsonraju.info">https://robinsonraju.info</a>) is different from anatole theme. It has 3 columns, the left nav is not as wide, the font is different, etc.
 As I mentioned earlier, I copied over css from the theme folder to override and changed a bunch of them.
-I wanted to have a TOC on the posts and followed instructions from <a href="https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/">https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/</a> to achieve that. Copied over <code>single.html</code> from themes layouts into the local <code>layouts/_default</code> folder and modified it.</p>
+I wanted to have a TOC on the posts and followed instructions from <a href="https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/">https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/</a> to achieve that. Copied over <strong><code>single.html</code></strong> from themes layouts into the local <strong><code>layouts/_default</code></strong> folder and modified it.</p>
 <p>That&rsquo;s it. All the best on your Hugo site.</p>
 
             </div>
