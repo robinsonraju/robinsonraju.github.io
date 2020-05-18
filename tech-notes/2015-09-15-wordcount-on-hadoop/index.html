@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title> Robinson Raju | Running Hadoop WordCount example </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Robinson Raju">
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.css" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://robinsonraju.info">
+    
+    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/">
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture" style="width:127px;border-radius: 50%;">
+        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
+        <div class="description">
+          <p>Robinson Raju</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <a href="https://linkedin.com/in/robinsonraju" rel="me" >
+          <i class="fa fa-linkedin" aria-hidden="true" title="Linkedin"></i>
+        </a>
+        
+        <a href="https://github.com/robinsonraju" rel="me" >
+          <i class="fa fa-github" aria-hidden="true" title="GitHub"></i>
+        </a>
+        
+        <a href="https://instagram.com/luminous_infinitus" rel="me" >
+          <i class="fa fa-instagram" aria-hidden="true" title="instagram"></i>
+        </a>
+        
+        <a href="mailto:robinson.raju@gmail.com" rel="me" >
+          <i class="fa fa-envelope" aria-hidden="true" title="e-mail"></i>
+        </a>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Robinson Raju 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <div class="nav">
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+
+        
+        <li><a  href="/about/" title="About">About</a></li>
+
+        
+    </div>
+</div>
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <main>
+          <div class="divTableCell" >
+            <div class="post-content">
+              <div class="post-title">
+                <h3>Running Hadoop WordCount example</h3>
+                  
+                    <h4></h4>
+                    <div class="info">
+                      <i class="fa fa-sun-o"></i><span class="date">Tue, Sep 15, 2015</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">2-minute read</span>
+                    </div>
+                  
+              </div>
+              <p>Here is a small example to run Wordcount program on hadoop. I&rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal..etc. MapR Sandbox doesnt come with GUI, so you&rsquo;d have to ssh into the machine to work on it. You can open <a href="https://localhost:8443">https://localhost:8443</a> in a browser to see Hue to see FileBrowser, DataBrowser, JobBrowser ..etc.</p>
+<h2 id="using-cloudera-vm">Using Cloudera VM</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Download and install <a href="https://www.virtualbox.org/wiki/Downloads"><strong>Virtualbox</strong></a>.</li>
+<li>Download <a href="http://cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html"><strong>Cloudera VM</strong></a> and import into VirtualBox.</li>
+</ul>
+<p>In the cloudera VM, open a terminal and go to the directory that contains hadoop library.</p>
+<pre><code>cd /usr/lib/hadoop-mapreduce/
+</code></pre><h3 id="create-sample-files">Create Sample files</h3>
+<pre><code>echo &quot;Hello world in HDFS&quot; &gt; /home/cloudera/testfile1
+</code></pre><pre><code>echo &quot;Hadoop word count example in HDFS&quot; &gt; /home/cloudera/testfile2
+</code></pre><h3 id="create-directory-for-the-input-files-on-the-hdfs-file-system-type">Create directory for the input files on the HDFS file system (type)</h3>
+<pre><code>hdfs dfs -mkdir /user/cloudera/input
+</code></pre><h3 id="copy-the-files-from-local-filesystem-to-the-hdfs-filesystem">Copy the files from local filesystem to the HDFS filesystem</h3>
+<pre><code>hdfs dfs -put /home/cloudera/testfile1 /user/cloudera/input
+</code></pre><pre><code>hdfs dfs -put /home/cloudera/testfile2 /user/cloudera/input
+</code></pre><h3 id="run-the-hadoop-wordcount-example">Run the Hadoop WordCount example</h3>
+<pre><code>hadoop jar hadoop-mapreduce-examples.jar wordcount /user/cloudera/input /user/cloudera/output
+</code></pre><h3 id="after-completion-view-the-output-directory">After completion view the output directory</h3>
+<pre><code>hdfs dfs -ls /user/cloudera/output
+</code></pre><h3 id="check-the-output-file-to-see-the-results">Check the output file to see the results</h3>
+<pre><code>hdfs dfs -cat /user/cloudera/output/part-r-00000
+</code></pre><p><strong>Output</strong></p>
+<blockquote>
+<!-- raw HTML omitted -->
+</blockquote>
+<hr>
+<h2 id="using-map-r-sandbox">Using Map-R Sandbox</h2>
+<h3 id="prerequisites-1">Prerequisites</h3>
+<ul>
+<li>Download and install <a href="https://www.virtualbox.org/wiki/Downloads"><strong>Virtualbox</strong></a>.</li>
+<li>Download <a href="https://www.mapr.com/products/mapr-sandbox-hadoop/download"><strong>MapR Sandbox</strong></a> and install into VirtualBox.</li>
+</ul>
+<h3 id="ssh-into-mapr-sandbox-vm">ssh into MapR Sandbox VM</h3>
+<pre><code>ssh –p 2222 user01@localhost
+</code></pre><h3 id="create-sample-files-1">Create Sample files</h3>
+<pre><code>mkdir input
+</code></pre><pre><code>cd input
+</code></pre><pre><code>echo &quot;Hello world in HDFS&quot; &gt; testfile1
+</code></pre><pre><code>echo &quot;Hadoop word count example in HDFS&quot; &gt; testfile2
+</code></pre><h3 id="run-the-hadoop-wordcount-example-1">Run the Hadoop WordCount example</h3>
+<pre><code>hadoop jar /opt/mapr/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.0-mapr-1506.jar wordcount /user/user01/input /user/user01/output
+</code></pre><h3 id="after-completion-view-the-output-directory-1">After completion, view the output directory</h3>
+<pre><code>hadoop fs -ls /user/user01/output
+</code></pre><h3 id="check-the-output-file-to-see-the-results-1">Check the output file to see the results</h3>
+<pre><code>hadoop fs -cat /user/user01/output/part-r-00000
+</code></pre><p><strong>Output</strong></p>
+<blockquote>
+<!-- raw HTML omitted -->
+</blockquote>
+<hr>
+<p><em>Header Image - &ldquo;<strong>n1atsigns2 (Network graph of people on twitter connecting to the topics of Big Data, infochimps or Hadoop)</strong>&rdquo; by Philip Kromer via <a href="https://flic.kr/p/8R7PyB">Flickr</a>. Inverterd colors using Photoshop</em></p>
+
+            </div>
+            <div class="post-footer">
+              <div class="info">
+                
+<span class="separator"><a class="category" href="/categories/technical-notes/">Technical Notes</a></span>
+
+                
+              </div>
+            </div>
+            
+          </div>
+          <nav class="divTableCell section-nav">
+            <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#using-cloudera-vm">Using Cloudera VM</a>
+      <ul>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#prerequisites">Prerequisites</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#create-sample-files">Create Sample files</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#create-directory-for-the-input-files-on-the-hdfs-file-system-type">Create directory for the input files on the HDFS file system (type)</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#copy-the-files-from-local-filesystem-to-the-hdfs-filesystem">Copy the files from local filesystem to the HDFS filesystem</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#run-the-hadoop-wordcount-example">Run the Hadoop WordCount example</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#after-completion-view-the-output-directory">After completion view the output directory</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#check-the-output-file-to-see-the-results">Check the output file to see the results</a></li>
+      </ul>
+    </li>
+    <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#using-map-r-sandbox">Using Map-R Sandbox</a>
+      <ul>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#prerequisites-1">Prerequisites</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#ssh-into-mapr-sandbox-vm">ssh into MapR Sandbox VM</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#create-sample-files-1">Create Sample files</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#run-the-hadoop-wordcount-example-1">Run the Hadoop WordCount example</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#after-completion-view-the-output-directory-1">After completion, view the output directory</a></li>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/#check-the-output-file-to-see-the-results-1">Check the output file to see the results</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </nav>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery-appear.min.js"></script><script type="text/javascript" src="https://robinsonraju.info/js/medium-zoom.min.js"></script>
+<script>
+	mediumZoom(document.querySelectorAll('div.post-content img'), {
+        background: '#fff'
+    });
+</script>
+<link rel="stylesheet" href="https://robinsonraju.info/css/medium-zoom.css" type="text/css">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

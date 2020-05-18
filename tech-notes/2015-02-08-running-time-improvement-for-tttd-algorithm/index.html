@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <title> Robinson Raju | Delivering a project and presenting to a multi-level audience </title>
+    <title> Robinson Raju | A Running Time Improvement for TTTD Algorithm </title>
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="Robinson Raju">
     <link rel="stylesheet" href="https://robinsonraju.info/css/style.css" type="text/css">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
 
-    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2014-11-18-presenting-to-a-multi-level-audience/">
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/">
 </head><body><div class="sidebar animated fadeInDown">
     <div class="logo-title">
       <div class="title">
@@ -70,40 +70,32 @@
           <div class="divTableCell" >
             <div class="post-content">
               <div class="post-title">
-                <h3>Delivering a project and presenting to a multi-level audience</h3>
+                <h3>A Running Time Improvement for TTTD Algorithm</h3>
                   
                     <h4></h4>
                     <div class="info">
-                      <i class="fa fa-sun-o"></i><span class="date">Tue, Nov 18, 2014</span>
-                      <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+                      <i class="fa fa-sun-o"></i><span class="date">Sun, Feb 8, 2015</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">1-minute read</span>
                     </div>
                   
               </div>
-              <p>A project delivery is a culmination of the team’s effort after a series of sprints. After a several sequences of twists and turns or crests and troughs of requirement/direction changes, the team is finally at the juncture where it has produced a product that the client wanted. The client has been involved in the process from the beginning, so nothing should be a surprise. Project delivery is also an opportunity to showcase the product to a broader audience than the immediate client that the team has been working on. Now comes the question of presenting the product to an audience that is not aware of the product yet. Worse, the audience may be very diverse in their technical or domain knowledge. How do we go about creating a presentation that appeals to all.</p>
-<p>A common rule of thumb for presentations is to go with the least common denominator in the audience who is significant enough. If the person with the least technical knowledge understands your framework, it is a win. There is always more hardwork in creating a simple presentation than a complex one. One usually starts by creating a presentation with all details in it and then stripping it slowly of the complexities layer by layer, in the end leaving only the most vital information that could be understood by all. After all, we’re investing time and energy, the audience is expecting to get something and if we disappoint, the ramifications could be disastrous. The audience may never come back even if the next product is stellar.</p>
+              <p><strong>Paper reviewed</strong>:</p>
+<blockquote>
+<p>Moh, T., &amp; Chang, B. (2010). A Running Time Improvement for the Two Thresholds Two Divisors Algorithm. ACM SE ’10 Proceedings of the 48th Annual Southeast Regional Conference.</p>
+</blockquote>
+<p>Last week I spent some time understanding hash-based data deduplication systems. It felt great to revisit Rabin-Karp Algorithm for string matching. This algorithm was my focus in CS 255 and I had implemented it using Monte Carlo and Las Vegas approaches (A Monte Carlo algorithm has a guaranteed completion time but fails to output a correct answer with a small probability, A Las Vegas algorithm has guaranteed correctness but fails to complete with a small probability).
+Before trying to dedupe data, it needs to be chunked. There are many algorithms to do that. The Basic Sliding Window (BSW) algorithm is one of the earliest and widely used. The Two Thresholds Two Divisors (TTTD) algorithm is an improvement over this.
+This paper proposes an improvement over the TTTD algorithm.</p>
+<p>I still need to find a better system to embed a presentation in a static page. For now using issuu.</p>
 <!-- raw HTML omitted -->
-<p>The objective is very simple – grab audience’s attention and keep it.</p>
-<p>As the picture above shows, audience will naturally lose interest with time. The key is to find out what interested the audience in the beginning – is it curiosity, is it a joke that you told in the beginning ? Each audience is unique, so you would have to determine what works for a specific audience at that time. Whatever works, use that technique often so that you can bring the audience to a higher attention span than they normally would be in.</p>
-<p>Also, always remember to keep the presentation simple and easy to remember.</p>
-<p>If you’re successful, the audience will be engaged, they would have a good opinion about the product and also good knowledge about the product to make the right choices.</p>
-<h2 id="references">References:</h2>
-<ul>
-<li>
-<p>Reimold, P., &amp; Reimold, C. (2003, October). IEEE-USA Today’s Engineer. “<strong>On the Road to a Great Presentation —
-Step One: Care About Your Audience</strong>”, Retrieved November 20, 2014, from <a href="http://www.todaysengineer.org/2003/Oct/presentations-p1.asp">http://www.todaysengineer.org/2003/Oct/presentations-p1.asp</a></p>
-</li>
-<li>
-<p>Reimold, P., &amp; Reimold, C. (2004, September). IEEE-USA Today’s Engineer. “<strong>Many Audiences, One Formula for Success</strong>”, Retrieved November 20, 2014, from <a href="http://www.todaysengineer.org/2004/Aug/presentations.asp">http://www.todaysengineer.org/2004/Aug/presentations.asp</a></p>
-</li>
-</ul>
 <hr>
-<p><em>Header Image - &ldquo;<strong>Election night crowd, Wellington, 1931</strong>&rdquo; from National Library NZ via <a href="https://flic.kr/p/64VEva">Flickr</a></em></p>
+<p><em>Header Image - &ldquo;<strong>Curiousity</strong>&rdquo; by Thomas Hawk via <a href="https://flic.kr/p/dSuxV1">Flickr</a></em></p>
 
             </div>
             <div class="post-footer">
               <div class="info">
                 
-<span class="separator"><a class="category" href="/categories/project-management/">Project Management</a><a class="category" href="/categories/technical-notes/">Technical Notes</a></span>
+<span class="separator"><a class="category" href="/categories/technical-notes/">Technical Notes</a></span>
 
                 
               </div>
@@ -112,11 +104,7 @@ Step One: Care About Your Audience</strong>”, Retrieved November 20, 2014, fro
           </div>
           <nav class="divTableCell section-nav">
             <div>
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="https://robinsonraju.info/tech-notes/2014-11-18-presenting-to-a-multi-level-audience/#references">References:</a></li>
-  </ul>
-</nav>
+              <nav id="TableOfContents"></nav>
             </div>
           </nav>
         </main>

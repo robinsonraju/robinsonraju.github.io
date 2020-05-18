@@ -21,6 +21,82 @@
     </item>
     
     <item>
+      <title>A Simple MapReduce Job for Iris Dataset</title>
+      <link>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</link>
+      <pubDate>Wed, 30 Sep 2015 22:50:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</guid>
+      <description>This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.</description>
+    </item>
+    
+    <item>
+      <title>Writing a simple Mapper and Reducer for Wordcount</title>
+      <link>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</link>
+      <pubDate>Mon, 21 Sep 2015 23:50:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</guid>
+      <description>The last blog was about how to run wordcount using the &amp;ldquo;hadoop-mapreduce-examples.</description>
+    </item>
+    
+    <item>
+      <title>Running Hadoop WordCount example</title>
+      <link>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</link>
+      <pubDate>Tue, 15 Sep 2015 22:50:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</guid>
+      <description>Here is a small example to run Wordcount program on hadoop.</description>
+    </item>
+    
+    <item>
+      <title>Data De-Duplication Performance With Multi-Threaded FBC Algorithm</title>
+      <link>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</link>
+      <pubDate>Sun, 01 Mar 2015 23:13:21 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</guid>
+      <description>Paper reviewed:
+ Jiang, X., Zhao, J., &amp;amp; Zheng, J. (2014).</description>
+    </item>
+    
+    <item>
+      <title>Distributional Stability of Chunk Sizes in Data Chunking</title>
+      <link>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</link>
+      <pubDate>Sun, 22 Feb 2015 09:13:21 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</guid>
+      <description>Paper reviewed:
+ Zhanjie, W., &amp;amp; Lang, S. (2013). Research on Distributional Stability of Chunk Sizes in Data Chunking.</description>
+    </item>
+    
+    <item>
+      <title>Winnowing: local algorithms for document fingerprinting</title>
+      <link>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</link>
+      <pubDate>Sun, 15 Feb 2015 01:23:11 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</guid>
+      <description>Paper reviewed:
+ Schleimer, S., Wilkerson, D. S., and Aiken, A.</description>
+    </item>
+    
+    <item>
+      <title>A Running Time Improvement for TTTD Algorithm</title>
+      <link>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</link>
+      <pubDate>Sun, 08 Feb 2015 11:33:21 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</guid>
+      <description>Paper reviewed:
+ Moh, T., &amp;amp; Chang, B. (2010). A Running Time Improvement for the Two Thresholds Two Divisors Algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Let sleeping files lie: Pattern matching in Z-compressed file</title>
+      <link>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</link>
+      <pubDate>Sun, 01 Feb 2015 04:35:12 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</guid>
+      <description>This is a review of the paper on Pattern matching in Z-compressed files.</description>
+    </item>
+    
+    <item>
       <title>Delivering a project and presenting to a multi-level audience</title>
       <link>https://robinsonraju.info/tech-notes/2014-11-18-presenting-to-a-multi-level-audience/</link>
       <pubDate>Tue, 18 Nov 2014 23:15:14 +0000</pubDate>

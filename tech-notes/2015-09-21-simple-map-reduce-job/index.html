@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title> Robinson Raju | Writing a simple Mapper and Reducer for Wordcount </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Robinson Raju">
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.css" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://robinsonraju.info">
+    
+    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/">
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture" style="width:127px;border-radius: 50%;">
+        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
+        <div class="description">
+          <p>Robinson Raju</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <a href="https://linkedin.com/in/robinsonraju" rel="me" >
+          <i class="fa fa-linkedin" aria-hidden="true" title="Linkedin"></i>
+        </a>
+        
+        <a href="https://github.com/robinsonraju" rel="me" >
+          <i class="fa fa-github" aria-hidden="true" title="GitHub"></i>
+        </a>
+        
+        <a href="https://instagram.com/luminous_infinitus" rel="me" >
+          <i class="fa fa-instagram" aria-hidden="true" title="instagram"></i>
+        </a>
+        
+        <a href="mailto:robinson.raju@gmail.com" rel="me" >
+          <i class="fa fa-envelope" aria-hidden="true" title="e-mail"></i>
+        </a>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Robinson Raju 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <div class="nav">
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+
+        
+        <li><a  href="/about/" title="About">About</a></li>
+
+        
+    </div>
+</div>
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <main>
+          <div class="divTableCell" >
+            <div class="post-content">
+              <div class="post-title">
+                <h3>Writing a simple Mapper and Reducer for Wordcount</h3>
+                  
+                    <h4></h4>
+                    <div class="info">
+                      <i class="fa fa-sun-o"></i><span class="date">Mon, Sep 21, 2015</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+                    </div>
+                  
+              </div>
+              <p>The last blog was about how to run wordcount using the &ldquo;hadoop-mapreduce-examples.jar&rdquo; that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this? I searched a bit for an eclipse plugin to be able to create a MR project through eclipse that would have the template for Mapper and Reducer and I would just write the implementation. Found some plugins (e.g HDT) and some screencasts but didn&rsquo;t take me far. Remembered that there was an eclipse icon in the Cloudera VM. Started the VM, clicked on the icon and viola ! there was a sample project with Stubs for Mapper, Reducer and Driver. Exactly what I needed!</p>
+<!-- raw HTML omitted -->
+<p>Put in the code for Mapper, Reducer and Driver in the Stub classes and ran the Driver. It worked like a charm. Here is the code for it.</p>
+<h2 id="mapper">Mapper</h2>
+<p>The map method takes key, value and context as inputs. The key represents the name of a document and the value is the contents of the document. For e.g, a record in a file. The map method below uses StringTokenizer to split the record into words, loops through the words and writes a 2-tuple (word, 1) into the context. Each mapper does this and what we get in the end is a list of key-value pairs.</p>
+<pre><code>import java.io.IOException;
+import java.util.StringTokenizer;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class StubMapper extends Mapper&lt;LongWritable, Text, Text, IntWritable&gt; {
+
+    private final static IntWritable one = new IntWritable(1);
+    private Text word = new Text();
+
+    @Override
+    public void map(LongWritable key, Text value, Context context)
+            throws IOException, InterruptedException {
+
+        String line = value.toString();
+        StringTokenizer tokenizer = new StringTokenizer(line);
+        while (tokenizer.hasMoreTokens()) {
+            word.set(tokenizer.nextToken());
+            context.write(word, one);
+        }
+
+    }
+}
+</code></pre>
+<h2 id="reducer">Reducer</h2>
+<p>A reducer takes an input of a key and list of values associated with the key, adds the counts and writes the output to the context.
+For e.g, input of (world, 1), (world, 1) gives output as (world, 2).</p>
+<pre><code>import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class StubReducer extends
+        Reducer&lt;Text, IntWritable, Text, IntWritable&gt; {
+
+    @Override
+    public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+            throws IOException, InterruptedException {
+
+        int sum = 0;
+        for (IntWritable val : values) {
+            sum += val.get();
+        }
+        context.write(key, new IntWritable(sum));
+    }
+}
+</code></pre>
+<h2 id="driver">Driver</h2>
+<pre><code>import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+
+public class StubDriver {
+
+    public static void main(String[] args) throws Exception {
+
+        /*
+         * Validate that two arguments were passed from the command line.
+         */
+        if (args.length != 2) {
+            System.out.printf(&quot;Usage: StubDriver &lt;input dir&gt; &lt;output dir&gt;\n&quot;);
+            System.exit(-1);
+        }
+
+        /*
+         * Instantiate a Job object for your job's configuration.
+         */
+        Job job = new Job();
+
+        /*
+         * Specify the jar file that contains your driver, mapper, and reducer.
+         * Hadoop will transfer this jar file to nodes in your cluster running
+         * mapper and reducer tasks.
+         */
+        // job.setJarByClass(StubDriver.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
+
+        job.setMapperClass(StubMapper.class);
+        job.setReducerClass(StubReducer.class);
+
+        job.setInputFormatClass(TextInputFormat.class);
+        job.setOutputFormatClass(TextOutputFormat.class);
+
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
+        /*
+         * Specify an easily-decipherable name for the job. This job name will
+         * appear in reports and logs.
+         */
+        job.setJobName(&quot;Stub Driver&quot;);
+
+        /*
+         * Start the MapReduce job and wait for it to finish. If it finishes
+         * successfully, return 0. If not, return 1.
+         */
+        boolean success = job.waitForCompletion(true);
+        System.exit(success ? 0 : 1);
+    }
+}
+</code></pre>
+<h2 id="how-to-run">How to Run</h2>
+<pre><code>Create an input directory named &quot;input&quot;
+
+Run As &gt; Java Application (give 2 arguments &quot;input&quot; and &quot;output&quot;)
+</code></pre>
+<p>Look at the the file &lsquo;part-r-00000&rsquo; in the output directory
+<!-- raw HTML omitted --></p>
+<hr>
+<h3 id="references">References</h3>
+<ul>
+<li>QuickStart VMs for CDH 5.4.x. (n.d.). Retrieved September 21, 2015, from <a href="http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html">http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html</a></li>
+<li>WordCount. (n.d.). Retrieved September 21, 2015, from <a href="https://wiki.apache.org/hadoop/WordCount">https://wiki.apache.org/hadoop/WordCount</a></li>
+</ul>
+<hr>
+<p><em>Header Image - &ldquo;<strong>Words</strong>&rdquo; by Cayce Newell via <a href="https://flic.kr/p/4BsjLY">Flickr</a>.</em></p>
+
+            </div>
+            <div class="post-footer">
+              <div class="info">
+                
+<span class="separator"><a class="category" href="/categories/technical-notes/">Technical Notes</a></span>
+
+                
+              </div>
+            </div>
+            
+          </div>
+          <nav class="divTableCell section-nav">
+            <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/#mapper">Mapper</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/#reducer">Reducer</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/#driver">Driver</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/#how-to-run">How to Run</a>
+      <ul>
+        <li><a href="https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/#references">References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </nav>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery-appear.min.js"></script><script type="text/javascript" src="https://robinsonraju.info/js/medium-zoom.min.js"></script>
+<script>
+	mediumZoom(document.querySelectorAll('div.post-content img'), {
+        background: '#fff'
+    });
+</script>
+<link rel="stylesheet" href="https://robinsonraju.info/css/medium-zoom.css" type="text/css">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

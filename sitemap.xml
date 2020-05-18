@@ -108,8 +108,48 @@
   </url>
   
   <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</loc>
+    <lastmod>2015-09-30T22:50:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</loc>
+    <lastmod>2015-09-21T23:50:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</loc>
+    <lastmod>2015-09-15T22:50:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/</loc>
     <lastmod>2015-09-06T08:17:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</loc>
+    <lastmod>2015-03-01T23:13:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</loc>
+    <lastmod>2015-02-22T09:13:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</loc>
+    <lastmod>2015-02-15T01:23:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</loc>
+    <lastmod>2015-02-08T11:33:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</loc>
+    <lastmod>2015-02-01T04:35:12+00:00</lastmod>
   </url>
   
   <url>
@@ -175,6 +215,11 @@
   <url>
     <loc>https://robinsonraju.info/blog/2014-01-20-the-spinning-melody-and-gateway/</loc>
     <lastmod>2014-01-20T16:35:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/blog/quotes/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
