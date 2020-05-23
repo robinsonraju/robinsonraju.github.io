@@ -782,13 +782,13 @@ main {
 }
 
 .homeleft {
-  width: 40%;
+  width: 45%;
   float: left;
   padding-right: 10px;
 }
 
 .homeright {
-  width: 60%;
+  width: 55%;
   float: right;
 }
 
@@ -796,6 +796,10 @@ main {
   display: flex;
 }
 
+.more {
+  font-weight: bold;
+  font-style: italic;
+}
 
 @media screen and (max-width: 960px) {
   .sidebar {
