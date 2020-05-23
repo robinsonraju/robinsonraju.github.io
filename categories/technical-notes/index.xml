@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Functional Thinking</title>
+      <link>https://robinsonraju.info/books/2016-10-16-functionalthinking/</link>
+      <pubDate>Sun, 16 Oct 2016 09:27:14 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2016-10-16-functionalthinking/</guid>
+      <description>For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift.</description>
+    </item>
+    
+    <item>
       <title>A Simple MapReduce Job for Iris Dataset</title>
       <link>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</link>
       <pubDate>Wed, 30 Sep 2015 22:50:11 +0000</pubDate>
