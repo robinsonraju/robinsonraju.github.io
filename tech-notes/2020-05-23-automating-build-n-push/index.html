@@ -150,7 +150,7 @@ A sample plist XML is available in the <a href="https://developer.apple.com/libr
 </code></pre><p><strong>Unloading a job</strong></p>
 <pre><code>launchctl unload /Library/LaunchAgents/&lt;LABEL&gt;.plist
 </code></pre><p>That&rsquo;s it.</p>
-<p>I had some difficulty in running it initially and it had errored out with code 78. You can either use Mac&rsquo;s <code>console</code> app to look at system.log or configure <code>StandardOutPath</code> &amp;  <code>StandardErrorPath</code> in the plist to direct the logs to another place of your liking.</p>
+<p>I had some difficulty in running it initially and it had errored out with code 78. You can either use Mac&rsquo;s <code>console</code> app to look at the system.log or configure <code>StandardOutPath</code> &amp;  <code>StandardErrorPath</code> in the plist to direct the logs to another place of your liking. Also, my initial progam argument string was <code>source /Users/.../gitpush.sh</code>. Then found that it was not needed and I could just give the shell script.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/ScheduledJobs.html">Apple Developer Website for Scheduling Timed Jobs</a></li>
