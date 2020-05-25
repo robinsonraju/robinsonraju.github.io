@@ -192,7 +192,7 @@ a:hover, a:active {
   z-index: 3;
   background-color: var(--bg-color);
   height: 60px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 0.5px solid var(--border-color);
 }
 .page-top .nav {
   list-style: none;
@@ -256,7 +256,7 @@ a:hover, a:active {
   left: 0;
   position: fixed;
   z-index: 4;
-  border-right: 1px solid var(--border-color);
+  border-right: 0.5px solid var(--border-color);
 }
 .sidebar .logo-title {
   text-align: center;
@@ -326,7 +326,7 @@ a:hover, a:active {
   color: var(--heading-color);
 }
 .post .post-title h3 {
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 1px;
   line-height: 1;
   font-weight: 600;
@@ -817,6 +817,7 @@ main {
   width: 45%;
   float: left;
   padding-right: 10px;
+  padding-left: 10px;
 }
 
 .homeright {

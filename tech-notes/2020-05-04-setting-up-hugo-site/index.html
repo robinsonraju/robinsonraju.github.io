@@ -102,21 +102,24 @@
 <p>The steps to set up are pretty simple like Jekyll. Hugo&rsquo;s <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> page covers the basics very clearly. I&rsquo;ll review what I did in addition to setting up the Hugo site.</p>
 <h3 id="1-install-hugo--create-a-new-site">1. Install hugo &amp; Create a new site</h3>
 <p>The first step is to install hugo. It is pretty simple on the Mac if you already have <strong><code>brew</code></strong> installed. Installation steps for other OSs are in the <a href="https://gohugo.io/getting-started/installing/">hugo-install</a> site.</p>
-<p><strong><code>brew install hugo</code></strong></p>
-<p>You can use <strong><code>hugo version</code></strong> to check if the insallation was done.</p>
-<p><strong><code>hugo new site rr_site</code></strong></p>
-<p>It is that simple. This creates a new site with all the default code that is needed. You can start the server by <strong><code>hugo server -D</code></strong> but it would be an empty site. In this step it differs from Jekyll where you get a ready made site right away. In order to view something meaningful, you need to configure your site with a theme.</p>
+<pre><code>brew install hugo
+</code></pre><p>You can use <strong><code>hugo version</code></strong> to check if the insallation was done.</p>
+<pre><code>hugo new site rr_site
+</code></pre><p>It is that simple. This creates a new site with all the default code that is needed. You can start the server by <strong><code>hugo server -D</code></strong> but it would be an empty site. In this step it differs from Jekyll where you get a ready made site right away. In order to view something meaningful, you need to configure your site with a theme.</p>
 <h3 id="2-configure-the-site-with-a-theme">2. Configure the site with a theme</h3>
-<p><strong><code>cd rr_site</code></strong></p>
-<p><strong><code>git init</code></strong></p>
-<p><strong><code>git submodule add https://github.com/lxndrblz/anatole.git themes/anatole</code></strong></p>
-<p><strong><code>cp themes/anatole/exampleSite/config.toml .</code></strong></p>
-<p>This steps assumes that you already know about <strong><code>git</code></strong> and you have it installed.
+<pre><code>cd rr_site
+
+git init
+
+git submodule add https://github.com/lxndrblz/anatole.git themes/anatole
+
+cp themes/anatole/exampleSite/config.toml .
+</code></pre><p>This steps assumes that you already know about <strong><code>git</code></strong> and you have it installed.
 Change the directory to the directory of your site. Initialize it as a git repository. Add the theme as a <strong><code>git submodule</code></strong>. After this, copy the config.toml from the examplesite in the theme to the main folder. The other option is to append the theme using <strong><code>echo 'theme = &quot;anatole&quot;' &gt;&gt; config.toml</code></strong> to the default <strong><code>config.toml</code></strong> that was added when the site was created. But this option would be a bare config without much in it. In order to leverage the theme better, it is a good idea to copy the config.toml over and modify it.</p>
 <h3 id="3-add-content--start-the-server">3. Add Content &amp; Start the server</h3>
 <p>All the content for the site are expected to be in <strong><code>content</code></strong> folder as markdown files. For the first try, you can either add content by using hugo command <strong><code>hugo new posts/my-first-post.md</code></strong>, or copy sample content from the example site within the theme folder <strong><code>./themes/anatole/exampleSite/content</code></strong>.</p>
-<p><strong><code>hugo server -D</code></strong></p>
-<p>This starts the server and you&rsquo;d be able to view it at <a href="http://localhost:1313">http://localhost:1313</a>.</p>
+<pre><code>hugo server -D
+</code></pre><p>This starts the server and you&rsquo;d be able to view it at <a href="http://localhost:1313">http://localhost:1313</a>.</p>
 <p>You can modify the content and the site will automatically rebuild. You can manually rebuild by simply typing <strong><code>hugo</code></strong> command on the command prompt.</p>
 <h2 id="migrate-content-from-jekyll">Migrate content from Jekyll</h2>
 <h3 id="1-content">1. Content</h3>
@@ -133,26 +136,32 @@ I copied over css from the theme folder to override. Also copied over some templ
 <ol>
 <li>Add the github repo as a submodule of the project repo.</li>
 </ol>
-<p><strong><code>git submodule add https://github.com/&lt;user&gt;/&lt;user&gt;.github.io.git &lt;user&gt;.github.io</code></strong></p>
-<ol start="2">
+<pre><code>git submodule add https://github.com/&lt;user&gt;/&lt;user&gt;.github.io.git &lt;user&gt;.github.io
+</code></pre><ol start="2">
 <li>Change config.toml and update the publish directory - <strong><code>publishDir = &quot;&lt;user&gt;.github.io&quot;</code></strong></li>
 </ol>
-<p><strong><code>baseURL = &quot;https://&lt;user&gt;.github.io/&quot;</code></strong></p>
-<p><strong><code>title = &quot;Website Title&quot;</code></strong></p>
-<p><strong><code>theme = &quot;anatole&quot;</code></strong></p>
-<p><strong><code>publishDir = &quot;&lt;user&gt;.github.io&quot;</code></strong></p>
-<ol start="3">
+<pre><code>baseURL = &quot;https://&lt;user&gt;.github.io/&quot;
+
+title = &quot;Website Title&quot;
+
+theme = &quot;anatole&quot;
+
+publishDir = &quot;&lt;user&gt;.github.io&quot;
+</code></pre><ol start="3">
 <li>Do a build using the command <strong><code>hugo</code></strong> in the command line. This updates <strong><code>_site</code></strong> folder in the publish directory which is our submodule.</li>
 </ol>
-<p><strong><code>hugo</code></strong></p>
-<ol start="4">
+<pre><code>hugo
+</code></pre><ol start="4">
 <li>Push the changes in the submodule to github.</li>
 </ol>
-<p><strong><code>cd &lt;user&gt;.github.io</code></strong></p>
-<p><strong><code>git add .</code></strong></p>
-<p><strong><code>git commit -m &quot;Initial commit of HTML generated from hugo.&quot;</code></strong></p>
-<p><strong><code>git push -u origin master</code></strong></p>
-<p>A few other files that I had to copy over from my backup to the github.io repo were CNAME, google site verification html and favicon.ico. Otherwise, it worked as is.</p>
+<pre><code>cd &lt;user&gt;.github.io
+
+git add .
+
+git commit -m &quot;Initial commit of HTML generated from hugo.&quot;
+
+git push -u origin master
+</code></pre><p>A few other files that I had to copy over from my backup to the github.io repo were CNAME, google site verification html and favicon.ico. Otherwise, it worked as is.</p>
 <h2 id="4-customizations-optional">4. Customizations (Optional)</h2>
 <p>You might notice that the website (<a href="https://robinsonraju.info">https://robinsonraju.info</a>) is different from anatole theme. It has 3 columns, the left nav is not as wide, the font is different, etc.
 As I mentioned earlier, I copied over css from the theme folder to override and changed a bunch of them.
