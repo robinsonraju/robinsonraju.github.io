@@ -834,12 +834,9 @@ main {
   font-style: italic;
 }
 
-img[alt=githubsearch-bookdata] {
+img[alt=githubsearch-bookdata],img[alt=postman-response], img[alt=files-in-the-codebase],img[alt=main-function] {
   width: 50%;
-}
-
-img[alt=postman-response] {
-  width: 50%;
+  height: 50%;
 }
 
 @media screen and (max-width: 960px) {
@@ -897,5 +894,11 @@ img[alt=postman-response] {
 
   .section-nav {
     display: none;
+  }
+
+
+  img[alt=githubsearch-bookdata],img[alt=postman-response], img[alt=files-in-the-codebase],img[alt=main-function] {
+    width: 50%;
+    height: 50%;
   }
 }

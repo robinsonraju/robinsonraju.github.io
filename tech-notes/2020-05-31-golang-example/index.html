@@ -93,14 +93,14 @@
                     <h4></h4>
                     <div class="info">
                       <i class="fa fa-sun-o"></i><span class="date">Sun, May 31, 2020</span>
-                      <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
                     </div>
                   
               </div>
               <p>Starting to read up on blockchain. RV mentioned that I might need to learn <a href="https://golang.org/">Go</a> if I need to tryout some <a href="https://www.hyperledger.org/">HyperLedger frameworks</a> in the future. Go has a cool <a href="https://play.golang.org/">playground</a> to try things online and a <a href="https://tour.golang.org/welcome/1">tour</a> which teaches you basics.</p>
 <p>Rather than looking at them, I wanted to look at some actual code and infer how things work. Most of the people in the Software industry learn things that way anyway. You take up a new project or a join a new team and the first thing that you do is to setup the codebase and figure your way around. In the past (say a decade back), setting up someone&rsquo;s codebase was the toughest thing. The first setup never worked and you had to actually get a help from one of the past developers to set some esoteric environment variable or have a specific folder structure or have specific versions of Java or some special dependencies. Maven simplified a lot of these dependency issues but still it was a struggle. But fast-forward to 2020, most repos have instructions on how to setup and they are pretty straight forward to setup even if there are no instructions.</p>
 <p>Though I&rsquo;ve developed a lot of front-end applications over the years, my expertise has been backend services. So why not look at how to develop a simple REST API using golang? Was thinking of loading a small dataset like <a href="https://www.kaggle.com/bilalyussef/google-books-dataset">&lsquo;Books data&rsquo;</a> or [&lsquo;Iris data&rsquo;] (<a href="https://archive.ics.uci.edu/ml/datasets/iris)">https://archive.ics.uci.edu/ml/datasets/iris)</a>.</p>
-<h2 id="references">References</h2>
+<h2 id="installing-go">Installing Go</h2>
 <p>Installed Go from the golang website. <a href="https://golang.org/dl/">https://golang.org/dl/</a>.
 Check if it was installed.</p>
 <pre><code>go version
@@ -143,15 +143,23 @@ J.K. Rowling-Mary GrandPré,4.56,0439785960,9780439785969,eng,652,1944099,26249
 </code></pre><p>Decided to open up Postman and do a search using ISBN.</p>
 <pre><code>GET http://localhost:8080/api/v1/book/isbn/0439785960
 </code></pre><p><strong>voila!</strong></p>
-<p><img src="/images/postman-response.png" alt="postman-response"><!-- raw HTML omitted --></p>
+<p><img src="/images/postman-response.png" alt="postman-response"></p>
 <p>I was super surprised that it even worked the first time. Exciting stuff. Thanks to <code>moficodes</code> for creating this app and sharing it on github.</p>
 <h2 id="inspecting-the-codebase">Inspecting the codebase</h2>
-<p>Many people think that reading through a codebase written in a language that you don&rsquo;t yet know, would not be possible. Definitely not. It is usually easy to figure out the simple stuff since the same patterns repeat everywhere.</p>
+<p>Many people think that reading through a codebase written in a language that you don&rsquo;t yet know, would not be possible. Definitely not! It is usually easy to figure out the simple stuff since the same patterns repeat everywhere, especially if you have been coding or reading code for sometime. Of course, the difficult stuff is not easy. Even if you have over a decade of Java coding experience, reading through a complex codebase might take time. Add in Generics to make it even tougher.</p>
+<p>The codebase here seems quite simple enough.</p>
+<pre><code>server.go -&gt; Has a main function with all the API paths defined.
+
+routes.go -&gt; Has the functions called in server.go like 'searchByAuthor', 'searchByISBN', etc.
+
+loader.go in 'loader' folder -&gt; Has the definition of BookData data structure and a function to load the data.
+I'd assume that this gets invoked during the server start.
+
+memory.go -&gt; Has initialize method which has code to load data from a file.  
+</code></pre><p>There is no correlation between the filename and the classname as in Java. A file contains a <code>package</code> statement, similar to Java, <code>import</code> statement which has packages to be imported. The syntax for import is different but you get what it is trying to do. Most files seem to be a series of functions declared by the keyword <code>func</code>.</p>
+<p><img src="/images/files-in-the-codebase.png" alt="files-in-the-codebase"></p>
+<p><img src="/images/main-function.png" alt="main-function"></p>
 <hr>
-<h2 id="references-1">References</h2>
-<ul>
-<li></li>
-</ul>
 
             </div>
             <div class="post-footer">
@@ -168,13 +176,12 @@ J.K. Rowling-Mary GrandPré,4.56,0439785960,9780439785969,eng,652,1944099,26249
             <div>
               <nav id="TableOfContents">
   <ul>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#references">References</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#installing-go">Installing Go</a></li>
     <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#sample-codebase">Sample Codebase</a></li>
     <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#setting-up-sample-codebase">Setting up sample codebase</a></li>
     <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#starting-the-server">Starting the server</a></li>
     <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#testing-the-api">Testing the API</a></li>
     <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#inspecting-the-codebase">Inspecting the codebase</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#references-1">References</a></li>
   </ul>
 </nav>
             </div>
