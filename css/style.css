@@ -834,9 +834,13 @@ main {
   font-style: italic;
 }
 
-img[alt=githubsearch-bookdata],img[alt=postman-response], img[alt=files-in-the-codebase],img[alt=main-function] {
+img[alt=githubsearch-bookdata],img[alt=postman-response],img[alt=main-function] {
   width: 50%;
-  height: 50%;
+}
+
+img[alt=files-in-the-codebase] {
+  width: 30%;
+  height: 20%;
 }
 
 @media screen and (max-width: 960px) {
@@ -896,9 +900,13 @@ img[alt=githubsearch-bookdata],img[alt=postman-response], img[alt=files-in-the-c
     display: none;
   }
 
-
-  img[alt=githubsearch-bookdata],img[alt=postman-response], img[alt=files-in-the-codebase],img[alt=main-function] {
+  img[alt=githubsearch-bookdata],img[alt=postman-response],img[alt=main-function] {
     width: 50%;
     height: 50%;
+  }
+
+  img[alt=files-in-the-codebase] {
+    width: 40%;
+    height: 40%;
   }
 }
