@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"><html lang="en" data-theme="light">
+<head>
+    <title> Robinson Raju | Baby steps on Go </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Robinson Raju">
+    
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.min.9e48afe85b9bccfe2b9e49d90d71720c638e2b14394f7f6eea9e6aff4d43c756.css" integrity="sha256-nkiv6FubzP4rnknZDXFyDGOOKxQ5T39u6p5q/01Dx1Y=" type="text/css">
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://robinsonraju.info">
+    
+    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/">
+    
+    
+    <script type="text/javascript" src="https://robinsonraju.info/js/anatole-header.min.3b96da9aecc38aaa950c7528be99cf86019b560752f7280b45b71d53f69e1367.js" integrity="sha256-O5bamuzDiqqVDHUovpnPhgGbVgdS9ygLRbcdU/aeE2c="></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
+        <div class="description">
+          <p>Robinson Raju</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/in/robinsonraju" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/robinsonraju" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://instagram.com/luminous_infinitus" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:robinson.raju@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Robinson Raju 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/about/" title="About">About</a></li>
+        
+    </ul>
+    
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <main>
+          <div class="divTableCell" >
+            <div class="post-content">
+              <div class="post-title">
+                <h3>Baby steps on Go</h3>
+                  
+                    <h4></h4>
+                    <div class="info">
+                      <i class="fa fa-sun-o"></i><span class="date">Sun, May 31, 2020</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+                    </div>
+                  
+              </div>
+              <p>Starting to read up on blockchain. RV mentioned that I might need to learn <a href="https://golang.org/">Go</a> if I need to tryout some <a href="https://www.hyperledger.org/">HyperLedger frameworks</a> in the future. Go has a cool <a href="https://play.golang.org/">playground</a> to try things online and a <a href="https://tour.golang.org/welcome/1">tour</a> which teaches you basics.</p>
+<p>Rather than looking at them, I wanted to look at some actual code and infer how things work. Most of the people in the Software industry learn things that way anyway. You take up a new project or a join a new team and the first thing that you do is to setup the codebase and figure your way around. In the past (say a decade back), setting up someone&rsquo;s codebase was the toughest thing. The first setup never worked and you had to actually get a help from one of the past developers to set some esoteric environment variable or have a specific folder structure or have specific versions of Java or some special dependencies. Maven simplified a lot of these dependency issues but still it was a struggle. But fast-forward to 2020, most repos have instructions on how to setup and they are pretty straight forward to setup even if there are no instructions.</p>
+<p>Though I&rsquo;ve developed a lot of front-end applications over the years, my expertise has been backend services. So why not look at how to develop a simple REST API using golang? Was thinking of loading a small dataset like <a href="https://www.kaggle.com/bilalyussef/google-books-dataset">&lsquo;Books data&rsquo;</a> or [&lsquo;Iris data&rsquo;] (<a href="https://archive.ics.uci.edu/ml/datasets/iris)">https://archive.ics.uci.edu/ml/datasets/iris)</a>.</p>
+<h2 id="references">References</h2>
+<p>Installed Go from the golang website. <a href="https://golang.org/dl/">https://golang.org/dl/</a>.
+Check if it was installed.</p>
+<pre><code>go version
+</code></pre><p>I got the response back as <code>go version go1.14.3 darwin/amd64</code></p>
+<h2 id="sample-codebase">Sample Codebase</h2>
+<p>Searched <a href="https://github.com">github.com</a> and got the following go repos for &ldquo;bookdata&rdquo;. Looks like people are using this to learn Go.</p>
+<p><img src="/images/githubsearch-bookdata.png" alt="githubsearch-bookdata"></p>
+<p>The first application seems to be pretty good. It even has documentation on the API paths that are supported.</p>
+<h2 id="setting-up-sample-codebase">Setting up sample codebase</h2>
+<pre><code>git clone https://github.com/moficodes/bookdata-api.git
+
+</code></pre><p>I was assuming, and hoping that there should be no other setup that is needed.</p>
+<h2 id="starting-the-server">Starting the server</h2>
+<pre><code>cd bookdata-api
+
+go run .
+</code></pre><h2 id="testing-the-api">Testing the API</h2>
+<p>The documentation has the following REST APIs.
+All api endpoints are prefixed with <code>/api/v1</code></p>
+<pre><code>Get Books by Author
+&quot;/books/authors/{author}&quot;
+Optional query parameter for ratingAbove ratingBelow limit and skip
+
+Get Books by BookName
+&quot;/books/book-name/{bookName}&quot;
+Optional query parameter for ratingAbove ratingBelow limit and skip
+
+Get Book by ISBN
+&quot;/book/isbn/{isbn}&quot;
+
+Delete Book by ISBN
+&quot;/book/isbn/{isbn}&quot;
+
+Create New Book
+&quot;/book&quot;
+</code></pre><p>Looking at the dataset in <code>./assets/books.csv</code>, I wasn&rsquo;t sure if Author&rsquo;s names with spaces would work.</p>
+<p>The first line in the dataset was this -</p>
+<pre><code>1,Harry Potter and the Half-Blood Prince (Harry Potter  #6),
+J.K. Rowling-Mary GrandPré,4.56,0439785960,9780439785969,eng,652,1944099,26249
+</code></pre><p>Decided to open up Postman and do a search using ISBN.</p>
+<pre><code>GET http://localhost:8080/api/v1/book/isbn/0439785960
+</code></pre><p><strong>voila!</strong></p>
+<p><img src="/images/postman-response.png" alt="postman-response"><!-- raw HTML omitted --></p>
+<p>I was super surprised that it even worked the first time. Exciting stuff. Thanks to <code>moficodes</code> for creating this app and sharing it on github.</p>
+<h2 id="inspecting-the-codebase">Inspecting the codebase</h2>
+<p>Many people think that reading through a codebase written in a language that you don&rsquo;t yet know, would not be possible. Definitely not. It is usually easy to figure out the simple stuff since the same patterns repeat everywhere.</p>
+<hr>
+<h2 id="references-1">References</h2>
+<ul>
+<li></li>
+</ul>
+
+            </div>
+            <div class="post-footer">
+              <div class="info">
+                
+<span class="separator"><a class="category" href="/categories/technical-notes/">Technical Notes</a><a class="category" href="/categories/blog/">Blog</a></span>
+
+                
+              </div>
+            </div>
+            
+          </div>
+          <nav class="divTableCell section-nav">
+            <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#references">References</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#sample-codebase">Sample Codebase</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#setting-up-sample-codebase">Setting up sample codebase</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#starting-the-server">Starting the server</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#testing-the-api">Testing the API</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#inspecting-the-codebase">Inspecting the codebase</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-05-31-golang-example/#references-1">References</a></li>
+  </ul>
+</nav>
+            </div>
+          </nav>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="></script>
+
+
+
+
+<script type="text/javascript" src="https://robinsonraju.info/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="></script>
+
+<script type="text/javascript" src="https://robinsonraju.info/js/medium-zoom.min.7487768bffcc6aee437cf6a4ac7da5d2ffc61dc63b36316a14122ceb26b34c70.js" integrity="sha256-dId2i//Mau5DfPakrH2l0v/GHcY7NjFqFBIs6yazTHA="></script>
+
+<link rel="stylesheet" href="https://robinsonraju.info/css/medium-zoom.min.a1468f7a1cce6fe96c4b5483cb4645b85728a32b3abbd598c375a92df16230ef.css" integrity="sha256-oUaPehzOb&#43;lsS1SDy0ZFuFcooys6u9WYw3WpLfFiMO8=" type="text/css">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

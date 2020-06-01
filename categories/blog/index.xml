@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/</link>
-    <description>Recent content on Rob&#39;s Notes</description>
+    <title>Blog on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.info/categories/blog/</link>
+    <description>Recent content in Blog on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://robinsonraju.info/about/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://robinsonraju.info/about/</guid>
-      <description>Hi there! I&amp;rsquo;m Robinson. I also go by Robin or sometimes Rob.</description>
-    </item>
     
     <item>
       <title>Baby steps on Go</title>
@@ -36,15 +27,6 @@
       
       <guid>https://robinsonraju.info/tech-notes/2020-05-23-automating-build-n-push/</guid>
       <description>Instead of remembering to build and push to GitHub, wanted to automate it.</description>
-    </item>
-    
-    <item>
-      <title>Cloud Atlas</title>
-      <link>https://robinsonraju.info/blog/2020-05-23-cloud-atlas/</link>
-      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://robinsonraju.info/blog/2020-05-23-cloud-atlas/</guid>
-      <description>&amp;ldquo;Yesterday, my life was headed in one direction. Today, it is headed in another.</description>
     </item>
     
     <item>

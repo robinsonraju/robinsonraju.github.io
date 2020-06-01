@@ -834,6 +834,14 @@ main {
   font-style: italic;
 }
 
+img[alt=githubsearch-bookdata] {
+  width: 50%;
+}
+
+img[alt=postman-response] {
+  width: 50%;
+}
+
 @media screen and (max-width: 960px) {
   .sidebar {
     width: 100%;
