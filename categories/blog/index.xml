@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Position or Knowledge?</title>
+      <link>https://robinsonraju.info/blog/2020-06-01-position-or-knowledge/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/blog/2020-06-01-position-or-knowledge/</guid>
+      <description>For the past few years, I have read quite a few materials on cybersecurity.</description>
+    </item>
     
     <item>
       <title>Baby steps on Go</title>

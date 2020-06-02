@@ -8,17 +8,32 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/tech-notes/2020-05-31-golang-example/</loc>
-    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://robinsonraju.info/categories/blog/</loc>
-    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.info/categories/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/categories/general/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/blog/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/blog/2020-06-01-position-or-knowledge/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tech-notes/2020-05-31-golang-example/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -39,16 +54,6 @@
   
   <url>
     <loc>https://robinsonraju.info/blog/2020-05-23-cloud-atlas/</loc>
-    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/categories/general/</loc>
-    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/blog/</loc>
     <lastmod>2020-05-23T00:00:00+00:00</lastmod>
   </url>
   
