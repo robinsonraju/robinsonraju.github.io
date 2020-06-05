@@ -6,10 +6,19 @@
     <description>Recent content in Technical Notes on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/tech-notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>API documentation using Swagger</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/</guid>
+      <description>Intro Wanted to create an API spec for brainstorming an API that we&amp;rsquo;re developing.</description>
+    </item>
     
     <item>
       <title>Baby steps on Go</title>

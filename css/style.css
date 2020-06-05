@@ -834,7 +834,7 @@ main {
   font-style: italic;
 }
 
-img[alt=githubsearch-bookdata],img[alt=postman-response],img[alt=main-function] {
+img[alt=githubsearch-bookdata],img[alt=postman-response],img[alt=main-function],img[alt=swagger-ui] {
   width: 50%;
 }
 
@@ -902,7 +902,7 @@ img[alt=files-in-the-codebase] {
     display: none;
   }
 
-  img[alt=githubsearch-bookdata],img[alt=postman-response],img[alt=main-function] {
+  img[alt=githubsearch-bookdata],img[alt=postman-response],img[alt=main-function],img[alt=swagger-ui] {
     width: 50%;
     height: 50%;
   }

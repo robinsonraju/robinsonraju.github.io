@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><html lang="en" data-theme="light">
+<head>
+    <title> Robinson Raju Varghese | API documentation using Swagger </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Robinson Raju Varghese">
+    
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.min.9e48afe85b9bccfe2b9e49d90d71720c638e2b14394f7f6eea9e6aff4d43c756.css" integrity="sha256-nkiv6FubzP4rnknZDXFyDGOOKxQ5T39u6p5q/01Dx1Y=" type="text/css">
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://robinsonraju.info">
+    
+    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/">
+    
+    
+    <script type="text/javascript" src="https://robinsonraju.info/js/anatole-header.min.3b96da9aecc38aaa950c7528be99cf86019b560752f7280b45b71d53f69e1367.js" integrity="sha256-O5bamuzDiqqVDHUovpnPhgGbVgdS9ygLRbcdU/aeE2c="></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
+        <div class="description">
+          <p>Robinson Raju Varghese</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/in/robinsonraju" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/robinsonraju" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://instagram.com/luminous_infinitus" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:robinson.raju@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Robinson Raju Varghese 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/about/" title="About">About</a></li>
+        
+    </ul>
+    
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <main>
+          <div class="divTableCell" >
+            <div class="post-content">
+              <div class="post-title">
+                <h3>API documentation using Swagger</h3>
+                  
+                    <h4></h4>
+                    <div class="info">
+                      <i class="fa fa-sun-o"></i><span class="date">Thu, Jun 4, 2020</span>
+                      <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
+                    </div>
+                  
+              </div>
+              <h2 id="intro">Intro</h2>
+<p>Wanted to create an API spec for brainstorming an API that we&rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (<a href="https://apiary.io/">https://apiary.io/</a>) in the past (2013-14). It had features like defining the API spec using yaml  and it getting rendered beautifully as API documentation. Nothing like a great API documentation that shows different methods, parameters, objects, input/output status codes and even a server/sandbox to try it out. It makes the life easier for consumers of the API. Currently a lot of companies use tools like Swagger, and the API documentation is quite good. The struggle to understand an API and get help to consume it is a thing of the past. API design is probably one of the most impactful aspects of software development since the right design goes a long way to lay the foundation of a solid system that works great for the service provider as well as clients.</p>
+<h2 id="great-api-documentation-examples">Great API documentation examples</h2>
+<p>The model API documentation to follow are probably the following -</p>
+<ol>
+<li>Plaid - <a href="https://plaid.com/docs/">https://plaid.com/docs/</a></li>
+<li>Stripe - <a href="https://stripe.com/docs/api">https://stripe.com/docs/api</a></li>
+<li>Twitter - <a href="https://developer.twitter.com/en/docs/api-reference-index">https://developer.twitter.com/en/docs/api-reference-index</a></li>
+<li>Github - <a href="https://developer.github.com/v3/guides/getting-started/">https://developer.github.com/v3/guides/getting-started/</a></li>
+</ol>
+<p>Back to Swagger, here is a quick explanation of Swagger from their website -</p>
+<h2 id="what-is-swagger">What Is Swagger?</h2>
+<p>From <a href="https://swagger.io/docs/specification/2-0/what-is-swagger/">https://swagger.io/docs/specification/2-0/what-is-swagger/</a></p>
+<blockquote>
+<p><em>Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger. Why is it so great? Well, by reading your API’s structure, we can automatically build beautiful and interactive API documentation. We can also automatically generate client libraries for your API in many languages and explore other possibilities like automated testing. Swagger does this by asking your API to return a YAML or JSON that contains a detailed description of your entire API. This file is essentially a resource listing of your API which adheres to OpenAPI Specification.</em></p>
+</blockquote>
+<blockquote>
+<p><em>The specification asks you to include information like:</em></p>
+</blockquote>
+<ul>
+<li><em>What are all the operations that your API supports?</em></li>
+<li><em>What are your API’s parameters and what does it return?</em></li>
+<li><em>Does your API need some authorization?</em></li>
+<li><em>And even fun things like terms, contact information and license to use the API.</em></li>
+</ul>
+<h2 id="installing-swagger-editor-locally">Installing Swagger editor locally</h2>
+<p>There are two options to use the Swagger editor (<a href="https://swagger.io/tools/swagger-editor/)">https://swagger.io/tools/swagger-editor/)</a>. You can download the editor or use the cloud version, which is the &lsquo;Swagger Hub&rsquo;. Wanted to try the cloud version since there would be no setup needed for it. It asked for sign-up or creating the account using Github. Did that and then thought it may not be a good idea to use the web. Might be better to install it locally and run. So went back to the <a href="https://swagger.io/tools/swagger-editor/">editor</a> page and clicked on &lsquo;download Swagger Editor&rsquo;. That took me to the swagger github repository (<a href="https://github.com/swagger-api/swagger-editor)">https://github.com/swagger-api/swagger-editor)</a>. Was expecting a binary that I could use to install locally though.</p>
+<p>Anyway, did a git clone and followed the instructions to set it up locally.</p>
+<pre><code># Install npm packages (if needed)
+npm install
+
+# Build the app
+npm run build
+
+# Build an image
+docker build -t swagger-editor .
+
+# Run the container
+docker run -d -p 80:8080 swagger-editor
+</code></pre><p>But this failed with the error</p>
+<p><code>docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?</code></p>
+<p>So installed docker. Used the local installable &lsquo;Docker Desptop for Mac&rsquo;(<a href="https://docs.docker.com/get-docker/)">https://docs.docker.com/get-docker/)</a>. This had a getting-started example which was easy to follow and in a few steps was able to create a &lsquo;getting-started&rsquo; container. The dashboard had a pretty UI to display the container. One could start/stop the container using the UI.</p>
+<h2 id="using-the-swagger-editor-docker-image">Using the swagger-editor docker image</h2>
+<p>Another option mentioned in the Swagger repo was to use a docker image that was already published in DockerHub. Should have used that instead of trying to build this locally.</p>
+<pre><code>docker pull swaggerapi/swagger-editor
+
+docker run -d -p 80:8080 swaggerapi/swagger-editor
+</code></pre><p>Navigating to http://localhost showed the beautiful Swagger UI with a pre-filled &ldquo;Petstore API documentation&rdquo;.</p>
+<p><img src="/images/swagger-ui.png" alt="swagger-ui"></p>
+<p>Exciting! Now starts the actual API documentation.</p>
+
+            </div>
+            <div class="post-footer">
+              <div class="info">
+                
+<span class="separator"><a class="category" href="/categories/technical-notes/">Technical Notes</a><a class="category" href="/categories/blog/">Blog</a></span>
+
+                
+              </div>
+            </div>
+            
+          </div>
+          <nav class="divTableCell section-nav">
+            <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/#intro">Intro</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/#great-api-documentation-examples">Great API documentation examples</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/#what-is-swagger">What Is Swagger?</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/#installing-swagger-editor-locally">Installing Swagger editor locally</a></li>
+    <li><a href="https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/#using-the-swagger-editor-docker-image">Using the swagger-editor docker image</a></li>
+  </ul>
+</nav>
+            </div>
+          </nav>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="></script>
+
+
+
+
+<script type="text/javascript" src="https://robinsonraju.info/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="></script>
+
+<script type="text/javascript" src="https://robinsonraju.info/js/medium-zoom.min.7487768bffcc6aee437cf6a4ac7da5d2ffc61dc63b36316a14122ceb26b34c70.js" integrity="sha256-dId2i//Mau5DfPakrH2l0v/GHcY7NjFqFBIs6yazTHA="></script>
+
+<link rel="stylesheet" href="https://robinsonraju.info/css/medium-zoom.min.a1468f7a1cce6fe96c4b5483cb4645b85728a32b3abbd598c375a92df16230ef.css" integrity="sha256-oUaPehzOb&#43;lsS1SDy0ZFuFcooys6u9WYw3WpLfFiMO8=" type="text/css">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

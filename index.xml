@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>API documentation using Swagger</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/</guid>
+      <description>Intro Wanted to create an API spec for brainstorming an API that we&amp;rsquo;re developing.</description>
+    </item>
+    
+    <item>
       <title>Catalyst of Change</title>
       <link>https://robinsonraju.info/blog/2020-06-03-catalyst-of-change/</link>
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
