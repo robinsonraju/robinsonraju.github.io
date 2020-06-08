@@ -889,7 +889,12 @@ img[alt=files-in-the-codebase] {
     flex-direction: column-reverse;
   }
 
-  .homeleft, .homeright {
+  .homeleft {
+    display: none;
+    width: auto;
+  }
+
+  .homeright {
     width: auto;
   }
 
