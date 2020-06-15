@@ -6,10 +6,19 @@
     <description>Recent content in Technical Notes on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/tech-notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IT Security: Defense against the digital dark arts</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-14-coursera-cybersecurity-course/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2020-06-14-coursera-cybersecurity-course/</guid>
+      <description>This was an extraordinary course. It is a great refresher of a lot of cybersecurity concepts that most engineers might have heard of but not know.</description>
+    </item>
     
     <item>
       <title>API documentation using Swagger</title>
