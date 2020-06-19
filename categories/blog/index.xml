@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Security Threat Models</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-18-threat-models/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2020-06-18-threat-models/</guid>
+      <description>Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading.</description>
+    </item>
     
     <item>
       <title>IT Security: Defense against the digital dark arts</title>
