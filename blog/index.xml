@@ -6,10 +6,19 @@
     <description>Recent content in General Posts on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Cybersecurity Book List</title>
+      <link>https://robinsonraju.info/blog/2020-06-22-cybersecurity-reading-list/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/blog/2020-06-22-cybersecurity-reading-list/</guid>
+      <description>While writing a note about My Reading Journey, I was reminded that I hadn&amp;rsquo;t put a section on list of books related to Computer Science in My Reading List.</description>
+    </item>
     
     <item>
       <title>Favorite Poems</title>
