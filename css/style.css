@@ -9,23 +9,26 @@
   --pre-bg-color: #f9f9fd;
   --nav-text-color:#5a5a5a;
   --tag-color: #424242;
+  scroll-padding-top: 100px;
 }
 
 html[data-theme='dark'] {
-  --bg-color:#fff;
-  --secondary-bg-color:#eeeeee;
-  --heading-color: #5f5f5f;
-  --body-color: rgba(0, 0, 0, 0.7);
+  --bg-color:#292a2d;
+  --secondary-bg-color:rgb(119, 119, 122);
+  --heading-color: rgb(169,169,179);
+  --body-color:rgb(169,169,179);
   --post-color: rgba(0, 0, 0, 0.44);
-  --border-color: rgba(0, 0, 0, 0.15);
-  --pre-bg-color: #f9f9fd;
-  --nav-text-color:#5a5a5a;
-  --tag-color: #007aa5;
+  --border-color: rgb(38, 38, 38);
+  --pre-bg-color:rgb(33,33,45);
+  --nav-text-color:rgb(191, 191, 191);
+  --tag-color: rgb(191, 191, 191);
+
 }
 
 html {
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
+
 }
 
 body {
