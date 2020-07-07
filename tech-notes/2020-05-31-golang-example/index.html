@@ -4,7 +4,7 @@
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="Robinson Raju Varghese">
     
-    <link rel="stylesheet" href="https://robinsonraju.info/css/style.min.cda2c44854ddd29a146f26f4840f1cee1c591e480f95899ad2670890a86403a0.css" integrity="sha256-zaLESFTd0poUbyb0hA8c7hxZHkgPlYma0mcIkKhkA6A=" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://robinsonraju.info/css/style.min.45fbe1c5ca3d3804f2ab2404804ccc7120160fea892057bc9d3ea6e9c36c1f61.css" integrity="sha256-Rfvhxco9OATyqyQEgEzMcSAWD&#43;qJIFe8nT6m6cNsH2E=" crossorigin="anonymous" type="text/css">
     
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
@@ -108,21 +108,28 @@
 <h2 id="installing-go">Installing Go</h2>
 <p>Installed Go from the golang website. <a href="https://golang.org/dl/">https://golang.org/dl/</a>.
 Checked if it was installed.</p>
-<pre><code>go version
-</code></pre><p>I got the response back as <code>go version go1.14.3 darwin/amd64</code></p>
+<pre class="cmd"><code>go version</code></pre>
+
+<p>I got the response back as <code>go version go1.14.3 darwin/amd64</code></p>
 <h2 id="sample-codebase">Sample Codebase</h2>
 <p>Searched <a href="https://github.com">github.com</a> and got the following go repos for &ldquo;bookdata&rdquo;. Looks like people are using this to learn Go.</p>
-<p><img src="/images/githubsearch-bookdata.png" alt="githubsearch-bookdata"></p>
+<figure>
+    <img src="/images/githubsearch-bookdata.png"/> <figcaption>
+            <h4>GitHub Search Bookdata</h4>
+        </figcaption>
+</figure>
+
 <p>The first application seems to be pretty good. It even has documentation on the API paths that are supported.</p>
 <h2 id="setting-up-sample-codebase">Setting up sample codebase</h2>
-<pre><code>git clone https://github.com/moficodes/bookdata-api.git
+<pre class="cmd"><code>git clone https://github.com/moficodes/bookdata-api.git</code></pre>
 
-</code></pre><p>I was assuming, and hoping that there should be no other setup that is needed.</p>
+<p>I was assuming, and hoping that there should be no other setup that is needed.</p>
 <h2 id="starting-the-server">Starting the server</h2>
-<pre><code>cd bookdata-api
+<pre class="cmd"><code>cd bookdata-api</code></pre>
 
-go run .
-</code></pre><h2 id="testing-the-api">Testing the API</h2>
+<pre class="cmd"><code>go run .</code></pre>
+
+<h2 id="testing-the-api">Testing the API</h2>
 <p>The documentation has the following REST APIs.
 All api endpoints are prefixed with <code>/api/v1</code></p>
 <pre><code>Get Books by Author
