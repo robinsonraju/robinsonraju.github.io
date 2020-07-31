@@ -6,10 +6,19 @@
     <description>Recent content in Technical Notes on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/technical-notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GCP Fundamentals Core Infrastructure</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-28-coursera-gcp-fundamentals-course/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tech-notes/2020-06-28-coursera-gcp-fundamentals-course/</guid>
+      <description>Thoughts If you&amp;rsquo;re looking for a sweeping introduction to all the various products under the Google Cloud umbrella, this is definitely the one you need to go through.</description>
+    </item>
     
     <item>
       <title>A Cybersecurity Book List</title>
