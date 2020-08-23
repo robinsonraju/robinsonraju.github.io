@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Rob&#39;s Notes</title>
+    <title>Categories on Robinson Raju</title>
     <link>https://robinsonraju.info/categories/</link>
-    <description>Recent content in Categories on Rob&#39;s Notes</description>
+    <description>Recent content in Categories on Robinson Raju</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <language>en-us</language>
+    <copyright>© 2020 Robinson Raju</copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +15,7 @@
     <item>
       <title>Blog</title>
       <link>https://robinsonraju.info/categories/blog/</link>
-      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.info/categories/blog/</guid>
       <description></description>
@@ -23,7 +24,7 @@
     <item>
       <title>Book Notes</title>
       <link>https://robinsonraju.info/categories/book-notes/</link>
-      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.info/categories/book-notes/</guid>
       <description></description>

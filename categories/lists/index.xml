@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lists on Rob&#39;s Notes</title>
+    <title>Lists on Robinson Raju</title>
     <link>https://robinsonraju.info/categories/lists/</link>
-    <description>Recent content in Lists on Rob&#39;s Notes</description>
+    <description>Recent content in Lists on Robinson Raju</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
+    <copyright>© 2020 Robinson Raju</copyright>
     <lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/lists/index.xml" rel="self" type="application/rss+xml" />

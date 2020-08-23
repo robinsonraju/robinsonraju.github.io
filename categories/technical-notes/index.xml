@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technical Notes on Rob&#39;s Notes</title>
+    <title>Technical Notes on Robinson Raju</title>
     <link>https://robinsonraju.info/categories/technical-notes/</link>
-    <description>Recent content in Technical Notes on Rob&#39;s Notes</description>
+    <description>Recent content in Technical Notes on Robinson Raju</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
+    <copyright>© 2020 Robinson Raju</copyright>
     <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/technical-notes/index.xml" rel="self" type="application/rss+xml" />
@@ -93,7 +94,7 @@
     </item>
     
     <item>
-      <title>Functional Thinking</title>
+      <title>Functional Thinking by Neal Ford</title>
       <link>https://robinsonraju.info/books/2016-10-16-functionalthinking/</link>
       <pubDate>Sun, 16 Oct 2016 09:27:14 +0000</pubDate>
       

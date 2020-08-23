@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project Management on Rob&#39;s Notes</title>
+    <title>Project Management on Robinson Raju</title>
     <link>https://robinsonraju.info/categories/project-management/</link>
-    <description>Recent content in Project Management on Rob&#39;s Notes</description>
+    <description>Recent content in Project Management on Robinson Raju</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
+    <copyright>© 2020 Robinson Raju</copyright>
     <lastBuildDate>Tue, 18 Nov 2014 23:15:14 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/project-management/index.xml" rel="self" type="application/rss+xml" />

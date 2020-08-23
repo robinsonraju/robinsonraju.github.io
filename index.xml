@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rob&#39;s Notes</title>
+    <title>Robinson Raju</title>
     <link>https://robinsonraju.info/</link>
-    <description>Recent content on Rob&#39;s Notes</description>
+    <description>Recent content on Robinson Raju</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
+    <copyright>© 2020 Robinson Raju</copyright>
     <lastBuildDate>Fri, 01 May 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/index.xml" rel="self" type="application/rss+xml" />
@@ -21,7 +22,25 @@
     </item>
     
     <item>
-      <title>The Return of the Native</title>
+      <title>Thinking, Fast and Slow by Daniel Kahneman</title>
+      <link>https://robinsonraju.info/books/2020-08-14-thinking-fast-and-slow/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2020-08-14-thinking-fast-and-slow/</guid>
+      <description>Thoughts Notes Chapter 1 Summary Kahneman begins the book by engaging the reader on an intuitive thinking practice whereby he posts a photo of a woman’s face who appears angry.</description>
+    </item>
+    
+    <item>
+      <title>Great Expectations by Charles Dickens</title>
+      <link>https://robinsonraju.info/books/2020-07-25-great-expectations/</link>
+      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2020-07-25-great-expectations/</guid>
+      <description>Thoughts  Notes Chapter I - Pip meets the convict The novel starts with Pip, a boy standing near the graves of his parents and his dead brothers trying to imagine what they looked like.</description>
+    </item>
+    
+    <item>
+      <title>The Return of the Native by Thomas Hardy</title>
       <link>https://robinsonraju.info/books/2020-07-10-the-return-of-the-native/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -84,6 +103,15 @@
     </item>
     
     <item>
+      <title>Zero Trust Networks by Evan Gilman, Doug Barth</title>
+      <link>https://robinsonraju.info/books/2020-06-20-zero-trust-networks/</link>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2020-06-20-zero-trust-networks/</guid>
+      <description>Zero Trust Networks: Building Secure Systems in Untrusted Networks 1st Edition</description>
+    </item>
+    
+    <item>
       <title>Security Threat Models</title>
       <link>https://robinsonraju.info/tech-notes/2020-06-18-threat-models/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
@@ -102,7 +130,7 @@
     </item>
     
     <item>
-      <title>The Goal: A Process of Ongoing Improvement</title>
+      <title>The Goal: A Process of Ongoing Improvement by Eliyahu M. Goldratt &amp; Jeff Cox</title>
       <link>https://robinsonraju.info/books/2020-06-09-the-goal-goldratt/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -210,7 +238,7 @@
     </item>
     
     <item>
-      <title>The Great Mental Models: Volume 1</title>
+      <title>The Great Mental Models: Volume 1 by Shane Parrish &amp; Rhiannon Beaubien</title>
       <link>https://robinsonraju.info/books/2020-04-28-great-mental-models/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -219,7 +247,7 @@
     </item>
     
     <item>
-      <title>21 Lessons for the 21st Century</title>
+      <title>21 Lessons for the 21st Century by Yuval Noah Harari</title>
       <link>https://robinsonraju.info/books/2020-01-18-21_lessons/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -228,7 +256,7 @@
     </item>
     
     <item>
-      <title>Factfulness</title>
+      <title>Factfulness By Hans Rosling,  Anna Rosling Rönnlund, Ola Rosling</title>
       <link>https://robinsonraju.info/books/2020-01-04-factfulness/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -237,7 +265,7 @@
     </item>
     
     <item>
-      <title>Of Love and Other Demons</title>
+      <title>Of Love and Other Demons by Gabriel Garcia Marquez</title>
       <link>https://robinsonraju.info/books/2019-10-15-of-love-and-other-demons/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
@@ -246,7 +274,17 @@
     </item>
     
     <item>
-      <title>Snow Crash</title>
+      <title>12 Rules for Life by Jordan Peterson</title>
+      <link>https://robinsonraju.info/books/2019-08-01-12-rules-of-life/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2019-08-01-12-rules-of-life/</guid>
+      <description>Chapter 1
+With limited resources like food, shelter and space to satisfy an exponentially increasing set of basic needs, there is a constant struggle among and between humans and animals.</description>
+    </item>
+    
+    <item>
+      <title>Snow Crash by Neal Stephenson</title>
       <link>https://robinsonraju.info/books/2019-02-20-snow-crash/</link>
       <pubDate>Wed, 20 Feb 2019 13:18:21 +0000</pubDate>
       
@@ -255,7 +293,7 @@
     </item>
     
     <item>
-      <title>Payment Systems in the US - Second Edition</title>
+      <title>Payment Systems in the US - Second Edition by Carol Coye Benson , Scott Loftesness</title>
       <link>https://robinsonraju.info/books/2019-01-31-payment-systems/</link>
       <pubDate>Thu, 31 Jan 2019 15:18:21 +0000</pubDate>
       
@@ -264,7 +302,7 @@
     </item>
     
     <item>
-      <title>How to Become CEO - The Rules for Rising to the Top of Any Organization</title>
+      <title>How to Become CEO - The Rules for Rising to the Top of Any Organization by Jeffrey J. Fox</title>
       <link>https://robinsonraju.info/books/2018-12-05-how-to-become-ceo/</link>
       <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
       
@@ -273,7 +311,7 @@
     </item>
     
     <item>
-      <title>Blink - The Power of Thinking Without Thinking</title>
+      <title>Blink - The Power of Thinking Without Thinking by Malcom Gladwell</title>
       <link>https://robinsonraju.info/books/2016-12-15-blink/</link>
       <pubDate>Thu, 15 Dec 2016 15:18:21 +0000</pubDate>
       
@@ -282,7 +320,7 @@
     </item>
     
     <item>
-      <title>The One Thing</title>
+      <title>The One Thing by Gary Keller</title>
       <link>https://robinsonraju.info/books/2016-11-26-the-one-thing/</link>
       <pubDate>Sat, 26 Nov 2016 18:17:11 +0000</pubDate>
       
@@ -291,7 +329,7 @@
     </item>
     
     <item>
-      <title>Functional Thinking</title>
+      <title>Functional Thinking by Neal Ford</title>
       <link>https://robinsonraju.info/books/2016-10-16-functionalthinking/</link>
       <pubDate>Sun, 16 Oct 2016 09:27:14 +0000</pubDate>
       
@@ -300,7 +338,7 @@
     </item>
     
     <item>
-      <title>Outliers</title>
+      <title>Outliers by Malcom Gladwell</title>
       <link>https://robinsonraju.info/books/2016-07-10-outliers/</link>
       <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
       
@@ -309,7 +347,7 @@
     </item>
     
     <item>
-      <title>The Bartimaeus Trilogy</title>
+      <title>The Bartimaeus Trilogy by Jonathan Stroud</title>
       <link>https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/</link>
       <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
       
@@ -355,7 +393,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>The Checklist Manifesto</title>
+      <title>The Checklist Manifesto by Atul Gawande</title>
       <link>https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/</link>
       <pubDate>Sun, 06 Sep 2015 08:17:11 +0000</pubDate>
       
@@ -413,7 +451,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>The End of Power</title>
+      <title>The End of Power by Moses Naim</title>
       <link>https://robinsonraju.info/books/2015-01-10-end-of-power/</link>
       <pubDate>Sat, 10 Jan 2015 10:17:11 +0000</pubDate>
       
@@ -512,7 +550,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>Introduction to Data Mining</title>
+      <title>Introduction to Data Mining by Pang-Ning Tan, Michael Steinbach, Vipin Kumar</title>
       <link>https://robinsonraju.info/books/2014-02-16-datamining-tsk/</link>
       <pubDate>Sun, 16 Feb 2014 18:17:11 +0000</pubDate>
       
@@ -580,7 +618,7 @@ List of books that I have read, started to read, heard a lot about and want to r
       <pubDate>Fri, 09 Nov 2007 08:38:12 +0000</pubDate>
       
       <guid>https://robinsonraju.info/blog/2007-11-09-rainbow-butterflies/</guid>
-      <description>Header Image - &amp;ldquo;Orange Sulphur in Miss Huff&amp;rdquo; by Vicki DeLoach via Flickr.</description>
+      <description>Thought of finally taking a break to roll up my sleeves, blow the dust off the writing desk and sit and gather the fluttering paper rainbow butterflies and stick them to the book.</description>
     </item>
     
     <item>
@@ -611,7 +649,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>7 Habits of Highly Effective People</title>
+      <title>7 Habits of Highly Effective People by Steven Covey</title>
       <link>https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/</link>
       <pubDate>Sun, 10 Dec 2006 10:27:11 +0000</pubDate>
       
@@ -653,7 +691,8 @@ List of books that I have read, started to read, heard a lot about and want to r
       <pubDate>Wed, 05 Jul 2006 02:05:33 +0000</pubDate>
       
       <guid>https://robinsonraju.info/blog/2006-07-05-destruction-of-sennacherib/</guid>
-      <description>Some days you get up slowly ..sit or sometimes sit n sleep on the bed for sometime .</description>
+      <description>Some days you get up slowly ..
+sit or sometimes sit n sleep on the bed for sometime .</description>
     </item>
     
     <item>
@@ -698,7 +737,7 @@ List of books that I have read, started to read, heard a lot about and want to r
       <pubDate>Sun, 30 Apr 2006 23:56:11 +0000</pubDate>
       
       <guid>https://robinsonraju.info/blog/2006-04-30-a-beautiful-day/</guid>
-      <description>The first thing that I did was to watch the rest of &amp;lsquo;The Sound of Music&#39;The &amp;lsquo;favourite things&amp;rsquo; song was still afresh in my mind.</description>
+      <description>&#34;...bright copper kettles and warm woolen mittens Brown paper packages tied up with strings,</description>
     </item>
     
     <item>
@@ -707,7 +746,8 @@ List of books that I have read, started to read, heard a lot about and want to r
       <pubDate>Wed, 08 Feb 2006 22:33:11 +0000</pubDate>
       
       <guid>https://robinsonraju.info/blog/2006-02-08-storytellers-creed/</guid>
-      <description>This is from a book named ‘All I really need to know I learned in kindergarten’.</description>
+      <description>I believe that imagination is stronger than knowledge.
+That myth is more potent than history.</description>
     </item>
     
     <item>
@@ -725,7 +765,7 @@ List of books that I have read, started to read, heard a lot about and want to r
       <pubDate>Thu, 26 Jan 2006 23:36:31 +0000</pubDate>
       
       <guid>https://robinsonraju.info/blog/2006-01-26-master-of-the-game/</guid>
-      <description>Experience means recognizing patterns. Attribute the observed pattern to something that you have already done.</description>
+      <description>For three days he has been working on it.</description>
     </item>
     
     <item>
@@ -747,7 +787,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>My Cousin Rachel</title>
+      <title>My Cousin Rachel by Daphne du Maurier</title>
       <link>https://robinsonraju.info/books/2005-06-17-my-cousin-rachel-daphne-du-maurier/</link>
       <pubDate>Fri, 17 Jun 2005 12:17:11 +0000</pubDate>
       
@@ -756,7 +796,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>Makar Chudra</title>
+      <title>Makar Chudra by Maxim Gorky</title>
       <link>https://robinsonraju.info/books/2005-06-15-makar-chudra-maxim-gorky/</link>
       <pubDate>Wed, 15 Jun 2005 01:29:31 +0000</pubDate>
       
@@ -765,7 +805,7 @@ List of books that I have read, started to read, heard a lot about and want to r
     </item>
     
     <item>
-      <title>The King&#39;s General</title>
+      <title>The King&#39;s General by Daphne du Maurier</title>
       <link>https://robinsonraju.info/books/2005-06-11-kings-general-dumaurier/</link>
       <pubDate>Sat, 11 Jun 2005 23:25:41 +0000</pubDate>
       

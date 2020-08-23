@@ -1,108 +1,134 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light"><head>
-    <title> Robinson Raju | Setting up Hugo Site and Migrating from Jekyll </title>
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="Robinson Raju">
-    
-    <link rel="stylesheet" href="https://robinsonraju.info/css/style.min.461e48b019eac9798c1197403c7aed11049ca011e92b798042fcbd2be22a1706.css" integrity="sha256-Rh5IsBnqyXmMEZdAPHrtEQScoBHpK3mAQvy9K&#43;IqFwY=" crossorigin="anonymous" type="text/css">
-    
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
-    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
-    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/">
-    
-    
-    <script type="text/javascript" src="https://robinsonraju.info/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
-    <meta name="twitter:card" content="summary"/>
+<html
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicon-16x16.png">
+<link rel="manifest" href="https://robinsonraju.info/site.webmanifest">
+<link rel="mask-icon" href="https://robinsonraju.info/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="">
+
+<meta property="og:title" content="Setting up Hugo Site and Migrating from Jekyll" />
+<meta property="og:description" content="A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/" />
+<meta property="article:published_time" content="2020-05-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-04T00:00:00+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+
+<meta property="og:site_name" content="Robinson Raju" />
+
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setting up Hugo Site and Migrating from Jekyll"/>
 <meta name="twitter:description" content="A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost."/>
 
-</head><body><div class="sidebar animated fadeInDown">
-    <div class="logo-title">
-      <div class="title">
-        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture">
-        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
-        <div class="description">
-          <p>Robinson Raju</p>
-        </div>
-      </div>
-    </div>
-    <ul class="social-links">
-        
-        <li>
-        <a href="https://linkedin.com/in/robinsonraju" rel="me" aria-label="Linkedin">
-          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
-        </a>          
-        </li>
 
-        
-        <li>
-        <a href="https://github.com/robinsonraju" rel="me" aria-label="GitHub">
-          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
-        </a>          
-        </li>
+<meta itemprop="name" content="Setting up Hugo Site and Migrating from Jekyll">
+<meta itemprop="description" content="A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost.">
+<meta itemprop="datePublished" content="2020-05-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-05-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1136">
 
-        
-        <li>
-        <a href="https://instagram.com/luminous_infinitus" rel="me" aria-label="instagram">
-          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
-        </a>          
-        </li>
 
-        
-        <li>
-        <a href="mailto:robinson.raju@gmail.com" rel="me" aria-label="e-mail">
-          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
-        </a>          
-        </li>
 
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Robinson Raju 2020 </div>
-      </div>
-    </div>
-</div><div class="main">
-            <div class="page-top animated fadeInDown">
-    <ul class="nav">
-        
-        
-        
-        <li><a  href="/" title="">Home</a></li>
-        
-        
-        <li><a  href="/categories/blog/" title="">Blog</a></li>
-        
-        
-        <li><a  href="/about/" title="About">About</a></li>
-        
-    </ul>
+<meta itemprop="keywords" content="" />
+
+
+    <title>Setting up Hugo Site and Migrating from Jekyll || Robinson Raju</title>
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/" />
+
     
-</div>
 
-            <div class="autopagerize_page_element">
-                <div class="content">
-<div class="post animated fadeInDown">
-  <div class="divTable">
-    <div class="divTableBody">
-      <div class="divTableRow">
-        <main>
-          <div class="divTableCell" >
-            <div class="post-content">
-              <div class="post-title">
-                <h3>Setting up Hugo Site and Migrating from Jekyll</h3>
-                  
-                    <h4></h4>
-                    <div class="info">
-                      <i class="fa fa-sun-o"></i><span class="date">Mon, May 4, 2020</span>
-                      <i class="fa fa-clock-o"></i><span class="reading-time">6-minute read</span>
-                    </div>
-                  
-              </div>
-              <p>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using <a href="https://ghost.org/">Ghost</a>. That made me think if I should explore moving from <a href="https://jekyllrb.com/">Jekyll</a> to something newer. New frameworks keep coming up and it probably is a good idea to shift to keep up. So googled for static website generators to see comparisons to products similar to Jekyll. Found that there are many. Hugo caught my attention and I had wanted to migrate my site to Hugo since then. All that was needed was couple of hours or so but I think I probably spent more time exploring through <a href="https://themes.gohugo.io/">Hugo Themes</a> for many days and months. My initial thought was to have a theme similar to the one that I had with Jekyll, which was the <a href="http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a> theme. What I had liked the most about the theme was the font, especially the italics version. But I didn&rsquo;t like banner images. Thinking of choosing the right image for an article itself seemed like a chore. I&rsquo;d rather prefer just typing text. My first choice was to go with a theme called <a href="https://themes.gohugo.io/hugo-theme-even/">Even</a>. It didn&rsquo;t quite workout the way I intended it to. I wanted to have a left-nav and also a starting page which was not a list of blog entries. After a couple of tries, used a theme called <a href="https://themes.gohugo.io/anatole/">Anatole</a>. It was super simple to set up and modify.</p>
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="en-us">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="https://robinsonraju.info" >Robinson Raju</a>
+      <span class="divider">/ </span>
+  <a href="https://robinsonraju.infotech-notes">Technical Notes</a>
+      <ul class="list-unstyled right-links">
+
+          <li>
+            <a href="/about">
+              <span class="post-title">About</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Robinson Raju" />
+  <meta itemprop="publisher" content="Robinson Raju" />
+  <meta itemprop="image" content="" />
+  <meta itemprop="headline" content="Setting up Hugo Site and Migrating from Jekyll" />
+  <h1 itemprop="name" id="title">Setting up Hugo Site and Migrating from Jekyll</h1>
+
+  
+
+    <h4 itemprop="name" id="title">Robinson Raju</h4>
+
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="https://robinsonraju.info/tags/general/">#General</a>&nbsp;
+        
+          <a href="https://robinsonraju.info/tags/technical-notes/">#Technical Notes</a>&nbsp;
+        
+          <a href="https://robinsonraju.info/tags/blog/">#Blog</a>&nbsp;
+        
+      </div>
+    
+
+    
+      <div class="post-date">
+        
+          <span itemprop="datePublished">May 4, 2020</span>
+          <meta itemprop="dateModified" content="May 4, 2020"/>
+        
+      | 1136 words
+      | 6-minute read
+      </div>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using <a href="https://ghost.org/">Ghost</a>. That made me think if I should explore moving from <a href="https://jekyllrb.com/">Jekyll</a> to something newer. New frameworks keep coming up and it probably is a good idea to shift to keep up. So googled for static website generators to see comparisons to products similar to Jekyll. Found that there are many. Hugo caught my attention and I had wanted to migrate my site to Hugo since then. All that was needed was couple of hours or so but I think I probably spent more time exploring through <a href="https://themes.gohugo.io/">Hugo Themes</a> for many days and months. My initial thought was to have a theme similar to the one that I had with Jekyll, which was the <a href="http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a> theme. What I had liked the most about the theme was the font, especially the italics version. But I didn&rsquo;t like banner images. Thinking of choosing the right image for an article itself seemed like a chore. I&rsquo;d rather prefer just typing text. My first choice was to go with a theme called <a href="https://themes.gohugo.io/hugo-theme-even/">Even</a>. It didn&rsquo;t quite workout the way I intended it to. I wanted to have a left-nav and also a starting page which was not a list of blog entries. After a couple of tries, used a theme called <a href="https://themes.gohugo.io/anatole/">Anatole</a>. It was super simple to set up and modify.</p>
 <h2 id="setting-up-the-hugo-site">Setting up the Hugo Site</h2>
 <p>The steps to set up are pretty simple like Jekyll. Hugo&rsquo;s <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> page covers the basics very clearly. I&rsquo;ll review what I did in addition to setting up the Hugo site.</p>
 <h3 id="1-install-hugo--create-a-new-site">1. Install hugo &amp; Create a new site</h3>
@@ -128,7 +154,7 @@ Change the directory to the directory of your site. Initialize it as a git repos
 <p>You can modify the content and the site will automatically rebuild. You can manually rebuild by simply typing <strong><code>hugo</code></strong> command on the command prompt.</p>
 <h2 id="migrate-content-from-jekyll">Migrate content from Jekyll</h2>
 <h3 id="1-content">1. Content</h3>
-<p>I initially thought I&rsquo;d just move all the files from <strong><code>_posts</code></strong> directory in Jekyll root folder to <strong><code>content</code></strong> folder in Hugo root folder. But that gave a lot of parsing errors. Got to know that Hugo support <strong><code>TOML</code></strong> format where metadata is enclosed with 2 lines of +++ and has <em>key = &ldquo;<!-- raw HTML omitted -->&rdquo;</em> structure and also <strong><code>YAML</code></strong> format where metadata is enclosed with 2 lines of &mdash; and has <em>key : value</em> structure. So it should support Jekyll&rsquo;s YAML structure automatically. One of the keys &lsquo;category&rsquo; was a String in my yaml file and in the new theme, it was an array. So changing that to array, fixed the issue and I was able to copy over all the content.</p>
+<p>I initially thought I&rsquo;d just move all the files from <strong><code>_posts</code></strong> directory in Jekyll root folder to <strong><code>content</code></strong> folder in Hugo root folder. But that gave a lot of parsing errors. Got to know that Hugo support <strong><code>TOML</code></strong> format where metadata is enclosed with 2 lines of +++ and has <em>key = &ldquo;<value>&rdquo;</em> structure and also <strong><code>YAML</code></strong> format where metadata is enclosed with 2 lines of &mdash; and has <em>key : value</em> structure. So it should support Jekyll&rsquo;s YAML structure automatically. One of the keys &lsquo;category&rsquo; was a String in my yaml file and in the new theme, it was an array. So changing that to array, fixed the issue and I was able to copy over all the content.</p>
 <h3 id="2-static-files---images-css">2. Static files - images, css</h3>
 <p>My Jekyll set up had specific folders named <strong><code>css, js, img</code></strong>, etc. under the <strong><code>root</code></strong> folder to store static data. In Hugo, it is all in <strong><code>static</code></strong> folder under the <strong><code>root</code></strong> folder .
 I copied over css from the theme folder to override. Also copied over some template HTMLs from theme to <strong><code>layouts</code></strong> folder.</p>
@@ -173,72 +199,29 @@ As I mentioned earlier, I copied over css from the theme folder to override and 
 I wanted to have a TOC on the posts and followed instructions from <a href="https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/">https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/</a> to achieve that. Copied over <strong><code>single.html</code></strong> from themes layouts into the local <strong><code>layouts/_default</code></strong> folder and modified it.</p>
 <p>That&rsquo;s it. All the best on your Hugo site.</p>
 
-            </div>
-            <div class="post-footer">
-              <div class="info">
-                
-<span class="separator"><a class="category" href="/categories/general/">General</a><a class="category" href="/categories/technical-notes/">Technical Notes</a><a class="category" href="/categories/blog/">Blog</a></span>
-
-                
-              </div>
-            </div>
-              
-          </div>
-          <nav class="divTableCell section-nav">
-            <div>
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#setting-up-the-hugo-site">Setting up the Hugo Site</a>
-      <ul>
-        <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#1-install-hugo--create-a-new-site">1. Install hugo &amp; Create a new site</a></li>
-        <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#2-configure-the-site-with-a-theme">2. Configure the site with a theme</a></li>
-        <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#3-add-content--start-the-server">3. Add Content &amp; Start the server</a></li>
-      </ul>
-    </li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#migrate-content-from-jekyll">Migrate content from Jekyll</a>
-      <ul>
-        <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#1-content">1. Content</a></li>
-        <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#2-static-files---images-css">2. Static files - images, css</a></li>
-      </ul>
-    </li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#3-deploying-to-github-pages">3. Deploying to Github pages</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/#4-customizations-optional">4. Customizations (Optional)</a></li>
-  </ul>
-</nav>
-            </div>
-          </nav>
-        </main>
-      </div>
-    </div>
   </div>
-</div>
+
+</article>
+
+  
 
 
-                </div>
-            </div>
-        </div>
-</body>
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: A Simple MapReduce Job for Iris Dataset</span>
+      </a>
+      
+      
+        <a href="https://robinsonraju.info/tech-notes/2020-05-23-automating-build-n-push/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Automating the Hugo build and push to GitHub</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
 
-
-
-<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
-
-
-
-
-<script type="text/javascript" src="https://robinsonraju.info/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="https://robinsonraju.info/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-166342905-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-</html></body>
-
+  </body>
 </html>

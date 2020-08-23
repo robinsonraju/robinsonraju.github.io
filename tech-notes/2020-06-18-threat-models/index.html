@@ -1,108 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light"><head>
-    <title> Robinson Raju | Security Threat Models </title>
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="Robinson Raju">
-    
-    <link rel="stylesheet" href="https://robinsonraju.info/css/style.min.461e48b019eac9798c1197403c7aed11049ca011e92b798042fcbd2be22a1706.css" integrity="sha256-Rh5IsBnqyXmMEZdAPHrtEQScoBHpK3mAQvy9K&#43;IqFwY=" crossorigin="anonymous" type="text/css">
-    
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
-    <link rel="shortcut icon" href="https://robinsonraju.info/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicons/favicon-16x16.png">
-    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/">
-    
-    
-    <script type="text/javascript" src="https://robinsonraju.info/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
-    <meta name="twitter:card" content="summary"/>
+<html
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicon-16x16.png">
+<link rel="manifest" href="https://robinsonraju.info/site.webmanifest">
+<link rel="mask-icon" href="https://robinsonraju.info/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="">
+
+<meta property="og:title" content="Security Threat Models" />
+<meta property="og:description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/" />
+<meta property="article:published_time" content="2020-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-18T00:00:00+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+
+<meta property="og:site_name" content="Robinson Raju" />
+
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Security Threat Models"/>
 <meta name="twitter:description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading."/>
 
-</head><body><div class="sidebar animated fadeInDown">
-    <div class="logo-title">
-      <div class="title">
-        <img src="https://robinsonraju.info/images/profile.jpeg" alt="profile picture">
-        <h3 title=""><a href="/">Rob&#39;s Notes</a></h3>
-        <div class="description">
-          <p>Robinson Raju</p>
-        </div>
-      </div>
-    </div>
-    <ul class="social-links">
-        
-        <li>
-        <a href="https://linkedin.com/in/robinsonraju" rel="me" aria-label="Linkedin">
-          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
-        </a>          
-        </li>
 
-        
-        <li>
-        <a href="https://github.com/robinsonraju" rel="me" aria-label="GitHub">
-          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
-        </a>          
-        </li>
+<meta itemprop="name" content="Security Threat Models">
+<meta itemprop="description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading.">
+<meta itemprop="datePublished" content="2020-06-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="672">
 
-        
-        <li>
-        <a href="https://instagram.com/luminous_infinitus" rel="me" aria-label="instagram">
-          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
-        </a>          
-        </li>
 
-        
-        <li>
-        <a href="mailto:robinson.raju@gmail.com" rel="me" aria-label="e-mail">
-          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
-        </a>          
-        </li>
 
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Robinson Raju 2020 </div>
-      </div>
-    </div>
-</div><div class="main">
-            <div class="page-top animated fadeInDown">
-    <ul class="nav">
-        
-        
-        
-        <li><a  href="/" title="">Home</a></li>
-        
-        
-        <li><a  href="/categories/blog/" title="">Blog</a></li>
-        
-        
-        <li><a  href="/about/" title="About">About</a></li>
-        
-    </ul>
+<meta itemprop="keywords" content="" />
+
+
+    <title>Security Threat Models || Robinson Raju</title>
+    <link rel="canonical" href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/" />
+
     
-</div>
 
-            <div class="autopagerize_page_element">
-                <div class="content">
-<div class="post animated fadeInDown">
-  <div class="divTable">
-    <div class="divTableBody">
-      <div class="divTableRow">
-        <main>
-          <div class="divTableCell" >
-            <div class="post-content">
-              <div class="post-title">
-                <h3>Security Threat Models</h3>
-                  
-                    <h4></h4>
-                    <div class="info">
-                      <i class="fa fa-sun-o"></i><span class="date">Thu, Jun 18, 2020</span>
-                      <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
-                    </div>
-                  
-              </div>
-              <p>Came across a list of Threat Models in a book on <a href="https://www.amazon.com/Zero-Trust-Networks-Building-Untrusted/dp/1491962194/">Zero Trust Networks</a> that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems <a href="https://www.mdpi.com/2073-431X/5/4/27">Seifert &amp; Reza (2016)</a>.</p>
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="en-us">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="https://robinsonraju.info" >Robinson Raju</a>
+      <span class="divider">/ </span>
+  <a href="https://robinsonraju.infotech-notes">Technical Notes</a>
+      <ul class="list-unstyled right-links">
+
+          <li>
+            <a href="/about">
+              <span class="post-title">About</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Robinson Raju" />
+  <meta itemprop="publisher" content="Robinson Raju" />
+  <meta itemprop="image" content="" />
+  <meta itemprop="headline" content="Security Threat Models" />
+  <h1 itemprop="name" id="title">Security Threat Models</h1>
+
+  
+
+    <h4 itemprop="name" id="title">Robinson Raju</h4>
+
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="https://robinsonraju.info/tags/technical-notes/">#Technical Notes</a>&nbsp;
+        
+          <a href="https://robinsonraju.info/tags/blog/">#Blog</a>&nbsp;
+        
+      </div>
+    
+
+    
+      <div class="post-date">
+        
+          <span itemprop="datePublished">June 18, 2020</span>
+          <meta itemprop="dateModified" content="June 18, 2020"/>
+        
+      | 672 words
+      | 4-minute read
+      </div>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Came across a list of Threat Models in a book on <a href="https://www.amazon.com/Zero-Trust-Networks-Building-Untrusted/dp/1491962194/">Zero Trust Networks</a> that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems <a href="https://www.mdpi.com/2073-431X/5/4/27">Seifert &amp; Reza (2016)</a>.</p>
 <p>Before going into the popular models, what is Threat Modeling? There was a small section on Threat Modeling in the <a href="/tech-notes/2020-06-14-coursera-cybersecurity-course/#week-6---creating-a-company-culture-for-security">IT Security course</a> that I wrote about recently. It mentions that Security Risk assessment starts with Threat Modeling. The goal is to identify likely threats to systems, assign them priorities that correspond to severity and probability. This is done by brainstorming from the perspective of an outside attacker and figuring out what high value targets an attacker may want to go after, and then review possible attack vectors that could be used to gain access to the high value assets.</p>
 <p>The book mentions the following and I thought I&rsquo;d do a quick read on the other 3 to find out what they are and summarize all of them.</p>
 <ol>
@@ -166,65 +190,29 @@ Shevchenko, Nataliya. &ldquo;Threat Modeling: 12 Available Methods.&rdquo; Threa
 </li>
 </ol>
 
-            </div>
-            <div class="post-footer">
-              <div class="info">
-                
-<span class="separator"><a class="category" href="/categories/technical-notes/">Technical Notes</a><a class="category" href="/categories/blog/">Blog</a></span>
-
-                
-              </div>
-            </div>
-              
-          </div>
-          <nav class="divTableCell section-nav">
-            <div>
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#stride">STRIDE</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#dread">DREAD</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#pasta">PASTA</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#trike">Trike</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#vast">VAST</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#more-models">More Models</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#threat-modeling-tools">Threat Modeling tools</a></li>
-    <li><a href="https://robinsonraju.info/tech-notes/2020-06-18-threat-models/#references">References</a></li>
-  </ul>
-</nav>
-            </div>
-          </nav>
-        </main>
-      </div>
-    </div>
   </div>
-</div>
+
+</article>
+
+  
 
 
-                </div>
-            </div>
-        </div>
-</body>
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="https://robinsonraju.info/tech-notes/2020-06-14-coursera-cybersecurity-course/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: IT Security: Defense against the digital dark arts</span>
+      </a>
+      
+      
+        <a href="https://robinsonraju.info/tech-notes/2020-06-22-cybersecurity-reading-list/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: A Cybersecurity Book List</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
 
-
-
-<script type="text/javascript" src="https://robinsonraju.info/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
-
-
-
-
-<script type="text/javascript" src="https://robinsonraju.info/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="https://robinsonraju.info/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-166342905-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-</html></body>
-
+  </body>
 </html>

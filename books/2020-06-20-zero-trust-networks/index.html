@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://robinsonraju.info/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://robinsonraju.info/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://robinsonraju.info/favicon-16x16.png">
+<link rel="manifest" href="https://robinsonraju.info/site.webmanifest">
+<link rel="mask-icon" href="https://robinsonraju.info/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="">
+
+<meta property="og:title" content="Zero Trust Networks by Evan Gilman, Doug Barth" />
+<meta property="og:description" content="Zero Trust Networks: Building Secure Systems in Untrusted Networks 1st Edition" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/books/2020-06-20-zero-trust-networks/" />
+<meta property="article:published_time" content="2020-06-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-07T00:00:00+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+
+<meta property="og:site_name" content="Robinson Raju" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Zero Trust Networks by Evan Gilman, Doug Barth"/>
+<meta name="twitter:description" content="Zero Trust Networks: Building Secure Systems in Untrusted Networks 1st Edition"/>
+
+
+<meta itemprop="name" content="Zero Trust Networks by Evan Gilman, Doug Barth">
+<meta itemprop="description" content="Zero Trust Networks: Building Secure Systems in Untrusted Networks 1st Edition">
+<meta itemprop="datePublished" content="2020-06-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-07-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1074">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+    <title>Zero Trust Networks by Evan Gilman, Doug Barth || Robinson Raju</title>
+    <link rel="canonical" href="https://robinsonraju.info/books/2020-06-20-zero-trust-networks/" />
+
+    
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body
+  class="draft look-sheet-bkg"
+  lang="en-us">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="https://robinsonraju.info" >Robinson Raju</a>
+      <span class="divider">/ </span>
+  <a href="https://robinsonraju.infobooks">Book Notes</a>
+      <ul class="list-unstyled right-links">
+
+          <li>
+            <a href="/about">
+              <span class="post-title">About</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Robinson Raju" />
+  <meta itemprop="publisher" content="Robinson Raju" />
+  <meta itemprop="image" content="" />
+  <meta itemprop="headline" content="Zero Trust Networks by Evan Gilman, Doug Barth" />
+  <h1 itemprop="name" id="title">Zero Trust Networks by Evan Gilman, Doug Barth</h1>
+
+  
+
+    <h4 itemprop="name" id="title">Robinson Raju</h4>
+
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="https://robinsonraju.info/tags/book-notes/">#Book Notes</a>&nbsp;
+        
+          <a href="https://robinsonraju.info/tags/blog/">#Blog</a>&nbsp;
+        
+      </div>
+    
+
+    
+      <div class="post-date">
+        
+          Created: <span itemprop="datePublished">June 20, 2020</span>
+          Last Edited: <span itemprop="dateModified">July 7, 2020</span>
+        
+      | 1074 words
+      | 6-minute read
+      </div>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p><strong>Zero Trust Networks: Building Secure Systems in Untrusted Networks 1st Edition</strong></p>
+<h1 id="thoughts">Thoughts</h1>
+<p>There is no better time to read this book than now. We&rsquo;re at a point in history where were have examples of massive data breaches in the past to study from, and also an unprecedented number of businesses going online at a rapid pace, accelerated by shelter-in-place rules enforced to stem the spread of covid-19 virus.</p>
+<p>Folks in IT operations, especially in big companies, know that it is not easy to get ahead of the constant attacks. In spite of all the hardwork behind maintaining a centralized firewall, configuring TLS across various applications, doing penetration testing and auditing, once the perimeter is breached, there is no defense. The hosts in the internal network are in the trusted zone and rely so much on the wall that if an attacker gains access to internal network, say through phishing, then it is free-access to all the internal resources.</p>
+<p>Zero-trust model is one which treats all hosts as if they’re internet-facing, and considers the entire network to be compromised and hostile.</p>
+<h1 id="notes">Notes</h1>
+<h2 id="1-zero-trust-fundamentals">1. Zero Trust Fundamentals</h2>
+<h3 id="what-is-a-zero-trust-network">What Is a Zero Trust Network?</h3>
+<ul>
+<li>
+<p>The assumption that systems and traffic within a datacenter can be trusted is flawed. Modern networks and usage patterns no longer echo those that made perimeter defense make sense many years ago.</p>
+</li>
+<li>
+<p>A zero trust network is built upon five fundamental assertions:</p>
+<ol>
+<li>The network is always assumed to be hostile.</li>
+<li>External and internal threats exist on the network at all times.</li>
+<li>Network locality is not sufficient for deciding trust in a network.</li>
+<li>Every device, user, and network flow is authenticated and authorized.</li>
+<li>Policies must be dynamic and calculated from as many sources of data as possible.</li>
+</ol>
+</li>
+<li>
+<p>Traditional network security architecture breaks the network into different zones, protected by firewalls. Each zone has some levels of trust. Zones that are closest to the internet, often called DMZ, have tighter controls. So, if we have different layers like the Internet (public), DMZ, Trusted and Privileged.</p>
+</li>
+<li>
+<p>A remote employee who is accessing the system from the Internet layer goes through VPN gateway which is in the DMZ to get access to a private service which is in the Trusted Zone.</p>
+</li>
+<li>
+<p>An untrusted client who is accessing the system from the Internet layer through a load balancer which is in the DMZ and that internally connects to an app server which is in the Trusted zone which internally could connect to PCI server which is in the Privileged zone.</p>
+</li>
+<li>
+<p>This has a few disadvantages -</p>
+<ul>
+<li>Lack of intra-zone traffic inspection</li>
+<li>Lack of flexibility in host placement</li>
+<li>Single points of failure</li>
+</ul>
+</li>
+<li>
+<p>Zero-trust model has authentication checks at every node regardless of its location in the network. This makes VPN redundant. The authors point out that VPN is probably the greatest backdoor that exists today.</p>
+</li>
+</ul>
+<p><strong>Introducing the Zero Trust Control Plane</strong></p>
+<h3 id="evolution-of-the-perimeter-model">Evolution of the Perimeter Model</h3>
+<p><strong>Managing the Global IP Address Space</strong>
+<strong>Birth of Private IP Address Space</strong>
+<strong>Private Networks Connect to Public Networks</strong>
+<strong>Birth of NAT</strong>
+<strong>The Contemporary Perimeter Model</strong></p>
+<h3 id="evolution-of-the-threat-landscape">Evolution of the Threat Landscape</h3>
+<h3 id="perimeter-shortcomings">Perimeter Shortcomings</h3>
+<h3 id="where-the-trust-lies">Where the Trust Lies</h3>
+<h3 id="automation-as-an-enabler">Automation as an Enabler</h3>
+<h3 id="perimeter-versus-zero-trust">Perimeter Versus Zero Trust</h3>
+<h3 id="applied-in-the-cloud">Applied in the Cloud</h3>
+<h3 id="summary">Summary</h3>
+<h2 id="2-managing-trust">2. Managing Trust</h2>
+<h3 id="threat-models">Threat Models</h3>
+<p><strong>Common Threat Models</strong>
+<strong>Zero Trust’s Threat Model</strong></p>
+<h3 id="strong-authentication">Strong Authentication</h3>
+<h3 id="authenticating-trust">Authenticating Trust</h3>
+<p><strong>What Is a Certificate Authority?</strong>
+<strong>Importance of PKI in Zero Trust</strong>
+<strong>Private Versus Public PKI</strong>
+<strong>Public PKI Strictly Better Than None</strong></p>
+<h3 id="least-privilege">Least Privilege</h3>
+<h3 id="variable-trust">Variable Trust</h3>
+<h3 id="control-plane-versus-data-plane">Control Plane Versus Data Plane</h3>
+<h3 id="summary-1">Summary</h3>
+<h2 id="3-network-agents">3. Network Agents</h2>
+<h3 id="what-is-an-agent">What Is an Agent?</h3>
+<p>Agent Volatility
+What’s in an Agent?</p>
+<h3 id="how-is-an-agent-used">How Is an Agent Used?</h3>
+<p>Not for Authentication</p>
+<h3 id="how-to-expose-an-agent">How to Expose an Agent?</h3>
+<h3 id="no-standard-exists">No Standard Exists</h3>
+<p>Rigidity and Fluidity, at the Same Time
+Standardization Desirable
+In the Meantime?</p>
+<h3 id="summary-2">Summary</h3>
+<h2 id="4-making-authorization-decisions">4. Making Authorization Decisions</h2>
+<h3 id="authorization-architecture">Authorization Architecture</h3>
+<h3 id="enforcement">Enforcement</h3>
+<h3 id="policy-engine">Policy Engine</h3>
+<p>Policy Storage
+What Makes Good Policy?
+Who Defines Policy?</p>
+<h3 id="trust-engine">Trust Engine</h3>
+<p>What Entities Are Scored?
+Exposing Scores Considered Risky</p>
+<h3 id="data-stores">Data Stores</h3>
+<h3 id="summary-3">Summary</h3>
+<h2 id="5-trusting-devices">5. Trusting Devices</h2>
+<h3 id="bootstrapping-trust">Bootstrapping Trust</h3>
+<p>Generating and Securing Identity
+Identity Security in Static and Dynamic Systems</p>
+<h3 id="authenticating-devices-with-the-control-plane">Authenticating Devices with the Control Plane</h3>
+<p>X.509
+TPMs
+Hardware-Based Zero Trust Supplicant?
+Inventory Management
+Knowing What to Expect
+Secure Introduction
+Renewing Device Trust
+Local Measurement
+Remote Measurement
+Software Configuration Management
+CM-Based Inventory
+Secure Source of Truth
+Using Device Data for User Authorization
+Trust Signals
+Time Since Image
+Historical Access
+Location
+Network Communication Patterns
+Summary</p>
+<h2 id="6-trusting-users">6. Trusting Users</h2>
+<p>Identity Authority
+Bootstrapping Identity in a Private System
+Government-Issued Identification
+Nothing Beats Meatspace
+Expectations and Stars
+Storing Identity
+User Directories
+Directory Maintenance
+When to Authenticate Identity
+Authenticating for Trust
+Trust as the Authentication Driver
+The Use of Multiple Channels
+Caching Identity and Trust
+How to Authenticate Identity
+Something You Know: Passwords
+Something You Have: TOTP
+Something You Have: Certificates
+Something You Have: Security Tokens
+Something You Are: Biometrics
+Out-of-Band Authentication
+Single Sign On
+Moving Toward a Local Auth Solution
+Authenticating and Authorizing a Group
+Shamir’s Secret Sharing
+Red October
+See Something, Say Something
+Trust Signals
+Summary</p>
+<h2 id="7-trusting-applications">7. Trusting Applications</h2>
+<p>Understanding the Application Pipeline
+Trusting Source
+Securing the Repository
+Authentic Code and the Audit Trail
+Code Reviews
+Trusting Builds
+The Risk
+Trusted Input, Trusted Output
+Reproducible Builds
+Decoupling Release and Artifact Versions
+Trusting Distribution
+Promoting an Artifact
+Distribution Security
+Integrity and Authenticity
+Trusting a Distribution Network
+Humans in the Loop
+Trusting an Instance
+Upgrade-Only Policy
+Authorized Instances
+Runtime Security
+Secure Coding Practices
+Isolation
+Active Monitoring
+Summary</p>
+<h2 id="8-trusting-the-traffic">8. Trusting the Traffic</h2>
+<p>Encryption Versus Authentication
+Authenticity Without Encryption?
+Bootstrapping Trust: The First Packet
+fwknop
+A Brief Introduction to Network Models
+Network Layers, Visually
+OSI Network Model
+TCP/IP Network Model
+Where Should Zero Trust Be in the Network Model?
+Client and Server Split
+The Protocols
+IKE/IPsec
+Mutually Authenticated TLS
+Filtering
+Host Filtering
+Bookended Filtering
+Intermediary Filtering
+Summary</p>
+<h2 id="9-realizing-a-zero-trust-network">9. Realizing a Zero Trust Network</h2>
+<p>Choosing Scope
+What’s Actually Required?
+Building a System Diagram
+Understanding Your Flows
+Controller-Less Architecture
+“Cheating” with Configuration Management
+Application Authentication and Authorization
+Authenticating Load Balancers and Proxies
+Relationship-Oriented Policy
+Policy Distribution
+Defining and Installing Policy
+Zero Trust Proxies
+Client-Side Versus Server-Side Migrations
+Case Studies
+Case Study: Google BeyondCorp
+The Major Components of BeyondCorp
+Leveraging and Extending the GFE
+Challenges with Multiplatform Authentication
+Migrating to BeyondCorp
+Lessons Learned
+Conclusion
+Case Study: PagerDuty’s Cloud Agnostic Network
+Configuration Management as an Automation Platform
+Dynamically Calculated Local Firewalls
+Distributed Traffic Encryption
+Decentralized User Management
+Rollout
+Value of a Provider-Agnostic System
+Summary</p>
+<h2 id="10-the-adversarial-view">10. The Adversarial View</h2>
+<p>Identity Theft
+Distributed Denial of Service
+Endpoint Enumeration
+Untrusted Computing Platform
+Social Engineering
+Physical Coercion
+Invalidation
+Control Plane Security
+Summary
+Index</p>
+
+  </div>
+
+</article>
+
+  
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="https://robinsonraju.info/books/2020-06-09-the-goal-goldratt/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: The Goal: A Process of Ongoing Improvement by Eliyahu M. Goldratt &amp; Jeff Cox</span>
+      </a>
+      
+      
+        <a href="https://robinsonraju.info/books/2020-07-10-the-return-of-the-native/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: The Return of the Native by Thomas Hardy</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+
+  </body>
+</html>
