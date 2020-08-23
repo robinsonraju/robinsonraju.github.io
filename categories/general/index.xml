@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Robinson Raju</copyright>
-    <lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Writing Habit</title>
+      <link>https://robinsonraju.info/blog/2020-08-08-the-writing-habit/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/blog/2020-08-08-the-writing-habit/</guid>
+      <description>One of the things that I wanted to do this year was to focus a bit more on writing.</description>
+    </item>
     
     <item>
       <title>Leadership - Essential Books</title>
