@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Robinson Raju</copyright>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Engineering Manager Interviews</title>
+      <link>https://robinsonraju.info/blog/2020-08-23-engineering-manager-interviews/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/blog/2020-08-23-engineering-manager-interviews/</guid>
+      <description>&amp;ldquo;When I think about my personal experiences with leading over the past few years, the only endeavors that have required the same level of self-awareness and equally high-level “comms plans” are being married for twenty-four years and parenting.</description>
+    </item>
     
     <item>
       <title>Migrating to a new theme</title>
