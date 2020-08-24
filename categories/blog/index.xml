@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Robinson Raju</copyright>
-    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Migrating to a new theme</title>
+      <link>https://robinsonraju.info/blog/2020-08-22-migrating-to-paperesque-theme/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/blog/2020-08-22-migrating-to-paperesque-theme/</guid>
+      <description>I&amp;rsquo;ve been thinking of migrating the site to a new theme which had a better font than I had.</description>
+    </item>
     
     <item>
       <title>Writing Habit</title>
