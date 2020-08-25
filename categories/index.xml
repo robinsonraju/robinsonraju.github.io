@@ -7,24 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2020 Robinson Raju</copyright>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog</title>
-      <link>https://robinsonraju.info/categories/blog/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://robinsonraju.info/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>General</title>
       <link>https://robinsonraju.info/categories/general/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://robinsonraju.info/categories/general/</guid>
       <description></description>
