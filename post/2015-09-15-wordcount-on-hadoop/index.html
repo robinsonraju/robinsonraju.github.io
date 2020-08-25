@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Running Hadoop WordCount example - Robinson Raju</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Robinson Raju" /><meta name="description" content="Here is a small example to run Wordcount program on hadoop. I&amp;rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal." />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="https://robinsonraju.info/post/2015-09-15-wordcount-on-hadoop/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.a24579fad52aa17654a2e145a70fb437cdc86beb76bc8d248b94b0ec09dfaa61.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Running Hadoop WordCount example" />
+<meta property="og:description" content="Here is a small example to run Wordcount program on hadoop. I&rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/post/2015-09-15-wordcount-on-hadoop/" />
+<meta property="article:published_time" content="2015-09-15T22:50:11+00:00" />
+<meta property="article:modified_time" content="2015-09-15T22:50:11+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+<meta itemprop="name" content="Running Hadoop WordCount example">
+<meta itemprop="description" content="Here is a small example to run Wordcount program on hadoop. I&rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal.">
+<meta itemprop="datePublished" content="2015-09-15T22:50:11&#43;00:00" />
+<meta itemprop="dateModified" content="2015-09-15T22:50:11&#43;00:00" />
+<meta itemprop="wordCount" content="333">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Running Hadoop WordCount example"/>
+<meta name="twitter:description" content="Here is a small example to run Wordcount program on hadoop. I&rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Robinson Raju</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Robinson Raju</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Running Hadoop WordCount example</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 09/15/2015 </span>
+        <div class="post-category">
+            <a href="/categories/technical-notes/"> Technical Notes </a>
+            <a href="/categories/blog/"> Blog </a>
+            </div>
+          <span class="more-meta"> 333 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-cloudera-vm">Using Cloudera VM</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#create-sample-files">Create Sample files</a></li>
+        <li><a href="#create-directory-for-the-input-files-on-the-hdfs-file-system-type">Create directory for the input files on the HDFS file system (type)</a></li>
+        <li><a href="#copy-the-files-from-local-filesystem-to-the-hdfs-filesystem">Copy the files from local filesystem to the HDFS filesystem</a></li>
+        <li><a href="#run-the-hadoop-wordcount-example">Run the Hadoop WordCount example</a></li>
+        <li><a href="#after-completion-view-the-output-directory">After completion view the output directory</a></li>
+        <li><a href="#check-the-output-file-to-see-the-results">Check the output file to see the results</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-map-r-sandbox">Using Map-R Sandbox</a>
+      <ul>
+        <li><a href="#prerequisites-1">Prerequisites</a></li>
+        <li><a href="#ssh-into-mapr-sandbox-vm">ssh into MapR Sandbox VM</a></li>
+        <li><a href="#create-sample-files-1">Create Sample files</a></li>
+        <li><a href="#run-the-hadoop-wordcount-example-1">Run the Hadoop WordCount example</a></li>
+        <li><a href="#after-completion-view-the-output-directory-1">After completion, view the output directory</a></li>
+        <li><a href="#check-the-output-file-to-see-the-results-1">Check the output file to see the results</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Here is a small example to run Wordcount program on hadoop. I&rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal..etc. MapR Sandbox doesnt come with GUI, so you&rsquo;d have to ssh into the machine to work on it. You can open <a href="https://localhost:8443">https://localhost:8443</a> in a browser to see Hue to see FileBrowser, DataBrowser, JobBrowser ..etc.</p>
+<h2 id="using-cloudera-vm">Using Cloudera VM</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Download and install <a href="https://www.virtualbox.org/wiki/Downloads"><strong>Virtualbox</strong></a>.</li>
+<li>Download <a href="http://cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-4-x.html"><strong>Cloudera VM</strong></a> and import into VirtualBox.</li>
+</ul>
+<p>In the cloudera VM, open a terminal and go to the directory that contains hadoop library.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd /usr/lib/hadoop-mapreduce/
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="create-sample-files">Create Sample files</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo &#34;Hello world in HDFS&#34; &gt; /home/cloudera/testfile1
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo &#34;Hadoop word count example in HDFS&#34; &gt; /home/cloudera/testfile2
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="create-directory-for-the-input-files-on-the-hdfs-file-system-type">Create directory for the input files on the HDFS file system (type)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hdfs dfs -mkdir /user/cloudera/input
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="copy-the-files-from-local-filesystem-to-the-hdfs-filesystem">Copy the files from local filesystem to the HDFS filesystem</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hdfs dfs -put /home/cloudera/testfile1 /user/cloudera/input
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hdfs dfs -put /home/cloudera/testfile2 /user/cloudera/input
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="run-the-hadoop-wordcount-example">Run the Hadoop WordCount example</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hadoop jar hadoop-mapreduce-examples.jar wordcount /user/cloudera/input /user/cloudera/output
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="after-completion-view-the-output-directory">After completion view the output directory</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hdfs dfs -ls /user/cloudera/output
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="check-the-output-file-to-see-the-results">Check the output file to see the results</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hdfs dfs -cat /user/cloudera/output/part-r-00000
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Output</strong></p>
+<blockquote>
+<img src="/img/hadoop/wc-output.png" width="520"/>
+</blockquote>
+<hr>
+<h2 id="using-map-r-sandbox">Using Map-R Sandbox</h2>
+<h3 id="prerequisites-1">Prerequisites</h3>
+<ul>
+<li>Download and install <a href="https://www.virtualbox.org/wiki/Downloads"><strong>Virtualbox</strong></a>.</li>
+<li>Download <a href="https://www.mapr.com/products/mapr-sandbox-hadoop/download"><strong>MapR Sandbox</strong></a> and install into VirtualBox.</li>
+</ul>
+<h3 id="ssh-into-mapr-sandbox-vm">ssh into MapR Sandbox VM</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ssh –p 2222 user01@localhost
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="create-sample-files-1">Create Sample files</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir input
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd input
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo &#34;Hello world in HDFS&#34; &gt; testfile1
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo &#34;Hadoop word count example in HDFS&#34; &gt; testfile2
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="run-the-hadoop-wordcount-example-1">Run the Hadoop WordCount example</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hadoop jar /opt/mapr/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.0-mapr-1506.jar wordcount /user/user01/input /user/user01/output
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="after-completion-view-the-output-directory-1">After completion, view the output directory</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hadoop fs -ls /user/user01/output
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="check-the-output-file-to-see-the-results-1">Check the output file to see the results</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hadoop fs -cat /user/user01/output/part-r-00000
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Output</strong></p>
+<blockquote>
+<img src="/img/hadoop/wc-output-mapr.png" width="520"/>
+</blockquote>
+<hr>
+<p><em>Header Image - &ldquo;<strong>n1atsigns2 (Network graph of people on twitter connecting to the topics of Big Data, infochimps or Hadoop)</strong>&rdquo; by Philip Kromer via <a href="https://flic.kr/p/8R7PyB">Flickr</a>. Inverterd colors using Photoshop</em></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Robinson Raju</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        09/15/2015
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2015-09-21-simple-map-reduce-job/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Writing a simple Mapper and Reducer for Wordcount</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2015-09-06-the-checklist-manifesto/">
+            <span class="next-text nav-default">The Checklist Manifesto by Atul Gawande</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:robinson.raju@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/robinsonraju" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://linkedin.com/in/robinsonraju" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://scholar.google.com/citations?user=TxqnZk8AAAAJ&amp;hl=en" class="iconfont icon-google" title="google"></a>
+      <a href="https://github.com/robinsonraju" class="iconfont icon-github" title="github"></a>
+      <a href="https://instagram.com/luminous_infinitus" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="https://robinsonraju.info/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">© 2020 Robinson Raju</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

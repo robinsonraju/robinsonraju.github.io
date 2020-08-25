@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Security Threat Models - Robinson Raju</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Robinson Raju" /><meta name="description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp;amp; Reza (2016)." />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="https://robinsonraju.info/post/2020-06-18-threat-models/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.a24579fad52aa17654a2e145a70fb437cdc86beb76bc8d248b94b0ec09dfaa61.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Security Threat Models" />
+<meta property="og:description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp; Reza (2016)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/post/2020-06-18-threat-models/" />
+<meta property="article:published_time" content="2020-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-18T00:00:00+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+<meta itemprop="name" content="Security Threat Models">
+<meta itemprop="description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp; Reza (2016).">
+<meta itemprop="datePublished" content="2020-06-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="672">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Security Threat Models"/>
+<meta name="twitter:description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp; Reza (2016)."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Robinson Raju</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Robinson Raju</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Security Threat Models</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 06/18/2020 </span>
+        <div class="post-category">
+            <a href="/categories/technical-notes/"> Technical Notes </a>
+            <a href="/categories/blog/"> Blog </a>
+            </div>
+          <span class="more-meta"> 672 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#stride">STRIDE</a></li>
+    <li><a href="#dread">DREAD</a></li>
+    <li><a href="#pasta">PASTA</a></li>
+    <li><a href="#trike">Trike</a></li>
+    <li><a href="#vast">VAST</a></li>
+    <li><a href="#more-models">More Models</a></li>
+    <li><a href="#threat-modeling-tools">Threat Modeling tools</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Came across a list of Threat Models in a book on <a href="https://www.amazon.com/Zero-Trust-Networks-Building-Untrusted/dp/1491962194/">Zero Trust Networks</a> that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems <a href="https://www.mdpi.com/2073-431X/5/4/27">Seifert &amp; Reza (2016)</a>.</p>
+<p>Before going into the popular models, what is Threat Modeling? There was a small section on Threat Modeling in the <a href="/tech-notes/2020-06-14-coursera-cybersecurity-course/#week-6---creating-a-company-culture-for-security">IT Security course</a> that I wrote about recently. It mentions that Security Risk assessment starts with Threat Modeling. The goal is to identify likely threats to systems, assign them priorities that correspond to severity and probability. This is done by brainstorming from the perspective of an outside attacker and figuring out what high value targets an attacker may want to go after, and then review possible attack vectors that could be used to gain access to the high value assets.</p>
+<p>The book mentions the following and I thought I&rsquo;d do a quick read on the other 3 to find out what they are and summarize all of them.</p>
+<ol>
+<li>STRIDE</li>
+<li>DREAD</li>
+<li>PASTA</li>
+<li>Trike</li>
+<li>VAST</li>
+</ol>
+<p>STRIDE and DREAD were developed at Microsoft. Chapter 3 of <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff648644(v=pandp.10)?redirectedfrom=MSDN">Improving Web Application Security: Threats and Countermeasures</a> talks in detail about these.  STRIDE is used in &lsquo;<em>Step 4. Identify the Threats</em>&rsquo; and DREAD in &lsquo;<em>Step 6. Rate the Threats</em>'.</p>
+<h2 id="stride">STRIDE</h2>
+<p><a href="https://docs.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)">STRIDE</a> is derived from an acronym for the following six threat categories. The goal is to bucketize the threats into these categories.</p>
+<ol>
+<li><strong>S</strong>poofing identity</li>
+<li><strong>T</strong>ampering with data</li>
+<li><strong>R</strong>epudiation</li>
+<li><strong>I</strong>nformation disclosure</li>
+<li><strong>D</strong>enial of service</li>
+<li><strong>E</strong>levation of privilege</li>
+</ol>
+<hr>
+<h2 id="dread">DREAD</h2>
+<p>Once classification is done, DREAD acronym can be used to asking the following questions to arrive at a risk rating.</p>
+<ul>
+<li><strong>D</strong>amage potential: How great is the damage if the vulnerability is exploited?</li>
+<li><strong>R</strong>eproducibility: How easy is it to reproduce the attack?</li>
+<li><strong>E</strong>xploitability: How easy is it to launch an attack?</li>
+<li><strong>A</strong>ffected users: As a rough percentage, how many users are affected?</li>
+<li><strong>D</strong>iscoverability: How easy is it to find the vulnerability?</li>
+</ul>
+<hr>
+<p>The chapter has a Risk rating table that is very useful in coming up with a combined rating.</p>
+<h2 id="pasta">PASTA</h2>
+<p>PASTA is an acronym for &lsquo;Process for Attack Simulation and Threat Analysis&rsquo;.  It provides a seven-step process for aligning business objectives and technical requirements, taking into account compliance issues and business analysis. The intent of the method is to provide a dynamic threat identification, enumeration, and scoring process.</p>
+<h2 id="trike">Trike</h2>
+<p>Trike is an open source threat modeling methodology and tool. There are two implementations of Trike. One is a spreadsheet, and the other is a standalone desktop tool. The high level idea is to model threats based on requirements of a system (assets) and the &lsquo;acceptable&rsquo; level of risk defined by stakeholders of the requirements.</p>
+<h2 id="vast">VAST</h2>
+<p>VAST is an acronym for Visual, Agile, and Simple Threat. It is based on an automated threat-modeling platform named  ThreatModeler, creates two types of models - Application and Operational threat models. Application model represents architectural POV and Operational model represents attacker POV.</p>
+<h2 id="more-models">More Models</h2>
+<p>This article from CMU is more comprehensive and goes over 12 threat models - <a href="https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html">https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html</a></p>
+<h2 id="threat-modeling-tools">Threat Modeling tools</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Threat_model#Threat_modeling_tools">wiki page</a> on Thread Modeling mentions many tools used for Threat Modeling. Of the list, I&rsquo;ve used SD Elements in the past. In that, the first step is to complete a questionnaire (created based on compliance requirements) and the system generates a set of threat vectors and actions that need to be taken to overcome the threats.</p>
+<hr>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><strong>STRIDE &amp; DREAD in CPS</strong> : Seifert, Darren, and Hassan Reza. &ldquo;A security analysis of cyber-physical systems architecture for healthcare.&rdquo; Computers 5, no. 4 (2016): 27.</p>
+</li>
+<li>
+<p><strong>STRIDE &amp; DREAD</strong> - Meier, J. D., A. Mackman, M. Dunner, S. Vasireddy, R. Escamilla, and A. Murukan. &ldquo;Improving Web Application Security: Threats and Countermeasures. Microsoft Corporation (2003).&rdquo; Online at: <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff648644(v=pandp.10)">http://msdn.microsoft.com/enus/library/ms994921.aspx</a> (2017).</p>
+</li>
+<li>
+<p><strong>PASTA</strong> - UcedaVelez, Tony, and Marco M. Morana. Risk centric threat modeling. <a href="https://www.wiley.com/en-us/Risk+Centric+Threat+Modeling%3A+Process+for+Attack+Simulation+and+Threat+Analysis-p-9780470500965">John Wiley &amp; Sons</a>, New York, USA, 2015.</p>
+</li>
+<li>
+<p><strong>Trike</strong> - <a href="https://www.octotrike.org">https://www.octotrike.org</a></p>
+</li>
+<li>
+<p><strong>VAST</strong> -
+Shevchenko, Nataliya. &ldquo;Threat Modeling: 12 Available Methods.&rdquo; Threat Modeling: 12 Available Methods. December 03, 2018. <a href="https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html">https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html</a>.</p>
+</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Robinson Raju</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        06/18/2020
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2020-06-22-cybersecurity-reading-list/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">A Cybersecurity Book List</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2020-06-14-coursera-cybersecurity-course/">
+            <span class="next-text nav-default">IT Security: Defense against the digital dark arts</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:robinson.raju@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/robinsonraju" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://linkedin.com/in/robinsonraju" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://scholar.google.com/citations?user=TxqnZk8AAAAJ&amp;hl=en" class="iconfont icon-google" title="google"></a>
+      <a href="https://github.com/robinsonraju" class="iconfont icon-github" title="github"></a>
+      <a href="https://instagram.com/luminous_infinitus" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="https://robinsonraju.info/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">© 2020 Robinson Raju</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

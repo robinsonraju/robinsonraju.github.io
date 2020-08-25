@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>API documentation using Swagger - Robinson Raju</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Robinson Raju" /><meta name="description" content="Intro Wanted to create an API spec for brainstorming an API that we&amp;rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (https://apiary." />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="https://robinsonraju.info/post/2020-06-04-api-documentation/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.a24579fad52aa17654a2e145a70fb437cdc86beb76bc8d248b94b0ec09dfaa61.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="API documentation using Swagger" />
+<meta property="og:description" content="Intro Wanted to create an API spec for brainstorming an API that we&rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (https://apiary." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/post/2020-06-04-api-documentation/" />
+<meta property="article:published_time" content="2020-06-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-04T00:00:00+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+<meta itemprop="name" content="API documentation using Swagger">
+<meta itemprop="description" content="Intro Wanted to create an API spec for brainstorming an API that we&rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (https://apiary.">
+<meta itemprop="datePublished" content="2020-06-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="671">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="API documentation using Swagger"/>
+<meta name="twitter:description" content="Intro Wanted to create an API spec for brainstorming an API that we&rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (https://apiary."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Robinson Raju</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Robinson Raju</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">API documentation using Swagger</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 06/04/2020 </span>
+        <div class="post-category">
+            <a href="/categories/technical-notes/"> Technical Notes </a>
+            <a href="/categories/blog/"> Blog </a>
+            </div>
+          <span class="more-meta"> 671 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#great-api-documentation-examples">Great API documentation examples</a></li>
+    <li><a href="#what-is-swagger">What Is Swagger?</a></li>
+    <li><a href="#installing-swagger-editor-locally">Installing Swagger editor locally</a></li>
+    <li><a href="#using-the-swagger-editor-docker-image">Using the swagger-editor docker image</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="intro">Intro</h2>
+<p>Wanted to create an API spec for brainstorming an API that we&rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (<a href="https://apiary.io/">https://apiary.io/</a>) in the past (2013-14). It had features like defining the API spec using yaml  and it getting rendered beautifully as API documentation. Nothing like a great API documentation that shows different methods, parameters, objects, input/output status codes and even a server/sandbox to try it out. It makes the life easier for consumers of the API. Currently a lot of companies use tools like Swagger, and the API documentation is quite good. The struggle to understand an API and get help to consume it is a thing of the past. API design is probably one of the most impactful aspects of software development since the right design goes a long way to lay the foundation of a solid system that works great for the service provider as well as clients.</p>
+<h2 id="great-api-documentation-examples">Great API documentation examples</h2>
+<p>The model API documentation to follow are probably the following -</p>
+<ol>
+<li>Plaid - <a href="https://plaid.com/docs/">https://plaid.com/docs/</a></li>
+<li>Stripe - <a href="https://stripe.com/docs/api">https://stripe.com/docs/api</a></li>
+<li>Twitter - <a href="https://developer.twitter.com/en/docs/api-reference-index">https://developer.twitter.com/en/docs/api-reference-index</a></li>
+<li>Github - <a href="https://developer.github.com/v3/guides/getting-started/">https://developer.github.com/v3/guides/getting-started/</a></li>
+</ol>
+<p>Back to Swagger, here is a quick explanation of Swagger from their website -</p>
+<h2 id="what-is-swagger">What Is Swagger?</h2>
+<p>From <a href="https://swagger.io/docs/specification/2-0/what-is-swagger/">https://swagger.io/docs/specification/2-0/what-is-swagger/</a></p>
+<blockquote>
+<p><em>Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger. Why is it so great? Well, by reading your API’s structure, we can automatically build beautiful and interactive API documentation. We can also automatically generate client libraries for your API in many languages and explore other possibilities like automated testing. Swagger does this by asking your API to return a YAML or JSON that contains a detailed description of your entire API. This file is essentially a resource listing of your API which adheres to OpenAPI Specification.</em></p>
+</blockquote>
+<blockquote>
+<p><em>The specification asks you to include information like:</em></p>
+</blockquote>
+<ul>
+<li><em>What are all the operations that your API supports?</em></li>
+<li><em>What are your API’s parameters and what does it return?</em></li>
+<li><em>Does your API need some authorization?</em></li>
+<li><em>And even fun things like terms, contact information and license to use the API.</em></li>
+</ul>
+<h2 id="installing-swagger-editor-locally">Installing Swagger editor locally</h2>
+<p>There are two options to use the Swagger editor (<a href="https://swagger.io/tools/swagger-editor/)">https://swagger.io/tools/swagger-editor/)</a>. You can download the editor or use the cloud version, which is the &lsquo;Swagger Hub&rsquo;. Wanted to try the cloud version since there would be no setup needed for it. It asked for sign-up or creating the account using Github. Did that and then thought it may not be a good idea to use the web. Might be better to install it locally and run. So went back to the <a href="https://swagger.io/tools/swagger-editor/">editor</a> page and clicked on &lsquo;download Swagger Editor&rsquo;. That took me to the swagger github repository (<a href="https://github.com/swagger-api/swagger-editor)">https://github.com/swagger-api/swagger-editor)</a>. Was expecting a binary that I could use to install locally though.</p>
+<p>Anyway, did a git clone and followed the instructions to set it up locally.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Install npm packages (if needed)
+npm install
+
+# Build the app
+npm run build
+
+# Build an image
+docker build -t swagger-editor .
+
+# Run the container
+docker run -d -p 80:8080 swagger-editor
+</code></pre></td></tr></table>
+</div>
+</div><p>But this failed with the error</p>
+<p><code>docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?</code></p>
+<p>So installed docker. Used the local installable &lsquo;Docker Desptop for Mac&rsquo;(<a href="https://docs.docker.com/get-docker/)">https://docs.docker.com/get-docker/)</a>. This had a getting-started example which was easy to follow and in a few steps was able to create a &lsquo;getting-started&rsquo; container. The dashboard had a pretty UI to display the container. One could start/stop the container using the UI.</p>
+<h2 id="using-the-swagger-editor-docker-image">Using the swagger-editor docker image</h2>
+<p>Another option mentioned in the Swagger repo was to use a docker image that was already published in DockerHub. Should have used that instead of trying to build this locally.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker pull swaggerapi/swagger-editor
+
+docker run -d -p 80:8080 swaggerapi/swagger-editor
+</code></pre></td></tr></table>
+</div>
+</div><p>Navigating to http://localhost showed the beautiful Swagger UI with a pre-filled &ldquo;Petstore API documentation&rdquo;.</p>
+<p><img src="/images/swagger-ui.png" alt="swagger-ui"></p>
+<p>Exciting! Now starts the actual API documentation.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Robinson Raju</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        06/04/2020
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2020-06-06-the-reading-journey/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">My Reading Journey</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2020-06-03-catalyst-of-change/">
+            <span class="next-text nav-default">Catalyst of Change</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:robinson.raju@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/robinsonraju" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://linkedin.com/in/robinsonraju" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://scholar.google.com/citations?user=TxqnZk8AAAAJ&amp;hl=en" class="iconfont icon-google" title="google"></a>
+      <a href="https://github.com/robinsonraju" class="iconfont icon-github" title="github"></a>
+      <a href="https://instagram.com/luminous_infinitus" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="https://robinsonraju.info/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">© 2020 Robinson Raju</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
