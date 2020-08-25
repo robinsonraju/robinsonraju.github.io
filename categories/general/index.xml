@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2020 Robinson Raju</copyright>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Engineering Manager Interviews</title>
+      <link>https://robinsonraju.info/post/2020-08-23-engineering-manager-interviews/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/post/2020-08-23-engineering-manager-interviews/</guid>
+      <description>I could not help but think of this quote from &amp;ldquo;The Mill on the Floss&amp;rdquo; when someone asked me a question about how to do well in an Engineering Manager interview.</description>
+    </item>
     
     <item>
       <title>Migrating to a new theme</title>
