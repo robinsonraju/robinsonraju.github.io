@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Robinson Raju</title>
+    <title>Tags on Rob&#39;s Notes</title>
     <link>https://robinsonraju.info/tags/</link>
-    <description>Recent content in Tags on Robinson Raju</description>
+    <description>Recent content in Tags on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© 2020 Robinson Raju</copyright>
+    <language>en-us</language>
+    <copyright>2020 Robinson Raju</copyright>
     
 	<atom:link href="https://robinsonraju.info/tags/index.xml" rel="self" type="application/rss+xml" />
     

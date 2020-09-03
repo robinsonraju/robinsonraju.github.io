@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html><head>
+<title>Security Threat Models</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="Security Threat Models" />
+<meta property="og:description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp; Reza (2016)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/posts/2020-06-18-threat-models/" />
+<meta property="article:published_time" content="2020-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-18T00:00:00+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Security Threat Models"/>
+<meta name="twitter:description" content="Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp; Reza (2016)."/>
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="icon" href="favicons/">
+
+
+
+
+<link rel="stylesheet" href="https://robinsonraju.info/scss/journal.min.3a660cc72faef0a681c9e4b5f0bf4b85e8428811f65d7381661dabb0f7b1a362.css" integrity="sha256-OmYMxy&#43;u8KaByeS18L9LhehCiBH2XXOBZh2rsPexo2I=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://robinsonraju.info/scss/dark-mode.min.aa6023bdd4e1262d50cf8966813e3e999c37d89d39247ba4634a9ee29cb15491.css" integrity="sha256-qmAjvdThJi1Qz4lmgT4&#43;mZw32J05JHukY0qe4pyxVJE=" media="screen">
+
+
+<script src="https://robinsonraju.info//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://robinsonraju.info//js/toc.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://robinsonraju.info/">
+    
+        <div class="nav-title">
+            Rob&#39;s Notes
+        </div>
+        
+        <div class="nav-subtitle">
+            Robinson Raju
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about/">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Robinson Raju
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{}">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- Contents -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#stride" onclick="onNavClick(`#stride-nav`)" id="stride-nav">
+									STRIDE
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dread" onclick="onNavClick(`#dread-nav`)" id="dread-nav">
+									DREAD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#pasta" onclick="onNavClick(`#pasta-nav`)" id="pasta-nav">
+									PASTA
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#trike" onclick="onNavClick(`#trike-nav`)" id="trike-nav">
+									Trike
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#vast" onclick="onNavClick(`#vast-nav`)" id="vast-nav">
+									VAST
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#more-models" onclick="onNavClick(`#more-models-nav`)" id="more-models-nav">
+									More Models
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#threat-modeling-tools" onclick="onNavClick(`#threat-modeling-tools-nav`)" id="threat-modeling-tools-nav">
+									Threat Modeling tools
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#references" onclick="onNavClick(`#references-nav`)" id="references-nav">
+									References
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about/">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- Contents -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#stride" onclick="onNavClick(`#stride-nav`)" id="stride-nav">
+									STRIDE
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dread" onclick="onNavClick(`#dread-nav`)" id="dread-nav">
+									DREAD
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#pasta" onclick="onNavClick(`#pasta-nav`)" id="pasta-nav">
+									PASTA
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#trike" onclick="onNavClick(`#trike-nav`)" id="trike-nav">
+									Trike
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#vast" onclick="onNavClick(`#vast-nav`)" id="vast-nav">
+									VAST
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#more-models" onclick="onNavClick(`#more-models-nav`)" id="more-models-nav">
+									More Models
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#threat-modeling-tools" onclick="onNavClick(`#threat-modeling-tools-nav`)" id="threat-modeling-tools-nav">
+									Threat Modeling tools
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#references" onclick="onNavClick(`#references-nav`)" id="references-nav">
+									References
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://robinsonraju.info/">
+            Rob&#39;s Notes
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://robinsonraju.info/">
+        <div class="single-column-header-title">Rob&#39;s Notes</div>
+        
+        <div class="single-column-header-subtitle">Robinson Raju</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Security Threat Models
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-06-18 00:00
+                        </time>
+                        
+
+                        
+                            
+                                <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technical-notes">Technical Notes</a>
+                                &nbsp;
+                            
+                        
+
+                        
+                        
+                          
+                            672 words
+                              <i class="material-icons" style="">schedule</i>
+
+                              
+
+                              
+                              
+
+                              
+                              3 min
+                              
+                              3 s.
+                          
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>Came across a list of Threat Models in a book on <a href="https://www.amazon.com/Zero-Trust-Networks-Building-Untrusted/dp/1491962194/">Zero Trust Networks</a> that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems <a href="https://www.mdpi.com/2073-431X/5/4/27">Seifert &amp; Reza (2016)</a>.</p>
+<p>Before going into the popular models, what is Threat Modeling? There was a small section on Threat Modeling in the <a href="/tech-notes/2020-06-14-coursera-cybersecurity-course/#week-6---creating-a-company-culture-for-security">IT Security course</a> that I wrote about recently. It mentions that Security Risk assessment starts with Threat Modeling. The goal is to identify likely threats to systems, assign them priorities that correspond to severity and probability. This is done by brainstorming from the perspective of an outside attacker and figuring out what high value targets an attacker may want to go after, and then review possible attack vectors that could be used to gain access to the high value assets.</p>
+<p>The book mentions the following and I thought I&rsquo;d do a quick read on the other 3 to find out what they are and summarize all of them.</p>
+<ol>
+<li>STRIDE</li>
+<li>DREAD</li>
+<li>PASTA</li>
+<li>Trike</li>
+<li>VAST</li>
+</ol>
+<p>STRIDE and DREAD were developed at Microsoft. Chapter 3 of <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff648644(v=pandp.10)?redirectedfrom=MSDN">Improving Web Application Security: Threats and Countermeasures</a> talks in detail about these.  STRIDE is used in &lsquo;<em>Step 4. Identify the Threats</em>&rsquo; and DREAD in &lsquo;<em>Step 6. Rate the Threats</em>'.</p>
+<h2 id="stride">STRIDE</h2>
+<p><a href="https://docs.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)">STRIDE</a> is derived from an acronym for the following six threat categories. The goal is to bucketize the threats into these categories.</p>
+<ol>
+<li><strong>S</strong>poofing identity</li>
+<li><strong>T</strong>ampering with data</li>
+<li><strong>R</strong>epudiation</li>
+<li><strong>I</strong>nformation disclosure</li>
+<li><strong>D</strong>enial of service</li>
+<li><strong>E</strong>levation of privilege</li>
+</ol>
+<hr>
+<h2 id="dread">DREAD</h2>
+<p>Once classification is done, DREAD acronym can be used to asking the following questions to arrive at a risk rating.</p>
+<ul>
+<li><strong>D</strong>amage potential: How great is the damage if the vulnerability is exploited?</li>
+<li><strong>R</strong>eproducibility: How easy is it to reproduce the attack?</li>
+<li><strong>E</strong>xploitability: How easy is it to launch an attack?</li>
+<li><strong>A</strong>ffected users: As a rough percentage, how many users are affected?</li>
+<li><strong>D</strong>iscoverability: How easy is it to find the vulnerability?</li>
+</ul>
+<hr>
+<p>The chapter has a Risk rating table that is very useful in coming up with a combined rating.</p>
+<h2 id="pasta">PASTA</h2>
+<p>PASTA is an acronym for &lsquo;Process for Attack Simulation and Threat Analysis&rsquo;.  It provides a seven-step process for aligning business objectives and technical requirements, taking into account compliance issues and business analysis. The intent of the method is to provide a dynamic threat identification, enumeration, and scoring process.</p>
+<h2 id="trike">Trike</h2>
+<p>Trike is an open source threat modeling methodology and tool. There are two implementations of Trike. One is a spreadsheet, and the other is a standalone desktop tool. The high level idea is to model threats based on requirements of a system (assets) and the &lsquo;acceptable&rsquo; level of risk defined by stakeholders of the requirements.</p>
+<h2 id="vast">VAST</h2>
+<p>VAST is an acronym for Visual, Agile, and Simple Threat. It is based on an automated threat-modeling platform named  ThreatModeler, creates two types of models - Application and Operational threat models. Application model represents architectural POV and Operational model represents attacker POV.</p>
+<h2 id="more-models">More Models</h2>
+<p>This article from CMU is more comprehensive and goes over 12 threat models - <a href="https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html">https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html</a></p>
+<h2 id="threat-modeling-tools">Threat Modeling tools</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Threat_model#Threat_modeling_tools">wiki page</a> on Thread Modeling mentions many tools used for Threat Modeling. Of the list, I&rsquo;ve used SD Elements in the past. In that, the first step is to complete a questionnaire (created based on compliance requirements) and the system generates a set of threat vectors and actions that need to be taken to overcome the threats.</p>
+<hr>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><strong>STRIDE &amp; DREAD in CPS</strong> : Seifert, Darren, and Hassan Reza. &ldquo;A security analysis of cyber-physical systems architecture for healthcare.&rdquo; Computers 5, no. 4 (2016): 27.</p>
+</li>
+<li>
+<p><strong>STRIDE &amp; DREAD</strong> - Meier, J. D., A. Mackman, M. Dunner, S. Vasireddy, R. Escamilla, and A. Murukan. &ldquo;Improving Web Application Security: Threats and Countermeasures. Microsoft Corporation (2003).&rdquo; Online at: <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff648644(v=pandp.10)">http://msdn.microsoft.com/enus/library/ms994921.aspx</a> (2017).</p>
+</li>
+<li>
+<p><strong>PASTA</strong> - UcedaVelez, Tony, and Marco M. Morana. Risk centric threat modeling. <a href="https://www.wiley.com/en-us/Risk+Centric+Threat+Modeling%3A+Process+for+Attack+Simulation+and+Threat+Analysis-p-9780470500965">John Wiley &amp; Sons</a>, New York, USA, 2015.</p>
+</li>
+<li>
+<p><strong>Trike</strong> - <a href="https://www.octotrike.org">https://www.octotrike.org</a></p>
+</li>
+<li>
+<p><strong>VAST</strong> -
+Shevchenko, Nataliya. &ldquo;Threat Modeling: 12 Available Methods.&rdquo; Threat Modeling: 12 Available Methods. December 03, 2018. <a href="https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html">https://insights.sei.cmu.edu/sei_blog/2018/12/threat-modeling-12-available-methods.html</a>.</p>
+</li>
+</ol>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-06-18</p>
+                    
+                </div>
+            </div>
+
+
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://robinsonraju.info/posts/2020-06-22-cybersecurity-reading-list/">
+			Next<br>A Cybersecurity Book List
+                </a>
+                
+
+                
+                <a class="older-posts" href="https://robinsonraju.info/posts/2020-06-14-coursera-cybersecurity-course/">
+			Previous<br>IT Security: Defense against the digital dark arts
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Robinson Raju
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+                this.toggleDarkMode();
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://robinsonraju.info//js/journal.js"></script>
+    </body>
+</html>

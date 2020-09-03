@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>index on Robinson Raju</title>
+    <title>index on Rob&#39;s Notes</title>
     <link>https://robinsonraju.info/tags/index/</link>
-    <description>Recent content in index on Robinson Raju</description>
+    <description>Recent content in index on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© 2020 Robinson Raju</copyright>
+    <language>en-us</language>
+    <copyright>2020 Robinson Raju</copyright>
     
 	<atom:link href="https://robinsonraju.info/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>General Posts</title>
-      <link>https://robinsonraju.info/post/</link>
+      <link>https://robinsonraju.info/posts/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/post/</guid>
+      <guid>https://robinsonraju.info/posts/</guid>
       <description></description>
     </item>
     
