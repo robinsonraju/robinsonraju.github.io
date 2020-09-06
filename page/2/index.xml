@@ -13,6 +13,23 @@
     
     
         <item>
+        <title>Catalyst of Change</title>
+        <link>https://robinsonraju.info/posts/2020-06-03-catalyst-of-change/</link>
+        <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://robinsonraju.info/posts/2020-06-03-catalyst-of-change/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2020-06-03-catalyst-of-change/ -&lt;p&gt;Thankfully most of the demonstrations across the U.S. today were peaceful. There was one in San Ramon also where people marched from our local Safeway (Gale Ranch) to City Hall near Bishop Ranch.&lt;/p&gt;
+&lt;p&gt;But the wound is deep. The anguish and heartbreak will not go away. Anyone who has seen the videos cannot remain not being horrified and scared.&lt;/p&gt;
+&lt;p&gt;George Floyd has unwittingly become the catalyst for change that is imminent. He has become a symbol of a person who was set up for failure. Whatever he did or said could not have saved him. I was reminded of Tom Robinson from &amp;ldquo;To Kill a Mockingbird&amp;rdquo;. Mayella comes on to him, but he gets accused of rape. Atticus proves that Tom could not have hit her on her right cheek since his left hand was injured. But the jury convicts Tom and sentences him for execution. The hopelessness of knowing that once you&amp;rsquo;re caught in the crosshairs of one or more prejudiced people, there is no escape. This once incident made people sit back and think about thousands of small instances where bigotry and prejudice won.&lt;/p&gt;
+&lt;p&gt;Is there a solution? Doesn&amp;rsquo;t this happen everywhere in the world? In many ways, big and small, humans are hurting each other and it feels sad. Aren&amp;rsquo;t all the 7+ billion people in the world part of the same species who are similar 99.9% to each other? But the U.S. is expected to be above other countries. It is a beacon of hope for the whole world, a country that was founded on the principle of equality, a status that others aspire to get to. But the image stands broken.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;We hold these Truths to be self-evident, that all Men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the Pursuit of Happiness.&lt;/em&gt;&amp;quot;&lt;br&gt;
+~ The Declaration of Independence&lt;/p&gt;
+- https://robinsonraju.info/posts/2020-06-03-catalyst-of-change/ - 2020 Robinson Raju</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Security news today</title>
         <link>https://robinsonraju.info/posts/2020-06-02-security-news-today/</link>
         <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
@@ -1736,101 +1753,6 @@ Time blocking is key for achieving great productivity.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Mrs-Funnybones&lt;/strong&gt; by Twinkle-Khanna&lt;/li&gt;
 &lt;/ul&gt;
 - https://robinsonraju.info/posts/reading-list/ - 2020 Robinson Raju</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>A Simple MapReduce Job for Iris Dataset</title>
-        <link>https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/</link>
-        <pubDate>Wed, 30 Sep 2015 22:50:11 +0000</pubDate>
-        
-        <guid>https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/ -&lt;p&gt;This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.&lt;/p&gt;
-&lt;p&gt;The objective is to read data from Iris dataset - &lt;a href=&#34;https://archive.ics.uci.edu/ml/datasets/Iris&#34;&gt;https://archive.ics.uci.edu/ml/datasets/Iris&lt;/a&gt; and calculate the mean sepal length of each class of the flower.&lt;/p&gt;
-&lt;p&gt;The data is here -&amp;gt; &lt;a href=&#34;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#34;&gt;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Sample record : &lt;code&gt;5.1,3.5,1.4,0.2,Iris-setosa&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Attribute Information:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;sepal length in cm&lt;/li&gt;
-&lt;li&gt;sepal width in cm&lt;/li&gt;
-&lt;li&gt;petal length in cm&lt;/li&gt;
-&lt;li&gt;petal width in cm&lt;/li&gt;
-&lt;li&gt;class: a) Iris Setosa, b) Iris Versicolour, c) Iris Virginica&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In the last blog on wordcount, I used an eclipse project that was bundled automatically with the Cloudera VM and just modified the StubMapper, StubReducer and Driver to plugin the code for wordcount. In this, I thought I&amp;rsquo;ll create one from scratch and see how it works.&lt;/p&gt;
-&lt;h2 id=&#34;step-1--create-a-java-project&#34;&gt;Step #1 : Create a Java project&lt;/h2&gt;
-&lt;p&gt;Create a Java project using Eclipse.
-Add Mapper, Reducer and Driver stubs from the other project. You&amp;rsquo;ll immediately notice that there are many compilation errors.&lt;/p&gt;
-&lt;h2 id=&#34;step-2-configure-build-path&#34;&gt;Step 2: Configure Build Path&lt;/h2&gt;
-&lt;p&gt;Add the following libraries from &lt;code&gt;/usr/lib/hadoop/client&lt;/code&gt; and &lt;code&gt;/cloudera/lib&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Properties &amp;gt; Java Build Path &amp;gt; Add External Jars&lt;/code&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Also add &lt;code&gt;&amp;lt;project&amp;gt;/conf&lt;/code&gt; as the class folder.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Now the compilation issues would be resolved.&lt;/p&gt;
-&lt;h2 id=&#34;step-3-add-code-for-mapper-and-reducer&#34;&gt;Step 3: Add code for Mapper and Reducer&lt;/h2&gt;
-&lt;p&gt;The objective is to read the records from the data and compute the mean sepal length of each class of the Iris flower.
-map() function in the Mapper gets each row and splits the columns to extract out the key (flower class) and the value (sepal length).
-The reduce() function is the Reducer is simple as well. It iterates through the values for each key, computes sum, maintains count and computes mean after the loop ends.&lt;/p&gt;
-&lt;h3 id=&#34;mapper&#34;&gt;Mapper&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;package com.iris.data.mapreduce;
-import java.io.IOException;
-
-import org.apache.hadoop.io.FloatWritable;
-import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Mapper;
-
-public class IrisMapper extends Mapper&amp;lt;LongWritable, Text, Text, FloatWritable&amp;gt; {
-
-    @Override
-    public void map(LongWritable key, Text value, Context context)
-            throws IOException, InterruptedException {
-
-        String[] columns = value.toString().split(&amp;quot;,&amp;quot;);
-        float sepal_len = Float.valueOf(columns[0]);
-        String flower_class = columns[4];
-
-        context.write(new Text(flower_class), new FloatWritable(sepal_len));
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;reducer&#34;&gt;Reducer&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;package com.iris.data.mapreduce;
-import java.io.IOException;
-
-import org.apache.hadoop.io.FloatWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Reducer;
-
-public class IrisReducer extends
-        Reducer&amp;lt;Text, FloatWritable, Text, FloatWritable&amp;gt; {
-
-    @Override
-    public void reduce(Text key, Iterable&amp;lt;FloatWritable&amp;gt; values, Context context)
-            throws IOException, InterruptedException {
-
-        float sum = 0;
-        float count = 0;
-        float mean_sepal_len = 0;
-        for (FloatWritable val : values) {
-            sum += val.get();
-            count++;
-        }
-
-        mean_sepal_len = sum / count;
-        context.write(key, new FloatWritable(mean_sepal_len));
-    }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;run-the-driver&#34;&gt;Run the Driver&lt;/h2&gt;
-&lt;p&gt;You should see the following output&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Iris&lt;/strong&gt;&amp;rdquo; by Pauline Rosenberg via &lt;a href=&#34;https://flic.kr/p/6sZzjm&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/ - 2020 Robinson Raju</description>
         </item>
     
     
