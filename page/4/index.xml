@@ -6,9 +6,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 Robinson Raju</copyright>
-    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>What is agile and what are user stories</title>
+        <link>https://robinsonraju.info/posts/2014-09-09-what-is-agile/</link>
+        <pubDate>Tue, 09 Sep 2014 22:54:56 +0000</pubDate>
+        
+        <guid>https://robinsonraju.info/posts/2014-09-09-what-is-agile/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-09-09-what-is-agile/ -&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In the earlier days of the software industry, the process of developing software products mirrored engineering practices of the day. Like a bridge construction needed elaborate planning, design and construction, a software product went through a “waterfall” model of requirement definition, design, development, testing and release, with each phase occurring one after another.&lt;/p&gt;
+&lt;p&gt;But the cookie cutter approach failed for big software products which ended up creating products and systems that user didn’t have in mind or didn’t want anymore or became obsolete because the technology had changed. This is where Agile methodology comes into light.&lt;/p&gt;
+&lt;h1 id=&#34;what-is-agile&#34;&gt;What is Agile?&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Agile software development is a group of software development methods in which requirements and solutions evolve through collaboration between self-organizing, cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement and encourages rapid and flexible response to change. It is a conceptual framework that focuses on frequently delivering small increments of working software.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;short-history&#34;&gt;Short History&lt;/h1&gt;
+&lt;p&gt;A small group of people got together in 2001 to discuss their feelings that the traditional approach to managing software development projects was failing far too often, and there had to be a better way.&lt;/p&gt;
+&lt;p&gt;They came up with the agile manifesto[1], which describes 4 important values that are as relevant today as they were then.  It says,&lt;/p&gt;
+&lt;h2 id=&#34;agile-manifesto&#34;&gt;Agile Manifesto&lt;/h2&gt;
+&lt;p&gt;We value:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Individuals and interactions&lt;/strong&gt; over processes and tools&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Working software&lt;/strong&gt; over comprehensive documentation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Customer collaboration&lt;/strong&gt; over contract negotiation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Responding to change&lt;/strong&gt; over following a plan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Though incremental practices have been in existence since late 1950’s[2], the ‘Agile Manifesto’ ushered in a new era of focus on lightweight-iterative development. The Agile Manifesto is based on twelve principles[3] :&lt;/p&gt;
+&lt;h2 id=&#34;agile-principles&#34;&gt;Agile Principles&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Customer satisfaction by rapid delivery of useful software&lt;/li&gt;
+&lt;li&gt;Welcome changing requirements, even late in development&lt;/li&gt;
+&lt;li&gt;Working software is delivered frequently (weeks rather than months)&lt;/li&gt;
+&lt;li&gt;Close, daily cooperation between business people and developers&lt;/li&gt;
+&lt;li&gt;Projects are built around motivated individuals, who should be trusted&lt;/li&gt;
+&lt;li&gt;Face-to-face conversation is the best form of communication (co-location)&lt;/li&gt;
+&lt;li&gt;Working software is the principal measure of progress&lt;/li&gt;
+&lt;li&gt;Sustainable development, able to maintain a constant pace&lt;/li&gt;
+&lt;li&gt;Continuous attention to technical excellence and good design&lt;/li&gt;
+&lt;li&gt;Simplicity—the art of maximizing the amount of work not done—is essential&lt;/li&gt;
+&lt;li&gt;Self-organizing teams&lt;/li&gt;
+&lt;li&gt;Regular adaptation to changing circumstances&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Agile development provides opportunities to assess the direction of the project and to evaluate the end product at very early stages. This is achieved through regular cadences of work, known as Sprints or iterations, at the end of which teams must present a potentially shippable product increment. At the beginning of every sprint, the team does a “Sprint Planning” session where it pulls requirements from the top of a “backlog”, estimates the effort and determines if they can be accomplished during the sprint or not. The requirements are in the form of “User Stories” which is a high level definition of a feature being built for an end user. We’ll talk about User Stories in detail in the next section.&lt;/p&gt;
+&lt;h2 id=&#34;user-stories&#34;&gt;User Stories&lt;/h2&gt;
+&lt;p&gt;A user story is a short, simple statement of a requirement from the perspective of the end user of a system.&lt;/p&gt;
+&lt;p&gt;It typically follows this structure :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a “type of user”, I want “some goal” so that “some reason”.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A user story is a very high-level definition of a requirement, containing just enough information so that the developers can produce a reasonable estimate of the effort to implement it. User stories are often written on index cards or sticky notes, stored in a shoe box, and arranged on walls or tables to facilitate planning and discussion. As such, they strongly shift the focus from writing about features to discussing them. In fact, these discussions are more important than whatever text is written.&lt;/p&gt;
+&lt;p&gt;Typically, if an index card is used, a user story might contain the following – User story summary (in the format mentioned above), priority and estimate on one side of the card and acceptance criteria on the other side.&lt;/p&gt;
+&lt;p&gt;All the user stories of a release are sorted in the order of priority in the “Release backlog”. Stories from the top of the pile are taken and a “Sprint backlog” is created for every sprint during the “Sprint Planning” meeting. At the end of every sprint, the team presents a potentially shippable product increment which is demoed during the “Sprint Review” at the end of the sprint. Details about the workflow of an Agile Sprint and related meetings would be the subject of another blog post.&lt;/p&gt;
+&lt;h2 id=&#34;epics&#34;&gt;Epics&lt;/h2&gt;
+&lt;p&gt;Epics are large user stories, typically ones which are too big to implement in a single iteration and therefore they need to be dis-aggregated into smaller user stories at some point. Epics are typically lower priority user stories because once the epic works its way towards the top of the work item stack.&lt;/p&gt;
+&lt;p&gt;User Stories in the backlog&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We looked at how agile methodologies took shape, what agile is, a high level overview of the development life-cycle using agile and also looked in depth into one of key artifacts of agile – “User Stories” .&lt;/p&gt;
+&lt;h1 id=&#34;references-&#34;&gt;References :&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[1] Beck, Kent; et al. (2001). “Manifesto for Agile Software Development”. Agile Alliance. Retrieved 14 June 2010.&lt;/li&gt;
+&lt;li&gt;[2] Gerald M. Weinberg, as quoted in Larman, Craig; Basili, Victor R. (June 2003). “Iterative and Incremental Development: A Brief History”.&lt;/li&gt;
+&lt;li&gt;[3] Beck, Kent; et al. (2001). “Principles behind the Agile Manifesto”. Agile Alliance. Archived from the original on 14 June 2010. Retrieved 6 June 2010.&lt;/li&gt;
+&lt;li&gt;[4] Ambler, S. (n.d.). User Stories: An Agile Introduction. Retrieved September 10, 2014, from &lt;a href=&#34;http://www.agilemodeling.com/artifacts/userStory.htm&#34;&gt;http://www.agilemodeling.com/artifacts/userStory.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Scott, A., &amp;amp; Holitza, M. (2012). Agile for Dummies. John Wiley &amp;amp; Sons.&lt;/li&gt;
+&lt;li&gt;Agile Methodology. (2014, July 1). Retrieved September 10, 2014, from &lt;a href=&#34;http://agilemethodology.org&#34;&gt;http://agilemethodology.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://robinsonraju.info/posts/2014-09-09-what-is-agile/ - 2020 Robinson Raju</description>
+        </item>
     
     
     
@@ -1760,23 +1830,6 @@ had told myself “watch it ! from today .. I’m gonna get more interested in t
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Hidden view - A double exposure self portrait&lt;/strong&gt;&amp;rdquo; by Jon Bush via &lt;a href=&#34;https://flic.kr/p/z9Nrzo&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 - https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/ - 2020 Robinson Raju</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>A time to celebrate</title>
-        <link>https://robinsonraju.info/posts/2006-05-07-time-to-celebrate/</link>
-        <pubDate>Sun, 07 May 2006 00:06:11 +0000</pubDate>
-        
-        <guid>https://robinsonraju.info/posts/2006-05-07-time-to-celebrate/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2006-05-07-time-to-celebrate/ -&lt;p&gt;St.George’s festival. Theophilus thirumeni (formerly MC Cherian achen) went over St. George’s life – the same story that had been told to me many times as a kid – more so because I had this paranoid fear of snakes. I’ve had moments in which I missed stamping on a snake or a snake bite by sheer luck ! If you said there was just one in a million chance to see a snake in the city of Bangalore.. yes.. may be.. but there is that one in a million..&lt;/p&gt;
-&lt;p&gt;We had a photo of him, St.George – an old, almost faded, small but framed one, in which the brave hero stands face to face with the dragon with a spear in his hand on a white horse . He is staring into the dragon’s eyes and the open mouthed dragon is lunging towards him. The dragon isn’t afraid and he isn’t even a bit scared !&lt;/p&gt;
-&lt;p&gt;Takes me back to the times when we used to go to kerala during summer vacations. Everything seemed to happen right during that time. Mango’s came at that time. It rained at that time. And this perunal too. It was one time we could have the most delicious of kozhi (chicken) currys.&lt;/p&gt;
-&lt;p&gt;It was also the day of Mexican celebration – Cinco de Mayo (simply means – the 5th of May). As I was returning home I could see a lot of people on the streets holding the Mexican flag. &lt;!-- raw HTML omitted --&gt;
-We went to the park in the evening. Guardalupe park was full of people. After coming from India I’d never seen so many people together in one single place. There were many stalls. There were a couple of stages in which some bands were playing. The music was good. There was a dancing corner. But I didn’t try it out. &lt;!-- raw HTML omitted --&gt;
-There are a few things that I can best do alone ! dancing may be one of them !!&lt;/p&gt;
-- https://robinsonraju.info/posts/2006-05-07-time-to-celebrate/ - 2020 Robinson Raju</description>
         </item>
     
     

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 Robinson Raju</copyright>
-    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://robinsonraju.info/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Plan B</title>
+      <link>https://robinsonraju.info/posts/2020-09-05-plan-b/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/posts/2020-09-05-plan-b/</guid>
+      <description>Happened to watch the first 3 episodes of Raised by Wolves1. I was expecting just an episode to get launched in the typical HBO fashion. But getting 3 episodes was a bonus.</description>
+    </item>
     
     <item>
       <title>The Money Effect</title>
