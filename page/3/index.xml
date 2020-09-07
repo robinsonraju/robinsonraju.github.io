@@ -13,6 +13,17 @@
     
     
         <item>
+        <title>The Bartimaeus Trilogy by Jonathan Stroud</title>
+        <link>https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/</link>
+        <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+        
+        <guid>https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/ -- https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/ - 2020 Robinson Raju</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Reading List</title>
         <link>https://robinsonraju.info/posts/reading-list/</link>
         <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -288,11 +299,11 @@
     
         <item>
         <title>A Simple MapReduce Job for Iris Dataset</title>
-        <link>https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</link>
         <pubDate>Wed, 30 Sep 2015 22:50:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/ -&lt;p&gt;This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/ -&lt;p&gt;This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.&lt;/p&gt;
 &lt;p&gt;The objective is to read data from Iris dataset - &lt;a href=&#34;https://archive.ics.uci.edu/ml/datasets/Iris&#34;&gt;https://archive.ics.uci.edu/ml/datasets/Iris&lt;/a&gt; and calculate the mean sepal length of each class of the flower.&lt;/p&gt;
 &lt;p&gt;The data is here -&amp;gt; &lt;a href=&#34;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#34;&gt;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Sample record : &lt;code&gt;5.1,3.5,1.4,0.2,Iris-setosa&lt;/code&gt;&lt;/p&gt;
@@ -376,18 +387,18 @@ public class IrisReducer extends
 &lt;p&gt;You should see the following output&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Iris&lt;/strong&gt;&amp;rdquo; by Pauline Rosenberg via &lt;a href=&#34;https://flic.kr/p/6sZzjm&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-09-30-mapreducejob-iris/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Writing a simple Mapper and Reducer for Wordcount</title>
-        <link>https://robinsonraju.info/posts/2015-09-21-simple-map-reduce-job/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</link>
         <pubDate>Mon, 21 Sep 2015 23:50:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-09-21-simple-map-reduce-job/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-09-21-simple-map-reduce-job/ -&lt;p&gt;The last blog was about how to run wordcount using the &amp;ldquo;hadoop-mapreduce-examples.jar&amp;rdquo; that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this? I searched a bit for an eclipse plugin to be able to create a MR project through eclipse that would have the template for Mapper and Reducer and I would just write the implementation. Found some plugins (e.g HDT) and some screencasts but didn&amp;rsquo;t take me far. Remembered that there was an eclipse icon in the Cloudera VM. Started the VM, clicked on the icon and viola ! there was a sample project with Stubs for Mapper, Reducer and Driver. Exactly what I needed!&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/ -&lt;p&gt;The last blog was about how to run wordcount using the &amp;ldquo;hadoop-mapreduce-examples.jar&amp;rdquo; that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this? I searched a bit for an eclipse plugin to be able to create a MR project through eclipse that would have the template for Mapper and Reducer and I would just write the implementation. Found some plugins (e.g HDT) and some screencasts but didn&amp;rsquo;t take me far. Remembered that there was an eclipse icon in the Cloudera VM. Started the VM, clicked on the icon and viola ! there was a sample project with Stubs for Mapper, Reducer and Driver. Exactly what I needed!&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Put in the code for Mapper, Reducer and Driver in the Stub classes and ran the Driver. It worked like a charm. Here is the code for it.&lt;/p&gt;
 &lt;h2 id=&#34;mapper&#34;&gt;Mapper&lt;/h2&gt;
@@ -518,18 +529,18 @@ Run As &amp;gt; Java Application (give 2 arguments &amp;quot;input&amp;quot; and
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Words&lt;/strong&gt;&amp;rdquo; by Cayce Newell via &lt;a href=&#34;https://flic.kr/p/4BsjLY&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-09-21-simple-map-reduce-job/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Running Hadoop WordCount example</title>
-        <link>https://robinsonraju.info/posts/2015-09-15-wordcount-on-hadoop/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</link>
         <pubDate>Tue, 15 Sep 2015 22:50:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-09-15-wordcount-on-hadoop/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-09-15-wordcount-on-hadoop/ -&lt;p&gt;Here is a small example to run Wordcount program on hadoop. I&amp;rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal..etc. MapR Sandbox doesnt come with GUI, so you&amp;rsquo;d have to ssh into the machine to work on it. You can open &lt;a href=&#34;https://localhost:8443&#34;&gt;https://localhost:8443&lt;/a&gt; in a browser to see Hue to see FileBrowser, DataBrowser, JobBrowser ..etc.&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/ -&lt;p&gt;Here is a small example to run Wordcount program on hadoop. I&amp;rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal..etc. MapR Sandbox doesnt come with GUI, so you&amp;rsquo;d have to ssh into the machine to work on it. You can open &lt;a href=&#34;https://localhost:8443&#34;&gt;https://localhost:8443&lt;/a&gt; in a browser to see Hue to see FileBrowser, DataBrowser, JobBrowser ..etc.&lt;/p&gt;
 &lt;h2 id=&#34;using-cloudera-vm&#34;&gt;Using Cloudera VM&lt;/h2&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
 &lt;ul&gt;
@@ -582,29 +593,29 @@ Run As &amp;gt; Java Application (give 2 arguments &amp;quot;input&amp;quot; and
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;n1atsigns2 (Network graph of people on twitter connecting to the topics of Big Data, infochimps or Hadoop)&lt;/strong&gt;&amp;rdquo; by Philip Kromer via &lt;a href=&#34;https://flic.kr/p/8R7PyB&#34;&gt;Flickr&lt;/a&gt;. Inverterd colors using Photoshop&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-09-15-wordcount-on-hadoop/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>The Checklist Manifesto by Atul Gawande</title>
-        <link>https://robinsonraju.info/posts/2015-09-06-the-checklist-manifesto/</link>
+        <link>https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/</link>
         <pubDate>Sun, 06 Sep 2015 08:17:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-09-06-the-checklist-manifesto/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-09-06-the-checklist-manifesto/ -- https://robinsonraju.info/posts/2015-09-06-the-checklist-manifesto/ - 2020 Robinson Raju</description>
+        <guid>https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/ -- https://robinsonraju.info/books/2015-09-06-the-checklist-manifesto/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Data De-Duplication Performance With Multi-Threaded FBC Algorithm</title>
-        <link>https://robinsonraju.info/posts/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</link>
         <pubDate>Sun, 01 Mar 2015 23:13:21 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-03-01-de-duplication-multi-thread-chunking-algorithm/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Jiang, X., Zhao, J., &amp;amp; Zheng, J. (2014). Enhance Data De – Duplication Performance With Multi – Thread Chunking Algorithm. Santa Clara, CA: Santa Clara University.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -614,18 +625,18 @@ FBC makes much improvement in reducing total chunk size and metadata overhead co
 This paper talks about a multi-threaded FBC that exploits the multicore architecture of the modern microprocessor.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Columbia Supercomputer&lt;/strong&gt;&amp;rdquo; by Scott Beale via &lt;a href=&#34;https://flic.kr/p/H8UJY&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-03-01-de-duplication-multi-thread-chunking-algorithm/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Distributional Stability of Chunk Sizes in Data Chunking</title>
-        <link>https://robinsonraju.info/posts/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</link>
         <pubDate>Sun, 22 Feb 2015 09:13:21 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Zhanjie, W., &amp;amp; Lang, S. (2013). Research on Distributional Stability of Chunk Sizes in Data Chunking. International Journal of Digital Content Technology and Its Applications, 443-450.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -634,18 +645,18 @@ This paper talks about a multi-threaded FBC that exploits the multicore architec
 and 50% in running time.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Axis of stability&lt;/strong&gt;&amp;rdquo; by TJ Gehling via &lt;a href=&#34;https://flic.kr/p/f2t2ps&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Winnowing: local algorithms for document fingerprinting</title>
-        <link>https://robinsonraju.info/posts/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</link>
         <pubDate>Sun, 15 Feb 2015 01:23:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Schleimer, S., Wilkerson, D. S., and Aiken, A. 2003. Winnowing: local algorithms for document fingerprinting. In Proceedings of the 2003 ACM SIGMOD International Conference on Management of Data (San Diego, California, USA, June 09 – 12, 2003).&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -672,18 +683,18 @@ This week I thought I&amp;rsquo;d take a step back and review some other techniq
 The paper gives an overview of local fingerprinting algorithms. It provides an introduction to Winnowing, a special local fingerprinting algorithm. It goes on to show experimental results for Winnowing&amp;rsquo;s performance being less than 33% of earlier lower bound.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Seminole Winnowing Basket&lt;/strong&gt;&amp;rdquo; by Mathers Museum of World Cultures via &lt;a href=&#34;https://flic.kr/p/pfY1mV&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>A Running Time Improvement for TTTD Algorithm</title>
-        <link>https://robinsonraju.info/posts/2015-02-08-running-time-improvement-for-tttd-algorithm/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</link>
         <pubDate>Sun, 08 Feb 2015 11:33:21 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-02-08-running-time-improvement-for-tttd-algorithm/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-02-08-running-time-improvement-for-tttd-algorithm/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/ -&lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Moh, T., &amp;amp; Chang, B. (2010). A Running Time Improvement for the Two Thresholds Two Divisors Algorithm. ACM SE ’10 Proceedings of the 48th Annual Southeast Regional Conference.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -694,18 +705,18 @@ This paper proposes an improvement over the TTTD algorithm.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Curiousity&lt;/strong&gt;&amp;rdquo; by Thomas Hawk via &lt;a href=&#34;https://flic.kr/p/dSuxV1&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-02-08-running-time-improvement-for-tttd-algorithm/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Let sleeping files lie: Pattern matching in Z-compressed file</title>
-        <link>https://robinsonraju.info/posts/2015-02-01-compressed-pattern-matching/</link>
+        <link>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</link>
         <pubDate>Sun, 01 Feb 2015 04:35:12 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-02-01-compressed-pattern-matching/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-02-01-compressed-pattern-matching/ -&lt;p&gt;This is a review of the paper on Pattern matching in Z-compressed files. I&amp;rsquo;d done a project last year to implement LZW compression and chanced upon this paper while I was googling for some information on LZW. To see two areas that I&amp;rsquo;d worked on in the past - Data Search (Had helped build a search engine using Lucene 10 yrs back and used Solr for another project a few years back) and Data Compression come together, to know that we would be able to index data and search from compressed files without decompressing them, was very intersting and I wanted to find more information and see some implementation of this.&lt;br&gt;
+        <guid>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/ -&lt;p&gt;This is a review of the paper on Pattern matching in Z-compressed files. I&amp;rsquo;d done a project last year to implement LZW compression and chanced upon this paper while I was googling for some information on LZW. To see two areas that I&amp;rsquo;d worked on in the past - Data Search (Had helped build a search engine using Lucene 10 yrs back and used Solr for another project a few years back) and Data Compression come together, to know that we would be able to index data and search from compressed files without decompressing them, was very intersting and I wanted to find more information and see some implementation of this.&lt;br&gt;
 The review of the paper was presented to some students at SJSU.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Paper reviewed&lt;/strong&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -738,18 +749,18 @@ The review of the paper was presented to some students at SJSU.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Elephant seals asleep&lt;/strong&gt;&amp;rdquo; by Bill Abbott via &lt;a href=&#34;https://flic.kr/p/2bVDZF&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2015-02-01-compressed-pattern-matching/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>The End of Power by Moses Naim</title>
-        <link>https://robinsonraju.info/posts/2015-01-10-end-of-power/</link>
+        <link>https://robinsonraju.info/books/2015-01-10-end-of-power/</link>
         <pubDate>Sat, 10 Jan 2015 10:17:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2015-01-10-end-of-power/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2015-01-10-end-of-power/ -&lt;p&gt;&lt;em&gt;Mark Zuckerberg posts a public challenge/goal for himself at the beginning of every year and in 2015 it was to &lt;a href=&#34;https://www.facebook.com/ayearofbooks/&#34;&gt;read a new book every two weeks&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+        <guid>https://robinsonraju.info/books/2015-01-10-end-of-power/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2015-01-10-end-of-power/ -&lt;p&gt;&lt;em&gt;Mark Zuckerberg posts a public challenge/goal for himself at the beginning of every year and in 2015 it was to &lt;a href=&#34;https://www.facebook.com/ayearofbooks/&#34;&gt;read a new book every two weeks&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Power no longer buys as much as it did in the past. In the 21st century, power is easy to get, harder to use - and easy to lose.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -813,18 +824,18 @@ The review of the paper was presented to some students at SJSU.&lt;/p&gt;
 &lt;h2 id=&#34;chapter-9-hyper-competition-for-your-soul-heart-and-brain&#34;&gt;Chapter 9	: Hyper-Competition for Your Soul, Heart, and Brain&lt;/h2&gt;
 &lt;h2 id=&#34;chapter-10--the-decay-of-power-is-the-glass-half-full-or-half-empty&#34;&gt;Chapter 10 : The Decay of Power: Is the Glass Half-Full or Half-Empty?&lt;/h2&gt;
 &lt;h2 id=&#34;chapter-11--power-is-decaying-so-what-what-to-do&#34;&gt;Chapter 11 : Power Is Decaying: So What? What to Do?&lt;/h2&gt;
-- https://robinsonraju.info/posts/2015-01-10-end-of-power/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/books/2015-01-10-end-of-power/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Delivering a project and presenting to a multi-level audience</title>
-        <link>https://robinsonraju.info/posts/2014-11-18-presenting-to-a-multi-level-audience/</link>
+        <link>https://robinsonraju.info/management/2014-11-18-presenting-to-a-multi-level-audience/</link>
         <pubDate>Tue, 18 Nov 2014 23:15:14 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-11-18-presenting-to-a-multi-level-audience/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-11-18-presenting-to-a-multi-level-audience/ -&lt;p&gt;A project delivery is a culmination of the team’s effort after a series of sprints. After a several sequences of twists and turns or crests and troughs of requirement/direction changes, the team is finally at the juncture where it has produced a product that the client wanted. The client has been involved in the process from the beginning, so nothing should be a surprise. Project delivery is also an opportunity to showcase the product to a broader audience than the immediate client that the team has been working on. Now comes the question of presenting the product to an audience that is not aware of the product yet. Worse, the audience may be very diverse in their technical or domain knowledge. How do we go about creating a presentation that appeals to all.&lt;/p&gt;
+        <guid>https://robinsonraju.info/management/2014-11-18-presenting-to-a-multi-level-audience/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-11-18-presenting-to-a-multi-level-audience/ -&lt;p&gt;A project delivery is a culmination of the team’s effort after a series of sprints. After a several sequences of twists and turns or crests and troughs of requirement/direction changes, the team is finally at the juncture where it has produced a product that the client wanted. The client has been involved in the process from the beginning, so nothing should be a surprise. Project delivery is also an opportunity to showcase the product to a broader audience than the immediate client that the team has been working on. Now comes the question of presenting the product to an audience that is not aware of the product yet. Worse, the audience may be very diverse in their technical or domain knowledge. How do we go about creating a presentation that appeals to all.&lt;/p&gt;
 &lt;p&gt;A common rule of thumb for presentations is to go with the least common denominator in the audience who is significant enough. If the person with the least technical knowledge understands your framework, it is a win. There is always more hardwork in creating a simple presentation than a complex one. One usually starts by creating a presentation with all details in it and then stripping it slowly of the complexities layer by layer, in the end leaving only the most vital information that could be understood by all. After all, we’re investing time and energy, the audience is expecting to get something and if we disappoint, the ramifications could be disastrous. The audience may never come back even if the next product is stellar.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;The objective is very simple – grab audience’s attention and keep it.&lt;/p&gt;
@@ -843,7 +854,7 @@ Step One: Care About Your Audience&lt;/strong&gt;”, Retrieved November 20, 201
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Election night crowd, Wellington, 1931&lt;/strong&gt;&amp;rdquo; from National Library NZ via &lt;a href=&#34;https://flic.kr/p/64VEva&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2014-11-18-presenting-to-a-multi-level-audience/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-11-18-presenting-to-a-multi-level-audience/ - 2020 Robinson Raju</description>
         </item>
     
     
@@ -894,11 +905,11 @@ Step One: Care About Your Audience&lt;/strong&gt;”, Retrieved November 20, 201
     
         <item>
         <title>Handing off a project to a client; what are the risks and challenges?</title>
-        <link>https://robinsonraju.info/posts/2014-11-12-handing-off-a-project-to-a-client/</link>
+        <link>https://robinsonraju.info/management/2014-11-12-handing-off-a-project-to-a-client/</link>
         <pubDate>Wed, 12 Nov 2014 06:25:44 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-11-12-handing-off-a-project-to-a-client/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-11-12-handing-off-a-project-to-a-client/ -&lt;p&gt;The biggest risk and challenge when handing off a project to a client is the fear of meeting the expectation of the client. The lingering question in the mind is “What if what we are presenting is different from what the Client is expecting?”. This happens in spite of the best documentation, design, execution and testing. Even projects that go into meticulous details of documenting every single requirement might in the end come to delivering something that the client is not expecting. Many times the client’s mindset changes, environment changes, technologies change.&lt;/p&gt;
+        <guid>https://robinsonraju.info/management/2014-11-12-handing-off-a-project-to-a-client/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-11-12-handing-off-a-project-to-a-client/ -&lt;p&gt;The biggest risk and challenge when handing off a project to a client is the fear of meeting the expectation of the client. The lingering question in the mind is “What if what we are presenting is different from what the Client is expecting?”. This happens in spite of the best documentation, design, execution and testing. Even projects that go into meticulous details of documenting every single requirement might in the end come to delivering something that the client is not expecting. Many times the client’s mindset changes, environment changes, technologies change.&lt;/p&gt;
 &lt;p&gt;The picture below depicts a very common joke in programming circles –&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Multiple methodologies have been developed to counter this – more in software development than other domains since software is abstract and clients may not be able to envision it before it is created, the risk of not meeting the expectation is higher. Many times, clients might want a new functionality when they see the product for the first time !&lt;/p&gt;
@@ -918,18 +929,18 @@ Step One: Care About Your Audience&lt;/strong&gt;”, Retrieved November 20, 201
 &lt;li&gt;Ferris, B. (2012, July 7). How to Hand Off a Project Successfully. Retrieved November 14, 2014, from &lt;a href=&#34;http://cobaltpm.com/project-hand-off&#34;&gt;http://cobaltpm.com/project-hand-off&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;Diamond DA42&amp;rdquo; by Jean-Pierre Bovin via &lt;a href=&#34;https://flic.kr/p/o3m4oR&#34;&gt;Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2014-11-12-handing-off-a-project-to-a-client/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-11-12-handing-off-a-project-to-a-client/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>What five technical skills are employers seeking? What five soft skills put you on top?</title>
-        <link>https://robinsonraju.info/posts/2014-11-03-five-technical-skills-are-employers-seeking/</link>
+        <link>https://robinsonraju.info/management/2014-11-03-five-technical-skills-are-employers-seeking/</link>
         <pubDate>Mon, 03 Nov 2014 05:19:29 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-11-03-five-technical-skills-are-employers-seeking/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-11-03-five-technical-skills-are-employers-seeking/ -&lt;hr&gt;
+        <guid>https://robinsonraju.info/management/2014-11-03-five-technical-skills-are-employers-seeking/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-11-03-five-technical-skills-are-employers-seeking/ -&lt;hr&gt;
 &lt;h2 id=&#34;header-img-imgblog7tech_skillsjpg&#34;&gt;layout: post
 title:  &amp;ldquo;What five technical skills are employers seeking? What five soft skills put you on top?&amp;rdquo;
 date:   2014-11-03 05:19:29
@@ -969,18 +980,18 @@ header-img: &amp;ldquo;img/blog7/tech_skills.jpg&amp;rdquo;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Top IT Skills For 2014. (n.d.). Retrieved December 2, 2014, from &lt;a href=&#34;http://www.forbes.com/sites/emc/2014/04/22/top-it-skills-for-2014/&#34;&gt;http://www.forbes.com/sites/emc/2014/04/22/top-it-skills-for-2014&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-11-03-five-technical-skills-are-employers-seeking/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-11-03-five-technical-skills-are-employers-seeking/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Social Media and Branding</title>
-        <link>https://robinsonraju.info/posts/2014-10-30-social-media-and-branding/</link>
+        <link>https://robinsonraju.info/management/2014-10-30-social-media-and-branding/</link>
         <pubDate>Thu, 30 Oct 2014 20:12:19 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-10-30-social-media-and-branding/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-10-30-social-media-and-branding/ -&lt;p&gt;We are in an era where social media influences everyone more than parents, friends, peers, etc. A couple of decades back, it was improbably to even think that something virtual could control so many aspects of your lives. It was also impossible to think that we would have tools to reach over 100 million people within minutes. The power and the challenges are amazing.&lt;/p&gt;
+        <guid>https://robinsonraju.info/management/2014-10-30-social-media-and-branding/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-10-30-social-media-and-branding/ -&lt;p&gt;We are in an era where social media influences everyone more than parents, friends, peers, etc. A couple of decades back, it was improbably to even think that something virtual could control so many aspects of your lives. It was also impossible to think that we would have tools to reach over 100 million people within minutes. The power and the challenges are amazing.&lt;/p&gt;
 &lt;p&gt;Social media marketing industry report done by Social Media Examiner in 2013 came out with the following findings:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Marketers place a very high value on social media: A significant 86% of marketers indicate that social media is important for their business, up from 83% in 2012.&lt;/li&gt;
@@ -1022,18 +1033,18 @@ This can be done in several stages:&lt;/p&gt;
 &lt;p&gt;[3] Kievman, N. (2007). Take Control of Your Image and Brand. In LinkedIn Quick Start Guide (1st ed.). LinkedStrategies.com.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-10-30-social-media-and-branding/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-10-30-social-media-and-branding/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>LinkedIn profiles, how to use them, how to market yourself, how to network</title>
-        <link>https://robinsonraju.info/posts/2014-10-19-linked-in-profiles-how-to-market-self/</link>
+        <link>https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/</link>
         <pubDate>Sun, 19 Oct 2014 22:02:12 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-10-19-linked-in-profiles-how-to-market-self/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-10-19-linked-in-profiles-how-to-market-self/ -&lt;p&gt;In this post, we take a segway from discussions around Agile methodology and focus on something that is very important for everyone’s career – to have an online professional profile, something that someone can look at and find out about your career, capabilities and achievements.&lt;/p&gt;
+        <guid>https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/ -&lt;p&gt;In this post, we take a segway from discussions around Agile methodology and focus on something that is very important for everyone’s career – to have an online professional profile, something that someone can look at and find out about your career, capabilities and achievements.&lt;/p&gt;
 &lt;p&gt;There are many sites where one can host a professional profile but LinkedIn is the most popular business oriented social networking service. With a huge database of over 120 million people, all of whom you can search and most of whom you can message within minutes, LinkedIn is far ahead in features and reach than other networking services. Employers and recruiters actively look at LinkedIn profiles either to find potential candidates that suit the role that they are looking for or to find out more about the person that they are interviewing. So it is very pertinent to look a little in-depth at what the site provides and how effectively it could be used.&lt;/p&gt;
 &lt;h2 id=&#34;what-does-linkedin-provide&#34;&gt;What does LinkedIn provide?&lt;/h2&gt;
 &lt;p&gt;LinkedIn’s remarkable value is making our second and third degree networks visible, as well as the connecting paths, thereby revealing the networks of people we know. Thus it helps in finding the right people using our connections. Here is a short summary of what LinkedIn provides:&lt;/p&gt;
@@ -1092,18 +1103,18 @@ This can be done in several stages:&lt;/p&gt;
 &lt;p&gt;[4] Kievman, N. (2007). LinkedIn Quick Start Guide (1st ed.). LinkedStrategies.com.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-10-19-linked-in-profiles-how-to-market-self/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Agile tasks lists, what does “done” mean in Agile?</title>
-        <link>https://robinsonraju.info/posts/2014-10-07-agile-task-list-what-does-done-mean/</link>
+        <link>https://robinsonraju.info/management/2014-10-07-agile-task-list-what-does-done-mean/</link>
         <pubDate>Tue, 07 Oct 2014 21:10:13 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-10-07-agile-task-list-what-does-done-mean/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-10-07-agile-task-list-what-does-done-mean/ -&lt;p&gt;This is the fourth post in this series of “Introduction to Agile methodology”. The topic of this blog is “Agile task lists, what does “done” mean in Agile?”.&lt;/p&gt;
+        <guid>https://robinsonraju.info/management/2014-10-07-agile-task-list-what-does-done-mean/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-10-07-agile-task-list-what-does-done-mean/ -&lt;p&gt;This is the fourth post in this series of “Introduction to Agile methodology”. The topic of this blog is “Agile task lists, what does “done” mean in Agile?”.&lt;/p&gt;
 &lt;p&gt;Teams change their methodology to agile with the lofty goal of getting great results but often fail. A primary reason for failure is the ambiguity around the definition of “done”. When what needs to be done in a User story is not clearly defined, what gets done does not fully meet end user requirements or even if it meets, might create technical debt. During the sprint planning, when the team discusses about the user story, everyone needs to make sure that the tasks required to complete the User Story is fully understood. If not, the scope would be inaccurate.&lt;/p&gt;
 &lt;p&gt;One way of listing down a task for the User Story is to go over a &lt;strong&gt;“done thinking grid“&lt;/strong&gt;. A sample one is below:&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -1122,18 +1133,18 @@ This can be done in several stages:&lt;/p&gt;
 &lt;p&gt;[2] Schwaber, K. (2004). Appendix A. In Agile project management with Scrum. Redmond, Wash.: Microsoft Press.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-10-07-agile-task-list-what-does-done-mean/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-10-07-agile-task-list-what-does-done-mean/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>The Agile Sprint Retrospective</title>
-        <link>https://robinsonraju.info/posts/2014-09-21-agile-sprint-retrospective/</link>
+        <link>https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/</link>
         <pubDate>Sun, 21 Sep 2014 21:24:13 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-09-21-agile-sprint-retrospective/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-09-21-agile-sprint-retrospective/ -&lt;h1 id=&#34;agile-sprint-retrospective&#34;&gt;Agile Sprint Retrospective&lt;/h1&gt;
+        <guid>https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/ -&lt;h1 id=&#34;agile-sprint-retrospective&#34;&gt;Agile Sprint Retrospective&lt;/h1&gt;
 &lt;p&gt;This is the third post in this series of “Introduction to Agile methodology”. The topic of this blog is “Agile Sprint Retrospective”.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt;  Agile Sprint Retrospective is a meeting that happens after a Sprint to evaluate how the last one went. The Team, the Scrum Master and the Product Owner attends this meeting in Scrum. The objective of the meeting is to reflect on the current process and determine what steps could be taken to make corrections and adapt to future sprints.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -1171,75 +1182,7 @@ What could be improved in the next Sprint?
 &lt;p&gt;[2] Agile Methodology. (2014, July 1). Retrieved September 10, 2014, from &lt;a href=&#34;http://agilemethodology.org&#34;&gt;http://agilemethodology.org&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-09-21-agile-sprint-retrospective/ - 2020 Robinson Raju</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>The Agile Team and the backlog</title>
-        <link>https://robinsonraju.info/posts/2014-09-16-agile-and-backlog/</link>
-        <pubDate>Tue, 16 Sep 2014 19:34:23 +0000</pubDate>
-        
-        <guid>https://robinsonraju.info/posts/2014-09-16-agile-and-backlog/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-09-16-agile-and-backlog/ -&lt;p&gt;This blog continues on the last week’s blog about introducing Agile to newcomers to the practice. The focus this week is on 2 things – The agile team and the artifacts that they work on, namely “backlogs”.&lt;/p&gt;
-&lt;h1 id=&#34;agile-team&#34;&gt;Agile Team&lt;/h1&gt;
-&lt;p&gt;Agile team is a self contained team that can by itself complete a user story in the backlog. Let’s take the example of “Scrum” which is a popular Agile framework. In scrum, there could be dependencies with external teams. But it is up to the Scrum Master to resolve these dependencies. Otherwise, the team would flag such User Stories as having ‘impediments’ and move on to the next one.&lt;/p&gt;
-&lt;p&gt;Typically a Scrum team consists of the following roles&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scrum Master&lt;/strong&gt; – Person who is in charge of the sprints&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Product Owner&lt;/strong&gt; – Person who represents the stakeholders&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Team&lt;/strong&gt; – Consists of different people who collectively have skills to complete tasks in the backlog.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Below is a short summary of responsibilities for each role.&lt;/p&gt;
-&lt;h2 id=&#34;scrum-master&#34;&gt;Scrum Master:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Manages 1 sprint at a time&lt;/li&gt;
-&lt;li&gt;Facilitates Sprint Planning, Review &amp;amp; Retrospective&lt;/li&gt;
-&lt;li&gt;Finds and works to remove roadblocks&lt;/li&gt;
-&lt;li&gt;Helps to motivate the team and keep them excited&lt;/li&gt;
-&lt;li&gt;Protects team from outside distractions&lt;/li&gt;
-&lt;li&gt;Facilitates communication between roles for every aspect of the project&lt;/li&gt;
-&lt;li&gt;Responsible for keeping release/project information consolidated, organized and up to date&lt;/li&gt;
-&lt;li&gt;Drives the cross-functional team at all levels&lt;/li&gt;
-&lt;li&gt;Responsible for throughput&lt;/li&gt;
-&lt;li&gt;Drives the execution of sprint items&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;product-owner&#34;&gt;Product Owner:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Responsible for market, business case, and competitive analysis&lt;/li&gt;
-&lt;li&gt;Responsible for long and short term product vision&lt;/li&gt;
-&lt;li&gt;Responsible for ROI and Net Profit&lt;/li&gt;
-&lt;li&gt;Prioritizes features for releases based upon expected ROI&lt;/li&gt;
-&lt;li&gt;Writes Acceptance Criteria&lt;/li&gt;
-&lt;li&gt;Writes user stories&lt;/li&gt;
-&lt;li&gt;Makes tradeoff decisions between scope and schedule&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;team&#34;&gt;Team:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Responsible for implementation of the backlog items as per the acceptance criteria&lt;/li&gt;
-&lt;li&gt;The team could contain people with specialized skills
-&lt;ul&gt;
-&lt;li&gt;Architect to define the design and ensure that best practices are followed.&lt;/li&gt;
-&lt;li&gt;Developers to develop and unit test the features&lt;/li&gt;
-&lt;li&gt;Quality engineers to test the features and ensure that they have been done as per the acceptance criteria&lt;/li&gt;
-&lt;li&gt;User Experience Designers to take care of the human interaction perspective&lt;/li&gt;
-&lt;li&gt;..etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;backlog&#34;&gt;Backlog&lt;/h1&gt;
-&lt;p&gt;The product backlog in Scrum is a list of features that are desired for a product at that point in time. Features are short descriptions of the functionality that is needed and these are prioritized. They could contain new features, bugs, technical debt..etc. Typically a team picks few features from the top of the list during ‘Sprint Grooming’ sessions. During ‘Sprint Planning’, the product owner shows up with the prioritized list and the team take these, estimates and locks the features that could be accomplished in a sprint (called ‘Sprint backlog’).&lt;/p&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;[1] – Sanders, A. (2008, August 12). Agile Team Members : Roles and Responsibilities. Retrieved September 16, 2014, from &lt;a href=&#34;http://aaron.sanders.name/agile-team-members-roles-and-responsibilities/&#34;&gt;http://aaron.sanders.name/agile-team-members-roles-and-responsibilities&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;[2] – Cohn, M. (n.d.). Topics in Scrum. Retrieved September 18, 2014, from &lt;a href=&#34;http://www.mountaingoatsoftware.com/agile/scrum/product-backlog&#34;&gt;http://www.mountaingoatsoftware.com/agile/scrum/product-backlog&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-09-16-agile-and-backlog/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/ - 2020 Robinson Raju</description>
         </item>
     
     

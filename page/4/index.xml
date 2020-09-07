@@ -13,12 +13,80 @@
     
     
         <item>
+        <title>The Agile Team and the backlog</title>
+        <link>https://robinsonraju.info/management/2014-09-16-agile-and-backlog/</link>
+        <pubDate>Tue, 16 Sep 2014 19:34:23 +0000</pubDate>
+        
+        <guid>https://robinsonraju.info/management/2014-09-16-agile-and-backlog/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-09-16-agile-and-backlog/ -&lt;p&gt;This blog continues on the last week’s blog about introducing Agile to newcomers to the practice. The focus this week is on 2 things – The agile team and the artifacts that they work on, namely “backlogs”.&lt;/p&gt;
+&lt;h1 id=&#34;agile-team&#34;&gt;Agile Team&lt;/h1&gt;
+&lt;p&gt;Agile team is a self contained team that can by itself complete a user story in the backlog. Let’s take the example of “Scrum” which is a popular Agile framework. In scrum, there could be dependencies with external teams. But it is up to the Scrum Master to resolve these dependencies. Otherwise, the team would flag such User Stories as having ‘impediments’ and move on to the next one.&lt;/p&gt;
+&lt;p&gt;Typically a Scrum team consists of the following roles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scrum Master&lt;/strong&gt; – Person who is in charge of the sprints&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Product Owner&lt;/strong&gt; – Person who represents the stakeholders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Team&lt;/strong&gt; – Consists of different people who collectively have skills to complete tasks in the backlog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below is a short summary of responsibilities for each role.&lt;/p&gt;
+&lt;h2 id=&#34;scrum-master&#34;&gt;Scrum Master:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Manages 1 sprint at a time&lt;/li&gt;
+&lt;li&gt;Facilitates Sprint Planning, Review &amp;amp; Retrospective&lt;/li&gt;
+&lt;li&gt;Finds and works to remove roadblocks&lt;/li&gt;
+&lt;li&gt;Helps to motivate the team and keep them excited&lt;/li&gt;
+&lt;li&gt;Protects team from outside distractions&lt;/li&gt;
+&lt;li&gt;Facilitates communication between roles for every aspect of the project&lt;/li&gt;
+&lt;li&gt;Responsible for keeping release/project information consolidated, organized and up to date&lt;/li&gt;
+&lt;li&gt;Drives the cross-functional team at all levels&lt;/li&gt;
+&lt;li&gt;Responsible for throughput&lt;/li&gt;
+&lt;li&gt;Drives the execution of sprint items&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;product-owner&#34;&gt;Product Owner:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Responsible for market, business case, and competitive analysis&lt;/li&gt;
+&lt;li&gt;Responsible for long and short term product vision&lt;/li&gt;
+&lt;li&gt;Responsible for ROI and Net Profit&lt;/li&gt;
+&lt;li&gt;Prioritizes features for releases based upon expected ROI&lt;/li&gt;
+&lt;li&gt;Writes Acceptance Criteria&lt;/li&gt;
+&lt;li&gt;Writes user stories&lt;/li&gt;
+&lt;li&gt;Makes tradeoff decisions between scope and schedule&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;team&#34;&gt;Team:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Responsible for implementation of the backlog items as per the acceptance criteria&lt;/li&gt;
+&lt;li&gt;The team could contain people with specialized skills
+&lt;ul&gt;
+&lt;li&gt;Architect to define the design and ensure that best practices are followed.&lt;/li&gt;
+&lt;li&gt;Developers to develop and unit test the features&lt;/li&gt;
+&lt;li&gt;Quality engineers to test the features and ensure that they have been done as per the acceptance criteria&lt;/li&gt;
+&lt;li&gt;User Experience Designers to take care of the human interaction perspective&lt;/li&gt;
+&lt;li&gt;..etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;backlog&#34;&gt;Backlog&lt;/h1&gt;
+&lt;p&gt;The product backlog in Scrum is a list of features that are desired for a product at that point in time. Features are short descriptions of the functionality that is needed and these are prioritized. They could contain new features, bugs, technical debt..etc. Typically a team picks few features from the top of the list during ‘Sprint Grooming’ sessions. During ‘Sprint Planning’, the product owner shows up with the prioritized list and the team take these, estimates and locks the features that could be accomplished in a sprint (called ‘Sprint backlog’).&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[1] – Sanders, A. (2008, August 12). Agile Team Members : Roles and Responsibilities. Retrieved September 16, 2014, from &lt;a href=&#34;http://aaron.sanders.name/agile-team-members-roles-and-responsibilities/&#34;&gt;http://aaron.sanders.name/agile-team-members-roles-and-responsibilities&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[2] – Cohn, M. (n.d.). Topics in Scrum. Retrieved September 18, 2014, from &lt;a href=&#34;http://www.mountaingoatsoftware.com/agile/scrum/product-backlog&#34;&gt;http://www.mountaingoatsoftware.com/agile/scrum/product-backlog&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- https://robinsonraju.info/management/2014-09-16-agile-and-backlog/ - 2020 Robinson Raju</description>
+        </item>
+    
+    
+    
+        <item>
         <title>What is agile and what are user stories</title>
-        <link>https://robinsonraju.info/posts/2014-09-09-what-is-agile/</link>
+        <link>https://robinsonraju.info/management/2014-09-09-what-is-agile/</link>
         <pubDate>Tue, 09 Sep 2014 22:54:56 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-09-09-what-is-agile/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-09-09-what-is-agile/ -&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+        <guid>https://robinsonraju.info/management/2014-09-09-what-is-agile/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-09-09-what-is-agile/ -&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;In the earlier days of the software industry, the process of developing software products mirrored engineering practices of the day. Like a bridge construction needed elaborate planning, design and construction, a software product went through a “waterfall” model of requirement definition, design, development, testing and release, with each phase occurring one after another.&lt;/p&gt;
 &lt;p&gt;But the cookie cutter approach failed for big software products which ended up creating products and systems that user didn’t have in mind or didn’t want anymore or became obsolete because the technology had changed. This is where Agile methodology comes into light.&lt;/p&gt;
 &lt;h1 id=&#34;what-is-agile&#34;&gt;What is Agile?&lt;/h1&gt;
@@ -77,18 +145,18 @@
 &lt;li&gt;Scott, A., &amp;amp; Holitza, M. (2012). Agile for Dummies. John Wiley &amp;amp; Sons.&lt;/li&gt;
 &lt;li&gt;Agile Methodology. (2014, July 1). Retrieved September 10, 2014, from &lt;a href=&#34;http://agilemethodology.org&#34;&gt;http://agilemethodology.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-09-09-what-is-agile/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/management/2014-09-09-what-is-agile/ - 2020 Robinson Raju</description>
         </item>
     
     
     
         <item>
         <title>Introduction to Data Mining by Pang-Ning Tan, Michael Steinbach, Vipin Kumar</title>
-        <link>https://robinsonraju.info/posts/2014-02-16-datamining-tsk/</link>
+        <link>https://robinsonraju.info/books/2014-02-16-datamining-tsk/</link>
         <pubDate>Sun, 16 Feb 2014 18:17:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2014-02-16-datamining-tsk/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2014-02-16-datamining-tsk/ -&lt;p&gt;&lt;strong&gt;&amp;ldquo;Introduction to Data Mining&amp;rdquo;&lt;/strong&gt; by Pang-Ning Tan, Michael Steinbach and Vipin Kumar has been recommended to me as a great book to learn about Data Mining. Read the first chapter and it felt very inspiring as though it was beckoning me to keep at it and read more.&lt;/p&gt;
+        <guid>https://robinsonraju.info/books/2014-02-16-datamining-tsk/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2014-02-16-datamining-tsk/ -&lt;p&gt;&lt;strong&gt;&amp;ldquo;Introduction to Data Mining&amp;rdquo;&lt;/strong&gt; by Pang-Ning Tan, Michael Steinbach and Vipin Kumar has been recommended to me as a great book to learn about Data Mining. Read the first chapter and it felt very inspiring as though it was beckoning me to keep at it and read more.&lt;/p&gt;
 &lt;p&gt;Thought I will capture notes as I read. The way I usually capture notes is to make a list of all the headings, go over them once I finish a chapter or at a later time. Brain just needs a key to fetch information. The headings serve as good keys.&lt;/p&gt;
 &lt;p&gt;The best thing about the book is that sample chapters and lecture notes (ppt) are available on the publisher&amp;rsquo;s website.&lt;/p&gt;
 &lt;ul&gt;
@@ -1085,7 +1153,7 @@ $a_i = 0, s_i = 1$&lt;/li&gt;
 &lt;li&gt;Power Point slides : &lt;a href=&#34;http://www-users.cs.umn.edu/~kumar/dmbook/index.php#item4&#34;&gt;http://www-users.cs.umn.edu/~kumar/dmbook/index.php#item4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Sample Chapters : &lt;a href=&#34;http://www-users.cs.umn.edu/~kumar/dmbook/index.php#item2&#34;&gt;http://www-users.cs.umn.edu/~kumar/dmbook/index.php#item2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- https://robinsonraju.info/posts/2014-02-16-datamining-tsk/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/books/2014-02-16-datamining-tsk/ - 2020 Robinson Raju</description>
         </item>
     
     
@@ -1394,11 +1462,11 @@ If you perceive something/someone as bad, should you tell them ? Is it because t
     
         <item>
         <title>7 Habits of Highly Effective People by Steven Covey</title>
-        <link>https://robinsonraju.info/posts/2006-12-10-7-habits-highly-effective-people/</link>
+        <link>https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/</link>
         <pubDate>Sun, 10 Dec 2006 10:27:11 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2006-12-10-7-habits-highly-effective-people/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2006-12-10-7-habits-highly-effective-people/ -&lt;p&gt;There are many books that when I think back on them, I have this lingering feeling that either due to reading quickly or not taking notes, I didn&amp;rsquo;t really take in the full essence of the book. There is more to be understood and when there is time, I need to get back to it. &amp;ldquo;7 Habits of Highly Effective People&amp;rdquo; by Steven Covey is one such book. My classmate from school, RR, was probably the first person to recommend the book to me. I have probably read the first chapter at least 5 or 6 times before I finally was able to finish reading the book around 2002 when I was working in Chennai. This is the second time I&amp;rsquo;ve read this book.&lt;/p&gt;
+        <guid>https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/ -&lt;p&gt;There are many books that when I think back on them, I have this lingering feeling that either due to reading quickly or not taking notes, I didn&amp;rsquo;t really take in the full essence of the book. There is more to be understood and when there is time, I need to get back to it. &amp;ldquo;7 Habits of Highly Effective People&amp;rdquo; by Steven Covey is one such book. My classmate from school, RR, was probably the first person to recommend the book to me. I have probably read the first chapter at least 5 or 6 times before I finally was able to finish reading the book around 2002 when I was working in Chennai. This is the second time I&amp;rsquo;ve read this book.&lt;/p&gt;
 &lt;p&gt;It is one of those books which the moment you finish reading, you will feel inspired, to do more, to yearn to lead a more fulfilling life. You will see the world in a new perspective with a feeling within you that things are more in your control than not.&lt;/p&gt;
 &lt;h2 id=&#34;part-1---paradigms-and-principles&#34;&gt;PART 1 - Paradigms and principles&lt;/h2&gt;
 &lt;ul&gt;
@@ -1467,7 +1535,7 @@ in all things, generosity&amp;rdquo;
 &lt;p&gt;&amp;ldquo;The Lord works from the inside out. The world works from the outside in. The world would take people out of the slums. Christ takes the slums out of people, and then they take themselves out of the slums. The world would mold men by changing their environment. Christ changes men, who then change their environment. The world would  shape human behavior, but Christ can change human nature.
 ~ Ezra Taft Benson&lt;/p&gt;
 &lt;/blockquote&gt;
-- https://robinsonraju.info/posts/2006-12-10-7-habits-highly-effective-people/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/books/2006-12-10-7-habits-highly-effective-people/ - 2020 Robinson Raju</description>
         </item>
     
     
@@ -1768,11 +1836,11 @@ End of Day.&lt;/p&gt;
     
         <item>
         <title>Fermat&#39;s Last Theorem - Amir Aczel</title>
-        <link>https://robinsonraju.info/posts/2006-07-02-fermats-last-theorem/</link>
+        <link>https://robinsonraju.info/books/2006-07-02-fermats-last-theorem/</link>
         <pubDate>Sun, 02 Jul 2006 23:44:13 +0000</pubDate>
         
-        <guid>https://robinsonraju.info/posts/2006-07-02-fermats-last-theorem/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2006-07-02-fermats-last-theorem/ -&lt;p&gt;Amir Aczel’s &amp;ldquo;Fermat’s Last Theorem&amp;rdquo; begins with this amazing quote by Andrew Wiles.&lt;!-- raw HTML omitted --&gt;
+        <guid>https://robinsonraju.info/books/2006-07-02-fermats-last-theorem/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2006-07-02-fermats-last-theorem/ -&lt;p&gt;Amir Aczel’s &amp;ldquo;Fermat’s Last Theorem&amp;rdquo; begins with this amazing quote by Andrew Wiles.&lt;!-- raw HTML omitted --&gt;
 Yes ! he is the one .. the mathematician who solved the most famous unsolvable problem in the history of Mathematics . Over a span of 3 centuries, thousands of brilliant and hardworking men and women were at it.. and in the quest had discovered so many ground-breaking theories ..even new branches of Maths!&lt;!-- raw HTML omitted --&gt;
 I was just dumbfounded the moment I read it - at the sheer truth behind it. Here it goes ..&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -1787,7 +1855,7 @@ He was so brilliant that he could solve most equations in his mind. In fact he c
 Galois died in a political duel. The night before the duel.. he was so convinced he would die, that he wrote down his complete mathematical theory and sent it to his friend. At the time of his death, he was just 20!&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Maison Fermat&lt;/strong&gt;&amp;rdquo; by Karine C. via &lt;a href=&#34;https://flic.kr/p/aFXxXK&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2006-07-02-fermats-last-theorem/ - 2020 Robinson Raju</description>
+- https://robinsonraju.info/books/2006-07-02-fermats-last-theorem/ - 2020 Robinson Raju</description>
         </item>
     
     
@@ -1803,33 +1871,7 @@ Yeah ! Yes ! just like that !&lt;!-- raw HTML omitted --&gt;
 Much as I&amp;rsquo;d like to think that someone&amp;rsquo;ll pick it up and read and mail and .. &lt;!-- raw HTML omitted --&gt;
 Nothing..&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Message in a Bottle&lt;/strong&gt;&amp;rdquo; by Karen Kirby via &lt;a href=&#34;https://flic.kr/p/smj7sF&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 - https://robinsonraju.info/posts/2006-05-19-message-in-a-bottle/ - 2020 Robinson Raju</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Appearances are deceptive !</title>
-        <link>https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/</link>
-        <pubDate>Mon, 15 May 2006 00:07:31 +0000</pubDate>
-        
-        <guid>https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/ -&lt;p&gt;Gosh ! I jus came to know that A’d changed from specs to lenses. When ? &lt;!-- raw HTML omitted --&gt;
-Now I got it ! I met him last week.. that too after a gap of a year ! he asked if I noticed any change in him. I get into this confused-i-wanna-chicken-out kind of state when someone asks me this !&lt;!-- raw HTML omitted --&gt;
-I think I’d said “haha .. you look exactly the same. You don’t eat much. Do you ? I guess I too haven’t changed much.”&lt;!-- raw HTML omitted --&gt;
-(A might’ve been thinking – ‘bummer! I’ve gotten rid my specs and you don’t even notice the difference ! grr !!’)&lt;/p&gt;
-&lt;p&gt;This’s been a problem which, for a long time I never knew ! Some friend wears a new dress or gets a new get-up and I never notice. The fact of the matter is, this hurts people…sometimes. v
-Once I thought I’d fix it … &lt;!-- raw HTML omitted --&gt;
-had told myself “watch it ! from today .. I’m gonna get more interested in the ‘appearance’” &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;The very next day I caught P coming to office.&lt;/p&gt;
-&lt;p&gt;Me – “hey P, you look different ! you’ve started wearing specs, haven’t you ? Cool ! I must say you now look your true intellectual self.”&lt;/p&gt;
-&lt;p&gt;I was really happy I that I noticed some change as soon as I wanted to. Man ! there is nothing in life that you can’t learn once you put your mind into it.&lt;/p&gt;
-&lt;p&gt;P’d looked at me curiously and laughed – “what’s wrong with you? I’ve been wearing specs from high school”&lt;/p&gt;
-&lt;p&gt;So much for bothering about looks ! I guess I’ll have to stick to what people feel, like or read !&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Header Image - &amp;ldquo;&lt;strong&gt;Hidden view - A double exposure self portrait&lt;/strong&gt;&amp;rdquo; by Jon Bush via &lt;a href=&#34;https://flic.kr/p/z9Nrzo&#34;&gt;Flickr&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-- https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/ - 2020 Robinson Raju</description>
         </item>
     
     

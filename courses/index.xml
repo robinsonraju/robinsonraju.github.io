@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.info/courses/</link>
+    <description>Recent content in Courses on Rob&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 Robinson Raju</copyright>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://robinsonraju.info/courses/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GCP Fundamentals Core Infrastructure</title>
+      <link>https://robinsonraju.info/courses/2020-06-28-coursera-gcp-fundamentals-course/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/courses/2020-06-28-coursera-gcp-fundamentals-course/</guid>
+      <description>Thoughts If you&amp;rsquo;re looking for a sweeping introduction to all the various products under the Google Cloud umbrella, this is definitely the one you need to go through.</description>
+    </item>
+    
+    <item>
+      <title>IT Security: Defense against the digital dark arts</title>
+      <link>https://robinsonraju.info/courses/2020-06-14-coursera-cybersecurity-course/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/courses/2020-06-14-coursera-cybersecurity-course/</guid>
+      <description>This is an excellent course. It is a great refresher of a lot of cybersecurity concepts that most engineers might have heard of but not know.</description>
+    </item>
+    
+  </channel>
+</rss>
