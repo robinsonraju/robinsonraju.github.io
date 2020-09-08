@@ -13,6 +13,17 @@
     
     
         <item>
+        <title>Outliers by Malcom Gladwell</title>
+        <link>https://robinsonraju.info/books/2016-07-10-outliers/</link>
+        <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
+        
+        <guid>https://robinsonraju.info/books/2016-07-10-outliers/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2016-07-10-outliers/ -- https://robinsonraju.info/books/2016-07-10-outliers/ - 2020 Robinson Raju</description>
+        </item>
+    
+    
+    
+        <item>
         <title>The Bartimaeus Trilogy by Jonathan Stroud</title>
         <link>https://robinsonraju.info/books/2016-05-20-bartimaeus-trilogy/</link>
         <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
@@ -1134,55 +1145,6 @@ This can be done in several stages:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 - https://robinsonraju.info/management/2014-10-07-agile-task-list-what-does-done-mean/ - 2020 Robinson Raju</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>The Agile Sprint Retrospective</title>
-        <link>https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/</link>
-        <pubDate>Sun, 21 Sep 2014 21:24:13 +0000</pubDate>
-        
-        <guid>https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/ -&lt;h1 id=&#34;agile-sprint-retrospective&#34;&gt;Agile Sprint Retrospective&lt;/h1&gt;
-&lt;p&gt;This is the third post in this series of “Introduction to Agile methodology”. The topic of this blog is “Agile Sprint Retrospective”.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt;  Agile Sprint Retrospective is a meeting that happens after a Sprint to evaluate how the last one went. The Team, the Scrum Master and the Product Owner attends this meeting in Scrum. The objective of the meeting is to reflect on the current process and determine what steps could be taken to make corrections and adapt to future sprints.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;em&gt;Figure 1   Sprint Meetings – Sprint Retrospective highlighted&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The meeting starts with all the team members answering 2 questions –&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;What went well during the last Sprint?
-What could be improved in the next Sprint?
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In Scrum, the Scrum Master writes down the answers in summary form. Then everyone prioritizes in which order it wants to talk about improvements. Actionable items could be added to the next Sprint during the Sprint Grooming session as “Non-functional Requirements”.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Advantages&lt;/strong&gt; of this meeting are as follows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;It often exposes Organizational impediments&lt;/li&gt;
-&lt;li&gt;Everyone gets clarity on what could be improved.&lt;/li&gt;
-&lt;li&gt;Actionable steps can be taken towards better execution.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There are many &lt;strong&gt;impediments&lt;/strong&gt; to having a good retrospective. Few of them are as follows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lack of a proper environment where the members could speak their minds would mean that people could avoid bringing up uncomfortable issues. It is advisable for managers (who do performance evaluation) to be not present in the meeting.&lt;/li&gt;
-&lt;li&gt;Lack of co-operation from everyone might make the retrospective life-less and stale with no constructive inputs to improve in the next iterations.&lt;/li&gt;
-&lt;li&gt;Geographic distribution is another impediment. If everyone in the meeting is not face to face, the communication might cease to be fully transparent.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Scrum Masters employ a variety of techniques to get honest and transparent feedback from the team. Below are a few:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Go around the table and ask 2 questions mentioned above.&lt;/li&gt;
-&lt;li&gt;Silent writing: In this, the team is asked to write down feedback about the current process and submit.&lt;/li&gt;
-&lt;li&gt;Satisfaction Histograms: Here the team given a survey of questions and asked to rate each on a satisfaction scale of 1 to 5.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In summary, the retrospective is a very good mechanism to keep the team agile and improve continuously. Scrum Master aims to get answers and compiles them into an actionable list. These are either put into the next sprint’s backlog or into the product backlog to be tackled later.&lt;/p&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;[1] Schwaber, K. (2004). Appendix A. In Agile project management with Scrum. Redmond, Wash.: Microsoft Press.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;[2] Agile Methodology. (2014, July 1). Retrieved September 10, 2014, from &lt;a href=&#34;http://agilemethodology.org&#34;&gt;http://agilemethodology.org&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- https://robinsonraju.info/management/2014-09-21-agile-sprint-retrospective/ - 2020 Robinson Raju</description>
         </item>
     
     
