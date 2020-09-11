@@ -6,9 +6,197 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 Robinson Raju</copyright>
-    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Functional Thinking by Neal Ford</title>
+        <link>https://robinsonraju.info/books/2016-10-16-functionalthinking/</link>
+        <pubDate>Sun, 16 Oct 2016 09:27:14 +0000</pubDate>
+        
+        <guid>https://robinsonraju.info/books/2016-10-16-functionalthinking/</guid>
+        <description>Rob&#39;s Notes https://robinsonraju.info/books/2016-10-16-functionalthinking/ -&lt;p&gt;&lt;em&gt;For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift. It is not like learning a different language or different version of Java from Java 2 (1.2) to Java 8. The first time I was exposed to functional programming is probably around 2012 when I had to do a project for an ML course using R language. It was refreshing to do things differently for sure. Thanks to &lt;a href=&#34;http://rovarghe.blogspot.com&#34;&gt;RV&lt;/a&gt;, I learnt the basics of Clojure last year. I&amp;rsquo;m at a stage where I can read Clojure code and understand and may be write very simple programs but not beyond that. Anyway, the paradigm shift that Ford talks about can be summarized in the example that he gives in the first chapter of the book.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Let’s say for a moment that you are a lumberjack. You have the best axe in the forest, which makes you the most productive lumberjack in the camp. Then one day someone shows up and extols the virtues of a new tree-cutting paradigm, the chainsaw. The sales guy is persuasive, so you buy a chainsaw, but you don’t know how it works. Demonstrating your expertise with the previous tree-cutting paradigm, you swing it vigorously at a tree—without cranking it. You quickly conclude that this newfangled chainsaw is a fad, and you return to your axe. Then, someone appears and shows you how to crank the chainsaw.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;The best thing about the book is that he gives a lot of code examples. So one needs to just think of how to solve these examples and get the gist of what is being talked about.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1--why&#34;&gt;Chapter 1 : Why&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;OO makes code understandable by encapsulating moving parts. FP makes code under‐ standable by minimizing moving parts.&amp;rdquo; ~ Michael Feathers&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;This chapter provides a broad overview and shows some examples of the mental shift that the author is teaching us.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 1-1. Word frequencies in Java&lt;/li&gt;
+&lt;li&gt;Example 1-2. Word frequencies in Java 8&lt;/li&gt;
+&lt;li&gt;Example 1-3. indexOfAny() from Apache Commons StringUtils
+&lt;ul&gt;
+&lt;li&gt;The IndexofAny() method accepts a String and an array and returns the index of the first occurrence in the String of any of the characters in the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 1-4. indexOfAny() example cases&lt;/li&gt;
+&lt;li&gt;Example 1-5. Scala version of firstIndexOfAny()&lt;/li&gt;
+&lt;li&gt;Example 1-6. Returning a lazy list of matches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Excercise to self&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write a program in Java 8 or Clojure which takes in a String of words separated by space (&amp;ldquo;a quick brown fox&amp;rdquo;) and returns a map of word frequencies.&lt;/li&gt;
+&lt;li&gt;Write a program in Java 8 or Clojure that mimics &amp;lsquo;indexOfAny() from Apache Commons StringUtils&amp;rsquo;. This method accepts a String and an array and returns the index of the first occurrence in the String of any of the characters in the array.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;chapter-2--shift&#34;&gt;Chapter 2 : Shift&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Once garbage collection became mainstream, it simultaneously eliminated entire categories of hard-to-debug problems and allowed the runtime to manage a process that is complex and error-prone for developers. Functional programming aims to do the same thing for the algorithms you write, allowing you to work at a higher level of abstraction while freeing the runtime to perform sophisticated optimizations.&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 2-1. Typical company process (in Java)
+&lt;ul&gt;
+&lt;li&gt;Let’s say that you are given a list of names, some of which consist of a single character, and you are asked to return a comma-delimited string with the single letter names removed, with each name capitalized.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 2-2. Pseudocode for the “company process”&lt;/li&gt;
+&lt;li&gt;Example 2-3. Processing functionally in Scala&lt;/li&gt;
+&lt;li&gt;Example 2-4. Java 8 version of the Company Process&lt;/li&gt;
+&lt;li&gt;Example 2-5. Processing in Groovy&lt;/li&gt;
+&lt;li&gt;Example 2-6. Processing in Clojure
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;One of Clojure’s selling points is that it removes concurrency as a developer concern just as Java removed garbage collection.&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 2-7. Improved readability for Clojure via the thread-last macro&lt;/li&gt;
+&lt;li&gt;Example 2-8. Scala processing in parallel&lt;/li&gt;
+&lt;li&gt;Example 2-9. Java 8 parallel processing&lt;/li&gt;
+&lt;li&gt;Example 2-10. Number classifier in Java
+&lt;ul&gt;
+&lt;li&gt;Perfect : Sum of factors = number&lt;/li&gt;
+&lt;li&gt;Abundant : Sum of factors &amp;gt; number&lt;/li&gt;
+&lt;li&gt;Deficient : Sum of factors &amp;lt; number&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Consider aliquotSum where sum of factors doesn&amp;rsquo;t contain the number itself.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 2-11. Slightly more functional number classifier&lt;/li&gt;
+&lt;li&gt;Example 2-12. Number classifier in Java 8&lt;/li&gt;
+&lt;li&gt;Example 2-13. Number classifier using the Functional Java framework&lt;/li&gt;
+&lt;li&gt;Example 2-14. Filtering in Java 8&lt;/li&gt;
+&lt;li&gt;Example 2-15. Using filtering (called findAll()) in Groovy&lt;/li&gt;
+&lt;li&gt;Example 2-16. Number classifier optimized&lt;/li&gt;
+&lt;li&gt;Example 2-17. Groovy optimized factors&lt;/li&gt;
+&lt;li&gt;Example 2-18. The (classify ) function in Clojure encapsulates all the behavior within assignments&lt;/li&gt;
+&lt;li&gt;Example 2-19. The foldLeft() method from Functional Java&lt;/li&gt;
+&lt;li&gt;Example 2-20. foldLeft() with user-supplied criteria&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;The last part of the chapter is a quick overview of &lt;strong&gt;3 key &amp;lsquo;functions&amp;rsquo;&lt;/strong&gt; in functional programming languages - &lt;strong&gt;filter&lt;/strong&gt;, &lt;strong&gt;map&lt;/strong&gt; and &lt;strong&gt;reduce&lt;/strong&gt;. The author shows code in Scala, Groovy and Clojure.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Excercise to self&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write a progam in Java 8 or Clojure that, given a list of names, some of which consist of a single character, returns a comma-delimited string with the single letter names removed, with each name capitalized.&lt;/li&gt;
+&lt;li&gt;Write a program in Java 8 or Clojure that implements Number Classification. i.e, given a number, the program outputs if the number is perfect, abundant or deficient.&lt;/li&gt;
+&lt;li&gt;Write a program in Clojure that takes in a range of numbers and returns numbers that are divisible by 3.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;chapter-3--cede&#34;&gt;Chapter 3 : Cede&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Confession: I never want to work in a non-garbage-collected language again. I paid my dues in languages like C++ for too many years, and I don’t want to surrender the conveniences of modern languages. That’s the story of how software development progresses.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;It&amp;rsquo;s so great to see this comment in the book! I spent close to a year in 2007 and over a year in 2015-2016 to re-engineer C++ applications into Java. Though the projects were for different companies (ebay and paypal), co-incidentally, both applications were related to payments!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In this chapter, the author shows five ways developers in functional languages can cede control to the language or runtime, freeing themselves to work on more relevant problems.&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Iteration to Higher-Order Functions&lt;/li&gt;
+&lt;li&gt;Closures&lt;/li&gt;
+&lt;li&gt;Currying and Partial Application
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Currying&lt;/em&gt; describes the conversion of a multiargument function into a chain of single-argument functions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Partial application&lt;/em&gt; describes the conversion of a multiargument function into one that accepts fewer arguments, with values for the elided arguments supplied in advance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Recursion&lt;/li&gt;
+&lt;li&gt;Streams and Work Reordering&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 3-1. Simple closure binding in Groovy&lt;/li&gt;
+&lt;li&gt;Example 3-2. Executing the closure block&lt;/li&gt;
+&lt;li&gt;Example 3-3. Another closure binding&lt;/li&gt;
+&lt;li&gt;Example 3-4. How closures work (in Groovy)&lt;/li&gt;
+&lt;li&gt;Example 3-5. makeCounter() in Java&lt;/li&gt;
+&lt;li&gt;Example 3-6. Currying in Groovy&lt;/li&gt;
+&lt;li&gt;Example 3-7. Partial application versus currying in Groovy&lt;/li&gt;
+&lt;li&gt;Example 3-8. Composing functions in Groovy&lt;/li&gt;
+&lt;li&gt;Example 3-9. Clojure’s partial application&lt;/li&gt;
+&lt;li&gt;Example 3-10. Scala’s currying of arguments&lt;/li&gt;
+&lt;li&gt;Example 3-11. Partially applying functions in Scala&lt;/li&gt;
+&lt;li&gt;Example 3-12. Using case without match&lt;/li&gt;
+&lt;li&gt;Example 3-13. Differences between map and collect&lt;/li&gt;
+&lt;li&gt;Example 3-14. Defining a partial function in Scala&lt;/li&gt;
+&lt;li&gt;Example 3-15. Alternative definition for answerUnits&lt;/li&gt;
+&lt;li&gt;Example 3-16. Defining an incrementer in Scala&lt;/li&gt;
+&lt;li&gt;Example 3-17. Adder and incrementer in Groovy&lt;/li&gt;
+&lt;li&gt;Example 3-18. Using partial application to supply implicit values&lt;/li&gt;
+&lt;li&gt;Example 3-19. List traversal using (sometimes hidden) indexes&lt;/li&gt;
+&lt;li&gt;Example 3-20. List traversal using recursion
+&lt;ul&gt;
+&lt;li&gt;Think of list as head and tail and iterate through it using recursion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 3-21. Imperative filtering with Groovy
+&lt;ul&gt;
+&lt;li&gt;Accepts a list and a predicate (a Boolean test) to determine if the item belongs in the list.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Example 3-22. Recursive filtering with Groovy&lt;/li&gt;
+&lt;li&gt;Example 3-23. Recursive filtering in Scala&lt;/li&gt;
+&lt;li&gt;Example 3-24. Java 8 version of the company process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;A note on Erlang&amp;rsquo;s tail-call optimization.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Given Erlang’s impressive fault-tolerance capabilities, there are likely tail-recursive loops in production that have run for &lt;strong&gt;years&lt;/strong&gt; (!) uninterrupted.&amp;rdquo;
+[&lt;code&gt;emphasis and exclamation added by self. &lt;/code&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Excercise to self&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write a closure (function that returns a function) in Clojure.&lt;/li&gt;
+&lt;li&gt;Write a function in Clojure that uses partial function. (partial is a function which takes a function f and a fewer-than-required number of arguments and returns a partially applied function that’s invokable when you supply the remaining arguments)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;chapter-4--smarter-not-harder&#34;&gt;Chapter 4 : Smarter, Not Harder&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Even if you don’t care about functional languages such as Scala or Clojure, functional programming will enter your life through the langauge(s) you now use as they evolve.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;In this chapter Ford discusses two features common in functional languages: memoization (function level caching) and laziness (Lazy evaluation — deferral of expression evaluation for as long as possible).&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 4-1. Caching sum&lt;/li&gt;
+&lt;li&gt;Example 4-2. Testing nonoptimized speed&lt;/li&gt;
+&lt;li&gt;Example 4-3. Caching everything&lt;/li&gt;
+&lt;li&gt;Example 4-4. Memoizing sum&lt;/li&gt;
+&lt;li&gt;Example 4-5. Memoizing everything&lt;/li&gt;
+&lt;li&gt;Example 4-6. Inline memoization in Groovy&lt;/li&gt;
+&lt;li&gt;Example 4-7. Testing memoized hashing function&lt;/li&gt;
+&lt;li&gt;Example 4-8. Memoization in Clojure&lt;/li&gt;
+&lt;li&gt;Example 4-9. Memoization implementation in Scala&lt;/li&gt;
+&lt;li&gt;Example 4-10. Pseudocode illustrating nonstrict evaluation&lt;/li&gt;
+&lt;li&gt;Example 4-11. Prime number finder in Java&lt;/li&gt;
+&lt;li&gt;Example 4-12. Prime iterator in Java&lt;/li&gt;
+&lt;li&gt;Example 4-13. Number classifier using the Totally Lazy Java framework&lt;/li&gt;
+&lt;li&gt;Example 4-14. Using lazy lists in Groovy&lt;/li&gt;
+&lt;li&gt;Example 4-15. LazyList implementation&lt;/li&gt;
+&lt;li&gt;Example 4-16. Pared-down version of perfect-number classifier in Groovy&lt;/li&gt;
+&lt;li&gt;Example 4-17. Lazily initialized list of perfect numbers&lt;/li&gt;
+&lt;li&gt;Example 4-18. Building a lazy list in Groovy&lt;/li&gt;
+&lt;li&gt;Example 4-19. Exercising lazy lists&lt;/li&gt;
+&lt;li&gt;Example 4-20. Finding palindromes in Groovy&lt;/li&gt;
+&lt;li&gt;Example 4-21. Clojure’s palindromes&lt;/li&gt;
+&lt;li&gt;Example 4-22. Scala palindromes&lt;/li&gt;
+&lt;li&gt;Example 4-23. Lazy fields in Groovy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Excercise to self&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Implement caching (using memoization) for Number Classifier built in Chapter 3. Cache factors and sum of factors for each number.&lt;/li&gt;
+&lt;li&gt;Given an input string, produce the rot 13 version of the string. &amp;quot;hello&amp;quot; -&amp;gt; &amp;quot;uryyb&amp;quot;. Implement memoized version in Clojure.&lt;/li&gt;
+&lt;li&gt;Write a Clojure function to find palindromes in a String of words.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;chapter-5--evolve&#34;&gt;Chapter 5 : Evolve&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.&amp;rdquo; ~ Alan Perlis&lt;/p&gt;
+&lt;/blockquote&gt;
+- https://robinsonraju.info/books/2016-10-16-functionalthinking/ - 2020 Robinson Raju</description>
+        </item>
     
     
     
@@ -1102,76 +1290,6 @@ This can be done in several stages:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 - https://robinsonraju.info/management/2014-10-30-social-media-and-branding/ - 2020 Robinson Raju</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>LinkedIn profiles, how to use them, how to market yourself, how to network</title>
-        <link>https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/</link>
-        <pubDate>Sun, 19 Oct 2014 22:02:12 +0000</pubDate>
-        
-        <guid>https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/</guid>
-        <description>Rob&#39;s Notes https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/ -&lt;p&gt;In this post, we take a segway from discussions around Agile methodology and focus on something that is very important for everyone’s career – to have an online professional profile, something that someone can look at and find out about your career, capabilities and achievements.&lt;/p&gt;
-&lt;p&gt;There are many sites where one can host a professional profile but LinkedIn is the most popular business oriented social networking service. With a huge database of over 120 million people, all of whom you can search and most of whom you can message within minutes, LinkedIn is far ahead in features and reach than other networking services. Employers and recruiters actively look at LinkedIn profiles either to find potential candidates that suit the role that they are looking for or to find out more about the person that they are interviewing. So it is very pertinent to look a little in-depth at what the site provides and how effectively it could be used.&lt;/p&gt;
-&lt;h2 id=&#34;what-does-linkedin-provide&#34;&gt;What does LinkedIn provide?&lt;/h2&gt;
-&lt;p&gt;LinkedIn’s remarkable value is making our second and third degree networks visible, as well as the connecting paths, thereby revealing the networks of people we know. Thus it helps in finding the right people using our connections. Here is a short summary of what LinkedIn provides:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provides an ability to find and identify the right people through 2nd and 3rd degree networks and connecting paths.&lt;/li&gt;
-&lt;li&gt;Gives a platform to discover information that can help in a conversation, meeting or network event by reading the other person’s LinkedIn Profile beforehand.&lt;/li&gt;
-&lt;li&gt;Helps in maintaining relationships with your network via personal messages, sharing ideas in Discussions and helping people out in Answers.&lt;/li&gt;
-&lt;li&gt;Helps in getting Recommendations which are visible to anyone, but in particular to the people who are important in your job or for your goals.&lt;/li&gt;
-&lt;li&gt;Provides a platform to receive introductions and referrals to the people who matter to you via the introduction tool or a regular email.&lt;/li&gt;
-&lt;li&gt;Helps in discovering the relationships between people by looking at mutual connections.&lt;/li&gt;
-&lt;li&gt;Raises your visibility, reputation, personal brand, and company brand via your LinkedIn Profile, your contributions in Answers and Discussions and on the web via search engines.&lt;/li&gt;
-&lt;li&gt;Helps in “word of mouth publicity” by receiving Recommendations, or from people recommending you in Discussions or mentioning you as the expert in Answers.&lt;/li&gt;
-&lt;li&gt;The platform sends notifications via Network Updates when someone changes jobs. This might be a good reminder to reconnect with them.&lt;/li&gt;
-&lt;li&gt;Helps in picking up trends in the marketplace via Discussions.&lt;/li&gt;
-&lt;li&gt;Assists in finding professional organizations to join, both online and offline, via Groups, and via people’s Profiles.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;linkedin-profile&#34;&gt;LinkedIn profile:&lt;/h2&gt;
-&lt;p&gt;Your LinkedIn profile is the page that people go to when they want to find out information about you. It means that many times, it is the first professional impression you make on someone. You need to make your profile relevant and highlight specific portions so that it increases your visibility, supports your personal branding and reputation.A good Profile increases your visibility on LinkedIn and also on the web. Google and other search engines index the information from your Public Profile on LinkedIn. Since LinkedIn has a high Page Ranking in Google the Profiles will also appear high in search results. If someone is not looking for you, but looking for a person with skills that you are expert at; a great LinkedIn profile will channel them to you.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-market-yourself-by-creating-a-great-linkedin-profile&#34;&gt;How to market yourself by creating a great LinkedIn profile&lt;/h2&gt;
-&lt;p&gt;There are 5 portions of your profile that you need to focus on to create an attractive LinkedIn profile:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Your “Teaser”: Picture, Name, Professional Headline, Location and Industry.&lt;/li&gt;
-&lt;li&gt;Short Overview: Current &amp;amp; Past experience, Education, Recommendations, Connections, Websites, Twitter, and Public Profile.&lt;/li&gt;
-&lt;li&gt;The Core: Summary and Specialties.&lt;/li&gt;
-&lt;li&gt;The Specifics: Experience, Education, and Sections.&lt;/li&gt;
-&lt;li&gt;The Details: Additional Information, Personal Information, and Contact Settings.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;1. Teaser&lt;/strong&gt;: Make sure that you provide a professional picture. Since there is not much space for photo, just focus on have a good photo of your face with the upper torso. Make sure that you provide a name that people can recognize you with. Do not give nicknames. Give a professional headline that tells something about your area of expertise. By default it is the current job title, but it is better to change it. Provide a location that indicates where you are working out of. Also provide the industry where you have your expertise.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. Short Overview&lt;/strong&gt;: It is important to use “Current &amp;amp; Past Experience” section to help being found by former colleagues or by people searching for skills and roles that you have performed. Education is an important section where you could get found by people searching for alumni from specific schools or to connect with your former class or school mates. Recommendation is another powerful feature that you could use. Make it a habit to ask for recommendations, and provide recommendations for other people. Make it a point to have connections who know you or can recommend your skills. If you cannot have one of your connections give you introduction to another, it is not of much use. There is also a section that asks you about your websites and you can list up to 3 websites. Instead of the standard “Company website” or “Personal website”, choose “Other”and then write some compelling text. If you have a Twitter account, list it so that people can follow you. At this moment this feature exists on LinkedIn also. But if you are actively posting on Twitter, it makes sense to post Twitter link. Lastly, you must take care to see that you have a public profile URL that is not the standard undecipherable alpha-numeric string but a URL with your name it in. This is good for SEO.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. The Core&lt;/strong&gt;: “Summary” is the place where you convey a lot of information about you in a very small area. It should not be too long or too short. The recommendation from Jon Vermeiren’s book “How to really use LinkedIn” is to use three blocks of text: information about the organization, some professional information about yourself, and some personal information. “Specialties” is the place to share the skills and knowledge you have accumulated in all your past jobs. This is the place to explain your expertise. You can put your certifications, knowledge of tools and programming languages, jargons, acronyms that are relevant to your industry here.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. The Specifics&lt;/strong&gt;: The “Summary and Specialties” section has limited room. The Specifics section is where you describe in as much detail, your experience and education – including courses, projects, certifications, patents, organizations, etc.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5. The Details&lt;/strong&gt;: In this section you provide additional information related to your interests, groups that you belong to, honors and awards, personal information to reach you, etc.&lt;/p&gt;
-&lt;p&gt;The above steps need to be followed through on a periodic basis to ensure that the information does not get stale. Keeping your LinkedIn profile up to date is the best strategy to market yourself and present your best to the world.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-expand-your-network&#34;&gt;How to expand your network:&lt;/h2&gt;
-&lt;p&gt;In their book &lt;strong&gt;“How to really use LinkedIn”&lt;/strong&gt;, Vermeiren &amp;amp; Verdonck give 4 phases to building a foundation of your LinkedIn network.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Phase 1: Upload your email contacts and connect with the ones already on LinkedIn.&lt;/li&gt;
-&lt;li&gt;Phase 2: Find current and former colleagues and classmates and connect with them.&lt;/li&gt;
-&lt;li&gt;Phase 3: Discover people you may know and connect with the ones you actually know.&lt;/li&gt;
-&lt;li&gt;Phase 4: Promote your LinkedIn Profile with a LinkedIn Email Signature and LinkedIn Profile Badge for your website and blog.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Once you have done these, you have a solid foundation on which you can build your network. It is said that there are just 6 degrees of separation between everyone in the world and since LinkedIn gives you 3 degrees of connections, you can leverage it to reach any contact that you have in mind. The next logical step is to join Groups that are relevant to your area or work or expertise. Groups are a place to help others and be helped by them, to apply the Golden Triangle of Networking and to raise your Know, Like, and Trust factor. Once you participate in some groups and gain trust and establish your brand as someone who can answer questions on specific topics, you can start groups or become Group manager.&lt;/p&gt;
-&lt;p&gt;There are a lot of other strategies to network and improve your sphere of influence. As you use LinkedIn more, you would be able to effectively find more of your ‘target audience’ by doing specific searches, setting up alerts, browsing the connections of people in your network, browsing through LinkedIn recommendations of who to connect to, which groups to join, etc.&lt;/p&gt;
-&lt;h1 id=&#34;references&#34;&gt;References:&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;[1] Vermeiren, J., &amp;amp; Verdonck, B. (2011). How to really use LinkedIn, second edition (2nd ed.). Stamford, Conn.: Hannacroix Creek Books.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;[2] Elad, J. (2011). LinkedIn for dummies (2nd ed.). Hoboken, N.J.: Wiley.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;[3] Brown, K. (2014). Mastering LinkedIn (1st ed.). Bookboon.com.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;[4] Kievman, N. (2007). LinkedIn Quick Start Guide (1st ed.). LinkedStrategies.com.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- https://robinsonraju.info/management/2014-10-19-linked-in-profiles-how-to-market-self/ - 2020 Robinson Raju</description>
         </item>
     
     
