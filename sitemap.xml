@@ -8,26 +8,46 @@
   
   <url>
     <loc>https://robinsonraju.info/categories/</loc>
-    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.info/categories/general/</loc>
-    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.info/posts/</loc>
-    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robinsonraju.info/posts/2020-09-05-plan-b/</loc>
-    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+    <loc>https://robinsonraju.info/tags/movies/</loc>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.info/</loc>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tags/</loc>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/posts/2020-09-12-the-non-citizens/</loc>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/tags/trafficking/</loc>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/posts/2020-09-05-plan-b/</loc>
     <lastmod>2020-09-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -543,10 +563,6 @@
   
   <url>
     <loc>https://robinsonraju.info/tags/index/</loc>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/tags/</loc>
   </url>
   
 </urlset>
