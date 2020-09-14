@@ -71,9 +71,6 @@ if (!doNotTrack) {
 
 
 
-<link rel="stylesheet" href="https://robinsonraju.info/scss/dark-mode.min.aa6023bdd4e1262d50cf8966813e3e999c37d89d39247ba4634a9ee29cb15491.css" integrity="sha256-qmAjvdThJi1Qz4lmgT4&#43;mZw32J05JHukY0qe4pyxVJE=" media="screen">
-
-
 <script src="https://robinsonraju.info//js/loadCSS.js"></script>
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
@@ -1355,15 +1352,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             </i>
         </a>
         
-        <a class="pagination-action" v-on:click="toggleDarkMode">
-            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
-                brightness_4
-            </i>
-            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
-                brightness_7
-            </i>
-        </a>
-        
         
     </div>
 </div>
@@ -2606,15 +2594,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         <a ref="navTitle" class="navbar-brand" href="https://robinsonraju.info/">
             Rob&#39;s Notes
         </a>
-        
-        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
-            <i class="material-icons" v-if="isDarkMode">
-                brightness_4
-            </i>
-            <i class="material-icons" v-else="isDarkMode">
-                brightness_7
-            </i>
-        </button>
         
     </div>
 </nav>
