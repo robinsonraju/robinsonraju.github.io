@@ -3,7 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://robinsonraju.info/about/</loc>
+    <loc>https://robinsonraju.info/</loc>
+    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,11 +24,6 @@
   
   <url>
     <loc>https://robinsonraju.info/tags/movies/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.info/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -244,6 +240,11 @@
   <url>
     <loc>https://robinsonraju.info/books/2020-01-04-factfulness/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/archive/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url>
   
   <url>
@@ -567,7 +568,15 @@
   </url>
   
   <url>
+    <loc>https://robinsonraju.info/about/</loc>
+  </url>
+  
+  <url>
     <loc>https://robinsonraju.info/tags/index/</loc>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.info/series/</loc>
   </url>
   
 </urlset>
