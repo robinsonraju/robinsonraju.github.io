@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>California on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.info/tags/california/</link>
+    <description>Recent content in California on Rob&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://robinsonraju.info/tags/california/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Paradise on fire</title>
+        <link>https://robinsonraju.info/posts/2020-09-19-paradise-on-fire/</link>
+        <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 20 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.info/posts/2020-09-19-paradise-on-fire/</guid>
+        <description>&amp;ldquo;The deepest lessons come out of the deepest waters and the hottest fires.&amp;rdquo;
+~ Elisabeth Elliot
+ CA wildfire, Orange skies in SF Bay area, and Dune trailer It seemed like a weird coincidence that Dune]1 trailer2 got released on the same day that the skies in San Francisco turned orange3.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>California</category>
+            
+          
+            
+              <category>Forest Fires</category>
+            
+          
+            
+              <category>Dune</category>
+            
+          
+        
+        
+          
+            
+              <category>General</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
