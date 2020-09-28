@@ -239,7 +239,7 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
@@ -1546,10 +1546,346 @@ if (!doNotTrack) {
 <header class="header basicflex-column">
   <h3 class="terms__title capitalize h3">Series</h3>
 </header>
-<main class="terms main">  
-  <div class="terms__list">
-    
+<main class="terms main">
+  <div class="taxo-root">
+  
+<div class="taxo">
+    <section>
+        <span class="title p2">
+            <a href="/tags/" class="taxo__title">
+                Tags
+            </a>
+        </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/california/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        California
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/dune/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Dune
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/forest-fires/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Forest Fires
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/index/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        index
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/movies/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Movies
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/trafficking/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Trafficking
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+    </section>
+</div>
+
+  
+<div class="taxo">
+    <section>
+        <span class="title p2">
+            <a href="/categories/" class="taxo__title">
+                Categories
+            </a>
+        </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/book-notes/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Book Notes
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        25
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/general/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        General
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        50
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/lists/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Lists
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        9
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/management/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Management
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        10
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/technical-notes/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Technical Notes
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        19
+                    </span>
+                </a>
+            </span>
+        
+        
+    </section>
+</div>
+
+  
+
   </div>
+  <div class="sidebar">
+      
+
+<div class="search">
+  <span class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </span>
+  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="Search" autocomplete="off">
+  <div id="search-results" class="dropdown">
+    <div id="search-menu" class="dropdown-menu" role="menu">
+    </div>
+  </div>
+</div>
+
+
+      
+      
+
+      
+          
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+
+          
+          <section class="sidebar-recent">
+              <a href="/posts/" class="sidebar-recent__title p2">General Posts</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/posts/2020-09-19-paradise-on-fire/" class="sidebar-recent__a p2">Paradise on Fire</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-09-12-the-non-citizens/" class="sidebar-recent__a p2">The Chained Non-citizens</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-09-05-plan-b/" class="sidebar-recent__a p2">Plan B</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-08-30-the-money-effect/" class="sidebar-recent__a p2">The Money Effect</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-08-22-migrating-to-new-theme/" class="sidebar-recent__a p2">Migrating to a new theme</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/management/" class="sidebar-recent__title p2">Management</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/management/2020-08-23-engineering-manager-interviews/" class="sidebar-recent__a p2">Engineering Manager Interviews</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-11-18-presenting-to-a-multi-level-audience/" class="sidebar-recent__a p2">Delivering a project and presenting to a multi-level audience</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-11-12-handing-off-a-project-to-a-client/" class="sidebar-recent__a p2">Handing off a project to a client; what are the risks and challenges?</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-11-03-five-technical-skills-are-employers-seeking/" class="sidebar-recent__a p2">What five technical skills are employers seeking? What five soft skills put you on top?</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-10-30-social-media-and-branding/" class="sidebar-recent__a p2">Social Media and Branding</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/books/" class="sidebar-recent__title p2">Books</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/books/2020-07-25-great-expectations/" class="sidebar-recent__a p2">Great Expectations by Charles Dickens</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-07-10-the-return-of-the-native/" class="sidebar-recent__a p2">The Return of the Native by Thomas Hardy</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-06-30-books-2020-h1/" class="sidebar-recent__a p2">Books 2020 H1</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-06-20-zero-trust-networks/" class="sidebar-recent__a p2">Zero Trust Networks by Evan Gilman, Doug Barth</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-06-09-the-goal-goldratt/" class="sidebar-recent__a p2">The Goal: A Process of Ongoing Improvement by Eliyahu M. Goldratt &amp; Jeff Cox</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/tech-notes/" class="sidebar-recent__title p2">Tech-notes</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/tech-notes/2020-07-01-reading-list-software-dev/" class="sidebar-recent__a p2">Software Development - Essential Books</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-22-cybersecurity-reading-list/" class="sidebar-recent__a p2">A Cybersecurity Book List</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-18-threat-models/" class="sidebar-recent__a p2">Security Threat Models</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-04-api-documentation/" class="sidebar-recent__a p2">API documentation using Swagger</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-02-security-news-today/" class="sidebar-recent__a p2">Security news today</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/courses/" class="sidebar-recent__title p2">Courses</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/courses/2020-06-28-coursera-gcp-fundamentals-course/" class="sidebar-recent__a p2">GCP Fundamentals Core Infrastructure</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/courses/2020-06-14-coursera-cybersecurity-course/" class="sidebar-recent__a p2">IT Security: Defense against the digital dark arts</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+      
+  </div>
+
 </main>
 <aside class="hide">
   

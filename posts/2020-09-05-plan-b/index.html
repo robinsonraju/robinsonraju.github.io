@@ -239,7 +239,7 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
@@ -1626,6 +1626,8 @@ if (!doNotTrack) {
 <p>Another aspect of films like Alien or Prometheus or TV series like The Expanse, that I like, is the belief that <strong>there is life out there</strong>. The universe is so vast. Though the probability of conditions to create life is so tiny, the universe is so vast that the probability is quite real.</p>
 <hr />
 <p>Plan B<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup> is a reference to Elon Musk saying couple of years back that humanity needs to have a Plan B, of either setting up a colony in the Moon or Mars, in case of World War III.</p>
+<hr />
+<p>Image Credit - <a href="https://commons.wikimedia.org/wiki/File:Kepler-22_diagram.jpg">https://commons.wikimedia.org/wiki/File:Kepler-22_diagram.jpg</a></p>
 <p><strong>References</strong></p>
 <div class="footnotes" role="doc-endnotes">
 <hr />
@@ -2363,7 +2365,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
@@ -3031,7 +3033,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </label>
           
         </div>
-        <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
           <nav id="TableOfContents"></nav>
         </div>
       
