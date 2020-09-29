@@ -1529,7 +1529,9 @@ if (!doNotTrack) {
   <h3 class="terms__title capitalize h3">Series</h3>
 </header>
 <main class="terms main">
-  <div class="sidebar">
+
+  <div class="terms__list">
+    <div class="taxo-root">
       
 
 <div class="search">
@@ -1544,158 +1546,24 @@ if (!doNotTrack) {
 </div>
 
 
-      
-      
-
-      
-          
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-              
-          
-
-          
-          <section class="sidebar-recent">
-              <a href="/books/" class="sidebar-recent__title p2">Books</a>
-              <ul class="sidebar-recent__ul">
-                  
-                      <li>
-                          <a href="/books/2020-10-03-dare-to-lead/" class="sidebar-recent__a p2">Dare to Lead by Brene Brown</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/books/2020-07-25-great-expectations/" class="sidebar-recent__a p2">Great Expectations by Charles Dickens</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/books/2020-07-10-the-return-of-the-native/" class="sidebar-recent__a p2">The Return of the Native by Thomas Hardy</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/books/2020-06-30-books-2020-h1/" class="sidebar-recent__a p2">Books 2020 H1</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/books/2020-06-20-zero-trust-networks/" class="sidebar-recent__a p2">Zero Trust Networks by Evan Gilman, Doug Barth</a>
-                      </li>
-                  
-              </ul>
-          </section>
-          <hr class="hr-fade sidebar-hr" />
-          
-          <section class="sidebar-recent">
-              <a href="/posts/" class="sidebar-recent__title p2">General Posts</a>
-              <ul class="sidebar-recent__ul">
-                  
-                      <li>
-                          <a href="/posts/2020-09-26-rbg-death-reflections/" class="sidebar-recent__a p2">All things grow with time, except grief</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/posts/2020-09-19-paradise-on-fire/" class="sidebar-recent__a p2">Paradise on Fire</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/posts/2020-09-12-the-non-citizens/" class="sidebar-recent__a p2">The Chained Non-citizens</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/posts/2020-09-05-plan-b/" class="sidebar-recent__a p2">Plan B</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/posts/2020-08-30-the-money-effect/" class="sidebar-recent__a p2">The Money Effect</a>
-                      </li>
-                  
-              </ul>
-          </section>
-          <hr class="hr-fade sidebar-hr" />
-          
-          <section class="sidebar-recent">
-              <a href="/management/" class="sidebar-recent__title p2">Management</a>
-              <ul class="sidebar-recent__ul">
-                  
-                      <li>
-                          <a href="/management/2020-08-23-engineering-manager-interviews/" class="sidebar-recent__a p2">Engineering Manager Interviews</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/management/2014-11-18-presenting-to-a-multi-level-audience/" class="sidebar-recent__a p2">Delivering a project and presenting to a multi-level audience</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/management/2014-11-12-handing-off-a-project-to-a-client/" class="sidebar-recent__a p2">Handing off a project to a client; what are the risks and challenges?</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/management/2014-11-03-five-technical-skills-are-employers-seeking/" class="sidebar-recent__a p2">What five technical skills are employers seeking? What five soft skills put you on top?</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/management/2014-10-30-social-media-and-branding/" class="sidebar-recent__a p2">Social Media and Branding</a>
-                      </li>
-                  
-              </ul>
-          </section>
-          <hr class="hr-fade sidebar-hr" />
-          
-          <section class="sidebar-recent">
-              <a href="/tech-notes/" class="sidebar-recent__title p2">Tech-notes</a>
-              <ul class="sidebar-recent__ul">
-                  
-                      <li>
-                          <a href="/tech-notes/2020-07-01-reading-list-software-dev/" class="sidebar-recent__a p2">Software Development - Essential Books</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/tech-notes/2020-06-22-cybersecurity-reading-list/" class="sidebar-recent__a p2">A Cybersecurity Book List</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/tech-notes/2020-06-18-threat-models/" class="sidebar-recent__a p2">Security Threat Models</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/tech-notes/2020-06-04-api-documentation/" class="sidebar-recent__a p2">API documentation using Swagger</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/tech-notes/2020-06-02-security-news-today/" class="sidebar-recent__a p2">Security news today</a>
-                      </li>
-                  
-              </ul>
-          </section>
-          <hr class="hr-fade sidebar-hr" />
-          
-          <section class="sidebar-recent">
-              <a href="/courses/" class="sidebar-recent__title p2">Courses</a>
-              <ul class="sidebar-recent__ul">
-                  
-                      <li>
-                          <a href="/courses/2020-06-28-coursera-gcp-fundamentals-course/" class="sidebar-recent__a p2">GCP Fundamentals Core Infrastructure</a>
-                      </li>
-                  
-                      <li>
-                          <a href="/courses/2020-06-14-coursera-cybersecurity-course/" class="sidebar-recent__a p2">IT Security: Defense against the digital dark arts</a>
-                      </li>
-                  
-              </ul>
-          </section>
-          <hr class="hr-fade sidebar-hr" />
-          
-      
+      <div class="search-result" data-display="none">
+  <div class="search-result__header">
+    <div class="search-result__close" data-dir="ltr">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
   </div>
-  <div class="taxo-root">
-  
+  <div class="search-result__body">
+    <ul>
+      <li class="search-result__item">
+        <div class="search-result__item--title">
+        </div>
+        <div class="search-result__item--desc">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+    
 <div class="taxo">
     <section>
         <span class="title p2">
@@ -1877,7 +1745,7 @@ if (!doNotTrack) {
     </section>
 </div>
 
-  
+    
 <div class="taxo">
     <section>
         <span class="title p2">
@@ -1955,8 +1823,160 @@ if (!doNotTrack) {
     </section>
 </div>
 
-  
+    
 
+    </div>
+  </div>
+  <div class="sidebar">
+      
+      
+
+      
+          
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+
+          
+          <section class="sidebar-recent">
+              <a href="/books/" class="sidebar-recent__title p2">Books</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/books/2020-10-03-dare-to-lead/" class="sidebar-recent__a p2">Dare to Lead by Brene Brown</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-07-25-great-expectations/" class="sidebar-recent__a p2">Great Expectations by Charles Dickens</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-07-10-the-return-of-the-native/" class="sidebar-recent__a p2">The Return of the Native by Thomas Hardy</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-06-30-books-2020-h1/" class="sidebar-recent__a p2">Books 2020 H1</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/books/2020-06-20-zero-trust-networks/" class="sidebar-recent__a p2">Zero Trust Networks by Evan Gilman, Doug Barth</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/posts/" class="sidebar-recent__title p2">General Posts</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/posts/2020-09-26-rbg-death-reflections/" class="sidebar-recent__a p2">All things grow with time, except grief</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-09-19-paradise-on-fire/" class="sidebar-recent__a p2">Paradise on Fire</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-09-12-the-non-citizens/" class="sidebar-recent__a p2">The Chained Non-citizens</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-09-05-plan-b/" class="sidebar-recent__a p2">Plan B</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/posts/2020-08-30-the-money-effect/" class="sidebar-recent__a p2">The Money Effect</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/management/" class="sidebar-recent__title p2">Management</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/management/2020-08-23-engineering-manager-interviews/" class="sidebar-recent__a p2">Engineering Manager Interviews</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-11-18-presenting-to-a-multi-level-audience/" class="sidebar-recent__a p2">Delivering a project and presenting to a multi-level audience</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-11-12-handing-off-a-project-to-a-client/" class="sidebar-recent__a p2">Handing off a project to a client; what are the risks and challenges?</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-11-03-five-technical-skills-are-employers-seeking/" class="sidebar-recent__a p2">What five technical skills are employers seeking? What five soft skills put you on top?</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/management/2014-10-30-social-media-and-branding/" class="sidebar-recent__a p2">Social Media and Branding</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/tech-notes/" class="sidebar-recent__title p2">Tech-notes</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/tech-notes/2020-07-01-reading-list-software-dev/" class="sidebar-recent__a p2">Software Development - Essential Books</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-22-cybersecurity-reading-list/" class="sidebar-recent__a p2">A Cybersecurity Book List</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-18-threat-models/" class="sidebar-recent__a p2">Security Threat Models</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-04-api-documentation/" class="sidebar-recent__a p2">API documentation using Swagger</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/tech-notes/2020-06-02-security-news-today/" class="sidebar-recent__a p2">Security news today</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+          <section class="sidebar-recent">
+              <a href="/courses/" class="sidebar-recent__title p2">Courses</a>
+              <ul class="sidebar-recent__ul">
+                  
+                      <li>
+                          <a href="/courses/2020-06-28-coursera-gcp-fundamentals-course/" class="sidebar-recent__a p2">GCP Fundamentals Core Infrastructure</a>
+                      </li>
+                  
+                      <li>
+                          <a href="/courses/2020-06-14-coursera-cybersecurity-course/" class="sidebar-recent__a p2">IT Security: Defense against the digital dark arts</a>
+                      </li>
+                  
+              </ul>
+          </section>
+          <hr class="hr-fade sidebar-hr" />
+          
+      
   </div>
 
 </main>
@@ -1977,6 +1997,93 @@ if (!doNotTrack) {
 
 </aside>
 
+<script>
+    
+    var sidebarPosition = JSON.parse("\"left\"");
+    
+    var enableSidebar = JSON.parse("false");
+
+    var listMainElem = document.querySelector('.list__main');
+    var listSideElem = document.querySelector('.list__sidebar');
+
+    var gridSmall = 'l';
+    var gridBig = 'mr';
+    var gridFull = 'lmr'
+
+    if (sidebarPosition === "right") {
+        gridSmall = 'r';
+        gridBig = 'lm'
+    }
+
+    enquire.register("screen and (max-width: 769px)", {
+        match: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+        },
+        unmatch: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+            var navCollapseBtn = document.querySelector('.navbar__burger');
+            var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+            if (navCollapse) {
+                navCollapse.setAttribute('data-open', false);
+                navCollapse.style.maxHeight = 0;
+                navCollapseBtn.classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
+        },
+        setup: function () { },
+        deferSetup: true,
+        destroy: function () { },
+    });
+</script>
+
+<script>
+  window.onload = function() {
+    
+    
+    var enableBusuanzi = JSON.parse("false");
+    if (enableBusuanzi) {
+      var sitePvElem = document.querySelector('#busuanzi_value_site_pv');
+      var siteUvElem = document.querySelector('#busuanzi_value_site_uv');
+      sitePvElem.textContent = sitePvElem.textContent.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      siteUvElem.textContent = siteUvElem.textContent.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    }
+  }
+</script>
 
             
             <footer class="footer">
