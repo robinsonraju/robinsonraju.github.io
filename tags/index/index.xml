@@ -7,13 +7,13 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>index on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/tags/index/</link>
+    <link>https://robinsonraju.blog/tags/index/</link>
     <description>Recent content in index on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
     
-        <atom:link href="https://robinsonraju.info/tags/index/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://robinsonraju.blog/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -21,11 +21,11 @@
       
       <item>
         <title>General Posts</title>
-        <link>https://robinsonraju.info/posts/</link>
+        <link>https://robinsonraju.blog/posts/</link>
         <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://robinsonraju.info/posts/</guid>
+        <guid>https://robinsonraju.blog/posts/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
@@ -45,11 +45,11 @@
       
       <item>
         <title>Management</title>
-        <link>https://robinsonraju.info/management/</link>
+        <link>https://robinsonraju.blog/management/</link>
         <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://robinsonraju.info/management/</guid>
+        <guid>https://robinsonraju.blog/management/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
