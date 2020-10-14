@@ -239,7 +239,7 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("false");
+    var tocFolding = JSON.parse("true");
     
     var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
@@ -2105,6 +2105,21 @@ d. Learning to rise</p>
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/books/2020-04-28-great-mental-models/" class="related__link">The Great Mental Models: Volume 1</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
@@ -2587,7 +2602,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
-    var tocFolding = JSON.parse("false");
+    var tocFolding = JSON.parse("true");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
@@ -3255,7 +3270,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </label>
           
         </div>
-        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+        <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
     <li><a href="#thoughts">Thoughts</a></li>
