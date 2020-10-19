@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,12 @@
 
       
       <item>
-        <title>Bob Iger</title>
-        <link>https://robinsonraju.blog/tags/bob-iger/</link>
-        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+        <title>Books</title>
+        <link>https://robinsonraju.blog/tags/books/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://robinsonraju.blog/tags/bob-iger/</guid>
+        <guid>https://robinsonraju.blog/tags/books/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
@@ -39,12 +39,102 @@
       </item>
       
       <item>
-        <title>Books</title>
-        <link>https://robinsonraju.blog/tags/books/</link>
+        <title>Farnam Street</title>
+        <link>https://robinsonraju.blog/tags/farnam-street/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/farnam-street/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Mental Models</title>
+        <link>https://robinsonraju.blog/tags/mental-models/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/mental-models/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Philosophy</title>
+        <link>https://robinsonraju.blog/tags/philosophy/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/philosophy/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Shane Parrish</title>
+        <link>https://robinsonraju.blog/tags/shane-parrish/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/shane-parrish/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>The Great Mental Models</title>
+        <link>https://robinsonraju.blog/tags/the-great-mental-models/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/the-great-mental-models/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Bob Iger</title>
+        <link>https://robinsonraju.blog/tags/bob-iger/</link>
         <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
         
         
-        <guid>https://robinsonraju.blog/tags/books/</guid>
+        <guid>https://robinsonraju.blog/tags/bob-iger/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
@@ -279,96 +369,6 @@
         
         
         <guid>https://robinsonraju.blog/tags/trafficking/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Farnam Street</title>
-        <link>https://robinsonraju.blog/tags/farnam-street/</link>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/farnam-street/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Mental Models</title>
-        <link>https://robinsonraju.blog/tags/mental-models/</link>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/mental-models/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Philosophy</title>
-        <link>https://robinsonraju.blog/tags/philosophy/</link>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/philosophy/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Shane Parrish</title>
-        <link>https://robinsonraju.blog/tags/shane-parrish/</link>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/shane-parrish/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>The Great Mental Models</title>
-        <link>https://robinsonraju.blog/tags/the-great-mental-models/</link>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/the-great-mental-models/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
