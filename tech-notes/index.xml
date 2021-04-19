@@ -12,13 +12,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tech-notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Dave Farley&#39;s Review of the State of DevOps Report</title>
+        <link>https://robinsonraju.blog/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
+        <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 05 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
+        <description>&amp;ldquo;Teams that are best at DevOps and continuous delivery can release software thousands of times more quickly and with a small fraction of the defects.&amp;rdquo;
+ The above quote is from Dave Farley&amp;rsquo;s review1 of &amp;ldquo;The State of DevOps&amp;rdquo; report2. It rang so true that I tweeted it. Martin Fowler responded to the original Tweet from Dave asking if there was a transcript available.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>CI</category>
+            
+          
+        
+        
+          
+            
+              <category>General</category>
+            
+          
+            
+              <category>Technical Notes</category>
+            
+          
+            
+              <category>DevOps</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Software Development - Essential Books</title>
