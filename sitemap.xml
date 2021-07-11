@@ -4,12 +4,67 @@
   
   <url>
     <loc>https://robinsonraju.blog/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/categories/book-notes/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/books/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/books/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.blog/categories/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/continuous-integration/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/devops/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/gene-kim/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/software-engineering/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/categories/technical-notes/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://robinsonraju.blog/tags/the-phoenix-project/</loc>
+    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,11 +103,6 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.blog/tags/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://robinsonraju.blog/tags/ci/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url>
@@ -63,22 +113,12 @@
   </url>
   
   <url>
-    <loc>https://robinsonraju.blog/tags/devops/</loc>
-    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://robinsonraju.blog/categories/devops/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://robinsonraju.blog/tech-notes/</loc>
-    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.blog/categories/technical-notes/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -145,21 +185,6 @@
   <url>
     <loc>https://robinsonraju.blog/posts/2020-11-07-scaffolding/</loc>
     <lastmod>2020-11-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.blog/categories/book-notes/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.blog/tags/books/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://robinsonraju.blog/books/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

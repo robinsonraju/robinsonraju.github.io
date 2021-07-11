@@ -12,13 +12,121 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Books</title>
+        <link>https://robinsonraju.blog/tags/books/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/books/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Continuous Integration</title>
+        <link>https://robinsonraju.blog/tags/continuous-integration/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/continuous-integration/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>DevOps</title>
+        <link>https://robinsonraju.blog/tags/devops/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/devops/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Gene Kim</title>
+        <link>https://robinsonraju.blog/tags/gene-kim/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/gene-kim/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Software Engineering</title>
+        <link>https://robinsonraju.blog/tags/software-engineering/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/software-engineering/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>The Phoenix project</title>
+        <link>https://robinsonraju.blog/tags/the-phoenix-project/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/the-phoenix-project/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>His Dark Materials</title>
@@ -99,24 +207,6 @@
         
         
         <guid>https://robinsonraju.blog/tags/ci/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>DevOps</title>
-        <link>https://robinsonraju.blog/tags/devops/</link>
-        <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/devops/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
@@ -297,24 +387,6 @@
         
         
         <guid>https://robinsonraju.blog/tags/scaffolding/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Books</title>
-        <link>https://robinsonraju.blog/tags/books/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/books/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>

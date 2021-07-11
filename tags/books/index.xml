@@ -12,13 +12,69 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 31 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>The Phoenix Project</title>
+        <link>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 19 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</guid>
+        <description>&amp;ldquo;Like matter and antimatter, in the presence of unplanned work, all planned work ignites with incandescent fury, incinerating everything around it.&amp;quot;
+~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win1
+ The book makes the case for proper planning, rigor, and discipline as the antidote to getting out of the impossible quagmire of technical debt, tightly coupled systems and unachievable product deadlines.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/The_Phoenix_Project.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>The Phoenix project</category>
+            
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>Continuous Integration</category>
+            
+          
+            
+              <category>Gene Kim</category>
+            
+          
+            
+              <category>Software Engineering</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+            
+              <category>Technical Notes</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Homo Deus - Is Man&#39;s reach exceeding his grasp?</title>
