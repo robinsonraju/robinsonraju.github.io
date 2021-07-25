@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>When Breath Becomes Air on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.blog/tags/when-breath-becomes-air/</link>
+    <description>Recent content in When Breath Becomes Air on Rob&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://robinsonraju.blog/tags/when-breath-becomes-air/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>When Breath Becomes Air</title>
+        <link>https://robinsonraju.blog/books/2021-07-10-when-breath-becomes-air/</link>
+        <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 10 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-07-10-when-breath-becomes-air/</guid>
+        <description>&amp;ldquo;I would have to learn to live in a different way, seeing death as an imposing itinerant visitor but knowing that even if I&amp;rsquo;m dying, until I actually die, I am still living.&amp;quot;
+~ Paul Kalanithi, When Breath Becomes Air 1
+ I first read about this book through Gates Notes2, where Bill Gates mentions that the book left him in tears.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/when-breath-becomes-air.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>When Breath Becomes Air</category>
+            
+          
+            
+              <category>Paul Kalanithi</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

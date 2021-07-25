@@ -1593,7 +1593,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Dec 19, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;6&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;7&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1626,9 +1626,13 @@ if (!doNotTrack) {
 ~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 </blockquote>
 <p>The book makes the case for proper planning, rigor, and discipline as an antidote to getting out of the impossible quagmire of technical debt, tightly coupled systems and unachievable product deadlines. The world is moving fast and successful companies usually grow much faster than anyone in the company can envision, usually in unanticipated directions. Of course, it is always better to have a messy system that serves customers than a clean system that does not have customers. A road full of potholes can serve the purpose of taking someone from one point to another but it is a toil, harmful for the vehicles and the people, and it only gets worse with time leading to despair. Work has to be joyful and a smooth build and release pipeline should be the last of the worries for engineers.</p>
+<p>Was reminded of this quote from Dave Thomas&rsquo;s<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> talk on &ldquo;Agile is Dead (Long live Agility)&quot;<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> -</p>
+<blockquote>
+<p>&ldquo;99% of software projects looked like this [picture of revolutionaries with guns], valiant people manning the barricades, do-or-die, mostly die. Chaos, smoke, gunfire, death - that was your average software project, and clearly that&rsquo;s not sustainable. It&rsquo;s fun and you get to wear cool uniforms but it&rsquo;s not sustainable.&rdquo;</p>
+</blockquote>
 <p>Through engaging story telling, &ldquo;The Phoenix Project&rdquo; takes the reader from visualizing a situation of complete disarray where the company is failiing financially, not able to launch things on time and people are overworked, to seeing an ideal state where everthing, including the unpredictable things, are predictably executed. Most of the situations that the characters go through will evoke a sense of déjà vu for folks who have been active in Software development in the last couple of decades, especially in &lsquo;online consumer&rsquo; companies. Many of the situations and dialogues might seem forced and a bit artificial. But overall, it is a good read and recommended reading for most engineers. It is a fast read and almost unputdownable.</p>
 <p>I look back to a time when downloading code from clearcase repository, doing a build and starting the server could take almost a day sometimes. Now everything is so fast that it seems magical. The ability to clone a random repository from github and have it up an running in minutes is nothing short of extraordinary. The story underscores the importance of incredible feeling that one gets when things go smooth everytime and things get done as per expectations.</p>
-<h4 id="inspired-from-the-goal2">Inspired from &lsquo;The Goal&rsquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></h4>
+<h4 id="inspired-from-the-goal2">Inspired from &lsquo;The Goal&rsquo;<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></h4>
 <p>For those who have read &lsquo;The Goal&rsquo;, this book will seem very familiar. In fact, the structure is quite the same and the authors do give credit to &ldquo;Sensei Goldratt&rdquo; in a few places. When you read the beginning, you know how it will end but it is the journey that makes it fascinating. I&rsquo;ve been involved in multiple large scale software migrations, most of them being backend services that handled billions of API calls per day and had huge blast radii. It is usually not the question of what the end goal is but about handling situations that arise during the migration. It is like you&rsquo;re on one bank of a river and want to get to the other bank. You get on the bridge and realize midway (or earlier) that it is incomplete. You&rsquo;ve got to figure out how to bridge the gap in the bridge.</p>
 <p>Bill Palmer, VP of IT, who is the central character, figures out how to get out of many difficult situations by thinking through questions raised by Dr. Erik, who is similar to the Jonah, the &lsquo;Yoda&rsquo; like person from &lsquo;The Goal&rsquo;. He comes up with the four types of work just by the prodding questions from Dr. Erik. In the same way, Bill graps the concept of Goldratt&rsquo;s &ldquo;Theory of Constraints&rdquo; and works out that a brilliant engineer like Brent who is called for every important thing and is always overworked, is actually one of the bottlenecks. Using TOC, the team identifies bottlenecks in the system and introduces continuous integration and deployement thereby improving the flow of work.</p>
 <p>Here are some concepts from the book.</p>
@@ -1699,7 +1703,17 @@ if (!doNotTrack) {
 <p>Kim, G., Behr, K., &amp; Spafford, K. (2014). <a href="https://itrevolution.com/the-phoenix-project/">The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win</a>. IT Revolution. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>Goldratt, E. M., &amp; Cox, J. (2016). The Goal: A Process of Ongoing Improvement. Routledge. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)">https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/a-BOSpxYJ9M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+ <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Goldratt, E. M., &amp; Cox, J. (2016). The Goal: A Process of Ongoing Improvement. Routledge. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -1951,6 +1965,13 @@ if (!doNotTrack) {
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://robinsonraju.blog/books/2021-04-17-fermats-enigma/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Fermat&#39;s Enigma</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>

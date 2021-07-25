@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Pierre de Fermat on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.blog/tags/pierre-de-fermat/</link>
+    <description>Recent content in Pierre de Fermat on Rob&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 17 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://robinsonraju.blog/tags/pierre-de-fermat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Fermat&#39;s Enigma</title>
+        <link>https://robinsonraju.blog/books/2021-04-17-fermats-enigma/</link>
+        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 17 Apr 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-04-17-fermats-enigma/</guid>
+        <description>&amp;ldquo;Proof is what lies at the heart of maths, and is what marks it out from other sciences. Other sciences have hypotheses that are tested against experimental evidence until they fail, and are overtaken by new hypotheses. In maths, absolute proof is the goal, and once something is proved, it is proved forever, with no room for change.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/fermats_enigma.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Fermat&#39;s Enigma</category>
+            
+          
+            
+              <category>Simon Singh</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Mathematics</category>
+            
+          
+            
+              <category>Pierre de Fermat</category>
+            
+          
+            
+              <category>History</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
