@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,10 +23,46 @@
       <item>
         <title>Books</title>
         <link>https://robinsonraju.blog/tags/books/</link>
-        <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
         
         
         <guid>https://robinsonraju.blog/tags/books/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Franz Kafka</title>
+        <link>https://robinsonraju.blog/tags/franz-kafka/</link>
+        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/franz-kafka/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Metamorphosis</title>
+        <link>https://robinsonraju.blog/tags/metamorphosis/</link>
+        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/metamorphosis/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
