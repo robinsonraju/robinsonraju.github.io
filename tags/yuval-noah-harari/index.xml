@@ -1,78 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yuval Noah Harari on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.blog/tags/yuval-noah-harari/</link>
+    <link>https://robinsonraju.info/tags/yuval-noah-harari/</link>
     <description>Recent content in Yuval Noah Harari on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <language>en-us</language>
+    <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 31 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://robinsonraju.blog/tags/yuval-noah-harari/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/tags/yuval-noah-harari/index.xml" rel="self" type="application/rss+xml" />
     
     
-    
-
+    <item>
+      <title>Homo Deus - Is Man&#39;s reach exceeding his grasp?</title>
+      <link>https://robinsonraju.info/books/2020-10-24-homo-deus/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Homo Deus - Is Man&#39;s reach exceeding his grasp?</title>
-        <link>https://robinsonraju.blog/books/2020-10-24-homo-deus/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sun, 01 Nov 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/books/2020-10-24-homo-deus/</guid>
-        <description>&amp;ldquo;In pursuit of health, happiness and power, humans will gradually change first one of their features and then another, and another, until they will no longer be human.&amp;rdquo;
-~ Yuval Noah Harari, Homo Deus: A Brief History of Tomorrow 1
- Thoughts As with Sapiens, Harari&amp;rsquo;s narrative is compelling. The book has a ton of facts and well researched material that he weaves into the story as a master folktale teller unraveling secrets one by one.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/homo-deus.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>Homo Deus A Brief History of Tomorrow</category>
-            
-          
-            
-              <category>Homo Deus</category>
-            
-          
-            
-              <category>Philosophy</category>
-            
-          
-            
-              <category>Yuval Noah Harari</category>
-            
-          
-            
-              <category>Sapiens</category>
-            
-          
-            
-              <category>Books</category>
-            
-          
-        
-        
-          
-            
-              <category>Book Notes</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://robinsonraju.info/books/2020-10-24-homo-deus/</guid>
+      <description>&amp;ldquo;In pursuit of health, happiness and power, humans will gradually change first one of their features and then another, and another, until they will no longer be human.</description>
+    </item>
     
   </channel>
 </rss>

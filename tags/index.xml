@@ -1,1106 +1,556 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.blog/tags/</link>
+    <link>https://robinsonraju.info/tags/</link>
     <description>Recent content in Tags on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <language>en-us</language>
+    <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://robinsonraju.blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Beyond Order</title>
+      <link>https://robinsonraju.info/tags/beyond-order/</link>
+      <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/tags/beyond-order/</guid>
+      <description></description>
+    </item>
     
-
+    <item>
+      <title>Books</title>
+      <link>https://robinsonraju.info/tags/books/</link>
+      <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Beyond Order</title>
-        <link>https://robinsonraju.blog/tags/beyond-order/</link>
-        <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/beyond-order/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jordan Peterson</title>
+      <link>https://robinsonraju.info/tags/jordan-peterson/</link>
+      <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Books</title>
-        <link>https://robinsonraju.blog/tags/books/</link>
-        <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/books/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/jordan-peterson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Franz Kafka</title>
+      <link>https://robinsonraju.info/tags/franz-kafka/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Jordan Peterson</title>
-        <link>https://robinsonraju.blog/tags/jordan-peterson/</link>
-        <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/jordan-peterson/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/franz-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metamorphosis</title>
+      <link>https://robinsonraju.info/tags/metamorphosis/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Franz Kafka</title>
-        <link>https://robinsonraju.blog/tags/franz-kafka/</link>
-        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/franz-kafka/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/metamorphosis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paul Kalanithi</title>
+      <link>https://robinsonraju.info/tags/paul-kalanithi/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Metamorphosis</title>
-        <link>https://robinsonraju.blog/tags/metamorphosis/</link>
-        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/metamorphosis/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/paul-kalanithi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When Breath Becomes Air</title>
+      <link>https://robinsonraju.info/tags/when-breath-becomes-air/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Paul Kalanithi</title>
-        <link>https://robinsonraju.blog/tags/paul-kalanithi/</link>
-        <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/paul-kalanithi/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/when-breath-becomes-air/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Foundation</title>
+      <link>https://robinsonraju.info/tags/foundation/</link>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>When Breath Becomes Air</title>
-        <link>https://robinsonraju.blog/tags/when-breath-becomes-air/</link>
-        <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/when-breath-becomes-air/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/foundation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Isaac Asimov</title>
+      <link>https://robinsonraju.info/tags/isaac-asimov/</link>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Foundation</title>
-        <link>https://robinsonraju.blog/tags/foundation/</link>
-        <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/foundation/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/isaac-asimov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sci-fi</title>
+      <link>https://robinsonraju.info/tags/sci-fi/</link>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Isaac Asimov</title>
-        <link>https://robinsonraju.blog/tags/isaac-asimov/</link>
-        <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/isaac-asimov/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/sci-fi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Space</title>
+      <link>https://robinsonraju.info/tags/space/</link>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Sci-fi</title>
-        <link>https://robinsonraju.blog/tags/sci-fi/</link>
-        <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/sci-fi/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/space/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fermat&#39;s Enigma</title>
+      <link>https://robinsonraju.info/tags/fermats-enigma/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Space</title>
-        <link>https://robinsonraju.blog/tags/space/</link>
-        <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/space/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/fermats-enigma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>History</title>
+      <link>https://robinsonraju.info/tags/history/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Fermat&#39;s Enigma</title>
-        <link>https://robinsonraju.blog/tags/fermats-enigma/</link>
-        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/fermats-enigma/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics</title>
+      <link>https://robinsonraju.info/tags/mathematics/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>History</title>
-        <link>https://robinsonraju.blog/tags/history/</link>
-        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/history/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pierre de Fermat</title>
+      <link>https://robinsonraju.info/tags/pierre-de-fermat/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Mathematics</title>
-        <link>https://robinsonraju.blog/tags/mathematics/</link>
-        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/mathematics/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/pierre-de-fermat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simon Singh</title>
+      <link>https://robinsonraju.info/tags/simon-singh/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Pierre de Fermat</title>
-        <link>https://robinsonraju.blog/tags/pierre-de-fermat/</link>
-        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/pierre-de-fermat/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/simon-singh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuous Integration</title>
+      <link>https://robinsonraju.info/tags/continuous-integration/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Simon Singh</title>
-        <link>https://robinsonraju.blog/tags/simon-singh/</link>
-        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/simon-singh/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/continuous-integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://robinsonraju.info/tags/devops/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Continuous Integration</title>
-        <link>https://robinsonraju.blog/tags/continuous-integration/</link>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/continuous-integration/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gene Kim</title>
+      <link>https://robinsonraju.info/tags/gene-kim/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>DevOps</title>
-        <link>https://robinsonraju.blog/tags/devops/</link>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/devops/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/gene-kim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Engineering</title>
+      <link>https://robinsonraju.info/tags/software-engineering/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Gene Kim</title>
-        <link>https://robinsonraju.blog/tags/gene-kim/</link>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/gene-kim/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Phoenix project</title>
+      <link>https://robinsonraju.info/tags/the-phoenix-project/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Software Engineering</title>
-        <link>https://robinsonraju.blog/tags/software-engineering/</link>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/software-engineering/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/the-phoenix-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>His Dark Materials</title>
+      <link>https://robinsonraju.info/tags/his-dark-materials/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Phoenix project</title>
-        <link>https://robinsonraju.blog/tags/the-phoenix-project/</link>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/the-phoenix-project/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/his-dark-materials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Milton</title>
+      <link>https://robinsonraju.info/tags/milton/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>His Dark Materials</title>
-        <link>https://robinsonraju.blog/tags/his-dark-materials/</link>
-        <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/his-dark-materials/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/milton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Philip Pullman</title>
+      <link>https://robinsonraju.info/tags/philip-pullman/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Milton</title>
-        <link>https://robinsonraju.blog/tags/milton/</link>
-        <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/milton/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/philip-pullman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Poem</title>
+      <link>https://robinsonraju.info/tags/poem/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Philip Pullman</title>
-        <link>https://robinsonraju.blog/tags/philip-pullman/</link>
-        <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/philip-pullman/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/poem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CI</title>
+      <link>https://robinsonraju.info/tags/ci/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Poem</title>
-        <link>https://robinsonraju.blog/tags/poem/</link>
-        <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/poem/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Charles Mackay</title>
+      <link>https://robinsonraju.info/tags/charles-mackay/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>CI</title>
-        <link>https://robinsonraju.blog/tags/ci/</link>
-        <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/ci/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/charles-mackay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Margaret Thatcher</title>
+      <link>https://robinsonraju.info/tags/margaret-thatcher/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Charles Mackay</title>
-        <link>https://robinsonraju.blog/tags/charles-mackay/</link>
-        <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/charles-mackay/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/margaret-thatcher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Crown</title>
+      <link>https://robinsonraju.info/tags/the-crown/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Margaret Thatcher</title>
-        <link>https://robinsonraju.blog/tags/margaret-thatcher/</link>
-        <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/margaret-thatcher/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/the-crown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chess</title>
+      <link>https://robinsonraju.info/tags/chess/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Crown</title>
-        <link>https://robinsonraju.blog/tags/the-crown/</link>
-        <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/the-crown/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/chess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Netflix</title>
+      <link>https://robinsonraju.info/tags/netflix/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Chess</title>
-        <link>https://robinsonraju.blog/tags/chess/</link>
-        <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/chess/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/netflix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Queens Gambit</title>
+      <link>https://robinsonraju.info/tags/the-queens-gambit/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Netflix</title>
-        <link>https://robinsonraju.blog/tags/netflix/</link>
-        <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/netflix/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/the-queens-gambit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Documentary</title>
+      <link>https://robinsonraju.info/tags/documentary/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Queens Gambit</title>
-        <link>https://robinsonraju.blog/tags/the-queens-gambit/</link>
-        <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/the-queens-gambit/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/documentary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HBO</title>
+      <link>https://robinsonraju.info/tags/hbo/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Documentary</title>
-        <link>https://robinsonraju.blog/tags/documentary/</link>
-        <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/documentary/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/hbo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NYC</title>
+      <link>https://robinsonraju.info/tags/nyc/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>HBO</title>
-        <link>https://robinsonraju.blog/tags/hbo/</link>
-        <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/hbo/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/nyc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scaffolding</title>
+      <link>https://robinsonraju.info/tags/scaffolding/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>NYC</title>
-        <link>https://robinsonraju.blog/tags/nyc/</link>
-        <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/nyc/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/scaffolding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homo Deus</title>
+      <link>https://robinsonraju.info/tags/homo-deus/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Scaffolding</title>
-        <link>https://robinsonraju.blog/tags/scaffolding/</link>
-        <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/scaffolding/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/homo-deus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homo Deus A Brief History of Tomorrow</title>
+      <link>https://robinsonraju.info/tags/homo-deus-a-brief-history-of-tomorrow/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Homo Deus</title>
-        <link>https://robinsonraju.blog/tags/homo-deus/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/homo-deus/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/homo-deus-a-brief-history-of-tomorrow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Philosophy</title>
+      <link>https://robinsonraju.info/tags/philosophy/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Homo Deus A Brief History of Tomorrow</title>
-        <link>https://robinsonraju.blog/tags/homo-deus-a-brief-history-of-tomorrow/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/homo-deus-a-brief-history-of-tomorrow/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sapiens</title>
+      <link>https://robinsonraju.info/tags/sapiens/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Philosophy</title>
-        <link>https://robinsonraju.blog/tags/philosophy/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/philosophy/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/sapiens/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yuval Noah Harari</title>
+      <link>https://robinsonraju.info/tags/yuval-noah-harari/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Sapiens</title>
-        <link>https://robinsonraju.blog/tags/sapiens/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/sapiens/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/yuval-noah-harari/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Farnam Street</title>
+      <link>https://robinsonraju.info/tags/farnam-street/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Yuval Noah Harari</title>
-        <link>https://robinsonraju.blog/tags/yuval-noah-harari/</link>
-        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/yuval-noah-harari/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/farnam-street/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mental Models</title>
+      <link>https://robinsonraju.info/tags/mental-models/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Farnam Street</title>
-        <link>https://robinsonraju.blog/tags/farnam-street/</link>
-        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/farnam-street/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/mental-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shane Parrish</title>
+      <link>https://robinsonraju.info/tags/shane-parrish/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Mental Models</title>
-        <link>https://robinsonraju.blog/tags/mental-models/</link>
-        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/mental-models/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/shane-parrish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Great Mental Models</title>
+      <link>https://robinsonraju.info/tags/the-great-mental-models/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Shane Parrish</title>
-        <link>https://robinsonraju.blog/tags/shane-parrish/</link>
-        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/shane-parrish/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/the-great-mental-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bob Iger</title>
+      <link>https://robinsonraju.info/tags/bob-iger/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Great Mental Models</title>
-        <link>https://robinsonraju.blog/tags/the-great-mental-models/</link>
-        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/the-great-mental-models/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/bob-iger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Disney</title>
+      <link>https://robinsonraju.info/tags/disney/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Bob Iger</title>
-        <link>https://robinsonraju.blog/tags/bob-iger/</link>
-        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/bob-iger/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/disney/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leadership</title>
+      <link>https://robinsonraju.info/tags/leadership/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Disney</title>
-        <link>https://robinsonraju.blog/tags/disney/</link>
-        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/disney/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/leadership/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ride of a Lifetime</title>
+      <link>https://robinsonraju.info/tags/ride-of-a-lifetime/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Leadership</title>
-        <link>https://robinsonraju.blog/tags/leadership/</link>
-        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/leadership/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/ride-of-a-lifetime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brené Brown</title>
+      <link>https://robinsonraju.info/tags/bren%C3%A9-brown/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Ride of a Lifetime</title>
-        <link>https://robinsonraju.blog/tags/ride-of-a-lifetime/</link>
-        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/ride-of-a-lifetime/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/bren%C3%A9-brown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dare to Lead</title>
+      <link>https://robinsonraju.info/tags/dare-to-lead/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Brené Brown</title>
-        <link>https://robinsonraju.blog/tags/bren%C3%A9-brown/</link>
-        <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/bren%C3%A9-brown/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/dare-to-lead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Death</title>
+      <link>https://robinsonraju.info/tags/death/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Dare to Lead</title>
-        <link>https://robinsonraju.blog/tags/dare-to-lead/</link>
-        <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/dare-to-lead/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/death/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RBG</title>
+      <link>https://robinsonraju.info/tags/rbg/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Death</title>
-        <link>https://robinsonraju.blog/tags/death/</link>
-        <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/death/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/rbg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruth Bader Ginsburg</title>
+      <link>https://robinsonraju.info/tags/ruth-bader-ginsburg/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>RBG</title>
-        <link>https://robinsonraju.blog/tags/rbg/</link>
-        <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/rbg/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/ruth-bader-ginsburg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>California</title>
+      <link>https://robinsonraju.info/tags/california/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Ruth Bader Ginsburg</title>
-        <link>https://robinsonraju.blog/tags/ruth-bader-ginsburg/</link>
-        <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/ruth-bader-ginsburg/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/california/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dune</title>
+      <link>https://robinsonraju.info/tags/dune/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>California</title>
-        <link>https://robinsonraju.blog/tags/california/</link>
-        <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/california/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/dune/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forest Fires</title>
+      <link>https://robinsonraju.info/tags/forest-fires/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Dune</title>
-        <link>https://robinsonraju.blog/tags/dune/</link>
-        <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/dune/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/forest-fires/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movies</title>
+      <link>https://robinsonraju.info/tags/movies/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Forest Fires</title>
-        <link>https://robinsonraju.blog/tags/forest-fires/</link>
-        <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/forest-fires/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trafficking</title>
+      <link>https://robinsonraju.info/tags/trafficking/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Movies</title>
-        <link>https://robinsonraju.blog/tags/movies/</link>
-        <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/movies/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tags/trafficking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>index</title>
+      <link>https://robinsonraju.info/tags/index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Trafficking</title>
-        <link>https://robinsonraju.blog/tags/trafficking/</link>
-        <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/trafficking/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>index</title>
-        <link>https://robinsonraju.blog/tags/index/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        
-        <guid>https://robinsonraju.blog/tags/index/</guid>
-        <description></description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-
+      <guid>https://robinsonraju.info/tags/index/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,1631 +1,540 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.blog/categories/general/</link>
+    <link>https://robinsonraju.info/categories/general/</link>
     <description>Recent content in General on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <language>en-us</language>
+    <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://robinsonraju.blog/categories/general/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>His Dark Materials</title>
+      <link>https://robinsonraju.info/posts/2020-12-12-his-dark-materials/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/posts/2020-12-12-his-dark-materials/</guid>
+      <description>“Into this wild abyss, The womb of nature and perhaps her grave, Of neither sea, nor shore, nor air, nor fire, But all these in their pregnant causes mixed Confusedly, and which thus must ever fight, Unless the almighty maker them ordain His dark materials to create more worlds, Into this wild abyss the wary fiend Stood on the brink of hell and looked a while, Pondering his voyage.</description>
+    </item>
     
-
+    <item>
+      <title>Dave Farley&#39;s Review of the State of DevOps Report</title>
+      <link>https://robinsonraju.info/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>His Dark Materials</title>
-        <link>https://robinsonraju.blog/posts/2020-12-12-his-dark-materials/</link>
-        <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 12 Dec 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-12-12-his-dark-materials/</guid>
-        <description>“Into this wild abyss,
-The womb of nature and perhaps her grave,
-Of neither sea, nor shore, nor air, nor fire,
-But all these in their pregnant causes mixed
-Confusedly, and which thus must ever fight,
-Unless the almighty maker them ordain
-His dark materials to create more worlds,</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/his-dark-materials.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>Poem</category>
-            
-          
-            
-              <category>His Dark Materials</category>
-            
-          
-            
-              <category>Philip Pullman</category>
-            
-          
-            
-              <category>Milton</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
+      <description>&amp;ldquo;Teams that are best at DevOps and continuous delivery can release software thousands of times more quickly and with a small fraction of the defects.</description>
+    </item>
+    
+    <item>
+      <title>A Choice to Make a Difference</title>
+      <link>https://robinsonraju.info/posts/2020-11-21-mckay-poem/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Dave Farley&#39;s Review of the State of DevOps Report</title>
-        <link>https://robinsonraju.blog/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
-        <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 05 Dec 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
-        <description>&amp;ldquo;Teams that are best at DevOps and continuous delivery can release software thousands of times more quickly and with a small fraction of the defects.&amp;rdquo;
- The above quote is from Dave Farley&amp;rsquo;s review1 of &amp;ldquo;The State of DevOps&amp;rdquo; report2. It rang so true that I tweeted it. Martin Fowler responded to the original Tweet from Dave asking if there was a transcript available.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>DevOps</category>
-            
-          
-            
-              <category>CI</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-            
-              <category>DevOps</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-11-21-mckay-poem/</guid>
+      <description>&amp;ldquo;God needs no faint hearts for his ambassadors.&amp;rdquo; ~ Margaret Thatcher in The Crown Season 4, Episode 2 1
+ The Poem #  In the second episode of Netflix&amp;rsquo;s &amp;lsquo;The Crown&amp;rsquo; 2, Margaret Thatcher recites a poem to the Queen, named &amp;lsquo;No Enemies&amp;rsquo; by Charles Mackay.</description>
+    </item>
+    
+    <item>
+      <title>The Queen&#39;s Gambit and the feeling of nostalgia</title>
+      <link>https://robinsonraju.info/posts/2020-11-14-queens-gambit/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>A Choice to Make a Difference</title>
-        <link>https://robinsonraju.blog/posts/2020-11-21-mckay-poem/</link>
-        <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 21 Nov 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-11-21-mckay-poem/</guid>
-        <description>&amp;ldquo;God needs no faint hearts for his ambassadors.&amp;rdquo;
-~ Margaret Thatcher in The Crown Season 4, Episode 2 1
- The Poem In the second episode of Netflix&amp;rsquo;s &amp;lsquo;The Crown&amp;rsquo; 2, Margaret Thatcher recites a poem to the Queen, named &amp;lsquo;No Enemies&amp;rsquo; by Charles Mackay. This was in response to the Queen saying that Thatcher is making a lot of enemies.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/perseverance.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>Poem</category>
-            
-          
-            
-              <category>Charles Mackay</category>
-            
-          
-            
-              <category>The Crown</category>
-            
-          
-            
-              <category>Margaret Thatcher</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-11-14-queens-gambit/</guid>
+      <description>&amp;ldquo;It&amp;rsquo;s foolish to run the risk of going mad for vanity&amp;rsquo;s sake.&amp;quot; ~ French Philosopher Diderot (From Netflix&amp;rsquo;s &amp;ldquo;The Queen&amp;rsquo;s Gambit&amp;rdquo; 1)
+ The Dream #  For the first time in so many years, I had a dream about Chess.</description>
+    </item>
+    
+    <item>
+      <title>Scaffolding - Temporary, yet Permanent</title>
+      <link>https://robinsonraju.info/posts/2020-11-07-scaffolding/</link>
+      <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Queen&#39;s Gambit and the feeling of nostalgia</title>
-        <link>https://robinsonraju.blog/posts/2020-11-14-queens-gambit/</link>
-        <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sun, 15 Nov 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-11-14-queens-gambit/</guid>
-        <description>&amp;ldquo;It&amp;rsquo;s foolish to run the risk of going mad for vanity&amp;rsquo;s sake.&amp;quot;
-~ French Philosopher Diderot (From Netflix&amp;rsquo;s &amp;ldquo;The Queen&amp;rsquo;s Gambit&amp;rdquo; 1)
- The Dream For the first time in so many years, I had a dream about Chess. Like many dreams, it is in the mind and is kind of difficult to exactly describe it.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/queens-gambit.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>Chess</category>
-            
-          
-            
-              <category>The Queens Gambit</category>
-            
-          
-            
-              <category>Netflix</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-11-07-scaffolding/</guid>
+      <description>&amp;ldquo;It&amp;rsquo;s really easy to settle for something that you don&amp;rsquo;t like. Because, if you never admit you&amp;rsquo;re unhappy with something, then you never have to change anything.</description>
+    </item>
+    
+    <item>
+      <title>You Can&#39;t Spell Truth Without Ruth</title>
+      <link>https://robinsonraju.info/posts/2020-09-26-rbg-death-reflections/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Scaffolding - Temporary, yet Permanent</title>
-        <link>https://robinsonraju.blog/posts/2020-11-07-scaffolding/</link>
-        <pubDate>Sat, 07 Nov 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Fri, 27 Nov 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-11-07-scaffolding/</guid>
-        <description>&amp;ldquo;It&amp;rsquo;s really easy to settle for something that you don&amp;rsquo;t like. Because, if you never admit you&amp;rsquo;re unhappy with something, then you never have to change anything.
-Most of us don&amp;rsquo;t speak up when we&amp;rsquo;re dissatisfied and then things just accumulate until you can&amp;rsquo;t really imagine an alternative.&amp;rdquo;
-~ John Wilson in Scaffolding (Episode 2 of &amp;lsquo;How to with John Wilson&amp;rsquo;1)</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/scaffolding.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>HBO</category>
-            
-          
-            
-              <category>Scaffolding</category>
-            
-          
-            
-              <category>NYC</category>
-            
-          
-            
-              <category>Documentary</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-09-26-rbg-death-reflections/</guid>
+      <description>Reflecting on Justice Ruth Bader Ginsburg&amp;rsquo;s passing away.
+RBG - Steadfast Commitment #   “The arc of the universe is long, but it bends toward justice,” but only “if there is a steadfast commitment to see the task through to completion.</description>
+    </item>
+    
+    <item>
+      <title>Paradise on Fire</title>
+      <link>https://robinsonraju.info/posts/2020-09-19-paradise-on-fire/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>You Can&#39;t Spell Truth Without Ruth</title>
-        <link>https://robinsonraju.blog/posts/2020-09-26-rbg-death-reflections/</link>
-        <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 26 Sep 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-09-26-rbg-death-reflections/</guid>
-        <description>Reflecting on Justice Ruth Bader Ginsburg&amp;rsquo;s passing away.
-RBG - Steadfast Commitment  “The arc of the universe is long, but it bends toward justice,” but only “if there is a steadfast commitment to see the task through to completion.”
-~ Ruth Bader Ginsburg
- RBG was a revolutionary, someone who made a dent in the world while she was living, someone who is affecting the lives of so many after her passing away.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/ruth-bader-ginsburg.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>Ruth Bader Ginsburg</category>
-            
-          
-            
-              <category>RBG</category>
-            
-          
-            
-              <category>Death</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-09-19-paradise-on-fire/</guid>
+      <description>&amp;ldquo;The deepest lessons come out of the deepest waters and the hottest fires.&amp;rdquo; ~ Elisabeth Elliot
+ CA wildfire, Orange skies in SF Bay area, and Dune trailer #  It seemed like a weird coincidence that Dune1 trailer2 got released on the same day that the skies in San Francisco turned orange3.</description>
+    </item>
+    
+    <item>
+      <title>The Chained Non-citizens</title>
+      <link>https://robinsonraju.info/posts/2020-09-12-the-non-citizens/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Paradise on Fire</title>
-        <link>https://robinsonraju.blog/posts/2020-09-19-paradise-on-fire/</link>
-        <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sun, 20 Sep 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-09-19-paradise-on-fire/</guid>
-        <description>&amp;ldquo;The deepest lessons come out of the deepest waters and the hottest fires.&amp;rdquo;
-~ Elisabeth Elliot
- CA wildfire, Orange skies in SF Bay area, and Dune trailer It seemed like a weird coincidence that Dune1 trailer2 got released on the same day that the skies in San Francisco turned orange3.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/ca-wildfires.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>California</category>
-            
-          
-            
-              <category>Forest Fires</category>
-            
-          
-            
-              <category>Dune</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-09-12-the-non-citizens/</guid>
+      <description>&amp;ldquo;Man is born free, yet everywhere he is in chains.&amp;rdquo; ~ Jean-Jacques Rousseau 1
+ The movie - C U Soon #  Saw this amazing movie named C U Soon2 on Amazon Prime.</description>
+    </item>
+    
+    <item>
+      <title>Plan B</title>
+      <link>https://robinsonraju.info/posts/2020-09-05-plan-b/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Chained Non-citizens</title>
-        <link>https://robinsonraju.blog/posts/2020-09-12-the-non-citizens/</link>
-        <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 12 Sep 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-09-12-the-non-citizens/</guid>
-        <description>&amp;ldquo;Man is born free, yet everywhere he is in chains.&amp;rdquo;
-~ Jean-Jacques Rousseau 1
- The movie - C U Soon Saw this amazing movie named C U Soon2 on Amazon Prime. The movie format was unique. Most of it was shown through video conferencing and chat. One gets to know the characters and their lives through chat messages and dialogues that happen through video apps.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/human_trafficking.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>Movies</category>
-            
-          
-            
-              <category>Trafficking</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-09-05-plan-b/</guid>
+      <description>Happened to watch the first 3 episodes of Raised by Wolves1. I was expecting just an episode to get launched in the typical HBO fashion. But getting 3 episodes was a bonus.</description>
+    </item>
+    
+    <item>
+      <title>The Money Effect</title>
+      <link>https://robinsonraju.info/posts/2020-08-30-the-money-effect/</link>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Plan B</title>
-        <link>https://robinsonraju.blog/posts/2020-09-05-plan-b/</link>
-        <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sun, 06 Sep 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-09-05-plan-b/</guid>
-        <description>Happened to watch the first 3 episodes of Raised by Wolves1. I was expecting just an episode to get launched in the typical HBO fashion. But getting 3 episodes was a bonus. Though I would have preferred to just have one. It would have given enough time to think about the episode and read articles about it till the next one came.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/kepler-22b.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-08-30-the-money-effect/</guid>
+      <description>&amp;ldquo;Money is the root of all evil&amp;rdquo; took a different meaning in my mind when I read this portion (quote below) from Thinking, Fast and Slow.</description>
+    </item>
+    
+    <item>
+      <title>Engineering Manager Interviews</title>
+      <link>https://robinsonraju.info/management/2020-08-23-engineering-manager-interviews/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Money Effect</title>
-        <link>https://robinsonraju.blog/posts/2020-08-30-the-money-effect/</link>
-        <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 29 Aug 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-08-30-the-money-effect/</guid>
-        <description>&amp;ldquo;Money is the root of all evil&amp;rdquo; took a different meaning in my mind when I read this portion (quote below) from Thinking, Fast and Slow. Set me thinking about different interactions with people in the past and different kinds of projects and people&amp;rsquo;s attitudes.
-What came to mind were transformations in people when the goal was changed from &amp;lsquo;doing something to benefit someone&amp;rsquo; to &amp;lsquo;doing something to meet a financial target&amp;rsquo;.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/money.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/management/2020-08-23-engineering-manager-interviews/</guid>
+      <description>A couple of folks asked me recently my opinion on how to do well in an Engineering Manager interview or what should they do to be more successful.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to a new theme</title>
+      <link>https://robinsonraju.info/posts/2020-08-22-migrating-to-new-theme/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Engineering Manager Interviews</title>
-        <link>https://robinsonraju.blog/management/2020-08-23-engineering-manager-interviews/</link>
-        <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 29 Aug 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/management/2020-08-23-engineering-manager-interviews/</guid>
-        <description>A couple of folks asked me recently my opinion on how to do well in an Engineering Manager interview or what should they do to be more successful. I provided some inputs based on my experience of interviewing and hiring eng managers.
-Also thought I&amp;rsquo;d write down notes as a way to help others who might find it useful.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/leadership.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Management</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-08-22-migrating-to-new-theme/</guid>
+      <description>I&amp;rsquo;ve been thinking of migrating the site to a new theme which had a better font than I had. Also wanted a smaller font to cover lot of text in a smaller area.</description>
+    </item>
+    
+    <item>
+      <title>The Writing Habit</title>
+      <link>https://robinsonraju.info/posts/2020-08-08-the-writing-habit/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Migrating to a new theme</title>
-        <link>https://robinsonraju.blog/posts/2020-08-22-migrating-to-new-theme/</link>
-        <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Wed, 02 Sep 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-08-22-migrating-to-new-theme/</guid>
-        <description>I&amp;rsquo;ve been thinking of migrating the site to a new theme which had a better font than I had. Also wanted a smaller font to cover lot of text in a smaller area. Stumbled upon paperesque theme on hugo themes site. It was a simple theme with lot more focus on writing.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-08-08-the-writing-habit/</guid>
+      <description>One of the things that I wanted to do this year was to focus a bit more on writing. I&amp;rsquo;ve had times when I wrote in bursts, and I always told myself - Yeah, this is great.</description>
+    </item>
+    
+    <item>
+      <title>Leadership - Essential Books</title>
+      <link>https://robinsonraju.info/posts/2020-07-03-reading-list-leadership/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Writing Habit</title>
-        <link>https://robinsonraju.blog/posts/2020-08-08-the-writing-habit/</link>
-        <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 08 Aug 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-08-08-the-writing-habit/</guid>
-        <description>One of the things that I wanted to do this year was to focus a bit more on writing. I&amp;rsquo;ve had times when I wrote in bursts, and I always told myself - Yeah, this is great. I should do more of it. It is not like I feel like a Yoda who knows too much and needs to write down to teach others, in fact, it is just the opposite.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-07-03-reading-list-leadership/</guid>
+      <description>The following two quotes sum up my ideal of leadership.
+&amp;ldquo;The greatest leader is not necessarily the one who does the greatest things. He is the one that gets the people to do the greatest things.</description>
+    </item>
+    
+    <item>
+      <title>Favorite TV Title Sequence Themes</title>
+      <link>https://robinsonraju.info/posts/2020-07-02-favorite-tv-intro-themes/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Leadership - Essential Books</title>
-        <link>https://robinsonraju.blog/posts/2020-07-03-reading-list-leadership/</link>
-        <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Fri, 03 Jul 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-07-03-reading-list-leadership/</guid>
-        <description>The following two quotes sum up my ideal of leadership.
-&amp;ldquo;The greatest leader is not necessarily the one who does the greatest things. He is the one that gets the people to do the greatest things.&amp;rdquo; ~ Ronald Reagan
-&amp;ldquo;A leader is best when people barely know he exists. When his work is done, his aim fulfilled, they will say: we did it ourselves.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-07-02-favorite-tv-intro-themes/</guid>
+      <description>Was listening to the awesome title sequence of His Dark Materials again today. It is one of those pieces of music that keep replaying in your mind even after you stop listening to it.</description>
+    </item>
+    
+    <item>
+      <title>Software Development - Essential Books</title>
+      <link>https://robinsonraju.info/tech-notes/2020-07-01-reading-list-software-dev/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Favorite TV Title Sequence Themes</title>
-        <link>https://robinsonraju.blog/posts/2020-07-02-favorite-tv-intro-themes/</link>
-        <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Thu, 02 Jul 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-07-02-favorite-tv-intro-themes/</guid>
-        <description>Was listening to the awesome title sequence of His Dark Materials again today. It is one of those pieces of music that keep replaying in your mind even after you stop listening to it. I love listening to Intro sequence themes and there are some iconic ones among American TV shows.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tech-notes/2020-07-01-reading-list-software-dev/</guid>
+      <description>As a person who loves checking off items in &amp;lsquo;to-do&amp;rsquo; lists and checklists, I&amp;rsquo;ve always liked books that have a list of rules/principles. Hence books like Effective Java, 201 Principles are the ones that come to mind when I think of a reading list of books related to Software Development.</description>
+    </item>
+    
+    <item>
+      <title>The Kerala - Russia Connection</title>
+      <link>https://robinsonraju.info/posts/2020-06-25-kerala-russia-connection/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Software Development - Essential Books</title>
-        <link>https://robinsonraju.blog/tech-notes/2020-07-01-reading-list-software-dev/</link>
-        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/tech-notes/2020-07-01-reading-list-software-dev/</guid>
-        <description>As a person who loves checking off items in &amp;lsquo;to-do&amp;rsquo; lists and checklists, I&amp;rsquo;ve always liked books that have a list of rules/principles. Hence books like Effective Java, 201 Principles are the ones that come to mind when I think of a reading list of books related to Software Development.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-06-25-kerala-russia-connection/</guid>
+      <description>I&amp;rsquo;d mentioned in another post that I&amp;rsquo;d do some research on Kerala-Russia connection and get back. This post is in response to that. First some context on what we&amp;rsquo;ve been doing.</description>
+    </item>
+    
+    <item>
+      <title>A Cybersecurity Book List</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-22-cybersecurity-reading-list/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Kerala - Russia Connection</title>
-        <link>https://robinsonraju.blog/posts/2020-06-25-kerala-russia-connection/</link>
-        <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Tue, 23 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-06-25-kerala-russia-connection/</guid>
-        <description>I&amp;rsquo;d mentioned in another post that I&amp;rsquo;d do some research on Kerala-Russia connection and get back. This post is in response to that. First some context on what we&amp;rsquo;ve been doing.
-Background Wife read the post on Oru Sangeerthanam Pole and really got fascinated by Perumbadavam and Dostoyevsky. She got busy reading articles on Dostoyevsky and Perumbadavam and also a couple of Perumbadavam&amp;rsquo;s interviews on Youtube.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tech-notes/2020-06-22-cybersecurity-reading-list/</guid>
+      <description>Background #  While writing a note about My Reading Journey, I was reminded that I hadn&amp;rsquo;t put a section on list of books related to Computer Science in My Reading List.</description>
+    </item>
+    
+    <item>
+      <title>Favorite Poems</title>
+      <link>https://robinsonraju.info/posts/2020-06-08-favorite-poems/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>A Cybersecurity Book List</title>
-        <link>https://robinsonraju.blog/tech-notes/2020-06-22-cybersecurity-reading-list/</link>
-        <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Mon, 22 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/tech-notes/2020-06-22-cybersecurity-reading-list/</guid>
-        <description>Background While writing a note about My Reading Journey, I was reminded that I hadn&amp;rsquo;t put a section on list of books related to Computer Science in My Reading List. Was reminded of that again when I read today&amp;rsquo;s WSJ. The paper had a section towards the end dedicated to Cybersecurity.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-06-08-favorite-poems/</guid>
+      <description>In the post about my reading journey, I had mentioned a few poems that were my favorite. Thought I&amp;rsquo;d just put them all here. One place to come back to read them over and again!</description>
+    </item>
+    
+    <item>
+      <title>Like a Psalm - Remembering Dostoyevsky</title>
+      <link>https://robinsonraju.info/posts/2020-06-07-like-a-psalm/</link>
+      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Favorite Poems</title>
-        <link>https://robinsonraju.blog/posts/2020-06-08-favorite-poems/</link>
-        <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Mon, 08 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-06-08-favorite-poems/</guid>
-        <description>In the post about my reading journey, I had mentioned a few poems that were my favorite. Thought I&amp;rsquo;d just put them all here. One place to come back to read them over and again!
-The Arrow and the Song  I shot an arrow into the air,
-It fell to earth, I knew not where;</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-06-07-like-a-psalm/</guid>
+      <description>While I was walking down the memory lane yesterday, I remembered meeting RR in Chennai and his gift of Crime and Punishment by Fyodor Dostoyevsky. We were best friends in school and I had lost touch with him during engineering.</description>
+    </item>
+    
+    <item>
+      <title>My Reading Journey</title>
+      <link>https://robinsonraju.info/posts/2020-06-06-the-reading-journey/</link>
+      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Like a Psalm - Remembering Dostoyevsky</title>
-        <link>https://robinsonraju.blog/posts/2020-06-07-like-a-psalm/</link>
-        <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sun, 07 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-06-07-like-a-psalm/</guid>
-        <description>While I was walking down the memory lane yesterday, I remembered meeting RR in Chennai and his gift of Crime and Punishment by Fyodor Dostoyevsky. We were best friends in school and I had lost touch with him during engineering. One day there was an email and he said he was in Chennai.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>My Reading Journey</title>
-        <link>https://robinsonraju.blog/posts/2020-06-06-the-reading-journey/</link>
-        <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 06 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-06-06-the-reading-journey/</guid>
-        <description>&amp;ldquo;I cannot remember the books I’ve read any more than the meals I have eaten; even so, they have made me.&amp;quot;
+      <guid>https://robinsonraju.info/posts/2020-06-06-the-reading-journey/</guid>
+      <description>&amp;ldquo;I cannot remember the books I’ve read any more than the meals I have eaten; even so, they have made me.&amp;quot;
 ~ Emerson
- Had a dream about me being in Chennai and being asked about a book that I was reading. I don&amp;rsquo;t quite remember who it was, but it was someone happy to see me with a book.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+ Had a dream about me being in Chennai and being asked about a book that I was reading.</description>
+    </item>
+    
+    <item>
+      <title>Catalyst of Change</title>
+      <link>https://robinsonraju.info/posts/2020-06-03-catalyst-of-change/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Catalyst of Change</title>
-        <link>https://robinsonraju.blog/posts/2020-06-03-catalyst-of-change/</link>
-        <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Wed, 03 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-06-03-catalyst-of-change/</guid>
-        <description>Thankfully most of the demonstrations across the U.S. today were peaceful. There was one in San Ramon also where people marched from our local Safeway (Gale Ranch) to City Hall near Bishop Ranch.
-But the wound is deep. The anguish and heartbreak will not go away. Anyone who has seen the videos cannot remain not being horrified and scared.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-06-03-catalyst-of-change/</guid>
+      <description>Thankfully most of the demonstrations across the U.S. today were peaceful. There was one in San Ramon also where people marched from our local Safeway (Gale Ranch) to City Hall near Bishop Ranch.</description>
+    </item>
+    
+    <item>
+      <title>Security news today</title>
+      <link>https://robinsonraju.info/tech-notes/2020-06-02-security-news-today/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Security news today</title>
-        <link>https://robinsonraju.blog/tech-notes/2020-06-02-security-news-today/</link>
-        <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Tue, 02 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/tech-notes/2020-06-02-security-news-today/</guid>
-        <description>The optimism around cybersecurity was dampened today by a news article on WSJ - &amp;ldquo;Cybersecurity Startups Feel a Pinch on Funding and Sales&amp;rdquo;.
+      <guid>https://robinsonraju.info/tech-notes/2020-06-02-security-news-today/</guid>
+      <description>The optimism around cybersecurity was dampened today by a news article on WSJ - &amp;ldquo;Cybersecurity Startups Feel a Pinch on Funding and Sales&amp;rdquo;.
  Cybersecurity startups are finding they have to do more with less, as the economic drag of coronavirus precautions makes it difficult to sell their products and enlist new customers while it simultaneously diminishes the size of their funding rounds, investors say.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-        
-        
-      </item>
+    </item>
+    
+    <item>
+      <title>Position or Knowledge?</title>
+      <link>https://robinsonraju.info/posts/2020-06-01-position-or-knowledge/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Position or Knowledge?</title>
-        <link>https://robinsonraju.blog/posts/2020-06-01-position-or-knowledge/</link>
-        <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Mon, 01 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-06-01-position-or-knowledge/</guid>
-        <description>For the past few years, I have read quite a few materials on cybersecurity. In 2017, my professor at SJSU asked me to write a paper on IoT Security and Machine Learning techniques used to protect IoT systems. That was really interesting. Learnt about IoT, Fog Computing, Privacy and Security issues with IoT systems during that time.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-06-01-position-or-knowledge/</guid>
+      <description>For the past few years, I have read quite a few materials on cybersecurity. In 2017, my professor at SJSU asked me to write a paper on IoT Security and Machine Learning techniques used to protect IoT systems.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Atlas</title>
+      <link>https://robinsonraju.info/posts/2020-05-23-cloud-atlas/</link>
+      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Cloud Atlas</title>
-        <link>https://robinsonraju.blog/posts/2020-05-23-cloud-atlas/</link>
-        <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 23 May 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2020-05-23-cloud-atlas/</guid>
-        <description>&amp;ldquo;Yesterday, my life was headed in one direction. Today, it is headed in another.&amp;rdquo;
-Was super glad to see Cloud Atlas as one of the books in Bill Gates&amp;rsquo;s reading list for this summer. I bought the book back in 2013 but haven&amp;rsquo;t read it yet.
-I still remember the first time I saw a trailer for the movie Cloud Atlas and being amazed and speechless.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2020-05-23-cloud-atlas/</guid>
+      <description>&amp;ldquo;Yesterday, my life was headed in one direction. Today, it is headed in another.&amp;rdquo;
+Was super glad to see Cloud Atlas as one of the books in Bill Gates&amp;rsquo;s reading list for this summer.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Hugo Site and Migrating from Jekyll</title>
+      <link>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Setting up Hugo Site and Migrating from Jekyll</title>
-        <link>https://robinsonraju.blog/tech-notes/2020-05-04-setting-up-hugo-site/</link>
-        <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Mon, 04 May 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/tech-notes/2020-05-04-setting-up-hugo-site/</guid>
-        <description>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost. That made me think if I should explore moving from Jekyll to something newer. New frameworks keep coming up and it probably is a good idea to shift to keep up.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</guid>
+      <description>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost.</description>
+    </item>
+    
+    <item>
+      <title>Reading List</title>
+      <link>https://robinsonraju.info/posts/reading-list/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Reading List</title>
-        <link>https://robinsonraju.blog/posts/reading-list/</link>
-        <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Fri, 01 Jan 2016 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/reading-list/</guid>
-        <description>Last Updated - 06/06/2020
-List of books that I have read, started to read, heard a lot about and want to read. I can at least talk one sentence about these books.
-Have written a draft of my Reading Journey which is a short recollection of what I read when.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/reading-list/</guid>
+      <description>Last Updated - 06/06/2020
+List of books that I have read, started to read, heard a lot about and want to read. I can at least talk one sentence about these books.</description>
+    </item>
+    
+    <item>
+      <title>Quotes on Learning</title>
+      <link>https://robinsonraju.info/posts/2014-12-14-learning-quotes/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Quotes on Learning</title>
-        <link>https://robinsonraju.blog/posts/2014-12-14-learning-quotes/</link>
-        <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Fri, 14 Nov 2014 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2014-12-14-learning-quotes/</guid>
-        <description>Some quotes on learning -
+      <guid>https://robinsonraju.info/posts/2014-12-14-learning-quotes/</guid>
+      <description>Some quotes on learning -
  &amp;ldquo;Disce Quasi Semper Victurus; Vive Quasi Cras Moriturus.&amp;rdquo;
  Translated, it means:
- &amp;ldquo;Learn As if You Were Going to Live Forever; Live As if You Were Going to Die Tomorrow.&amp;rdquo;
- ~ Gandhi
-(In English, it is often attributed to Gandhi, the original Latin is commonly attributed to Edmund Rich (aka.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//images/img/quotes-bg.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+ &amp;ldquo;Learn As if You Were Going to Live Forever; Live As if You Were Going to Die Tomorrow.</description>
+    </item>
+    
+    <item>
+      <title>Time Tips</title>
+      <link>https://robinsonraju.info/posts/2014-11-14-time-tips/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Time Tips</title>
-        <link>https://robinsonraju.blog/posts/2014-11-14-time-tips/</link>
-        <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Fri, 14 Nov 2014 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2014-11-14-time-tips/</guid>
-        <description>Count all your time as time to be used and make every attempt to get satisfaction out of every moment. Find something to enjoy in whatever you do. Try to be an optimist and seek out the good in your life. Find ways to build on your successes. Stop regretting your failures and start learning from your mistakes.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2014-11-14-time-tips/</guid>
+      <description>Count all your time as time to be used and make every attempt to get satisfaction out of every moment. Find something to enjoy in whatever you do.</description>
+    </item>
+    
+    <item>
+      <title>The Spinning Melody and the Gateway</title>
+      <link>https://robinsonraju.info/posts/2014-01-20-the-spinning-melody-and-gateway/</link>
+      <pubDate>Mon, 20 Jan 2014 16:35:56 +0000</pubDate>
       
-      <item>
-        <title>The Spinning Melody and the Gateway</title>
-        <link>https://robinsonraju.blog/posts/2014-01-20-the-spinning-melody-and-gateway/</link>
-        <pubDate>Mon, 20 Jan 2014 16:35:56 +0000</pubDate>
-        
-        <atom:modified>Mon, 20 Jan 2014 16:35:56 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2014-01-20-the-spinning-melody-and-gateway/</guid>
-        <description>Reading &amp;ldquo;The Proof of Heaven&amp;rdquo; by Dr. Eben Alexander is almost like experiencing the NDE that he went through, to really be at the hospital with him where his loved ones were holding his hand 24/7 while he was in a coma, to be with him while he went through the underground, the gateway and the core back and forth experiencing the bright light and the melodious songs and the angelic being, to be able to hear with the whole being without anyone talking, to be able to see without physical eyes, to not have a concept of time, to feel a divine presence and be overjoyed to the fullest.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2014-01-20-the-spinning-melody-and-gateway/</guid>
+      <description>Reading &amp;ldquo;The Proof of Heaven&amp;rdquo; by Dr. Eben Alexander is almost like experiencing the NDE that he went through, to really be at the hospital with him where his loved ones were holding his hand 24/7 while he was in a coma, to be with him while he went through the underground, the gateway and the core back and forth experiencing the bright light and the melodious songs and the angelic being, to be able to hear with the whole being without anyone talking, to be able to see without physical eyes, to not have a concept of time, to feel a divine presence and be overjoyed to the fullest.</description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>https://robinsonraju.info/posts/quotes/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>Quotes</title>
-        <link>https://robinsonraju.blog/posts/quotes/</link>
-        <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Fri, 01 Jan 2010 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/quotes/</guid>
-        <description>&amp;ldquo;Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. Persistence and determination alone are omnipotent. The slogan &amp;lsquo;Press On&amp;rsquo; has solved and always will solve the problems of the human race.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/quotes/</guid>
+      <description>&amp;ldquo;Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb.</description>
+    </item>
+    
+    <item>
+      <title>The Other World</title>
+      <link>https://robinsonraju.info/posts/2009-01-11-the-other-world/</link>
+      <pubDate>Sun, 11 Jan 2009 17:24:36 +0000</pubDate>
       
-      <item>
-        <title>The Other World</title>
-        <link>https://robinsonraju.blog/posts/2009-01-11-the-other-world/</link>
-        <pubDate>Sun, 11 Jan 2009 17:24:36 +0000</pubDate>
-        
-        <atom:modified>Sun, 11 Jan 2009 17:24:36 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2009-01-11-the-other-world/</guid>
-        <description>&amp;ldquo;Ankle deep, he waded through the bluebells. His spirit rose and exalted&amp;hellip; as he breathed in the sun-drenched air. The glorious day was in its last decline. Long shadows lay on the sward&amp;hellip; and from above the leaves dripped their shimmering drops of gold-green light.
-Moths and butterflies swarmed in merry hosts&amp;hellip; flittering here, glimmering there.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2009-01-11-the-other-world/</guid>
+      <description>&amp;ldquo;Ankle deep, he waded through the bluebells. His spirit rose and exalted&amp;hellip; as he breathed in the sun-drenched air. The glorious day was in its last decline.</description>
+    </item>
+    
+    <item>
+      <title>A New Beginning</title>
+      <link>https://robinsonraju.info/posts/2009-01-04-new-beginning/</link>
+      <pubDate>Sun, 04 Jan 2009 14:26:16 +0000</pubDate>
       
-      <item>
-        <title>A New Beginning</title>
-        <link>https://robinsonraju.blog/posts/2009-01-04-new-beginning/</link>
-        <pubDate>Sun, 04 Jan 2009 14:26:16 +0000</pubDate>
-        
-        <atom:modified>Sun, 04 Jan 2009 14:26:16 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2009-01-04-new-beginning/</guid>
-        <description>More than a year whizzed past without me writing anything here.
-When you&amp;rsquo;re working for a company that does more than double the work in less than half the time that the client does it in and if the client happens to be this uber-fast techie company that rolls out 8 million lines of code once every 2 weeks with almost 50K lines of code changing every week, time is a pricey quantity.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2009-01-04-new-beginning/</guid>
+      <description>More than a year whizzed past without me writing anything here. When you&amp;rsquo;re working for a company that does more than double the work in less than half the time that the client does it in and if the client happens to be this uber-fast techie company that rolls out 8 million lines of code once every 2 weeks with almost 50K lines of code changing every week, time is a pricey quantity.</description>
+    </item>
+    
+    <item>
+      <title>Write now, Right now!</title>
+      <link>https://robinsonraju.info/posts/2009-01-04-write-now-right-now/</link>
+      <pubDate>Sun, 04 Jan 2009 01:55:42 +0000</pubDate>
       
-      <item>
-        <title>Write now, Right now!</title>
-        <link>https://robinsonraju.blog/posts/2009-01-04-write-now-right-now/</link>
-        <pubDate>Sun, 04 Jan 2009 01:55:42 +0000</pubDate>
-        
-        <atom:modified>Sun, 04 Jan 2009 01:55:42 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2009-01-04-write-now-right-now/</guid>
-        <description>A has given me the ultimatum.
-&amp;ldquo;It is too much. You&amp;rsquo;ve been fooling me for more than a year. Write now. Just 10 minutes. Whatever comes to your mind&amp;rdquo;
-She&amp;rsquo;s been hitting the url for over a year expecting me to surprise her by writing something and I&amp;rsquo;ve always been saying.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2009-01-04-write-now-right-now/</guid>
+      <description>A has given me the ultimatum. &amp;ldquo;It is too much. You&amp;rsquo;ve been fooling me for more than a year. Write now. Just 10 minutes. Whatever comes to your mind&amp;rdquo; She&amp;rsquo;s been hitting the url for over a year expecting me to surprise her by writing something and I&amp;rsquo;ve always been saying.</description>
+    </item>
+    
+    <item>
+      <title>Astral Blueberries</title>
+      <link>https://robinsonraju.info/posts/2007-11-13-astral-blueberries/</link>
+      <pubDate>Tue, 13 Nov 2007 03:19:32 +0000</pubDate>
       
-      <item>
-        <title>Astral Blueberries</title>
-        <link>https://robinsonraju.blog/posts/2007-11-13-astral-blueberries/</link>
-        <pubDate>Tue, 13 Nov 2007 03:19:32 +0000</pubDate>
-        
-        <atom:modified>Tue, 13 Nov 2007 03:19:32 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2007-11-13-astral-blueberries/</guid>
-        <description>I’m lying flat on my back and looking at the open sky. It is clear. There are no stars. Only a single moon.
-Is the queen of the night sky smiling at me ?
-Or at the seabird sitting at the stern.
-Or at her own beauty that is reflected by the sea ?</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2007-11-13-astral-blueberries/</guid>
+      <description>I’m lying flat on my back and looking at the open sky. It is clear. There are no stars. Only a single moon. Is the queen of the night sky smiling at me ?</description>
+    </item>
+    
+    <item>
+      <title>Rainbow Butterflies</title>
+      <link>https://robinsonraju.info/posts/2007-11-09-rainbow-butterflies/</link>
+      <pubDate>Fri, 09 Nov 2007 08:38:12 +0000</pubDate>
       
-      <item>
-        <title>Rainbow Butterflies</title>
-        <link>https://robinsonraju.blog/posts/2007-11-09-rainbow-butterflies/</link>
-        <pubDate>Fri, 09 Nov 2007 08:38:12 +0000</pubDate>
-        
-        <atom:modified>Fri, 09 Nov 2007 08:38:12 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2007-11-09-rainbow-butterflies/</guid>
-        <description>Thought of finally taking a break to roll up my sleeves, blow the dust off the writing desk and sit and gather the fluttering paper rainbow butterflies and stick them to the book.  They’re around, just a catch away. The touch of the rainbow butterflies, oh boy ! they almost take my breath away.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2007-11-09-rainbow-butterflies/</guid>
+      <description>Header Image - &amp;ldquo;Orange Sulphur in Miss Huff&amp;rdquo; by Vicki DeLoach via Flickr.</description>
+    </item>
+    
+    <item>
+      <title>A Poet&#39;s Corner</title>
+      <link>https://robinsonraju.info/posts/2007-08-07-poets-corner/</link>
+      <pubDate>Tue, 07 Aug 2007 01:49:31 +0000</pubDate>
       
-      <item>
-        <title>A Poet&#39;s Corner</title>
-        <link>https://robinsonraju.blog/posts/2007-08-07-poets-corner/</link>
-        <pubDate>Tue, 07 Aug 2007 01:49:31 +0000</pubDate>
-        
-        <atom:modified>Tue, 07 Aug 2007 01:49:31 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2007-08-07-poets-corner/</guid>
-        <description>Re-lived a wonderful moment when I accidentally read one of my old scribblings.
- There are some places where the moment you go, you feel completely at ease ; you’d stay, transfixed with a longing in your heart to be left there forever! It could be a library, a church, a temple, top of a mountain, a beach, an island, a hut in the middle of a forest, a river bank .</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2007-08-07-poets-corner/</guid>
+      <description>Re-lived a wonderful moment when I accidentally read one of my old scribblings.
+When I think back, there is much more to describe. Much more beyond description.</description>
+    </item>
+    
+    <item>
+      <title>Waking Dream</title>
+      <link>https://robinsonraju.info/posts/2007-08-05-waking-dream/</link>
+      <pubDate>Sun, 05 Aug 2007 04:07:11 +0000</pubDate>
       
-      <item>
-        <title>Waking Dream</title>
-        <link>https://robinsonraju.blog/posts/2007-08-05-waking-dream/</link>
-        <pubDate>Sun, 05 Aug 2007 04:07:11 +0000</pubDate>
-        
-        <atom:modified>Sun, 05 Aug 2007 04:07:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2007-08-05-waking-dream/</guid>
-        <description>In my dream I was sleeping. A was shaking my hand.
+      <guid>https://robinsonraju.info/posts/2007-08-05-waking-dream/</guid>
+      <description>In my dream I was sleeping. A was shaking my hand.
 “Achaya..wake up.. wake up.. I can’t find the books.”
 “What books ? ”
-“The ones I kept in the box yesterday. The box is empty now.”
-“Yeah, the books walked away. You ignored them for too long. You know indifference is a punishment more severe than hatred.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+“The ones I kept in the box yesterday.</description>
+    </item>
+    
+    <item>
+      <title>The Blue Lenses</title>
+      <link>https://robinsonraju.info/posts/2007-04-19-the-blue-lenses/</link>
+      <pubDate>Thu, 19 Apr 2007 08:46:31 +0000</pubDate>
       
-      <item>
-        <title>The Blue Lenses</title>
-        <link>https://robinsonraju.blog/posts/2007-04-19-the-blue-lenses/</link>
-        <pubDate>Thu, 19 Apr 2007 08:46:31 +0000</pubDate>
-        
-        <atom:modified>Thu, 19 Apr 2007 08:46:31 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2007-04-19-the-blue-lenses/</guid>
-        <description>A recent trip to Mount Shasta became more memorable due to me losing my glasses. When the optician asked me if I wanted the sunlight coating, I said yes. Well ! when someone sounds as though she’s offering the best thing in the world, you’ve got no option but to have it.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2007-04-19-the-blue-lenses/</guid>
+      <description>A recent trip to Mount Shasta became more memorable due to me losing my glasses. When the optician asked me if I wanted the sunlight coating, I said yes.</description>
+    </item>
+    
+    <item>
+      <title>The Spice of Life - Movies and Songs</title>
+      <link>https://robinsonraju.info/posts/2006-08-12-spice-of-life-movies-and-songs/</link>
+      <pubDate>Sat, 12 Aug 2006 22:43:11 +0000</pubDate>
       
-      <item>
-        <title>The Spice of Life - Movies and Songs</title>
-        <link>https://robinsonraju.blog/posts/2006-08-12-spice-of-life-movies-and-songs/</link>
-        <pubDate>Sat, 12 Aug 2006 22:43:11 +0000</pubDate>
-        
-        <atom:modified>Sat, 12 Aug 2006 22:43:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-08-12-spice-of-life-movies-and-songs/</guid>
-        <description>S called. Before he started speaking, I knew what he’d say. Let’s meet up and study something. Yeah ! it’s been over a month since 2nd semester started and we hadn’t even looked into the books list. EC1 was a couple of weeks ahead. It was time.
-He was in Stanford meeting up with some friend.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-08-12-spice-of-life-movies-and-songs/</guid>
+      <description>S called. Before he started speaking, I knew what he’d say. Let’s meet up and study something. Yeah ! it’s been over a month since 2nd semester started and we hadn’t even looked into the books list.</description>
+    </item>
+    
+    <item>
+      <title>Top 5 Movies and Songs</title>
+      <link>https://robinsonraju.info/posts/2006-08-12-top-5-movies-and-songs/</link>
+      <pubDate>Sat, 12 Aug 2006 22:43:11 +0000</pubDate>
       
-      <item>
-        <title>Top 5 Movies and Songs</title>
-        <link>https://robinsonraju.blog/posts/2006-08-12-top-5-movies-and-songs/</link>
-        <pubDate>Sat, 12 Aug 2006 22:43:11 +0000</pubDate>
-        
-        <atom:modified>Sat, 12 Aug 2006 22:43:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-08-12-top-5-movies-and-songs/</guid>
-        <description>Movies English
+      <guid>https://robinsonraju.info/posts/2006-08-12-top-5-movies-and-songs/</guid>
+      <description>Movies #  English
  The Matrix Forrest Gump T2 The Saint The Terminal  Malayalam
- Thalavattam Manichittrathazhu Veendum chila veetu kaaryangal Kireedam Sanmanassulavarku samadhanam  Kannada
- Ramachari Muthina Haara Nammura Mandara Hoove Rayaru bandaru mavana manege Amruthavarshini  Hindi
- Sarfarosh Deewar Rang De Basanti Anand Ghulam  Tamil</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Lists</category>
-            
-          
-        
-        
-      </item>
+ Thalavattam Manichittrathazhu Veendum chila veetu kaaryangal Kireedam Sanmanassulavarku samadhanam  Kannada</description>
+    </item>
+    
+    <item>
+      <title>Is Infinity lit ?</title>
+      <link>https://robinsonraju.info/posts/2006-08-10-is-infinity-lit/</link>
+      <pubDate>Thu, 10 Aug 2006 12:02:01 +0000</pubDate>
       
-      <item>
-        <title>Is Infinity lit ?</title>
-        <link>https://robinsonraju.blog/posts/2006-08-10-is-infinity-lit/</link>
-        <pubDate>Thu, 10 Aug 2006 12:02:01 +0000</pubDate>
-        
-        <atom:modified>Thu, 10 Aug 2006 12:02:01 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-08-10-is-infinity-lit/</guid>
-        <description>He was standing near the sun. There was brightness everywhere, almost blinding him. He could see the rays going away – far away to distant lands, giving light, feeding happiness.
-But he couldn’t stand there for long. Some strong force was pulling him away. He clenched his teeth, tightened his muscles, held his fists in a tight grip, He tried .</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-08-10-is-infinity-lit/</guid>
+      <description>He was standing near the sun. There was brightness everywhere, almost blinding him. He could see the rays going away – far away to distant lands, giving light, feeding happiness.</description>
+    </item>
+    
+    <item>
+      <title>The destruction of Sennacherib</title>
+      <link>https://robinsonraju.info/posts/2006-07-05-destruction-of-sennacherib/</link>
+      <pubDate>Wed, 05 Jul 2006 02:05:33 +0000</pubDate>
       
-      <item>
-        <title>The destruction of Sennacherib</title>
-        <link>https://robinsonraju.blog/posts/2006-07-05-destruction-of-sennacherib/</link>
-        <pubDate>Wed, 05 Jul 2006 02:05:33 +0000</pubDate>
-        
-        <atom:modified>Wed, 05 Jul 2006 02:05:33 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-07-05-destruction-of-sennacherib/</guid>
-        <description>Some days you get up slowly ..
-sit or sometimes sit n sleep on the bed for sometime ..
-wait for thoughts to gather, slowly come into terms with the world – as though you need time to gradually transition from one world to completely different one – as though you just came out of water and you’re gasping for breath.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-07-05-destruction-of-sennacherib/</guid>
+      <description>Some days you get up slowly ..sit or sometimes sit n sleep on the bed for sometime ..wait for thoughts to gather, slowly come into terms with the world – as though you need time to gradually transition from one world to completely different one – as though you just came out of water and you’re gasping for breath.</description>
+    </item>
+    
+    <item>
+      <title>Fermat&#39;s Last Theorem - Amir Aczel</title>
+      <link>https://robinsonraju.info/books/2006-07-02-fermats-last-theorem/</link>
+      <pubDate>Sun, 02 Jul 2006 23:44:13 +0000</pubDate>
       
-      <item>
-        <title>Fermat&#39;s Last Theorem - Amir Aczel</title>
-        <link>https://robinsonraju.blog/books/2006-07-02-fermats-last-theorem/</link>
-        <pubDate>Sun, 02 Jul 2006 23:44:13 +0000</pubDate>
-        
-        <atom:modified>Thu, 15 Oct 2015 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/books/2006-07-02-fermats-last-theorem/</guid>
-        <description>Amir Aczel’s &amp;ldquo;Fermat’s Last Theorem&amp;rdquo; begins with this amazing quote by Andrew Wiles.
-Yes ! he is the one .. the mathematician who solved the most famous unsolvable problem in the history of Mathematics . Over a span of 3 centuries, thousands of brilliant and hardworking men and women were at it.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//img/general/blog_fermat.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Book Notes</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/books/2006-07-02-fermats-last-theorem/</guid>
+      <description>Amir Aczel’s &amp;ldquo;Fermat’s Last Theorem&amp;rdquo; begins with this amazing quote by Andrew Wiles.Yes ! he is the one .. the mathematician who solved the most famous unsolvable problem in the history of Mathematics .</description>
+    </item>
+    
+    <item>
+      <title>Message in a bottle ?</title>
+      <link>https://robinsonraju.info/posts/2006-05-19-message-in-a-bottle/</link>
+      <pubDate>Fri, 19 May 2006 02:12:11 +0000</pubDate>
       
-      <item>
-        <title>Message in a bottle ?</title>
-        <link>https://robinsonraju.blog/posts/2006-05-19-message-in-a-bottle/</link>
-        <pubDate>Fri, 19 May 2006 02:12:11 +0000</pubDate>
-        
-        <atom:modified>Fri, 19 May 2006 02:12:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-05-19-message-in-a-bottle/</guid>
-        <description>Though sleeping, reading and watching movies were the only major things that I did during this weekend, what I really wanted to do was to go to a beach, write something, put it into a bottle and throw it into the sea.
-Yeah ! Yes ! just like that !</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-05-19-message-in-a-bottle/</guid>
+      <description>Though sleeping, reading and watching movies were the only major things that I did during this weekend, what I really wanted to do was to go to a beach, write something, put it into a bottle and throw it into the sea.</description>
+    </item>
+    
+    <item>
+      <title>Appearances are deceptive !</title>
+      <link>https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/</link>
+      <pubDate>Mon, 15 May 2006 00:07:31 +0000</pubDate>
       
-      <item>
-        <title>Appearances are deceptive !</title>
-        <link>https://robinsonraju.blog/posts/2006-05-15-appearances-are-deceptive/</link>
-        <pubDate>Mon, 15 May 2006 00:07:31 +0000</pubDate>
-        
-        <atom:modified>Mon, 15 May 2006 00:07:31 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-05-15-appearances-are-deceptive/</guid>
-        <description>Gosh ! I jus came to know that A’d changed from specs to lenses. When ? Now I got it ! I met him last week.. that too after a gap of a year ! he asked if I noticed any change in him. I get into this confused-i-wanna-chicken-out kind of state when someone asks me this !</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-05-15-appearances-are-deceptive/</guid>
+      <description>Gosh ! I jus came to know that A’d changed from specs to lenses. When ? Now I got it ! I met him last week.</description>
+    </item>
+    
+    <item>
+      <title>A time to celebrate</title>
+      <link>https://robinsonraju.info/posts/2006-05-07-time-to-celebrate/</link>
+      <pubDate>Sun, 07 May 2006 00:06:11 +0000</pubDate>
       
-      <item>
-        <title>A time to celebrate</title>
-        <link>https://robinsonraju.blog/posts/2006-05-07-time-to-celebrate/</link>
-        <pubDate>Sun, 07 May 2006 00:06:11 +0000</pubDate>
-        
-        <atom:modified>Sun, 07 May 2006 00:06:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-05-07-time-to-celebrate/</guid>
-        <description>St.George’s festival. Theophilus thirumeni (formerly MC Cherian achen) went over St. George’s life – the same story that had been told to me many times as a kid – more so because I had this paranoid fear of snakes. I’ve had moments in which I missed stamping on a snake or a snake bite by sheer luck !</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-05-07-time-to-celebrate/</guid>
+      <description>St.George’s festival. Theophilus thirumeni (formerly MC Cherian achen) went over St. George’s life – the same story that had been told to me many times as a kid – more so because I had this paranoid fear of snakes.</description>
+    </item>
+    
+    <item>
+      <title>A beautiful day</title>
+      <link>https://robinsonraju.info/posts/2006-04-30-a-beautiful-day/</link>
+      <pubDate>Sun, 30 Apr 2006 23:56:11 +0000</pubDate>
       
-      <item>
-        <title>A beautiful day</title>
-        <link>https://robinsonraju.blog/posts/2006-04-30-a-beautiful-day/</link>
-        <pubDate>Sun, 30 Apr 2006 23:56:11 +0000</pubDate>
-        
-        <atom:modified>Sun, 30 Apr 2006 23:56:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-04-30-a-beautiful-day/</guid>
-        <description>&#34;...bright copper kettles and warm woolen mittens Brown paper packages tied up with strings,
-These are a few of my favorite things.&#34;
- ~ &#39;The Sound of Music&#39; The first thing that I did was to watch the rest of &amp;lsquo;The Sound of Music&#39;
-The &amp;lsquo;favourite things&amp;rsquo; song was still afresh in my mind.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-04-30-a-beautiful-day/</guid>
+      <description>The first thing that I did was to watch the rest of &amp;lsquo;The Sound of Music&#39;The &amp;lsquo;favourite things&amp;rsquo; song was still afresh in my mind. I&amp;rsquo;d watched it till Maria stealthily ran away to the abbey.</description>
+    </item>
+    
+    <item>
+      <title>Francisco d&#39;Anconia&#39;s Speech on Money</title>
+      <link>https://robinsonraju.info/posts/2006-03-19-francisco-d-anconia-speech-money/</link>
+      <pubDate>Sun, 19 Mar 2006 20:13:12 +0000</pubDate>
       
-      <item>
-        <title>Francisco d&#39;Anconia&#39;s Speech on Money</title>
-        <link>https://robinsonraju.blog/posts/2006-03-19-francisco-d-anconia-speech-money/</link>
-        <pubDate>Sun, 19 Mar 2006 20:13:12 +0000</pubDate>
-        
-        <atom:modified>Tue, 25 Aug 2020 00:00:00 -0700</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-03-19-francisco-d-anconia-speech-money/</guid>
-        <description>Fransisco d&amp;rsquo;Anconia&amp;rsquo;s speech from Atlas Shrugged1 when someone says &amp;ldquo;Money is the root of all evil&amp;rdquo; &amp;ldquo;So you think that money is the root of all evil?&amp;quot; said Francisco d&amp;rsquo;Anconia.
-&amp;ldquo;Have you ever asked what is the root of money? Money is a tool of exchange, which can&amp;rsquo;t exist unless there are goods produced and men able to produce them.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-03-19-francisco-d-anconia-speech-money/</guid>
+      <description>Fransisco d&amp;rsquo;Anconia&amp;rsquo;s speech from Atlas Shrugged1 when someone says &amp;ldquo;Money is the root of all evil&amp;rdquo; #  &amp;ldquo;So you think that money is the root of all evil?</description>
+    </item>
+    
+    <item>
+      <title>The Storyteller&#39;s Creed</title>
+      <link>https://robinsonraju.info/posts/2006-02-08-storytellers-creed/</link>
+      <pubDate>Wed, 08 Feb 2006 22:33:11 +0000</pubDate>
       
-      <item>
-        <title>The Storyteller&#39;s Creed</title>
-        <link>https://robinsonraju.blog/posts/2006-02-08-storytellers-creed/</link>
-        <pubDate>Wed, 08 Feb 2006 22:33:11 +0000</pubDate>
-        
-        <atom:modified>Wed, 08 Feb 2006 22:33:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-02-08-storytellers-creed/</guid>
-        <description>I believe that imagination is stronger than knowledge.
-That myth is more potent than history.
-That dreams are more powerful than facts.
-That hope always triumphs over experience.
-That laughter is the only cure for grief.
-And I believe that love is stronger than death.
-This is from a book named ‘All I really need to know I learned in kindergarten’.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-02-08-storytellers-creed/</guid>
+      <description>This is from a book named ‘All I really need to know I learned in kindergarten’. D was so ecstatic about it on the phone that I ordered the book online as soon as I got a chance.</description>
+    </item>
+    
+    <item>
+      <title>I am you, You are me</title>
+      <link>https://robinsonraju.info/posts/2006-01-27-im-you-youre-me/</link>
+      <pubDate>Fri, 27 Jan 2006 23:26:11 +0000</pubDate>
       
-      <item>
-        <title>I am you, You are me</title>
-        <link>https://robinsonraju.blog/posts/2006-01-27-im-you-youre-me/</link>
-        <pubDate>Fri, 27 Jan 2006 23:26:11 +0000</pubDate>
-        
-        <atom:modified>Fri, 27 Jan 2006 23:26:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-01-27-im-you-youre-me/</guid>
-        <description>Chinese new year ! C took us to the most famous sea food restaurant here. ABC seafood center ! We spent a good 20 minutes to find a place to park only to find over 20 people waiting in line. But luckily C had arranged for everything and we just had to go to the table where he and other team members were sitting.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-01-27-im-you-youre-me/</guid>
+      <description>Chinese new year ! C took us to the most famous sea food restaurant here. ABC seafood center ! We spent a good 20 minutes to find a place to park only to find over 20 people waiting in line.</description>
+    </item>
+    
+    <item>
+      <title>The Master of The Game</title>
+      <link>https://robinsonraju.info/posts/2006-01-26-master-of-the-game/</link>
+      <pubDate>Thu, 26 Jan 2006 23:36:31 +0000</pubDate>
       
-      <item>
-        <title>The Master of The Game</title>
-        <link>https://robinsonraju.blog/posts/2006-01-26-master-of-the-game/</link>
-        <pubDate>Thu, 26 Jan 2006 23:36:31 +0000</pubDate>
-        
-        <atom:modified>Thu, 26 Jan 2006 23:36:31 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-01-26-master-of-the-game/</guid>
-        <description>For three days he has been working on it.
-Finally he got it. ‘Is that it? That’s all? Aww’ he thought. He could now do it in a mere two hours. Instead of rejoicing that his labour had finally borne fruit, he was unhappy. A person with experience could do it in 2 hours.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-01-26-master-of-the-game/</guid>
+      <description>Experience means recognizing patterns. Attribute the observed pattern to something that you have already done. If you have competence in that field, you must have done something similar.</description>
+    </item>
+    
+    <item>
+      <title>A Sanguine Tale</title>
+      <link>https://robinsonraju.info/posts/2006-01-25-sanguine-tale/</link>
+      <pubDate>Wed, 25 Jan 2006 22:46:21 +0000</pubDate>
       
-      <item>
-        <title>A Sanguine Tale</title>
-        <link>https://robinsonraju.blog/posts/2006-01-25-sanguine-tale/</link>
-        <pubDate>Wed, 25 Jan 2006 22:46:21 +0000</pubDate>
-        
-        <atom:modified>Wed, 25 Jan 2006 22:46:21 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-01-25-sanguine-tale/</guid>
-        <description>The good soul decides to do something good. He feels happy about the great deed he is about to perform.
-In his mind he sees obscure faces of people whom he might save.
-When he had done it in the past, he had felt weak and had gone home and slept .</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-01-25-sanguine-tale/</guid>
+      <description>The good soul decides to do something good. He feels happy about the great deed he is about to perform.In his mind he sees obscure faces of people whom he might save.</description>
+    </item>
+    
+    <item>
+      <title>All charged up for nothing</title>
+      <link>https://robinsonraju.info/posts/2006-01-23-all-charged-up-for-nothing/</link>
+      <pubDate>Mon, 23 Jan 2006 22:16:11 +0000</pubDate>
       
-      <item>
-        <title>All charged up for nothing</title>
-        <link>https://robinsonraju.blog/posts/2006-01-23-all-charged-up-for-nothing/</link>
-        <pubDate>Mon, 23 Jan 2006 22:16:11 +0000</pubDate>
-        
-        <atom:modified>Mon, 23 Jan 2006 22:16:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2006-01-23-all-charged-up-for-nothing/</guid>
-        <description>Ever started your day in the office with a rude shock? I mean, shock in the literal sense. I’ve discovered that being a good chap who switches off his monitor before calling it a day (to save power!) has its disadvantages, especially if he is a ..err..&amp;lsquo;static electric&amp;rsquo; person – someone who gets a shock even before he touches the metal switch to turn on the power.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2006-01-23-all-charged-up-for-nothing/</guid>
+      <description>Ever started your day in the office with a rude shock? I mean, shock in the literal sense. I’ve discovered that being a good chap who switches off his monitor before calling it a day (to save power!</description>
+    </item>
+    
+    <item>
+      <title>about not wanting to buy so many books</title>
+      <link>https://robinsonraju.info/posts/2005-06-10-about-not-wanting-to-buy-so-many-books/</link>
+      <pubDate>Fri, 10 Jun 2005 11:30:41 +0000</pubDate>
       
-      <item>
-        <title>about not wanting to buy so many books</title>
-        <link>https://robinsonraju.blog/posts/2005-06-10-about-not-wanting-to-buy-so-many-books/</link>
-        <pubDate>Fri, 10 Jun 2005 11:30:41 +0000</pubDate>
-        
-        <atom:modified>Fri, 10 Jun 2005 11:30:41 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2005-06-10-about-not-wanting-to-buy-so-many-books/</guid>
-        <description>Much as I want to buy as many books as I want , I don’t like being forced into book-buying , to feel that I’ve done something which I could’ve avoided. That’s exactly what happens when I go to Church street / MG Road. Blossoms, Gangarams, HigginBothams, LB publishers, Crossword ; so many book shops each just a hop away from each other that almost all the time , I’d just enter one , lose my whole evening , and most of time feel : “this is the time to buy , what if I am short of cash tomorrow ?</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://robinsonraju.info/posts/2005-06-10-about-not-wanting-to-buy-so-many-books/</guid>
+      <description>Much as I want to buy as many books as I want , I don’t like being forced into book-buying , to feel that I’ve done something which I could’ve avoided.</description>
+    </item>
+    
+    <item>
+      <title>here cometh the time to blog</title>
+      <link>https://robinsonraju.info/posts/2005-06-07-here-cometh-time-to-blog/</link>
+      <pubDate>Tue, 07 Jun 2005 03:16:41 +0000</pubDate>
       
-      <item>
-        <title>here cometh the time to blog</title>
-        <link>https://robinsonraju.blog/posts/2005-06-07-here-cometh-time-to-blog/</link>
-        <pubDate>Tue, 07 Jun 2005 03:16:41 +0000</pubDate>
-        
-        <atom:modified>Tue, 07 Jun 2005 03:16:41 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/2005-06-07-here-cometh-time-to-blog/</guid>
-        <description>everyone seems to be blogging.
-is that why i want to blog ? nopes . i have this strong tendency to go retro from the direction that the crowd is going . so thats not the reason. anyway , let me make my tendencies a subject of another post.
-back to why i thought of blogging , i am freeeeeeeeeeeeeee</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://robinsonraju.info/posts/2005-06-07-here-cometh-time-to-blog/</guid>
+      <description>everyone seems to be blogging. is that why i want to blog ? nopes . i have this strong tendency to go retro from the direction that the crowd is going .</description>
+    </item>
     
   </channel>
 </rss>

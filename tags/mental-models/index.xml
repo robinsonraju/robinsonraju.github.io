@@ -1,130 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mental Models on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.blog/tags/mental-models/</link>
+    <link>https://robinsonraju.info/tags/mental-models/</link>
     <description>Recent content in Mental Models on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <language>en-us</language>
+    <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://robinsonraju.blog/tags/mental-models/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/tags/mental-models/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>The Great Mental Models: Volume 2</title>
+      <link>https://robinsonraju.info/books/2020-10-17-great-mental-models-2/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2020-10-17-great-mental-models-2/</guid>
+      <description>&amp;ldquo;Combining a deep specialized knowledge in a domain with a broader understanding of the rules that govern the physical world is a rare combination that saves you time, money, and problems.</description>
+    </item>
     
-
+    <item>
+      <title>The Great Mental Models: Volume 1</title>
+      <link>https://robinsonraju.info/books/2020-04-28-great-mental-models/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Great Mental Models: Volume 2</title>
-        <link>https://robinsonraju.blog/books/2020-10-17-great-mental-models-2/</link>
-        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sun, 18 Oct 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/books/2020-10-17-great-mental-models-2/</guid>
-        <description>&amp;ldquo;Combining a deep specialized knowledge in a domain with a broader understanding of the rules that govern the physical world is a rare combination that saves you time, money, and problems.&amp;rdquo;
-~ &amp;ldquo;The Great Mental Models Volume 2: Physics, Chemistry and Biology&amp;rdquo;1 by Shane Parrish.
- Thoughts It was greatly fulfilling to read this book.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/great-mental-models-2.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>The Great Mental Models</category>
-            
-          
-            
-              <category>Mental Models</category>
-            
-          
-            
-              <category>Philosophy</category>
-            
-          
-            
-              <category>Shane Parrish</category>
-            
-          
-            
-              <category>Farnam Street</category>
-            
-          
-            
-              <category>Books</category>
-            
-          
-        
-        
-          
-            
-              <category>Book Notes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>The Great Mental Models: Volume 1</title>
-        <link>https://robinsonraju.blog/books/2020-04-28-great-mental-models/</link>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Tue, 28 Apr 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/books/2020-04-28-great-mental-models/</guid>
-        <description>&amp;ldquo;The quality of your thinking depends on the models that are in your head.&amp;rdquo;
-~ The Great Mental Models, Volume 1: General Thinking Concepts1 by Shane Parrish &amp;amp; Rhiannon Beaubien
- Thoughts I was introduced to The Knowledge Project2 by AJ last year during one of our 1-1 walks around the campus.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/great-mental-models-1.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>The Great Mental Models</category>
-            
-          
-            
-              <category>Mental Models</category>
-            
-          
-            
-              <category>Philosophy</category>
-            
-          
-            
-              <category>Shane Parrish</category>
-            
-          
-            
-              <category>Farnam Street</category>
-            
-          
-            
-              <category>Books</category>
-            
-          
-        
-        
-          
-            
-              <category>Book Notes</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://robinsonraju.info/books/2020-04-28-great-mental-models/</guid>
+      <description>&amp;ldquo;The quality of your thinking depends on the models that are in your head.&amp;rdquo; ~ The Great Mental Models, Volume 1: General Thinking Concepts1 by Shane Parrish &amp;amp; Rhiannon Beaubien</description>
+    </item>
     
   </channel>
 </rss>

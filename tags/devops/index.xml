@@ -1,125 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevOps on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.blog/tags/devops/</link>
+    <link>https://robinsonraju.info/tags/devops/</link>
     <description>Recent content in DevOps on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
+    <language>en-us</language>
+    <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://robinsonraju.blog/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>The Phoenix Project</title>
+      <link>https://robinsonraju.info/books/2020-12-19-the-phoenix-project/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robinsonraju.info/books/2020-12-19-the-phoenix-project/</guid>
+      <description>&amp;ldquo;Like matter and antimatter, in the presence of unplanned work, all planned work ignites with incandescent fury, incinerating everything around it.&amp;quot; ~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win1</description>
+    </item>
     
-
+    <item>
+      <title>Dave Farley&#39;s Review of the State of DevOps Report</title>
+      <link>https://robinsonraju.info/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <item>
-        <title>The Phoenix Project</title>
-        <link>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</link>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 19 Dec 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</guid>
-        <description>&amp;ldquo;Like matter and antimatter, in the presence of unplanned work, all planned work ignites with incandescent fury, incinerating everything around it.&amp;quot;
-~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win1
- The book makes the case for proper planning, rigor, and discipline as an antidote to getting out of the impossible quagmire of technical debt, tightly coupled systems and unachievable product deadlines.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/The_Phoenix_Project.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>The Phoenix project</category>
-            
-          
-            
-              <category>DevOps</category>
-            
-          
-            
-              <category>Continuous Integration</category>
-            
-          
-            
-              <category>Gene Kim</category>
-            
-          
-            
-              <category>Software Engineering</category>
-            
-          
-            
-              <category>Books</category>
-            
-          
-        
-        
-          
-            
-              <category>Book Notes</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Dave Farley&#39;s Review of the State of DevOps Report</title>
-        <link>https://robinsonraju.blog/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
-        <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 05 Dec 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
-        <description>&amp;ldquo;Teams that are best at DevOps and continuous delivery can release software thousands of times more quickly and with a small fraction of the defects.&amp;rdquo;
- The above quote is from Dave Farley&amp;rsquo;s review1 of &amp;ldquo;The State of DevOps&amp;rdquo; report2. It rang so true that I tweeted it. Martin Fowler responded to the original Tweet from Dave asking if there was a transcript available.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//blog/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-          
-            
-              <category>DevOps</category>
-            
-          
-            
-              <category>CI</category>
-            
-          
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-            
-              <category>Technical Notes</category>
-            
-          
-            
-              <category>DevOps</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://robinsonraju.info/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
+      <description>&amp;ldquo;Teams that are best at DevOps and continuous delivery can release software thousands of times more quickly and with a small fraction of the defects.</description>
+    </item>
     
   </channel>
 </rss>
