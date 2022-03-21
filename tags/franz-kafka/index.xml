@@ -1,25 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Franz Kafka on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/tags/franz-kafka/</link>
+    <link>https://robinsonraju.blog/tags/franz-kafka/</link>
     <description>Recent content in Franz Kafka on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2022 Robinson Raju</copyright>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/tags/franz-kafka/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://robinsonraju.blog/tags/franz-kafka/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Metamorphosis</title>
-      <link>https://robinsonraju.info/books/2021-07-24-metamorphosis/</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+    
+
       
-      <guid>https://robinsonraju.info/books/2021-07-24-metamorphosis/</guid>
-      <description>People did not understand his words any more, although they seemed clear enough to him, clearer than previously ..&amp;rdquo; ~ The Metamorphosis from Franz Kafka1</description>
-    </item>
+      <item>
+        <title>Metamorphosis</title>
+        <link>https://robinsonraju.blog/books/2021-07-24-metamorphosis/</link>
+        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 24 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-07-24-metamorphosis/</guid>
+        <description>People did not understand his words any more, although they seemed clear enough to him, clearer than previously ..&amp;rdquo;
+~ The Metamorphosis from Franz Kafka1
+ Metamorphosis is a short novel that you can finish reading in a few hours. But those few hours can truly set you thinking for several days.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/metamorphosis.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Metamorphosis</category>
+            
+          
+            
+              <category>Franz Kafka</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

@@ -1,115 +1,545 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Books on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/tags/books/</link>
+    <link>https://robinsonraju.blog/tags/books/</link>
     <description>Recent content in Books on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2022 Robinson Raju</copyright>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/tags/books/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://robinsonraju.blog/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Beyond Order: 12 More Rules for Life</title>
-      <link>https://robinsonraju.info/books/2021-08-07-beyond-order/</link>
-      <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
+    
+
       
-      <guid>https://robinsonraju.info/books/2021-08-07-beyond-order/</guid>
-      <description>&amp;ldquo;When you are visited by chaos and swallowed up; when nature curses you or someone you love with illness; or when tyranny rends asunder something of value that you have built, it is salutary to know the rest of the story.</description>
-    </item>
-    
-    <item>
-      <title>Metamorphosis</title>
-      <link>https://robinsonraju.info/books/2021-07-24-metamorphosis/</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      <item>
+        <title>Beyond Order: 12 More Rules for Life</title>
+        <link>https://robinsonraju.blog/books/2021-08-07-beyond-order/</link>
+        <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 07 Aug 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-08-07-beyond-order/</guid>
+        <description>&amp;ldquo;When you are visited by chaos and swallowed up; when nature curses you or someone you love with illness; or when tyranny rends asunder something of value that you have built, it is salutary to know the rest of the story. All of that misfortune is only the bitter half of the tale of existence, without taking note of the heroic element of redemption or the nobility of the human spirit requiring a certain responsibility to shoulder.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/beyond_order.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Beyond Order</category>
+            
+          
+            
+              <category>Jordan Peterson</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2021-07-24-metamorphosis/</guid>
-      <description>People did not understand his words any more, although they seemed clear enough to him, clearer than previously ..&amp;rdquo; ~ The Metamorphosis from Franz Kafka1</description>
-    </item>
-    
-    <item>
-      <title>When Breath Becomes Air</title>
-      <link>https://robinsonraju.info/books/2021-07-10-when-breath-becomes-air/</link>
-      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      <item>
+        <title>Metamorphosis</title>
+        <link>https://robinsonraju.blog/books/2021-07-24-metamorphosis/</link>
+        <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 24 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-07-24-metamorphosis/</guid>
+        <description>People did not understand his words any more, although they seemed clear enough to him, clearer than previously ..&amp;rdquo;
+~ The Metamorphosis from Franz Kafka1
+ Metamorphosis is a short novel that you can finish reading in a few hours. But those few hours can truly set you thinking for several days.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/metamorphosis.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Metamorphosis</category>
+            
+          
+            
+              <category>Franz Kafka</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2021-07-10-when-breath-becomes-air/</guid>
-      <description>&amp;ldquo;I would have to learn to live in a different way, seeing death as an imposing itinerant visitor but knowing that even if I&amp;rsquo;m dying, until I actually die, I am still living.</description>
-    </item>
-    
-    <item>
-      <title>Foundation</title>
-      <link>https://robinsonraju.info/books/2021-06-26-foundation/</link>
-      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
+      <item>
+        <title>When Breath Becomes Air</title>
+        <link>https://robinsonraju.blog/books/2021-07-10-when-breath-becomes-air/</link>
+        <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 10 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-07-10-when-breath-becomes-air/</guid>
+        <description>&amp;ldquo;I would have to learn to live in a different way, seeing death as an imposing itinerant visitor but knowing that even if I&amp;rsquo;m dying, until I actually die, I am still living.&amp;quot;
+~ Paul Kalanithi, When Breath Becomes Air 1
+ I first read about this book through Gates Notes2, where Bill Gates mentions that the book left him in tears.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/when-breath-becomes-air.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>When Breath Becomes Air</category>
+            
+          
+            
+              <category>Paul Kalanithi</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2021-06-26-foundation/</guid>
-      <description>&amp;ldquo;Any fool can tell a crisis when it arrives. The real service to the state is to detect it in embryo.&amp;quot; ~ Foundation by Isaac Asimov 1</description>
-    </item>
-    
-    <item>
-      <title>Fermat&#39;s Enigma</title>
-      <link>https://robinsonraju.info/books/2021-04-17-fermats-enigma/</link>
-      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      <item>
+        <title>Foundation</title>
+        <link>https://robinsonraju.blog/books/2021-06-26-foundation/</link>
+        <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 26 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-06-26-foundation/</guid>
+        <description>&amp;ldquo;Any fool can tell a crisis when it arrives. The real service to the state is to detect it in embryo.&amp;quot;
+~ Foundation by Isaac Asimov 1
+ This is the second time I&amp;rsquo;m reading this book, that too after a gap of around 20 years. I had forgotten so much of the book that it felt like I was reading a new book.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/foundation.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Isaac Asimov</category>
+            
+          
+            
+              <category>Foundation</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Sci-fi</category>
+            
+          
+            
+              <category>Space</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2021-04-17-fermats-enigma/</guid>
-      <description>&amp;ldquo;Proof is what lies at the heart of maths, and is what marks it out from other sciences. Other sciences have hypotheses that are tested against experimental evidence until they fail, and are overtaken by new hypotheses.</description>
-    </item>
-    
-    <item>
-      <title>The Phoenix Project</title>
-      <link>https://robinsonraju.info/books/2020-12-19-the-phoenix-project/</link>
-      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <item>
+        <title>Fermat&#39;s Enigma</title>
+        <link>https://robinsonraju.blog/books/2021-04-17-fermats-enigma/</link>
+        <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 17 Apr 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-04-17-fermats-enigma/</guid>
+        <description>&amp;ldquo;Proof is what lies at the heart of maths, and is what marks it out from other sciences. Other sciences have hypotheses that are tested against experimental evidence until they fail, and are overtaken by new hypotheses. In maths, absolute proof is the goal, and once something is proved, it is proved forever, with no room for change.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/fermats_enigma.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Fermat&#39;s Enigma</category>
+            
+          
+            
+              <category>Simon Singh</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Mathematics</category>
+            
+          
+            
+              <category>Pierre de Fermat</category>
+            
+          
+            
+              <category>History</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2020-12-19-the-phoenix-project/</guid>
-      <description>&amp;ldquo;Like matter and antimatter, in the presence of unplanned work, all planned work ignites with incandescent fury, incinerating everything around it.&amp;quot; ~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win1</description>
-    </item>
-    
-    <item>
-      <title>Homo Deus - Is Man&#39;s reach exceeding his grasp?</title>
-      <link>https://robinsonraju.info/books/2020-10-24-homo-deus/</link>
-      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      <item>
+        <title>The Phoenix Project</title>
+        <link>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</link>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 19 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-12-19-the-phoenix-project/</guid>
+        <description>&amp;ldquo;Like matter and antimatter, in the presence of unplanned work, all planned work ignites with incandescent fury, incinerating everything around it.&amp;quot;
+~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win1
+ The book makes the case for proper planning, rigor, and discipline as an antidote to getting out of the impossible quagmire of technical debt, tightly coupled systems and unachievable product deadlines.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/The_Phoenix_Project.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>The Phoenix project</category>
+            
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>Continuous Integration</category>
+            
+          
+            
+              <category>Gene Kim</category>
+            
+          
+            
+              <category>Software Engineering</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+            
+              <category>Technical Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2020-10-24-homo-deus/</guid>
-      <description>&amp;ldquo;In pursuit of health, happiness and power, humans will gradually change first one of their features and then another, and another, until they will no longer be human.</description>
-    </item>
-    
-    <item>
-      <title>The Great Mental Models: Volume 2</title>
-      <link>https://robinsonraju.info/books/2020-10-17-great-mental-models-2/</link>
-      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+      <item>
+        <title>Homo Deus - Is Man&#39;s reach exceeding his grasp?</title>
+        <link>https://robinsonraju.blog/books/2020-10-24-homo-deus/</link>
+        <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 01 Nov 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-10-24-homo-deus/</guid>
+        <description>&amp;ldquo;In pursuit of health, happiness and power, humans will gradually change first one of their features and then another, and another, until they will no longer be human.&amp;rdquo;
+~ Yuval Noah Harari, Homo Deus: A Brief History of Tomorrow 1
+ Thoughts As with Sapiens, Harari&amp;rsquo;s narrative is compelling. The book has a ton of facts and well researched material that he weaves into the story as a master folktale teller unraveling secrets one by one.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/homo-deus.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Homo Deus A Brief History of Tomorrow</category>
+            
+          
+            
+              <category>Homo Deus</category>
+            
+          
+            
+              <category>Philosophy</category>
+            
+          
+            
+              <category>Yuval Noah Harari</category>
+            
+          
+            
+              <category>Sapiens</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2020-10-17-great-mental-models-2/</guid>
-      <description>&amp;ldquo;Combining a deep specialized knowledge in a domain with a broader understanding of the rules that govern the physical world is a rare combination that saves you time, money, and problems.</description>
-    </item>
-    
-    <item>
-      <title>The Ride of a Lifetime</title>
-      <link>https://robinsonraju.info/books/2020-10-10-ride-of-a-lifetime/</link>
-      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <item>
+        <title>The Great Mental Models: Volume 2</title>
+        <link>https://robinsonraju.blog/books/2020-10-17-great-mental-models-2/</link>
+        <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 18 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-10-17-great-mental-models-2/</guid>
+        <description>&amp;ldquo;Combining a deep specialized knowledge in a domain with a broader understanding of the rules that govern the physical world is a rare combination that saves you time, money, and problems.&amp;rdquo;
+~ &amp;ldquo;The Great Mental Models Volume 2: Physics, Chemistry and Biology&amp;rdquo;1 by Shane Parrish.
+ Thoughts It was greatly fulfilling to read this book.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/great-mental-models-2.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>The Great Mental Models</category>
+            
+          
+            
+              <category>Mental Models</category>
+            
+          
+            
+              <category>Philosophy</category>
+            
+          
+            
+              <category>Shane Parrish</category>
+            
+          
+            
+              <category>Farnam Street</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2020-10-10-ride-of-a-lifetime/</guid>
-      <description>&amp;ldquo;Optimism in a leader, especially in challenging times, is so vital. Pessimism leads to paranoia, which leads to defensiveness, which leads to risk aversion. Optimism sets a different machine in motion.</description>
-    </item>
-    
-    <item>
-      <title>Dare to Lead</title>
-      <link>https://robinsonraju.info/books/2020-10-03-dare-to-lead/</link>
-      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      <item>
+        <title>The Ride of a Lifetime</title>
+        <link>https://robinsonraju.blog/books/2020-10-10-ride-of-a-lifetime/</link>
+        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 11 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-10-10-ride-of-a-lifetime/</guid>
+        <description>&amp;ldquo;Optimism in a leader, especially in challenging times, is so vital. Pessimism leads to paranoia, which leads to defensiveness, which leads to risk aversion. Optimism sets a different machine in motion.&amp;rdquo;
+~ From The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/ride-of-a-lifetime.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Ride of a Lifetime</category>
+            
+          
+            
+              <category>Leadership</category>
+            
+          
+            
+              <category>Bob Iger</category>
+            
+          
+            
+              <category>Disney</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2020-10-03-dare-to-lead/</guid>
-      <description>&amp;ldquo;Daring leadership is ultimately about serving other people, not ourselves. That&amp;rsquo;s why we choose courage.&amp;rdquo; ~ From Dare to Lead: Brave Work. Tough Conversations. Whole Hearts.</description>
-    </item>
-    
-    <item>
-      <title>The Great Mental Models: Volume 1</title>
-      <link>https://robinsonraju.info/books/2020-04-28-great-mental-models/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      <item>
+        <title>Dare to Lead</title>
+        <link>https://robinsonraju.blog/books/2020-10-03-dare-to-lead/</link>
+        <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 04 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-10-03-dare-to-lead/</guid>
+        <description>&amp;ldquo;Daring leadership is ultimately about serving other people, not ourselves. That&amp;rsquo;s why we choose courage.&amp;rdquo;
+~ From Dare to Lead: Brave Work. Tough Conversations. Whole Hearts.1 by Brené Brown
+ Thoughts It feels super inspirational to have finished this book. The book was excellent and it felt good to know that all the people who spoke highly of Brené Brown were justified in doing so.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/dare-to-lead.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Dare to Lead</category>
+            
+          
+            
+              <category>Leadership</category>
+            
+          
+            
+              <category>Brené Brown</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://robinsonraju.info/books/2020-04-28-great-mental-models/</guid>
-      <description>&amp;ldquo;The quality of your thinking depends on the models that are in your head.&amp;rdquo; ~ The Great Mental Models, Volume 1: General Thinking Concepts1 by Shane Parrish &amp;amp; Rhiannon Beaubien</description>
-    </item>
+      <item>
+        <title>The Great Mental Models: Volume 1</title>
+        <link>https://robinsonraju.blog/books/2020-04-28-great-mental-models/</link>
+        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Tue, 28 Apr 2020 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2020-04-28-great-mental-models/</guid>
+        <description>&amp;ldquo;The quality of your thinking depends on the models that are in your head.&amp;rdquo;
+~ The Great Mental Models, Volume 1: General Thinking Concepts1 by Shane Parrish &amp;amp; Rhiannon Beaubien
+ Thoughts I was introduced to The Knowledge Project2 by AJ last year during one of our 1-1 walks around the campus.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/great-mental-models-1.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>The Great Mental Models</category>
+            
+          
+            
+              <category>Mental Models</category>
+            
+          
+            
+              <category>Philosophy</category>
+            
+          
+            
+              <category>Shane Parrish</category>
+            
+          
+            
+              <category>Farnam Street</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

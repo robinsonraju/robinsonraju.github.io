@@ -1,25 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Space on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/tags/space/</link>
+    <link>https://robinsonraju.blog/tags/space/</link>
     <description>Recent content in Space on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2022 Robinson Raju</copyright>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, Robinson Raju, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 26 Jun 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/tags/space/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://robinsonraju.blog/tags/space/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Foundation</title>
-      <link>https://robinsonraju.info/books/2021-06-26-foundation/</link>
-      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
+    
+
       
-      <guid>https://robinsonraju.info/books/2021-06-26-foundation/</guid>
-      <description>&amp;ldquo;Any fool can tell a crisis when it arrives. The real service to the state is to detect it in embryo.&amp;quot; ~ Foundation by Isaac Asimov 1</description>
-    </item>
+      <item>
+        <title>Foundation</title>
+        <link>https://robinsonraju.blog/books/2021-06-26-foundation/</link>
+        <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 26 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/books/2021-06-26-foundation/</guid>
+        <description>&amp;ldquo;Any fool can tell a crisis when it arrives. The real service to the state is to detect it in embryo.&amp;quot;
+~ Foundation by Isaac Asimov 1
+ This is the second time I&amp;rsquo;m reading this book, that too after a gap of around 20 years. I had forgotten so much of the book that it felt like I was reading a new book.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/foundation.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Isaac Asimov</category>
+            
+          
+            
+              <category>Foundation</category>
+            
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Sci-fi</category>
+            
+          
+            
+              <category>Space</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>
