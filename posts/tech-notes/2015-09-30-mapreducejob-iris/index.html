@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="A Simple MapReduce Job for Iris Dataset" />
+<meta property="og:description" content="This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/posts/tech-notes/2015-09-30-mapreducejob-iris/" />
+<meta property="article:published_time" content="2015-09-30T22:50:11+00:00" />
+<meta property="article:modified_time" content="2015-09-30T22:50:11+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+<title>A Simple MapReduce Job for Iris Dataset | Rob&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.da110f27d6a4d632dc8e162876b7216c5c1f82164fbdac7ff33021633767f034.css" integrity="sha256-2hEPJ9ak1jLcjhYodrchbFwfghZPvax/8zAhYzdn8DQ=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2e8f8decce0053f89531d0003743736195fbf004068a9dafd624530b33d1f562.js" integrity="sha256-Lo&#43;N7M4AU/iVMdAAN0NzYZX78AQGip2v1iRTCzPR9WI=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Rob&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="/posts/books/" >
+        Book Notes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>A Simple MapReduce Job for Iris Dataset</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1--create-a-java-project">Step #1 : Create a Java project</a></li>
+    <li><a href="#step-2-configure-build-path">Step 2: Configure Build Path</a></li>
+    <li><a href="#step-3-add-code-for-mapper-and-reducer">Step 3: Add code for Mapper and Reducer</a>
+      <ul>
+        <li><a href="#mapper">Mapper</a></li>
+        <li><a href="#reducer">Reducer</a></li>
+      </ul>
+    </li>
+    <li><a href="#run-the-driver">Run the Driver</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/tech-notes/2015-09-30-mapreducejob-iris/">A Simple MapReduce Job for Iris Dataset</a>
+  </h1>
+  
+  <h5>September 30, 2015</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/Technical-Notes/">Technical Notes</a>
+  </div>
+  
+
+  
+
+
+
+<p>This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.</p>
+<p>The objective is to read data from Iris dataset - <a href="https://archive.ics.uci.edu/ml/datasets/Iris">https://archive.ics.uci.edu/ml/datasets/Iris</a> and calculate the mean sepal length of each class of the flower.</p>
+<p>The data is here -&gt; <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data">https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data</a>.</p>
+<p>Sample record : <code>5.1,3.5,1.4,0.2,Iris-setosa</code></p>
+<p>Attribute Information:</p>
+<ol>
+<li>sepal length in cm</li>
+<li>sepal width in cm</li>
+<li>petal length in cm</li>
+<li>petal width in cm</li>
+<li>class: a) Iris Setosa, b) Iris Versicolour, c) Iris Virginica</li>
+</ol>
+<p>In the last blog on wordcount, I used an eclipse project that was bundled automatically with the Cloudera VM and just modified the StubMapper, StubReducer and Driver to plugin the code for wordcount. In this, I thought I&rsquo;ll create one from scratch and see how it works.</p>
+<h2 id="step-1--create-a-java-project">
+  Step #1 : Create a Java project
+  <a class="anchor" href="#step-1--create-a-java-project">#</a>
+</h2>
+<p>Create a Java project using Eclipse.
+Add Mapper, Reducer and Driver stubs from the other project. You&rsquo;ll immediately notice that there are many compilation errors.</p>
+<h2 id="step-2-configure-build-path">
+  Step 2: Configure Build Path
+  <a class="anchor" href="#step-2-configure-build-path">#</a>
+</h2>
+<p>Add the following libraries from <code>/usr/lib/hadoop/client</code> and <code>/cloudera/lib</code></p>
+<p><code>Properties &gt; Java Build Path &gt; Add External Jars</code></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Also add <code>&lt;project&gt;/conf</code> as the class folder.</p>
+<!-- raw HTML omitted -->
+<p>Now the compilation issues would be resolved.</p>
+<h2 id="step-3-add-code-for-mapper-and-reducer">
+  Step 3: Add code for Mapper and Reducer
+  <a class="anchor" href="#step-3-add-code-for-mapper-and-reducer">#</a>
+</h2>
+<p>The objective is to read the records from the data and compute the mean sepal length of each class of the Iris flower.
+map() function in the Mapper gets each row and splits the columns to extract out the key (flower class) and the value (sepal length).
+The reduce() function is the Reducer is simple as well. It iterates through the values for each key, computes sum, maintains count and computes mean after the loop ends.</p>
+<h3 id="mapper">
+  Mapper
+  <a class="anchor" href="#mapper">#</a>
+</h3>
+<pre><code>package com.iris.data.mapreduce;
+import java.io.IOException;
+
+import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class IrisMapper extends Mapper&lt;LongWritable, Text, Text, FloatWritable&gt; {
+
+    @Override
+    public void map(LongWritable key, Text value, Context context)
+            throws IOException, InterruptedException {
+
+        String[] columns = value.toString().split(&quot;,&quot;);
+        float sepal_len = Float.valueOf(columns[0]);
+        String flower_class = columns[4];
+
+        context.write(new Text(flower_class), new FloatWritable(sepal_len));
+    }
+}
+</code></pre>
+<h3 id="reducer">
+  Reducer
+  <a class="anchor" href="#reducer">#</a>
+</h3>
+<pre><code>package com.iris.data.mapreduce;
+import java.io.IOException;
+
+import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class IrisReducer extends
+        Reducer&lt;Text, FloatWritable, Text, FloatWritable&gt; {
+
+    @Override
+    public void reduce(Text key, Iterable&lt;FloatWritable&gt; values, Context context)
+            throws IOException, InterruptedException {
+
+        float sum = 0;
+        float count = 0;
+        float mean_sepal_len = 0;
+        for (FloatWritable val : values) {
+            sum += val.get();
+            count++;
+        }
+
+        mean_sepal_len = sum / count;
+        context.write(key, new FloatWritable(mean_sepal_len));
+    }
+
+}
+</code></pre>
+<h2 id="run-the-driver">
+  Run the Driver
+  <a class="anchor" href="#run-the-driver">#</a>
+</h2>
+<p>You should see the following output</p>
+<!-- raw HTML omitted -->
+<p><em>Header Image - &ldquo;<strong>Iris</strong>&rdquo; by Pauline Rosenberg via <a href="https://flic.kr/p/6sZzjm">Flickr</a>.</em></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1--create-a-java-project">Step #1 : Create a Java project</a></li>
+    <li><a href="#step-2-configure-build-path">Step 2: Configure Build Path</a></li>
+    <li><a href="#step-3-add-code-for-mapper-and-reducer">Step 3: Add code for Mapper and Reducer</a>
+      <ul>
+        <li><a href="#mapper">Mapper</a></li>
+        <li><a href="#reducer">Reducer</a></li>
+      </ul>
+    </li>
+    <li><a href="#run-the-driver">Run the Driver</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

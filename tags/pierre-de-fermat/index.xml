@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pierre de Fermat on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/tags/pierre-de-fermat/</link>
+    <link>https://robinsonraju.info/tags/Pierre-de-Fermat/</link>
     <description>Recent content in Pierre de Fermat on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 17 Apr 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/tags/pierre-de-fermat/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/tags/Pierre-de-Fermat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fermat&#39;s Enigma</title>
-      <link>https://robinsonraju.info/books/2021-04-17-fermats-enigma/</link>
+      <link>https://robinsonraju.info/posts/books/2021-04-17-fermats-enigma/</link>
       <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/books/2021-04-17-fermats-enigma/</guid>
+      <guid>https://robinsonraju.info/posts/books/2021-04-17-fermats-enigma/</guid>
       <description>&amp;ldquo;Proof is what lies at the heart of maths, and is what marks it out from other sciences. Other sciences have hypotheses that are tested against experimental evidence until they fail, and are overtaken by new hypotheses.</description>
     </item>
     

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Paper reviewed:
+ Schleimer, S., Wilkerson, D. S., and Aiken, A. 2003. Winnowing: local algorithms for document fingerprinting. In Proceedings of the 2003 ACM SIGMOD International Conference on Management of Data (San Diego, California, USA, June 09 – 12, 2003).">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Winnowing: local algorithms for document fingerprinting" />
+<meta property="og:description" content="Paper reviewed:
+ Schleimer, S., Wilkerson, D. S., and Aiken, A. 2003. Winnowing: local algorithms for document fingerprinting. In Proceedings of the 2003 ACM SIGMOD International Conference on Management of Data (San Diego, California, USA, June 09 – 12, 2003)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/posts/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/" />
+<meta property="article:published_time" content="2015-02-15T01:23:11+00:00" />
+<meta property="article:modified_time" content="2015-02-15T01:23:11+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+<title>Winnowing: local algorithms for document fingerprinting | Rob&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.da110f27d6a4d632dc8e162876b7216c5c1f82164fbdac7ff33021633767f034.css" integrity="sha256-2hEPJ9ak1jLcjhYodrchbFwfghZPvax/8zAhYzdn8DQ=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2e8f8decce0053f89531d0003743736195fbf004068a9dafd624530b33d1f562.js" integrity="sha256-Lo&#43;N7M4AU/iVMdAAN0NzYZX78AQGip2v1iRTCzPR9WI=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Rob&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="/posts/books/" >
+        Book Notes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Winnowing: local algorithms for document fingerprinting</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/">Winnowing: local algorithms for document fingerprinting</a>
+  </h1>
+  
+  <h5>February 15, 2015</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/Technical-Notes/">Technical Notes</a>
+  </div>
+  
+
+  
+
+
+
+<p><strong>Paper reviewed</strong>:</p>
+<blockquote>
+<p>Schleimer, S., Wilkerson, D. S., and Aiken, A. 2003. Winnowing: local algorithms for document fingerprinting. In Proceedings of the 2003 ACM SIGMOD International Conference on Management of Data (San Diego, California, USA, June 09 – 12, 2003).</p>
+</blockquote>
+<p>My focus area right now is data chunking alogrithms. I&rsquo;d jumped right into data chunking using hashing algorithms since those are popular and there are multiple papers on them.
+This week I thought I&rsquo;d take a step back and review some other techniques.</p>
+<p>Here is a high level overview of different chunking algorithms -</p>
+<ul>
+<li>
+<p>Overlap</p>
+<ul>
+<li>K-gram algorithm</li>
+<li>0 mod p algorithm</li>
+<li><strong>Winnowing algorithm</strong></li>
+</ul>
+</li>
+<li>
+<p>Non-Overlap</p>
+<ul>
+<li>Hash-breaking</li>
+</ul>
+</li>
+</ul>
+<p>Last paper focused on non-overlap method. This has more information on overlap methods.
+The paper gives an overview of local fingerprinting algorithms. It provides an introduction to Winnowing, a special local fingerprinting algorithm. It goes on to show experimental results for Winnowing&rsquo;s performance being less than 33% of earlier lower bound.</p>
+<hr>
+<p><em>Header Image - &ldquo;<strong>Seminole Winnowing Basket</strong>&rdquo; by Mathers Museum of World Cultures via <a href="https://flic.kr/p/pfY1mV">Flickr</a></em></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

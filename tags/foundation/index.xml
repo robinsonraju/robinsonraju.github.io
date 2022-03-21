@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Foundation on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/tags/foundation/</link>
+    <link>https://robinsonraju.info/tags/Foundation/</link>
     <description>Recent content in Foundation on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 26 Jun 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/tags/foundation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/tags/Foundation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Foundation</title>
-      <link>https://robinsonraju.info/books/2021-06-26-foundation/</link>
+      <link>https://robinsonraju.info/posts/books/2021-06-26-foundation/</link>
       <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/books/2021-06-26-foundation/</guid>
+      <guid>https://robinsonraju.info/posts/books/2021-06-26-foundation/</guid>
       <description>&amp;ldquo;Any fool can tell a crisis when it arrives. The real service to the state is to detect it in embryo.&amp;quot; ~ Foundation by Isaac Asimov 1</description>
     </item>
     

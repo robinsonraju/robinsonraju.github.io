@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Functional Thinking by Neal Ford" />
+<meta property="og:description" content="For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://robinsonraju.info/posts/books/2016-10-16-FunctionalThinking/" />
+<meta property="article:published_time" content="2016-10-16T09:27:14+00:00" />
+<meta property="article:modified_time" content="2016-10-16T09:27:14+00:00" /><meta property="og:site_name" content="Rob&#39;s Notes" />
+<title>Functional Thinking by Neal Ford | Rob&#39;s Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.da110f27d6a4d632dc8e162876b7216c5c1f82164fbdac7ff33021633767f034.css" integrity="sha256-2hEPJ9ak1jLcjhYodrchbFwfghZPvax/8zAhYzdn8DQ=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2e8f8decce0053f89531d0003743736195fbf004068a9dafd624530b33d1f562.js" integrity="sha256-Lo&#43;N7M4AU/iVMdAAN0NzYZX78AQGip2v1iRTCzPR9WI=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-166342905-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Rob&#39;s Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="/posts/books/" >
+        Book Notes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Functional Thinking by Neal Ford</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-1--why">Chapter 1 : Why</a></li>
+    <li><a href="#chapter-2--shift">Chapter 2 : Shift</a></li>
+    <li><a href="#chapter-3--cede">Chapter 3 : Cede</a></li>
+    <li><a href="#chapter-4--smarter-not-harder">Chapter 4 : Smarter, Not Harder</a></li>
+    <li><a href="#chapter-5--evolve">Chapter 5 : Evolve</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/books/2016-10-16-FunctionalThinking/">Functional Thinking by Neal Ford</a>
+  </h1>
+  
+  <h5>October 16, 2016</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/Book-Notes/">Book Notes</a>, 
+      <a href="/categories/Technical-Notes/">Technical Notes</a>
+  </div>
+  
+
+  
+
+
+
+<p><em>For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift. It is not like learning a different language or different version of Java from Java 2 (1.2) to Java 8. The first time I was exposed to functional programming is probably around 2012 when I had to do a project for an ML course using R language. It was refreshing to do things differently for sure. Thanks to <a href="http://rovarghe.blogspot.com">RV</a>, I learnt the basics of Clojure last year. I&rsquo;m at a stage where I can read Clojure code and understand and may be write very simple programs but not beyond that. Anyway, the paradigm shift that Ford talks about can be summarized in the example that he gives in the first chapter of the book.</em></p>
+<blockquote>
+<p>Let’s say for a moment that you are a lumberjack. You have the best axe in the forest, which makes you the most productive lumberjack in the camp. Then one day someone shows up and extols the virtues of a new tree-cutting paradigm, the chainsaw. The sales guy is persuasive, so you buy a chainsaw, but you don’t know how it works. Demonstrating your expertise with the previous tree-cutting paradigm, you swing it vigorously at a tree—without cranking it. You quickly conclude that this newfangled chainsaw is a fad, and you return to your axe. Then, someone appears and shows you how to crank the chainsaw.</p>
+</blockquote>
+<p><em>The best thing about the book is that he gives a lot of code examples. So one needs to just think of how to solve these examples and get the gist of what is being talked about.</em></p>
+<h2 id="chapter-1--why">
+  Chapter 1 : Why
+  <a class="anchor" href="#chapter-1--why">#</a>
+</h2>
+<blockquote>
+<p>&ldquo;OO makes code understandable by encapsulating moving parts. FP makes code under‐ standable by minimizing moving parts.&rdquo; ~ Michael Feathers</p>
+</blockquote>
+<p><em>This chapter provides a broad overview and shows some examples of the mental shift that the author is teaching us.</em></p>
+<ul>
+<li>Example 1-1. Word frequencies in Java</li>
+<li>Example 1-2. Word frequencies in Java 8</li>
+<li>Example 1-3. indexOfAny() from Apache Commons StringUtils
+<ul>
+<li>The IndexofAny() method accepts a String and an array and returns the index of the first occurrence in the String of any of the characters in the array</li>
+</ul>
+</li>
+<li>Example 1-4. indexOfAny() example cases</li>
+<li>Example 1-5. Scala version of firstIndexOfAny()</li>
+<li>Example 1-6. Returning a lazy list of matches</li>
+</ul>
+<p><strong><em>Excercise to self</em></strong></p>
+<ol>
+<li>Write a program in Java 8 or Clojure which takes in a String of words separated by space (&ldquo;a quick brown fox&rdquo;) and returns a map of word frequencies.</li>
+<li>Write a program in Java 8 or Clojure that mimics &lsquo;indexOfAny() from Apache Commons StringUtils&rsquo;. This method accepts a String and an array and returns the index of the first occurrence in the String of any of the characters in the array.</li>
+</ol>
+<h2 id="chapter-2--shift">
+  Chapter 2 : Shift
+  <a class="anchor" href="#chapter-2--shift">#</a>
+</h2>
+<blockquote>
+<p>&ldquo;Once garbage collection became mainstream, it simultaneously eliminated entire categories of hard-to-debug problems and allowed the runtime to manage a process that is complex and error-prone for developers. Functional programming aims to do the same thing for the algorithms you write, allowing you to work at a higher level of abstraction while freeing the runtime to perform sophisticated optimizations.&rdquo;&rdquo;</p>
+</blockquote>
+<ul>
+<li>Example 2-1. Typical company process (in Java)
+<ul>
+<li>Let’s say that you are given a list of names, some of which consist of a single character, and you are asked to return a comma-delimited string with the single letter names removed, with each name capitalized.</li>
+</ul>
+</li>
+<li>Example 2-2. Pseudocode for the “company process”</li>
+<li>Example 2-3. Processing functionally in Scala</li>
+<li>Example 2-4. Java 8 version of the Company Process</li>
+<li>Example 2-5. Processing in Groovy</li>
+<li>Example 2-6. Processing in Clojure
+<ul>
+<li><em>&ldquo;One of Clojure’s selling points is that it removes concurrency as a developer concern just as Java removed garbage collection.&quot;</em></li>
+</ul>
+</li>
+<li>Example 2-7. Improved readability for Clojure via the thread-last macro</li>
+<li>Example 2-8. Scala processing in parallel</li>
+<li>Example 2-9. Java 8 parallel processing</li>
+<li>Example 2-10. Number classifier in Java
+<ul>
+<li>Perfect : Sum of factors = number</li>
+<li>Abundant : Sum of factors &gt; number</li>
+<li>Deficient : Sum of factors &lt; number</li>
+<li><em>Consider aliquotSum where sum of factors doesn&rsquo;t contain the number itself.</em></li>
+</ul>
+</li>
+<li>Example 2-11. Slightly more functional number classifier</li>
+<li>Example 2-12. Number classifier in Java 8</li>
+<li>Example 2-13. Number classifier using the Functional Java framework</li>
+<li>Example 2-14. Filtering in Java 8</li>
+<li>Example 2-15. Using filtering (called findAll()) in Groovy</li>
+<li>Example 2-16. Number classifier optimized</li>
+<li>Example 2-17. Groovy optimized factors</li>
+<li>Example 2-18. The (classify ) function in Clojure encapsulates all the behavior within assignments</li>
+<li>Example 2-19. The foldLeft() method from Functional Java</li>
+<li>Example 2-20. foldLeft() with user-supplied criteria</li>
+</ul>
+<p><em>The last part of the chapter is a quick overview of <strong>3 key &lsquo;functions&rsquo;</strong> in functional programming languages - <strong>filter</strong>, <strong>map</strong> and <strong>reduce</strong>. The author shows code in Scala, Groovy and Clojure.</em></p>
+<p><strong><em>Excercise to self</em></strong></p>
+<ol>
+<li>Write a progam in Java 8 or Clojure that, given a list of names, some of which consist of a single character, returns a comma-delimited string with the single letter names removed, with each name capitalized.</li>
+<li>Write a program in Java 8 or Clojure that implements Number Classification. i.e, given a number, the program outputs if the number is perfect, abundant or deficient.</li>
+<li>Write a program in Clojure that takes in a range of numbers and returns numbers that are divisible by 3.</li>
+</ol>
+<h2 id="chapter-3--cede">
+  Chapter 3 : Cede
+  <a class="anchor" href="#chapter-3--cede">#</a>
+</h2>
+<blockquote>
+<p>&ldquo;Confession: I never want to work in a non-garbage-collected language again. I paid my dues in languages like C++ for too many years, and I don’t want to surrender the conveniences of modern languages. That’s the story of how software development progresses.&rdquo;</p>
+</blockquote>
+<p><em>It&rsquo;s so great to see this comment in the book! I spent close to a year in 2007 and over a year in 2015-2016 to re-engineer C++ applications into Java. Though the projects were for different companies (ebay and paypal), co-incidentally, both applications were related to payments!</em></p>
+<p><em>In this chapter, the author shows five ways developers in functional languages can cede control to the language or runtime, freeing themselves to work on more relevant problems.</em></p>
+<ol>
+<li>Iteration to Higher-Order Functions</li>
+<li>Closures</li>
+<li>Currying and Partial Application
+<ul>
+<li><em>Currying</em> describes the conversion of a multiargument function into a chain of single-argument functions.</li>
+<li><em>Partial application</em> describes the conversion of a multiargument function into one that accepts fewer arguments, with values for the elided arguments supplied in advance.</li>
+</ul>
+</li>
+<li>Recursion</li>
+<li>Streams and Work Reordering</li>
+</ol>
+<ul>
+<li>Example 3-1. Simple closure binding in Groovy</li>
+<li>Example 3-2. Executing the closure block</li>
+<li>Example 3-3. Another closure binding</li>
+<li>Example 3-4. How closures work (in Groovy)</li>
+<li>Example 3-5. makeCounter() in Java</li>
+<li>Example 3-6. Currying in Groovy</li>
+<li>Example 3-7. Partial application versus currying in Groovy</li>
+<li>Example 3-8. Composing functions in Groovy</li>
+<li>Example 3-9. Clojure’s partial application</li>
+<li>Example 3-10. Scala’s currying of arguments</li>
+<li>Example 3-11. Partially applying functions in Scala</li>
+<li>Example 3-12. Using case without match</li>
+<li>Example 3-13. Differences between map and collect</li>
+<li>Example 3-14. Defining a partial function in Scala</li>
+<li>Example 3-15. Alternative definition for answerUnits</li>
+<li>Example 3-16. Defining an incrementer in Scala</li>
+<li>Example 3-17. Adder and incrementer in Groovy</li>
+<li>Example 3-18. Using partial application to supply implicit values</li>
+<li>Example 3-19. List traversal using (sometimes hidden) indexes</li>
+<li>Example 3-20. List traversal using recursion
+<ul>
+<li>Think of list as head and tail and iterate through it using recursion</li>
+</ul>
+</li>
+<li>Example 3-21. Imperative filtering with Groovy
+<ul>
+<li>Accepts a list and a predicate (a Boolean test) to determine if the item belongs in the list.</li>
+</ul>
+</li>
+<li>Example 3-22. Recursive filtering with Groovy</li>
+<li>Example 3-23. Recursive filtering in Scala</li>
+<li>Example 3-24. Java 8 version of the company process</li>
+</ul>
+<p><em>A note on Erlang&rsquo;s tail-call optimization.</em></p>
+<blockquote>
+<p>&ldquo;Given Erlang’s impressive fault-tolerance capabilities, there are likely tail-recursive loops in production that have run for <strong>years</strong> (!) uninterrupted.&rdquo;
+[<code>emphasis and exclamation added by self. </code>]</p>
+</blockquote>
+<p><strong><em>Excercise to self</em></strong></p>
+<ol>
+<li>Write a closure (function that returns a function) in Clojure.</li>
+<li>Write a function in Clojure that uses partial function. (partial is a function which takes a function f and a fewer-than-required number of arguments and returns a partially applied function that’s invokable when you supply the remaining arguments)</li>
+</ol>
+<h2 id="chapter-4--smarter-not-harder">
+  Chapter 4 : Smarter, Not Harder
+  <a class="anchor" href="#chapter-4--smarter-not-harder">#</a>
+</h2>
+<blockquote>
+<p>&ldquo;Even if you don’t care about functional languages such as Scala or Clojure, functional programming will enter your life through the langauge(s) you now use as they evolve.&rdquo;</p>
+</blockquote>
+<p><em>In this chapter Ford discusses two features common in functional languages: memoization (function level caching) and laziness (Lazy evaluation — deferral of expression evaluation for as long as possible).</em></p>
+<ul>
+<li>Example 4-1. Caching sum</li>
+<li>Example 4-2. Testing nonoptimized speed</li>
+<li>Example 4-3. Caching everything</li>
+<li>Example 4-4. Memoizing sum</li>
+<li>Example 4-5. Memoizing everything</li>
+<li>Example 4-6. Inline memoization in Groovy</li>
+<li>Example 4-7. Testing memoized hashing function</li>
+<li>Example 4-8. Memoization in Clojure</li>
+<li>Example 4-9. Memoization implementation in Scala</li>
+<li>Example 4-10. Pseudocode illustrating nonstrict evaluation</li>
+<li>Example 4-11. Prime number finder in Java</li>
+<li>Example 4-12. Prime iterator in Java</li>
+<li>Example 4-13. Number classifier using the Totally Lazy Java framework</li>
+<li>Example 4-14. Using lazy lists in Groovy</li>
+<li>Example 4-15. LazyList implementation</li>
+<li>Example 4-16. Pared-down version of perfect-number classifier in Groovy</li>
+<li>Example 4-17. Lazily initialized list of perfect numbers</li>
+<li>Example 4-18. Building a lazy list in Groovy</li>
+<li>Example 4-19. Exercising lazy lists</li>
+<li>Example 4-20. Finding palindromes in Groovy</li>
+<li>Example 4-21. Clojure’s palindromes</li>
+<li>Example 4-22. Scala palindromes</li>
+<li>Example 4-23. Lazy fields in Groovy</li>
+</ul>
+<p><strong><em>Excercise to self</em></strong></p>
+<ol>
+<li>Implement caching (using memoization) for Number Classifier built in Chapter 3. Cache factors and sum of factors for each number.</li>
+<li>Given an input string, produce the rot 13 version of the string. &quot;hello&quot; -&gt; &quot;uryyb&quot;. Implement memoized version in Clojure.</li>
+<li>Write a Clojure function to find palindromes in a String of words.</li>
+</ol>
+<h2 id="chapter-5--evolve">
+  Chapter 5 : Evolve
+  <a class="anchor" href="#chapter-5--evolve">#</a>
+</h2>
+<blockquote>
+<p>&ldquo;It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.&rdquo; ~ Alan Perlis</p>
+</blockquote>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-1--why">Chapter 1 : Why</a></li>
+    <li><a href="#chapter-2--shift">Chapter 2 : Shift</a></li>
+    <li><a href="#chapter-3--cede">Chapter 3 : Cede</a></li>
+    <li><a href="#chapter-4--smarter-not-harder">Chapter 4 : Smarter, Not Harder</a></li>
+    <li><a href="#chapter-5--evolve">Chapter 5 : Evolve</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
