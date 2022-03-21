@@ -2,207 +2,207 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technical Notes on Rob&#39;s Notes</title>
-    <link>https://robinsonraju.info/categories/Technical-Notes/</link>
+    <link>https://robinsonraju.info/categories/technical-notes/</link>
     <description>Recent content in Technical Notes on Rob&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022 Robinson Raju</copyright>
     <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robinsonraju.info/categories/Technical-Notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robinsonraju.info/categories/technical-notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Phoenix Project</title>
-      <link>https://robinsonraju.info/posts/books/2020-12-19-the-phoenix-project/</link>
+      <link>https://robinsonraju.info/books/2020-12-19-the-phoenix-project/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/books/2020-12-19-the-phoenix-project/</guid>
+      <guid>https://robinsonraju.info/books/2020-12-19-the-phoenix-project/</guid>
       <description>&amp;ldquo;Like matter and antimatter, in the presence of unplanned work, all planned work ignites with incandescent fury, incinerating everything around it.&amp;quot; ~ Gene Kim, The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win1</description>
     </item>
     
     <item>
       <title>Dave Farley&#39;s Review of the State of DevOps Report</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-12-05-dave-farleys-review-state-of-dev-ops/</guid>
       <description>&amp;ldquo;Teams that are best at DevOps and continuous delivery can release software thousands of times more quickly and with a small fraction of the defects.</description>
     </item>
     
     <item>
       <title>Software Development - Essential Books</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-07-01-reading-list-software-dev/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-07-01-reading-list-software-dev/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-07-01-reading-list-software-dev/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-07-01-reading-list-software-dev/</guid>
       <description>As a person who loves checking off items in &amp;lsquo;to-do&amp;rsquo; lists and checklists, I&amp;rsquo;ve always liked books that have a list of rules/principles. Hence books like Effective Java, 201 Principles are the ones that come to mind when I think of a reading list of books related to Software Development.</description>
     </item>
     
     <item>
       <title>GCP Fundamentals Core Infrastructure</title>
-      <link>https://robinsonraju.info/posts/courses/2020-06-28-coursera-gcp-fundamentals-course/</link>
+      <link>https://robinsonraju.info/courses/2020-06-28-coursera-gcp-fundamentals-course/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/courses/2020-06-28-coursera-gcp-fundamentals-course/</guid>
+      <guid>https://robinsonraju.info/courses/2020-06-28-coursera-gcp-fundamentals-course/</guid>
       <description>Thoughts #  If you&amp;rsquo;re looking for a sweeping introduction to all the various products under the Google Cloud umbrella, this is definitely the one you need to go through.</description>
     </item>
     
     <item>
       <title>A Cybersecurity Book List</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-06-22-cybersecurity-reading-list/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-06-22-cybersecurity-reading-list/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-06-22-cybersecurity-reading-list/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-06-22-cybersecurity-reading-list/</guid>
       <description>Background #  While writing a note about My Reading Journey, I was reminded that I hadn&amp;rsquo;t put a section on list of books related to Computer Science in My Reading List.</description>
     </item>
     
     <item>
       <title>Security Threat Models</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-06-18-threat-models/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-06-18-threat-models/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-06-18-threat-models/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-06-18-threat-models/</guid>
       <description>Came across a list of Threat Models in a book on Zero Trust Networks that I just started reading. I had heard of two models in the past - STRIDE and DREAD in the context of security thread classification and ranking for Cyber-physical systems Seifert &amp;amp; Reza (2016).</description>
     </item>
     
     <item>
       <title>IT Security: Defense against the digital dark arts</title>
-      <link>https://robinsonraju.info/posts/courses/2020-06-14-coursera-cybersecurity-course/</link>
+      <link>https://robinsonraju.info/courses/2020-06-14-coursera-cybersecurity-course/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/courses/2020-06-14-coursera-cybersecurity-course/</guid>
+      <guid>https://robinsonraju.info/courses/2020-06-14-coursera-cybersecurity-course/</guid>
       <description>This is an excellent course. It is a great refresher of a lot of cybersecurity concepts that most engineers might have heard of but not know.</description>
     </item>
     
     <item>
       <title>API documentation using Swagger</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-06-04-api-documentation/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-06-04-api-documentation/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-06-04-api-documentation/</guid>
       <description>Intro #  Wanted to create an API spec for brainstorming an API that we&amp;rsquo;re developing. Swagger is probably the most popular API design tool. I had used Apiary (https://apiary.</description>
     </item>
     
     <item>
       <title>Security news today</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-06-02-security-news-today/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-06-02-security-news-today/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-06-02-security-news-today/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-06-02-security-news-today/</guid>
       <description>The optimism around cybersecurity was dampened today by a news article on WSJ - &amp;ldquo;Cybersecurity Startups Feel a Pinch on Funding and Sales&amp;rdquo;.
  Cybersecurity startups are finding they have to do more with less, as the economic drag of coronavirus precautions makes it difficult to sell their products and enlist new customers while it simultaneously diminishes the size of their funding rounds, investors say.</description>
     </item>
     
     <item>
       <title>Baby steps on Go</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-05-31-golang-example/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-05-31-golang-example/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-05-31-golang-example/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-05-31-golang-example/</guid>
       <description>Starting to read up on blockchain. RV mentioned that I might need to learn Go if I need to tryout some HyperLedger frameworks in the future.</description>
     </item>
     
     <item>
       <title>Automating the Hugo build and push to GitHub</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-05-23-automating-build-n-push/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-05-23-automating-build-n-push/</link>
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-05-23-automating-build-n-push/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-05-23-automating-build-n-push/</guid>
       <description>Instead of remembering to build and push to GitHub, wanted to automate it. The steps are simple enough to write a script and have a cron job execute it.</description>
     </item>
     
     <item>
       <title>Setting up Hugo Site and Migrating from Jekyll</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2020-05-04-setting-up-hugo-site/</link>
+      <link>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2020-05-04-setting-up-hugo-site/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2020-05-04-setting-up-hugo-site/</guid>
       <description>A couple of years back, I chanced upon an article where someone was describing how simple it was to set up a static website using Ghost.</description>
     </item>
     
     <item>
       <title>Functional Thinking by Neal Ford</title>
-      <link>https://robinsonraju.info/posts/books/2016-10-16-FunctionalThinking/</link>
+      <link>https://robinsonraju.info/books/2016-10-16-functionalthinking/</link>
       <pubDate>Sun, 16 Oct 2016 09:27:14 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/books/2016-10-16-FunctionalThinking/</guid>
+      <guid>https://robinsonraju.info/books/2016-10-16-functionalthinking/</guid>
       <description>For someone who has been doing Java programming and reading through lot of OO codebase for over a decade, functional programming is truly a paradigm shift.</description>
     </item>
     
     <item>
       <title>A Simple MapReduce Job for Iris Dataset</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-09-30-mapreducejob-iris/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</link>
       <pubDate>Wed, 30 Sep 2015 22:50:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-09-30-mapreducejob-iris/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-09-30-mapreducejob-iris/</guid>
       <description>This blog is an attempt to walk through the process of using hadoop to analyze a dataset that might look similar to an actual dataset that we might encounter.</description>
     </item>
     
     <item>
       <title>Writing a simple Mapper and Reducer for Wordcount</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-09-21-simple-map-reduce-job/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</link>
       <pubDate>Mon, 21 Sep 2015 23:50:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-09-21-simple-map-reduce-job/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-09-21-simple-map-reduce-job/</guid>
       <description>The last blog was about how to run wordcount using the &amp;ldquo;hadoop-mapreduce-examples.jar&amp;rdquo; that was automatically available in the VMs. How would it be to really write the Mapper and Reducer for this?</description>
     </item>
     
     <item>
       <title>Running Hadoop WordCount example</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-09-15-wordcount-on-hadoop/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</link>
       <pubDate>Tue, 15 Sep 2015 22:50:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-09-15-wordcount-on-hadoop/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-09-15-wordcount-on-hadoop/</guid>
       <description>Here is a small example to run Wordcount program on hadoop. I&amp;rsquo;ve tried to do this using Cloudera VM and also MapR Sandbox. When you start ClouderaVM, it is already loaded with desktop and you can do all the work inside the desktop - open a browser, start a terminal.</description>
     </item>
     
     <item>
       <title>Data De-Duplication Performance With Multi-Threaded FBC Algorithm</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</link>
       <pubDate>Sun, 01 Mar 2015 23:13:21 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-03-01-de-duplication-multi-thread-chunking-algorithm/</guid>
       <description>Paper reviewed:
  Jiang, X., Zhao, J., &amp;amp; Zheng, J. (2014). Enhance Data De – Duplication Performance With Multi – Thread Chunking Algorithm. Santa Clara, CA: Santa Clara University.</description>
     </item>
     
     <item>
       <title>Distributional Stability of Chunk Sizes in Data Chunking</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</link>
       <pubDate>Sun, 22 Feb 2015 09:13:21 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-02-22-distributional-stability-of-chunk-sizes-in-data-chunking/</guid>
       <description>Paper reviewed:
  Zhanjie, W., &amp;amp; Lang, S. (2013). Research on Distributional Stability of Chunk Sizes in Data Chunking. International Journal of Digital Content Technology and Its Applications, 443-450.</description>
     </item>
     
     <item>
       <title>Winnowing: local algorithms for document fingerprinting</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</link>
       <pubDate>Sun, 15 Feb 2015 01:23:11 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-02-15-winnowing-local-algorithms-for-doc-fingerprinting/</guid>
       <description>Paper reviewed:
  Schleimer, S., Wilkerson, D. S., and Aiken, A. 2003. Winnowing: local algorithms for document fingerprinting. In Proceedings of the 2003 ACM SIGMOD International Conference on Management of Data (San Diego, California, USA, June 09 – 12, 2003).</description>
     </item>
     
     <item>
       <title>A Running Time Improvement for TTTD Algorithm</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</link>
       <pubDate>Sun, 08 Feb 2015 11:33:21 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-02-08-running-time-improvement-for-tttd-algorithm/</guid>
       <description>Paper reviewed:
  Moh, T., &amp;amp; Chang, B. (2010). A Running Time Improvement for the Two Thresholds Two Divisors Algorithm. ACM SE ’10 Proceedings of the 48th Annual Southeast Regional Conference.</description>
     </item>
     
     <item>
       <title>Let sleeping files lie: Pattern matching in Z-compressed file</title>
-      <link>https://robinsonraju.info/posts/tech-notes/2015-02-01-compressed-pattern-matching/</link>
+      <link>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</link>
       <pubDate>Sun, 01 Feb 2015 04:35:12 +0000</pubDate>
       
-      <guid>https://robinsonraju.info/posts/tech-notes/2015-02-01-compressed-pattern-matching/</guid>
+      <guid>https://robinsonraju.info/tech-notes/2015-02-01-compressed-pattern-matching/</guid>
       <description>This is a review of the paper on Pattern matching in Z-compressed files. I&amp;rsquo;d done a project last year to implement LZW compression and chanced upon this paper while I was googling for some information on LZW.</description>
     </item>
     
