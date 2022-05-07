@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -99,6 +99,74 @@
           navCollapse.setAttribute('data-open', 'true');
           navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
           navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
         }
       }
     }) : null;
@@ -239,7 +307,7 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
@@ -292,11 +360,13 @@
         if (st < 45) {
           return null;
         }
-        
-        if (!navbar.classList.contains('navbar--hide')) {
-          navbar.classList.add('navbar--hide');
-        } else if (navbar.classList.contains('navbar--show')) {
-          navbar.classList.remove('navbar--show');
+
+        if (navbar.classList.contains('scrolling')) {
+          if (!navbar.classList.contains('navbar--hide')) {
+            navbar.classList.add('navbar--hide');
+          } else if (navbar.classList.contains('navbar--show')) {
+            navbar.classList.remove('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -363,10 +433,12 @@
           gttBtn.style.display = "none";
         }
 
-        if (navbar.classList.contains('navbar--hide')) {
-          navbar.classList.remove('navbar--hide');
-        } else if (!navbar.classList.contains('navbar--show')) {
-          navbar.classList.add('navbar--show');
+        if (navbar.classList.contains('scrolling')) {
+          if (navbar.classList.contains('navbar--hide')) {
+            navbar.classList.remove('navbar--hide');
+          } else if (!navbar.classList.contains('navbar--show')) {
+            navbar.classList.add('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -447,6 +519,17 @@
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+    
+    
+    var skinDarkCode = JSON.parse("\"dark\"");
+    
+    var skinLightCode = JSON.parse("\"light\"");
+    
+    var skinHackerCode = JSON.parse("\"hacker\"");
+    
+    var skinSolarizedCode = JSON.parse("\"solarized\"");
+    
+    var skinKimbieCode = JSON.parse("\"kimbie\"");
 
     var setMetaColor = function(themeColor) {
       var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
@@ -479,7 +562,21 @@
         metaThemeColor.setAttribute('content', '#eee8d5');
         metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
         metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
-      } 
+      }
+    }
+
+    var parseSkinCode = function(themeText) {
+      if (themeText === skinDarkCode) {
+        return 'dark';
+      } else if (themeText === skinLightCode) {
+        return 'light';
+      } else if (themeText === skinHackerCode) {
+        return 'hacker';
+      } else if (themeText === skinSolarizedCode) {
+        return 'solarized';
+      } else if (themeText === skinKimbieCode) {
+        return 'kimbie';
+      }
     }
     
     if (localTheme) {
@@ -500,7 +597,7 @@
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
       v.addEventListener('click', function (e) {
-        var selectedThemeVariant = e.target.text.trim();
+        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
         localStorage.setItem('theme', selectedThemeVariant);
         setMetaColor(selectedThemeVariant);
 
@@ -591,12 +688,15 @@
             fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
               keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
               includeMatches: enableSearchHighlight,
-              shouldSort: true,
-              threshold: 0.4,
-              location: 0,
-              distance: 100,
+              shouldSort: true, 
+              threshold: 0.4, 
+              location: 0, 
+              distance: 100, 
               maxPatternLength: 32,
               minMatchCharLength: 1,
+              isCaseSensitive: false, 
+              findAllMatches: false, 
+              useExtendedSearch: false, 
             });
             window.fuse = fuse;
           }
@@ -613,16 +713,16 @@
       li.className = 'search-result__item';
       
       var a = document.createElement('a');
-      a.innerHTML = obj.title;
+      a.innerHTML = obj.item.title;
       a.setAttribute('class', 'search-result__item--title');
-      a.setAttribute('href', obj.permalink);
+      a.setAttribute('href', obj.item.permalink);
 
       var descDiv = document.createElement('div');
       descDiv.setAttribute('class', 'search-result__item--desc');
-      if (obj.description) {
-        descDiv.innerHTML = obj.description;
-      } else if (obj.content) {
-        descDiv.innerHTML = obj.content.substring(0, 225);
+      if (obj.item.description) {
+        descDiv.innerHTML = obj.item.description;
+      } else if (obj.item.content) {
+        descDiv.innerHTML = obj.item.content.substring(0, 225);
       }
       
       li.appendChild(a);
@@ -1096,7 +1196,7 @@
   
     var mobileSearchInputElem = document.querySelector('#search-mobile');
     var mobileSearchClassElem = document.querySelector('.mobile-search');
-    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
+    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
     var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
     var mobileSearchContainer = document.querySelector('#search-mobile-container');
     var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
@@ -1106,19 +1206,21 @@
       mobileSearchClassElem.style.display = 'none';
     }
 
-    mobileSearchBtnElem ? 
-    mobileSearchBtnElem.addEventListener('click', function () {
-      if (mobileSearchContainer) {
-        mobileSearchContainer.style.display = 'block';
-      }
+    mobileSearchBtnElems ? 
+    mobileSearchBtnElems.forEach(function (elem, idx) {
+      elem.addEventListener('click', function () {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'block';
+        }
 
-      if (mobileSearchInputElem) {
-        mobileSearchInputElem.focus();
-      }
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.focus();
+        }
 
-      if (htmlElem) {
-        htmlElem.style.overflowY = 'hidden';
-      }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'hidden';
+        }
+      });
     }) : null;
 
     mobileSearchCloseBtnElem ? 
@@ -1225,7 +1327,7 @@
 
 
 <meta name="created" content="2006-03-19T20:13:12&#43;0000">
-<meta name="modified" content="2020-08-25T00:00:00-0700">
+<meta name="modified" content="2020-08-25T00:00:00&#43;0000">
 <meta property="article:published_time" content="2006-03-19T20:13:12&#43;0000">
 
 <meta name="author" content="Robinson Raju">
@@ -1238,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Random Thoughts">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.98.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1275,7 +1377,7 @@
     "@type": "WebPage",
     "headline": "Francisco d'Anconia's Speech on Money",
     "datePublished": "2006-03-19T20:13:12Z",
-    "dateModified": "2020-08-25T00:00:00-07:00",
+    "dateModified": "2020-08-25T00:00:00Z",
     "url" : "https://robinsonraju.blog/posts/2006-03-19-francisco-d-anconia-speech-money/",
     "description": "Fransisco d\u0026rsquo;Anconia\u0026rsquo;s speech from Atlas Shrugged1 when someone says \u0026ldquo;Money is the root of all evil\u0026rdquo; \u0026ldquo;So you think that money is the root of …",
     "author": {
@@ -1308,7 +1410,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1346,7 +1447,7 @@ if (!doNotTrack) {
 
 
         <div class="wrapper" data-type="posts" data-kind="page">
-            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
+            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     &nbsp;&nbsp;
     <a href="/" title="Home" rel="home" class="navbar__title-link">
@@ -1391,7 +1492,7 @@ if (!doNotTrack) {
 </div>
 
 
-<div id="mobileSearchBtn" class="mobile-search__btn" data-ani="true">
+<div class="mobile-search__btn navbar-search" data-ani="true">
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
 </div>
 
@@ -1471,6 +1572,8 @@ if (!doNotTrack) {
   </ul>
 </div>
   <div class="navbar__menu">
+  
+  
   
 <div class="theme" data-ani="true">
   <div class="dropdown">
@@ -1585,6 +1688,7 @@ if (!doNotTrack) {
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">Francisco d&#39;Anconia&#39;s Speech on Money</h2>
+    <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
@@ -1600,16 +1704,18 @@ if (!doNotTrack) {
     
   </span>
 </div>
+
       
 <ul class="single__tags caption">
   
 
 </ul>
+
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <h3 id="fransisco-danconias-speech-from-atlas-shrugged1-when-someone-says-money-is-the-root-of-all-evil">Fransisco d&rsquo;Anconia&rsquo;s speech from <strong>Atlas Shrugged</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> when someone says &ldquo;Money is the root of all evil&rdquo;</h3>
-<p><em>&ldquo;So you think that money is the root of all evil?&quot;</em> said Francisco d&rsquo;Anconia.</p>
+<p><em>&ldquo;So you think that money is the root of all evil?&rdquo;</em> said Francisco d&rsquo;Anconia.</p>
 <p><em>&ldquo;Have you ever asked what is the root of money? Money is a tool of exchange, which can&rsquo;t exist unless there are goods produced and men able to produce them. Money is the material shape of the principle that men who wish to deal with one another must deal by trade and give value for value. Money is not the tool of the moochers, who claim your product by tears, or of the looters, who take it from you by force. Money is made possible only by the men who produce. Is this what you consider evil?</em></p>
 <p><em>When you accept money in payment for your effort, you do so only on the conviction that you will exchange it for the product of the effort of others. It is not the moochers or the looters who give value to money. Not an ocean of tears not all the guns in the world can transform those pieces of paper in your wallet into the bread you will need to survive tomorrow. Those pieces of paper, which should have been gold, are a token of honor—your claim upon the energy of the men who produce. Your wallet is your statement of hope that somewhere in the world around you there are men who will not default on that moral principle which is the root of money, Is this what you consider evil?</em></p>
 <p><em>Have you ever looked for the root of production? Take a look at an electric generator and dare tell yourself that it was created by the muscular effort of unthinking brutes. Try to grow a seed of wheat without the knowledge left to you by men who had to discover it for the first time. Try to obtain your food by means of nothing but physical motions—and you&rsquo;ll learn that man&rsquo;s mind is the root of all the goods produced and of all the wealth that has ever existed on earth.</em></p>
@@ -1626,27 +1732,140 @@ if (!doNotTrack) {
 <p><em>But money demands of you the highest virtues, if you wish to make it or to keep it. Men who have no courage, pride or self-esteem, men who have no moral sense of their right to their money and are not willing to defend it as they defend their life, men who apologize for being rich—will not remain rich for long. They are the natural bait for the swarms of looters that stay under rocks for centuries, but come crawling out at the first smell of a man who begs to be forgiven for the guilt of owning wealth. They will hasten to relieve him of the guilt—and of his life, as he deserves.</em></p>
 <p><em>Then you will see the rise of the men of the double standard—the men who live by force, yet count on those who live by trade to create the value of their looted money—the men who are the hitchhikers of virtue. In a moral society, these are the criminals, and the statutes are written to protect you against them. But when a society establishes criminals-by-right and looters-by-law—men who use force to seize the wealth of disarmed victims—then money becomes its creators&rsquo; avenger. Such looters believe it safe to rob defenseless men, once they&rsquo;ve passed a law to disarm them. But their loot becomes the magnet for other looters, who get it from them as they got it. Then the race goes, not to the ablest at production, but to those most ruthless at brutality. When force is the standard, the murderer wins over the pickpocket. And then that society vanishes, in a spread of ruins and slaughter.</em></p>
 <p><em>Do you wish to know whether that day is coming? Watch money. Money is the barometer of a society&rsquo;s virtue. When you see that trading is done, not by consent, but by compulsion—when you see that in order to produce, you need to obtain permission from men who produce nothing—when you see that money is flowing to those who deal, not in goods, but in favors—when you see that men get richer by graft and by pull than by work, and your laws don&rsquo;t protect you against them, but protect them against you—when you see corruption being rewarded and honesty becoming a self-sacrifice—you may know that your society is doomed. Money is so noble a medium that is does not compete with guns and it does not make terms with brutality. It will not permit a country to survive as half-property, half-loot.</em></p>
-<p><em>Whenever destroyers appear among men, they start by destroying money, for money is men&rsquo;s protection and the base of a moral existence. Destroyers seize gold and leave to its owners a counterfeit pile of paper. This kills all objective standards and delivers men into the arbitrary power of an arbitrary setter of values. Gold was an objective value, an equivalent of wealth produced. Paper is a mortgage on wealth that does not exist, backed by a gun aimed at those who are expected to produce it. Paper is a check drawn by legal looters upon an account which is not theirs: upon the virtue of the victims. Watch for the day when it bounces, marked, &lsquo;Account overdrawn.'</em></p>
+<p><em>Whenever destroyers appear among men, they start by destroying money, for money is men&rsquo;s protection and the base of a moral existence. Destroyers seize gold and leave to its owners a counterfeit pile of paper. This kills all objective standards and delivers men into the arbitrary power of an arbitrary setter of values. Gold was an objective value, an equivalent of wealth produced. Paper is a mortgage on wealth that does not exist, backed by a gun aimed at those who are expected to produce it. Paper is a check drawn by legal looters upon an account which is not theirs: upon the virtue of the victims. Watch for the day when it bounces, marked, &lsquo;Account overdrawn.&rsquo;</em></p>
 <p><em>When you have made evil the means of survival, do not expect men to remain good. Do not expect them to stay moral and lose their lives for the purpose of becoming the fodder of the immoral. Do not expect them to produce, when production is punished and looting rewarded. Do not ask, &lsquo;Who is destroying the world? You are.</em></p>
 <p><em>You stand in the midst of the greatest achievements of the greatest productive civilization and you wonder why it&rsquo;s crumbling around you, while you&rsquo;re damning its life-blood—money. You look upon money as the savages did before you, and you wonder why the jungle is creeping back to the edge of your cities. Throughout men&rsquo;s history, money was always seized by looters of one brand or another, whose names changed, but whose method remained the same: to seize wealth by force and to keep the producers bound, demeaned, defamed, deprived of honor. That phrase about the evil of money, which you mouth with such righteous recklessness, comes from a time when wealth was produced by the labor of slaves—slaves who repeated the motions once discovered by somebody&rsquo;s mind and left unimproved for centuries. So long as production was ruled by force, and wealth was obtained by conquest, there was little to conquer, Yet through all the centuries of stagnation and starvation, men exalted the looters, as aristocrats of the sword, as aristocrats of birth, as aristocrats of the bureau, and despised the producers, as slaves, as traders, as shopkeepers—as industrialists.</em></p>
 <p><em>To the glory of mankind, there was, for the first and only time in history, a country of money—and I have no higher, more reverent tribute to pay to America, for this means: a country of reason, justice, freedom, production, achievement. For the first time, man&rsquo;s mind and money were set free, and there were no fortunes-by-conquest, but only fortunes-by-work, and instead of swordsmen and slaves, there appeared the real maker of wealth, the greatest worker, the highest type of human being—the self-made man—the American industrialist.</em></p>
-<p><em>If you ask me to name the proudest distinction of Americans, I would choose—because it contains all the others—the fact that they were the people who created the phrase &lsquo;to make money.&rsquo; No other language or nation had ever used these words before; men had always thought of wealth as a static quantity—to be seized, begged, inherited, shared, looted of obtained as a favor. Americans were the first to understand that wealth has to be created. The words &lsquo;to make money&rsquo; hold the essence of human morality.</em></p>
+<p><em>If you ask me to name the proudest distinction of Americans, I would choose—because it contains all the others—the fact that they were the people who created the phrase &rsquo;to make money.&rsquo; No other language or nation had ever used these words before; men had always thought of wealth as a static quantity—to be seized, begged, inherited, shared, looted of obtained as a favor. Americans were the first to understand that wealth has to be created. The words &rsquo;to make money&rsquo; hold the essence of human morality.</em></p>
 <p><em>Yet these were the words for which Americans were denounced by the rotted cultures of the looters&rsquo; continents. Now the looters&rsquo; credo has brought you to regard your proudest achievements as a hallmark of shame, your prosperity as guilt, your greatest men, the industrialists, as blackguards, and your magnificent factories as the product and property of muscular labor, the labor of whip-driven slaves, like the pyramids of Egypt. The rotter who simpers that he sees no difference between the power of the dollar and the power of the whip, ought to learn the difference on his own hide— as, I think, he will.</em></p>
-<p><em>Until and unless you discover that money is the root of all good, you ask for your own destruction. When money ceases to be the tool by which men deal with one another, then men become the tools of men. Blood, whips and guns—or dollars. Take your choice—there is no other—and your time is running out.&quot;</em> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p><em>Until and unless you discover that money is the root of all good, you ask for your own destruction. When money ceases to be the tool by which men deal with one another, then men become the tools of men. Blood, whips and guns—or dollars. Take your choice—there is no other—and your time is running out.&rdquo;</em> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <div class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>Rand, A. (1996). <a href="https://www.amazon.com/gp/product/0451191145/ref=dbs_a_def_rwt_hsch_vapi_tpbk_p1_i0">Atlas Shrugged</a>. Signet. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1">
+<p>Rand, A. (1996). <a href="https://www.amazon.com/gp/product/0451191145/ref=dbs_a_def_rwt_hsch_vapi_tpbk_p1_i0">Atlas Shrugged</a>. Signet.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p>Text Reproduced from <a href="http://faculty.citadel.edu/sobel/Entrepreneurship%20Class%20Readings/11.%20Rand%20-%20Francisco%20d%27Anconia%27s%20Speech%20on%20Money.pdf">http://faculty.citadel.edu/sobel/Entrepreneurship%20Class%20Readings/11.%20Rand%20-%20Francisco%20d%27Anconia%27s%20Speech%20on%20Money.pdf</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:2">
+<p>Text Reproduced from <a href="http://faculty.citadel.edu/sobel/Entrepreneurship%20Class%20Readings/11.%20Rand%20-%20Francisco%20d%27Anconia%27s%20Speech%20on%20Money.pdf">http://faculty.citadel.edu/sobel/Entrepreneurship%20Class%20Readings/11.%20Rand%20-%20Francisco%20d%27Anconia%27s%20Speech%20on%20Money.pdf</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
 
     </article>
     
+    
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+
+<script defer src="/js/helper/prev.min.js"></script>
+
+<script defer src="/js/helper/prop.min.js"></script>
+<script>
+  'use strict';
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    var clipInit = false;
+    var preChromaElem = document.querySelectorAll('pre.chroma');
+    var langCodeElem = document.querySelectorAll('.language-code');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+    var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+    var makeClipboard = function(elem) {
+      var code = elem,
+          text = elem.textContent;
+        
+      if (text.length > 15) {
+        if (!clipInit) {
+          var text, clip = new ClipboardJS('.copy-to-clipboard', {
+            text: function (trigger) {
+              var codeElem = prev(trigger).querySelectorAll('code');
+              if (codeElem.length > 1) {
+                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
+              } else {
+                text = prev(trigger).querySelector('code').textContent;
+              }
+
+              return text.replace(/^\$\s/gm, '');
+            }
+          });
+
+          var inPre;
+          clip.on('success', function (e) {
+            e.clearSelection();
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clip.on('error', function (e) {
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', e.action.toString());
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clipInit = true;
+        }
+
+        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
+        var isNotAllowedIncluded = false;
+        var curClassName = code.getAttribute('class');
+
+        for (var i = 0; i < notAllowedClass.length; i++) {
+          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
+            isNotAllowedIncluded = true;
+            break;
+          }
+        }
+
+        if (!isNotAllowedIncluded) {
+          if (curClassName) {
+            var newClipboardElem = document.createElement('span');
+            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
+            newClipboardElem.setAttribute('title', 'Copy to clipboard');
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
+          }
+        }
+      }
+    }
+
+    var makeSymbolClipboard = function(elem) {
+      var clipboardSpan = document.createElement('span');
+      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
+      clipboardSpan.setAttribute('title', 'Copy to clipboard');
+      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
+    }
+
+    preChromaElem ? 
+    preChromaElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function(codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+    
+    langCodeElem ? 
+    langCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+    
+  });
+</script>
     <script>
   'use strict';
   
@@ -1692,6 +1911,31 @@ if (!doNotTrack) {
     newElem.className = 'copy-to-clipboard';
     newElem.setAttribute('title', 'Copy to clipboard');
     elem.append(newElem);
+  }) : null;
+  
+
+  
+
+  
+  var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+  var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+  dollarCodeElem ?
+  dollarCodeElem.forEach(function(elem) {
+    var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+    lnts ? 
+    lnts.forEach(function(lnt) {
+      lnt.innerHTML = '$<br/>';
+    }) : null;
+  }) : null;
+
+  gtCodeElem ?
+  gtCodeElem.forEach(function(elem) {
+    var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+    lnts ? 
+    lnts.forEach(function(lnt) {
+      lnt.innerHTML = '><br/>';
+    }) : null;
   }) : null;
   
 </script>
@@ -1919,7 +2163,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.25f8e2889d0e03e2f9015306518a5ae00178acd2ec1b8e5ef20cc9f888d908ca.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -2271,8 +2515,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
-
 <script defer src="/js/helper/getParents.min.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
@@ -2319,6 +2561,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
+
     
     
     
@@ -2330,10 +2573,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
+
+      tableOfContentsElem.onmouseenter = function() {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      tableOfContentsElem.onmouseleave = function() {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.add('scrolling');
+        }
+      }
 
       if (false === tocFolding) {
 
@@ -2353,10 +2608,13 @@ document.addEventListener('DOMContentLoaded', function () {
           tableOfContentsElem.querySelectorAll('a').forEach(function (elem) {
             elem.addEventListener('click', function () {
               var id = elem.getAttribute('id');
-              navbar.classList.remove('navbar--show');
-              navbar.classList.remove('navbar--hide');
-              navbar.classList.add('navbar--hide');
 
+              if (!navbar.classList.contains('scrolling')) {
+                navbar.classList.remove('navbar--show');
+                navbar.classList.remove('navbar--hide');
+                navbar.classList.add('navbar--hide');
+              }
+              
               document.querySelector('.toc').querySelectorAll('a').forEach(function (elem) {
                 elem.classList.remove('active');
               });
@@ -2451,17 +2709,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
-    
-    var tables = document.querySelectorAll('.single__contents > table');
-    for (let i = 0; i < tables.length; i++) {
-      var table = tables[i];
-      var wrapper = document.createElement('div');
-      wrapper.className = 'table-wrapper';
-      table.parentElement.replaceChild(wrapper, table);
-      wrapper.appendChild(table);
-    }
-    
-
 
     
     var text, clip = new ClipboardJS('.anchor');
@@ -2472,6 +2719,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     headers ? 
     headers.forEach(function (elem) {
+      var size = parseInt(elem.tagName.substr(1), 10) * 2;
       var url = encodeURI(document.location.origin + document.location.pathname);
       var link = url + "#" + elem.getAttribute('id');
       var newElemOuter = document.createElement('span');
@@ -2481,11 +2729,12 @@ document.addEventListener('DOMContentLoaded', function () {
       newElemOuter.style.position = 'relative';
 
       var newElemInner = document.createElement('span');
-      newElemInner.style.fontSize = '1rem';
       newElemInner.style.position = 'absolute';
       newElemInner.style.top = '50%';
+      newElemInner.style.left = '0.75rem';
       newElemInner.style.transform = 'translateY(-50%)';
-      newElemInner.innerText = "🔗";
+      newElemInner.innerHTML = `
+<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${32 - size}px" height="${32 - size}px"><path d="M 5.5625 0 C 4.136719 0 2.707031 0.542969 1.625 1.625 C -0.539063 3.789063 -0.539063 7.335938 1.625 9.5 L 5.28125 13.15625 C 5.667969 13.554688 6.304688 13.558594 6.703125 13.171875 C 7.101563 12.785156 7.105469 12.148438 6.71875 11.75 L 3.03125 8.0625 C 1.632813 6.664063 1.632813 4.429688 3.03125 3.03125 C 4.429688 1.632813 6.664063 1.632813 8.0625 3.03125 L 12.96875 7.9375 C 14.367188 9.335938 14.367188 11.570313 12.96875 12.96875 C 12.804688 13.132813 12.621094 13.25 12.4375 13.375 C 11.980469 13.6875 11.859375 14.308594 12.171875 14.765625 C 12.484375 15.222656 13.105469 15.34375 13.5625 15.03125 C 13.847656 14.835938 14.125 14.625 14.375 14.375 C 16.539063 12.210938 16.539063 8.664063 14.375 6.5 L 9.5 1.625 C 8.417969 0.542969 6.988281 0 5.5625 0 Z M 10.78125 8.875 C 10.738281 8.882813 10.695313 8.894531 10.65625 8.90625 C 10.507813 8.9375 10.371094 9 10.25 9.09375 C 10.039063 9.253906 9.820313 9.429688 9.625 9.625 C 7.460938 11.789063 7.460938 15.335938 9.625 17.5 L 14.5 22.375 C 16.664063 24.539063 20.210938 24.539063 22.375 22.375 C 24.539063 20.210938 24.539063 16.664063 22.375 14.5 L 18.71875 10.875 C 18.476563 10.578125 18.089844 10.441406 17.714844 10.527344 C 17.34375 10.613281 17.050781 10.90625 16.964844 11.277344 C 16.878906 11.652344 17.015625 12.039063 17.3125 12.28125 L 20.96875 15.9375 C 22.367188 17.335938 22.367188 19.570313 20.96875 20.96875 C 19.570313 22.367188 17.335938 22.367188 15.9375 20.96875 L 11.03125 16.0625 C 9.632813 14.664063 9.632813 12.429688 11.03125 11.03125 C 11.152344 10.90625 11.300781 10.820313 11.4375 10.71875 C 11.839844 10.472656 12.015625 9.976563 11.855469 9.53125 C 11.699219 9.085938 11.25 8.8125 10.78125 8.875 Z"/></svg>`;
 
       if (languagedir === "rtl") {
         newElemInner.style.left = '-2rem';
@@ -2519,132 +2768,8 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
-
-    
-    var clipInit = false;
-    var preChromaElem = document.querySelectorAll('pre.chroma');
-    var langCodeElem = document.querySelectorAll('.language-code');
-    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
-    var gtCodeElem = document.querySelectorAll('div.language-\\>');
-
-    var makeClipboard = function(elem) {
-      var code = elem,
-        text = elem.textContent;
-        
-      if (text.length > 15) {
-        if (!clipInit) {
-          var text, clip = new ClipboardJS('.copy-to-clipboard', {
-            text: function (trigger) {
-              var codeElem = prev(trigger).querySelectorAll('code');
-              if (codeElem.length > 1) {
-                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
-              } else {
-                text = prev(trigger).querySelector('code').textContent;
-              }
-
-              return text.replace(/^\$\s/gm, '');
-            }
-          });
-
-          var inPre;
-          clip.on('success', function (e) {
-            e.clearSelection();
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clip.on('error', function (e) {
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', e.action.toString());
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clipInit = true;
-        }
-
-        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
-        var isNotAllowedIncluded = false;
-        var curClassName = code.getAttribute('class');
-
-        for (var i = 0; i < notAllowedClass.length; i++) {
-          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
-            isNotAllowedIncluded = true;
-            break;
-          }
-        }
-
-        if (!isNotAllowedIncluded) {
-          if (curClassName) {
-            var newClipboardElem = document.createElement('span');
-            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
-            newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
-          }
-        }
-      }
-    }
-
-    var makeSymbolClipboard = function(elem) {
-      var clipboardSpan = document.createElement('span');
-      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
-      clipboardSpan.setAttribute('title', 'Copy to clipboard');
-      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
-    }
-
-    preChromaElem ? 
-    preChromaElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function(codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-    
-    langCodeElem ? 
-    langCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-
-    dollarCodeElem ? 
-    dollarCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-    
-
-
-    
-    dollarCodeElem ?
-    dollarCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '$<br/>';
-      }) : null;
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '><br/>';
-      }) : null;
-    }) : null;
-    
 
 
     
@@ -2679,6 +2804,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
     
 
     
@@ -2696,6 +2822,7 @@ document.addEventListener('DOMContentLoaded', function () {
       renderMathInElement(document.querySelector('.single__contents'), options);
     }
     
+
 
 
     
@@ -2723,12 +2850,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
+    
 
     
     document.querySelectorAll("mjx-container").forEach(function (x) {
       x.parentElement.classList += 'has-jax'
     });
     
+
 
 
     
@@ -2752,6 +2881,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
 
 
     
@@ -2795,6 +2925,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
+
     
     if (lib && lib.includes('wavedrom')) {
       var wavePrefix = "language-wave";
@@ -2815,6 +2946,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
 
 
     
@@ -2955,11 +3087,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <hr />
 
-    <div class="basicflex">
+    <div class="basicflex flexwrap">
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
     </div>
 
@@ -2998,7 +3130,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </label>
           
         </div>
-        <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
           <nav id="TableOfContents">
   <ul>
     <li>
