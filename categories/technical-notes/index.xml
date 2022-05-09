@@ -31,7 +31,7 @@
         
         <dc:creator>Robinson Raju</dc:creator>
         
-        <media:content url="https://robinsonraju.blog/image//blog/The_Phoenix_Project.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://robinsonraju.blog/image//books/2020/The_Phoenix_Project.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
           
@@ -399,7 +399,7 @@ cd &amp;lt;site directory&amp;gt; hugo cd &amp;lt;user&amp;gt;.</description>
         
         <dc:creator>Robinson Raju</dc:creator>
         
-        
+        <media:content url="https://robinsonraju.blog/image//books/2016/FunctionalThinking.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
