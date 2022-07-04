@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>The Expanse on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.blog/tags/the-expanse/</link>
+    <description>Recent content in The Expanse on Rob&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2022, Robinson Raju, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 06 Feb 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://robinsonraju.blog/tags/the-expanse/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>The Expanse S5:E4 and the facade of charismastic leadership</title>
+        <link>https://robinsonraju.blog/posts/general/2021-02-06-the-expanse/</link>
+        <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 06 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/general/2021-02-06-the-expanse/</guid>
+        <description>&amp;ldquo;It is nobler to have courage as we stumble into half the things we fear than to analyze every possible obstacle and begin nothing. Great things are achieved by embracing great dangers. These were the words of Xerxes, Persia’s king of kings ..&amp;rdquo;
+— Admiral Emil Sauveterre, Season 5, Ep 2: Churn</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//blog/the_expanse.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>TV Series</category>
+            
+          
+            
+              <category>Sci-Fi/Fantasy</category>
+            
+          
+            
+              <category>The Expanse</category>
+            
+          
+            
+              <category>Prime Video</category>
+            
+          
+        
+        
+          
+            
+              <category>General</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
