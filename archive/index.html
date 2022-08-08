@@ -9,9 +9,6 @@
     
 
 
-  
-  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
-
 
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
@@ -661,7 +658,7 @@
     var searchText = null;
     
     
-    var enableSearch = JSON.parse("true");
+    var enableSearch = JSON.parse("false");
     
     var searchDistance = JSON.parse("null");
     
@@ -1477,7 +1474,7 @@ if (!doNotTrack) {
   
 <div class="theme theme-mobile" data-ani="true">
   <div class="dropdown">
-    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="" data-ani="true">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="position: absolute; top: 0;" data-ani="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
     </button>
     <div class="dropdown-content select-theme">
@@ -1508,22 +1505,6 @@ if (!doNotTrack) {
   </div>
 </div>
 
-
-<div class="mobile-search__btn navbar-search" data-ani="true">
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-</div>
-
-<div id="search-mobile-container" class="mobile-search hide" data-dir="ltr">
-  <div class="mobile-search__top">
-    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
-    <div id="search-mobile-close" class="mobile-search__top--icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
-    </div>
-  </div>
-  <div id="search-mobile-results" class="mobile-search__body">
-    
-  </div>
-</div>
 
 
 <a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
@@ -1715,6 +1696,21 @@ if (!doNotTrack) {
 
   
     
+    
+      <span class="archive__key" data-ani="true">2022</span>
+      <ul class="archive__ul" data-dir="ltr">
+        
+        <li class="archive__li" data-dir="ltr">
+          <span class="archive__meta" data-ani="true">
+            
+              <span class="archive__type">posts</span>
+              <span class="archive__date">Jun 15</span>
+            
+          </span>
+          <a href="https://robinsonraju.blog/posts/books/2022-06-15-hyperion/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Hyperion</a>        
+        </li>
+        
+      </ul>
     
       <span class="archive__key" data-ani="true">2021</span>
       <ul class="archive__ul" data-dir="ltr">
@@ -1914,16 +1910,6 @@ if (!doNotTrack) {
           <a href="https://robinsonraju.blog/posts/general/on-death/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">The Next Adventure</a>        
         </li>
         
-        <li class="archive__li" data-dir="ltr">
-          <span class="archive__meta" data-ani="true">
-            
-              <span class="archive__type">posts</span>
-              <span class="archive__date">Sep 19</span>
-            
-          </span>
-          <a href="https://robinsonraju.blog/posts/general/2020-09-19-paradise-on-fire/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Paradise on Fire</a>        
-        </li>
-        
       </ul>
     
   
@@ -1975,19 +1961,6 @@ if (!doNotTrack) {
 
   <div class="hide">
     
-
-<div class="search">
-  <span class="icon">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-  </span>
-  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="Search" autocomplete="off">
-  <div id="search-results" class="dropdown">
-    <div id="search-menu" class="dropdown-menu" role="menu">
-    </div>
-  </div>
-</div>
-
-
   </div>
   
 </main>
