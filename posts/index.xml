@@ -12,11 +12,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2022, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>The Cuckoo&#39;s Egg</title>
+        <link>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</link>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 31 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</guid>
+        <description>&amp;ldquo;Like Einstein’s universe, most networks are finite but unbounded. There’s only a certain number of computers attached, yet you never quite reach the edge of the network. There’s always another computer down the line. Eventually, you’ll make a complete circuit and wind up back where you started. Most networks are so complicated and interwoven that no one knows where all their connections lead.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//books/2022/cuckoos_egg.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Clifford Stoll</category>
+            
+          
+            
+              <category>Cybersecurity</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Hyperion</title>
@@ -45,6 +83,75 @@
           
             
               <category>Sci-fi</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>A Quick note on Wordle</title>
+        <link>https://robinsonraju.blog/posts/general/2022-06-02-wordle/</link>
+        <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Thu, 02 Jun 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/general/2022-06-02-wordle/</guid>
+        <description>Six calculated guesses to figure out a five-letter word. Wow!
+Wordle1 the game, is simple, yet super fulfilling once you crack the word of the day. As per wikipedia2, the emoji-style display of the result that could be shared with friends is what made this game a viral phenomenon on social media (Twitter especially).</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Games</category>
+            
+          
+            
+              <category>Wordle</category>
+            
+          
+        
+        
+          
+            
+              <category>General</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Why We Sleep: Unlocking the Power of Sleep and Dreams</title>
+        <link>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</link>
+        <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 23 Jan 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</guid>
+        <description>Thoughts I got to know about this book through Gates Notes1 and a few times on Youtube feed. I&amp;rsquo;m glad that I finally got a chance to read the book. Of course, almost everyone instinctively knows about the importance of sleep. Most people might have had a first hand experience of the ill effects of lack of sleep after going through a sleepless night and struggling through the next day.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//books/2022/why_we_sleep.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Matthew Walker</category>
             
           
         
@@ -2430,11 +2537,11 @@ The objective is to read data from Iris dataset - https://archive.ics.uci.edu/ml
       
       <item>
         <title>Introduction to Data Mining by Pang-Ning Tan, Michael Steinbach, Vipin Kumar</title>
-        <link>https://robinsonraju.blog/posts/books/2014-02-16-datamining-tsk/</link>
+        <link>https://robinsonraju.blog/posts/textbooks/2014-02-16-datamining-tsk/</link>
         <pubDate>Sun, 16 Feb 2014 18:17:11 +0000</pubDate>
         
         <atom:modified>Sun, 16 Feb 2014 18:17:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/books/2014-02-16-datamining-tsk/</guid>
+        <guid>https://robinsonraju.blog/posts/textbooks/2014-02-16-datamining-tsk/</guid>
         <description>&amp;ldquo;Introduction to Data Mining&amp;rdquo; by Pang-Ning Tan, Michael Steinbach and Vipin Kumar has been recommended to me as a great book to learn about Data Mining. Read the first chapter and it felt very inspiring as though it was beckoning me to keep at it and read more.
 Thought I will capture notes as I read.</description>
         
@@ -2899,82 +3006,6 @@ Yeah ! Yes ! just like that !</description>
         <atom:modified>Mon, 15 May 2006 00:07:31 +0000</atom:modified>
         <guid>https://robinsonraju.blog/posts/general/2006-05-15-appearances-are-deceptive/</guid>
         <description>Gosh ! I jus came to know that A’d changed from specs to lenses. When ? Now I got it ! I met him last week.. that too after a gap of a year ! he asked if I noticed any change in him. I get into this confused-i-wanna-chicken-out kind of state when someone asks me this !</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>A time to celebrate</title>
-        <link>https://robinsonraju.blog/posts/general/2006-05-07-time-to-celebrate/</link>
-        <pubDate>Sun, 07 May 2006 00:06:11 +0000</pubDate>
-        
-        <atom:modified>Sun, 07 May 2006 00:06:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/general/2006-05-07-time-to-celebrate/</guid>
-        <description>St.George’s festival. Theophilus thirumeni (formerly MC Cherian achen) went over St. George’s life – the same story that had been told to me many times as a kid – more so because I had this paranoid fear of snakes. I’ve had moments in which I missed stamping on a snake or a snake bite by sheer luck !</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>A beautiful day</title>
-        <link>https://robinsonraju.blog/posts/general/2006-04-30-a-beautiful-day/</link>
-        <pubDate>Sun, 30 Apr 2006 23:56:11 +0000</pubDate>
-        
-        <atom:modified>Sun, 30 Apr 2006 23:56:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/general/2006-04-30-a-beautiful-day/</guid>
-        <description>&#34;...bright copper kettles and warm woolen mittens Brown paper packages tied up with strings,
-These are a few of my favorite things.&#34;
- ~ &#39;The Sound of Music&#39; The first thing that I did was to watch the rest of &amp;lsquo;The Sound of Music&amp;rsquo;
-The &amp;lsquo;favourite things&amp;rsquo; song was still afresh in my mind.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Francisco d&#39;Anconia&#39;s Speech on Money</title>
-        <link>https://robinsonraju.blog/posts/general/2006-03-19-francisco-d-anconia-speech-money/</link>
-        <pubDate>Sun, 19 Mar 2006 20:13:12 +0000</pubDate>
-        
-        <atom:modified>Tue, 25 Aug 2020 00:00:00 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/general/2006-03-19-francisco-d-anconia-speech-money/</guid>
-        <description>Fransisco d&amp;rsquo;Anconia&amp;rsquo;s speech from Atlas Shrugged1 when someone says &amp;ldquo;Money is the root of all evil&amp;rdquo; &amp;ldquo;So you think that money is the root of all evil?&amp;rdquo; said Francisco d&amp;rsquo;Anconia.
-&amp;ldquo;Have you ever asked what is the root of money? Money is a tool of exchange, which can&amp;rsquo;t exist unless there are goods produced and men able to produce them.</description>
         
         <dc:creator>Robinson Raju</dc:creator>
         

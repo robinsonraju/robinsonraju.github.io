@@ -12,11 +12,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2022, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>The Cuckoo&#39;s Egg</title>
+        <link>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</link>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 31 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</guid>
+        <description>&amp;ldquo;Like Einstein’s universe, most networks are finite but unbounded. There’s only a certain number of computers attached, yet you never quite reach the edge of the network. There’s always another computer down the line. Eventually, you’ll make a complete circuit and wind up back where you started. Most networks are so complicated and interwoven that no one knows where all their connections lead.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//books/2022/cuckoos_egg.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Clifford Stoll</category>
+            
+          
+            
+              <category>Cybersecurity</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Hyperion</title>
@@ -45,6 +83,40 @@
           
             
               <category>Sci-fi</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Why We Sleep: Unlocking the Power of Sleep and Dreams</title>
+        <link>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</link>
+        <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 23 Jan 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</guid>
+        <description>Thoughts I got to know about this book through Gates Notes1 and a few times on Youtube feed. I&amp;rsquo;m glad that I finally got a chance to read the book. Of course, almost everyone instinctively knows about the importance of sleep. Most people might have had a first hand experience of the ill effects of lack of sleep after going through a sleepless night and struggling through the next day.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//books/2022/why_we_sleep.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Matthew Walker</category>
             
           
         

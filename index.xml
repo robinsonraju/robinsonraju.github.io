@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2022, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -38,6 +38,44 @@
         
       
 
+      
+      <item>
+        <title>The Cuckoo&#39;s Egg</title>
+        <link>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</link>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 31 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</guid>
+        <description>&amp;ldquo;Like Einstein’s universe, most networks are finite but unbounded. There’s only a certain number of computers attached, yet you never quite reach the edge of the network. There’s always another computer down the line. Eventually, you’ll make a complete circuit and wind up back where you started. Most networks are so complicated and interwoven that no one knows where all their connections lead.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//books/2022/cuckoos_egg.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Clifford Stoll</category>
+            
+          
+            
+              <category>Cybersecurity</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Hyperion</title>
@@ -66,6 +104,75 @@
           
             
               <category>Sci-fi</category>
+            
+          
+        
+        
+          
+            
+              <category>Book Notes</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>A Quick note on Wordle</title>
+        <link>https://robinsonraju.blog/posts/general/2022-06-02-wordle/</link>
+        <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Thu, 02 Jun 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/general/2022-06-02-wordle/</guid>
+        <description>Six calculated guesses to figure out a five-letter word. Wow!
+Wordle1 the game, is simple, yet super fulfilling once you crack the word of the day. As per wikipedia2, the emoji-style display of the result that could be shared with friends is what made this game a viral phenomenon on social media (Twitter especially).</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Games</category>
+            
+          
+            
+              <category>Wordle</category>
+            
+          
+        
+        
+          
+            
+              <category>General</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Why We Sleep: Unlocking the Power of Sleep and Dreams</title>
+        <link>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</link>
+        <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 23 Jan 2022 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</guid>
+        <description>Thoughts I got to know about this book through Gates Notes1 and a few times on Youtube feed. I&amp;rsquo;m glad that I finally got a chance to read the book. Of course, almost everyone instinctively knows about the importance of sleep. Most people might have had a first hand experience of the ill effects of lack of sleep after going through a sleepless night and struggling through the next day.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        <media:content url="https://robinsonraju.blog/image//books/2022/why_we_sleep.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Books</category>
+            
+          
+            
+              <category>Matthew Walker</category>
             
           
         
@@ -2663,11 +2770,11 @@ Agile Team Agile team is a self contained team that can by itself complete a use
       
       <item>
         <title>Introduction to Data Mining by Pang-Ning Tan, Michael Steinbach, Vipin Kumar</title>
-        <link>https://robinsonraju.blog/posts/books/2014-02-16-datamining-tsk/</link>
+        <link>https://robinsonraju.blog/posts/textbooks/2014-02-16-datamining-tsk/</link>
         <pubDate>Sun, 16 Feb 2014 18:17:11 +0000</pubDate>
         
         <atom:modified>Sun, 16 Feb 2014 18:17:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/books/2014-02-16-datamining-tsk/</guid>
+        <guid>https://robinsonraju.blog/posts/textbooks/2014-02-16-datamining-tsk/</guid>
         <description>&amp;ldquo;Introduction to Data Mining&amp;rdquo; by Pang-Ning Tan, Michael Steinbach and Vipin Kumar has been recommended to me as a great book to learn about Data Mining. Read the first chapter and it felt very inspiring as though it was beckoning me to keep at it and read more.
 Thought I will capture notes as I read.</description>
         
@@ -2902,79 +3009,6 @@ Or at her own beauty that is reflected by the sea ?</description>
 “What books ? ”
 “The ones I kept in the box yesterday. The box is empty now.”
 “Yeah, the books walked away. You ignored them for too long. You know indifference is a punishment more severe than hatred.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>The Blue Lenses</title>
-        <link>https://robinsonraju.blog/posts/general/2007-04-19-the-blue-lenses/</link>
-        <pubDate>Thu, 19 Apr 2007 08:46:31 +0000</pubDate>
-        
-        <atom:modified>Thu, 19 Apr 2007 08:46:31 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/general/2007-04-19-the-blue-lenses/</guid>
-        <description>A recent trip to Mount Shasta became more memorable due to me losing my glasses. When the optician asked me if I wanted the sunlight coating, I said yes. Well ! when someone sounds as though she’s offering the best thing in the world, you’ve got no option but to have it.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        
-        
-        
-        
-          
-            
-              <category>General</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>7 Habits of Highly Effective People by Steven Covey</title>
-        <link>https://robinsonraju.blog/posts/books/2006-12-10-7-habits-highly-effective-people/</link>
-        <pubDate>Sun, 10 Dec 2006 10:27:11 +0000</pubDate>
-        
-        <atom:modified>Sun, 10 Dec 2006 10:27:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/books/2006-12-10-7-habits-highly-effective-people/</guid>
-        <description>There are many books that when I think back on them, I have this lingering feeling that either due to reading quickly or not taking notes, I didn&amp;rsquo;t really take in the full essence of the book. There is more to be understood and when there is time, I need to get back to it.</description>
-        
-        <dc:creator>Robinson Raju</dc:creator>
-        
-        <media:content url="https://robinsonraju.blog/image//books/2006/7-habits-of-highly-effective-people.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Book Notes</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>The Spice of Life - Movies and Songs</title>
-        <link>https://robinsonraju.blog/posts/general/2006-08-12-spice-of-life-movies-and-songs/</link>
-        <pubDate>Sat, 12 Aug 2006 22:43:11 +0000</pubDate>
-        
-        <atom:modified>Sat, 12 Aug 2006 22:43:11 +0000</atom:modified>
-        <guid>https://robinsonraju.blog/posts/general/2006-08-12-spice-of-life-movies-and-songs/</guid>
-        <description>S called. Before he started speaking, I knew what he’d say. Let’s meet up and study something. Yeah ! it’s been over a month since 2nd semester started and we hadn’t even looked into the books list. EC1 was a couple of weeks ahead. It was time.
-He was in Stanford meeting up with some friend.</description>
         
         <dc:creator>Robinson Raju</dc:creator>
         

@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2022, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,10 +21,46 @@
       <item>
         <title>Books</title>
         <link>https://robinsonraju.blog/tags/books/</link>
-        <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
         
         
         <guid>https://robinsonraju.blog/tags/books/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Clifford Stoll</title>
+        <link>https://robinsonraju.blog/tags/clifford-stoll/</link>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/clifford-stoll/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cybersecurity</title>
+        <link>https://robinsonraju.blog/tags/cybersecurity/</link>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/cybersecurity/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
@@ -61,6 +97,60 @@
         
         
         <guid>https://robinsonraju.blog/tags/sci-fi/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Games</title>
+        <link>https://robinsonraju.blog/tags/games/</link>
+        <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/games/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Wordle</title>
+        <link>https://robinsonraju.blog/tags/wordle/</link>
+        <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/wordle/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Matthew Walker</title>
+        <link>https://robinsonraju.blog/tags/matthew-walker/</link>
+        <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/matthew-walker/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>

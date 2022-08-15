@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://robinsonraju.blog/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/categories/book-notes/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/tags/books/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/categories/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/tags/clifford-stoll/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/tags/cybersecurity/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/posts/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/tags/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/posts/books/2022-07-31-cuckoos-egg/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/tags/dan-simmons/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
@@ -20,14 +35,26 @@
     <loc>https://robinsonraju.blog/posts/books/2022-06-15-hyperion/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robinsonraju.blog/posts/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://robinsonraju.blog/tags/sci-fi/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robinsonraju.blog/tags/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <loc>https://robinsonraju.blog/posts/general/2022-06-02-wordle/</loc>
+    <lastmod>2022-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/tags/games/</loc>
+    <lastmod>2022-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/categories/general/</loc>
+    <lastmod>2022-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/tags/wordle/</loc>
+    <lastmod>2022-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/tags/matthew-walker/</loc>
+    <lastmod>2022-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/posts/books/2022-01-23-why-we-sleep/</loc>
+    <lastmod>2022-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/tags/beyond-order/</loc>
     <lastmod>2021-08-07T00:00:00+00:00</lastmod>
@@ -69,9 +96,6 @@
     <lastmod>2021-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/posts/general/2021-05-29-the-nevers/</loc>
-    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robinsonraju.blog/categories/general/</loc>
     <lastmod>2021-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/tags/hbo/</loc>
@@ -491,7 +515,7 @@
     <loc>https://robinsonraju.blog/posts/management/2014-09-09-what-is-agile/</loc>
     <lastmod>2014-09-09T22:54:56+00:00</lastmod>
   </url><url>
-    <loc>https://robinsonraju.blog/posts/books/2014-02-16-datamining-tsk/</loc>
+    <loc>https://robinsonraju.blog/posts/textbooks/2014-02-16-datamining-tsk/</loc>
     <lastmod>2014-02-16T18:17:11+00:00</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/posts/general/2014-01-20-the-spinning-melody-and-gateway/</loc>
