@@ -12,19 +12,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2023, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 31 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>Book Notes</title>
-        <link>https://robinsonraju.blog/categories/book-notes/</link>
-        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+        <title>General</title>
+        <link>https://robinsonraju.blog/categories/general/</link>
+        <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
         
         
-        <guid>https://robinsonraju.blog/categories/book-notes/</guid>
+        <guid>https://robinsonraju.blog/categories/general/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
@@ -37,12 +37,12 @@
       </item>
       
       <item>
-        <title>General</title>
-        <link>https://robinsonraju.blog/categories/general/</link>
-        <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+        <title>Book Notes</title>
+        <link>https://robinsonraju.blog/categories/book-notes/</link>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
         
         
-        <guid>https://robinsonraju.blog/categories/general/</guid>
+        <guid>https://robinsonraju.blog/categories/book-notes/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>
