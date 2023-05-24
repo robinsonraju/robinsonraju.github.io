@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2023, Robinson Raju, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://robinsonraju.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,7 @@
       <item>
         <title>Great Books</title>
         <link>https://robinsonraju.blog/tags/great-books/</link>
-        <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
         
         
         <guid>https://robinsonraju.blog/tags/great-books/</guid>
@@ -39,7 +39,7 @@
       <item>
         <title>Newsletter</title>
         <link>https://robinsonraju.blog/tags/newsletter/</link>
-        <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
         
         
         <guid>https://robinsonraju.blog/tags/newsletter/</guid>
@@ -57,10 +57,28 @@
       <item>
         <title>Substack</title>
         <link>https://robinsonraju.blog/tags/substack/</link>
-        <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
         
         
         <guid>https://robinsonraju.blog/tags/substack/</guid>
+        <description></description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>The Iliad</title>
+        <link>https://robinsonraju.blog/tags/the-iliad/</link>
+        <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+        
+        
+        <guid>https://robinsonraju.blog/tags/the-iliad/</guid>
         <description></description>
         
         <dc:creator>Robinson Raju</dc:creator>

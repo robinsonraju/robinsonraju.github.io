@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>The Iliad on Rob&#39;s Notes</title>
+    <link>https://robinsonraju.blog/tags/the-iliad/</link>
+    <description>Recent content in The Iliad on Rob&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, Robinson Raju, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://robinsonraju.blog/tags/the-iliad/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Great Books - The Iliad</title>
+        <link>https://robinsonraju.blog/posts/general/2023-05-21-great-books-iliad/</link>
+        <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 21 May 2023 00:00:00 +0000</atom:modified>
+        <guid>https://robinsonraju.blog/posts/general/2023-05-21-great-books-iliad/</guid>
+        <description>Yay! I finished the first book in the series. The Iliad!
+As mentioned in the previous post, as I read The Iliad, I picked a quote/passage, crafted a prompt to tie it to some contemporary issue, and posted it to ChatGPT and Bard. They definitely gave me interesting answers, which made me think further.</description>
+        
+        <dc:creator>Robinson Raju</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Great Books</category>
+            
+          
+            
+              <category>Newsletter</category>
+            
+          
+            
+              <category>Substack</category>
+            
+          
+            
+              <category>The Iliad</category>
+            
+          
+        
+        
+          
+            
+              <category>General</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
