@@ -26,11 +26,11 @@
         <atom:modified>Sun, 21 May 2023 00:00:00 +0000</atom:modified>
         <guid>https://robinsonraju.blog/posts/general/2023-05-21-great-books-iliad/</guid>
         <description>Yay! I finished the first half of the first book in the series. The Iliad!
-As mentioned in the previous post, as I read The Iliad, I picked a quote/passage, crafted a prompt to tie it to some contemporary issue, and asked a question or two to ChatGPT and Bard. They definitely gave me interesting answers, which made me think further.</description>
+As mentioned in the previous post, as I read The Iliad, I picked a quote/passage, crafted a prompt to tie it to some contemporary issue, and submitted the prompt to ChatGPT and Bard. They definitely gave me interesting answers, which made me think further.</description>
         
         <dc:creator>Robinson Raju</dc:creator>
         
-        
+        <media:content url="https://robinsonraju.blog/image//books/2023/GB-Vol4-Homer2.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
           
@@ -72,7 +72,7 @@ As mentioned in the previous post, as I read The Iliad, I picked a quote/passage
         
         <dc:creator>Robinson Raju</dc:creator>
         
-        
+        <media:content url="https://robinsonraju.blog/image//books/2023/Great_Books.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
           
