@@ -311,19 +311,28 @@
     <loc>https://robinsonraju.blog/Books-Reference/Booker-Prize-Winners</loc>
     <lastmod>2024-07-01T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://robinsonraju.blog/Books-Reference/GB-Volume-4---Reading-Plan</loc>
-    <lastmod>2023-04-05T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://robinsonraju.blog/Books-Reference/GB-Volume-4</loc>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-1</loc>
     <lastmod>2024-01-01T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://robinsonraju.blog/Books-Reference/GB-Volume-5---Reading-Plan</loc>
-    <lastmod>2023-04-05T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://robinsonraju.blog/Books-Reference/GB-Volume-5</loc>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-2</loc>
     <lastmod>2024-01-01T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World</loc>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-3</loc>
+    <lastmod>2024-01-01T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-4---Reading-Plan</loc>
+    <lastmod>2023-04-05T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-4</loc>
+    <lastmod>2024-01-01T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-5---Reading-Plan</loc>
+    <lastmod>2023-04-05T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/GB-Volume-5</loc>
+    <lastmod>2024-01-01T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Books-Reference/Great-Books-of-the-Western-World/Great-Books-of-the-Western-World</loc>
     <lastmod>2024-06-28T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/Books-Reference/Hugo-Awards-Winners</loc>
@@ -505,6 +514,9 @@
   </url><url>
     <loc>https://robinsonraju.blog/Lists/Cybersecurity-Book-List</loc>
     <lastmod>2020-06-22T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Lists/Cybersecurity-Canon</loc>
+    <lastmod>2024-10-22T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/Lists/Favorite-Poems</loc>
     <lastmod>2020-06-08T00:00:00.000Z</lastmod>
@@ -1844,6 +1856,9 @@
     <loc>https://robinsonraju.blog/Readwise/Articles/2024/2024-12-22---(Readwise)---Wisereads-Vol.-70-%E2%80%94-Kadavy's-How-to-Sell-a-Book,-Ilya-Sutskever's-Talk,-and-More</loc>
     <lastmod>2025-01-04T14:23:04.290Z</lastmod>
   </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2024/</loc>
+    <lastmod>2024-07-02T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-02---Gurwinder---25-Useful-Ideas-for-2025</loc>
     <lastmod>2025-01-06T04:57:33.716Z</lastmod>
   </url><url>
@@ -1864,6 +1879,9 @@
   </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-07---Zaides---The-Victim-Trap-of-Engineering-Managers</loc>
     <lastmod>2025-01-07T17:00:59.077Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-08---Jarow---How-Meditation-Deconstructs-Your-Mind</loc>
+    <lastmod>2025-01-21T19:45:38.565Z</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-08---Kao---%E2%80%9CLooks-Good-to-Me%E2%80%9D-Is-a-Lazy-Default-Why-Managers-Should-Give-Feedback-on-Work-Output</loc>
     <lastmod>2025-01-10T05:41:25.393Z</lastmod>
@@ -1886,6 +1904,9 @@
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-12---(Readwise)---Wisereads-Vol.-73-%E2%80%94-Altman's-Reflections,-Steinbeck's-Cup-of-Gold,-and-More</loc>
     <lastmod>2025-01-18T00:45:26.849Z</lastmod>
   </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-12---Palihapitiya---What-I-Read-This-Week%E2%80%A6</loc>
+    <lastmod>2025-01-21T19:45:38.483Z</lastmod>
+  </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-12---Qureshi---Principles</loc>
     <lastmod>2025-01-19T14:22:29.417Z</lastmod>
   </url><url>
@@ -1904,11 +1925,35 @@
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-15---Smith---TikTok-Is-Just-the-Beginning</loc>
     <lastmod>2025-01-20T15:44:54.864Z</lastmod>
   </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-15---Walters---Swearing-on-a-Penis</loc>
+    <lastmod>2025-01-21T19:45:38.549Z</lastmod>
+  </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-16---Issa---The-Art-of-Being-Reflections-on-a-Christmas-Break-With-Family</loc>
     <lastmod>2025-01-20T15:44:54.910Z</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-18---Smith---Why-I'm-Long-Term-Bullish-on-the-Middle-East</loc>
     <lastmod>2025-01-20T15:44:54.928Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-19---(Readwise)---Wisereads-Vol.-74-%E2%80%94-Tim-Ferriss's-New-Book-Announcement,-Gandhi's-Experiments-With-Truth,-and-More</loc>
+    <lastmod>2025-01-21T19:45:38.475Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-20---Palihapitiya---What-I-Read-This-Week%E2%80%A6</loc>
+    <lastmod>2025-01-21T19:45:38.489Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-20---Walters---What's-Wrong-With-Retribution</loc>
+    <lastmod>2025-01-22T15:37:26.537Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-21---Anderberg---My-Year-With-Dickens-Bleak-House</loc>
+    <lastmod>2025-01-22T15:37:26.485Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-21---Smith---Your-Memecoin-Is-Your-Slush-Fund</loc>
+    <lastmod>2025-01-22T15:37:26.502Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-21---Zaides---6-Secrets-for-Never-Being-Blocked-Again</loc>
+    <lastmod>2025-01-22T15:37:26.492Z</lastmod>
+  </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Articles/2025-01-22---Kao---No,-I-Don't-Want-to-Hop-on-a-Call</loc>
+    <lastmod>2025-01-22T15:37:26.570Z</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/Readwise/Articles/</loc>
     <lastmod>2024-07-02T00:00:00.000Z</lastmod>
@@ -2057,6 +2102,9 @@
     <loc>https://robinsonraju.blog/Readwise/Books/Lorimer---Letters-From-a-Self-Made-Merchant-to-His-Son-Being-the-Letters-Written-by-John-Graham,-Head-of-the-House-of-Graham--and--Company,-Pork-Packers-in-Chicago,-...-Known-to-His-Intimates-as-Piggy.</loc>
     <lastmod>2024-08-16T00:08:13.330Z</lastmod>
   </url><url>
+    <loc>https://robinsonraju.blog/Readwise/Books/Manz---Research-Methods-for-Cyber-Security</loc>
+    <lastmod>2025-01-20T19:56:20.884Z</lastmod>
+  </url><url>
     <loc>https://robinsonraju.blog/Readwise/Books/Marquez---Of-Love-and-Other-Demons</loc>
     <lastmod>2024-08-16T00:08:13.927Z</lastmod>
   </url><url>
@@ -2167,9 +2215,6 @@
   </url><url>
     <loc>https://robinsonraju.blog/Text-Books/Introduction-to-Data-Mining</loc>
     <lastmod>2014-02-17T02:17:11.000Z</lastmod>
-  </url><url>
-    <loc>https://robinsonraju.blog/Untitled</loc>
-    <lastmod>2024-12-13T19:56:30.188Z</lastmod>
   </url><url>
     <loc>https://robinsonraju.blog/What-I-Read-Last-Week</loc>
     <lastmod>2024-07-01T00:00:00.000Z</lastmod>
