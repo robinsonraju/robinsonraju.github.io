@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Fermat's Enigma: The Epic Quest to Solve the World's Greatest Mathematical Problem by Simon Singh</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Text:wght@400;700&amp;family=Noto Serif:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="✍️ Rob's Notes"/><meta property="og:title" content="Fermat's Enigma: The Epic Quest to Solve the World's Greatest Mathematical Problem by Simon Singh"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Fermat's Enigma: The Epic Quest to Solve the World's Greatest Mathematical Problem by Simon Singh"/><meta name="twitter:description" content="“Proof is what lies at the heart of maths, and is what marks it out from other sciences."/><meta property="og:description" content="“Proof is what lies at the heart of maths, and is what marks it out from other sciences."/><meta property="og:image:alt" content="“Proof is what lies at the heart of maths, and is what marks it out from other sciences."/><meta property="twitter:domain" content="robinsonraju.blog"/><meta property="og:url" content="https://robinsonraju.blog/Blog/2021/2021-04-17---Fermat's-Enigma"/><meta property="twitter:url" content="https://robinsonraju.blog/Blog/2021/2021-04-17---Fermat's-Enigma"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="“Proof is what lies at the heart of maths, and is what marks it out from other sciences."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL3JvYi9SZXBvc2l0b3JpZXMvZ2l0L1BlcnNvbmFsL1dlYnNpdGUvcnItbm90ZXMvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://robinsonraju.blog/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://robinsonraju.blog/Blog/2021/2021-04-17---Fermat's-Enigma-og-image.webp"/><meta property="og:image:url" content="https://robinsonraju.blog/Blog/2021/2021-04-17---Fermat's-Enigma-og-image.webp"/><meta name="twitter:image" content="https://robinsonraju.blog/Blog/2021/2021-04-17---Fermat's-Enigma-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="Blog/2021/2021-04-17---Fermat's-Enigma"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">✍️ Rob's Notes</a></h2><div class="spacer mobile-only"></div><div style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-1"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Blog/">Blog</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Blog/2021/">2021</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Fermat's Enigma: The Epic Quest to Solve the World's Greatest Mathematical Problem by Simon Singh</a></div></nav><h1 class="article-title">Fermat's Enigma: The Epic Quest to Solve the World's Greatest Mathematical Problem by Simon Singh</h1><p show-comma="true" class="content-meta"><time datetime="2021-04-17T00:00:00.000Z">Apr 16, 2021</time><span>14 min read</span></p><ul class="tags"><li><a href="../../tags/Non-Fiction" class="internal tag-link">Non-Fiction</a></li><li><a href="../../tags/Mathematics" class="internal tag-link">Mathematics</a></li><li><a href="../../tags/History" class="internal tag-link">History</a></li><li><a href="../../tags/book-notes" class="internal tag-link">book-notes</a></li><li><a href="../../tags/blog" class="internal tag-link">blog</a></li></ul></div></div><article class="popover-hint"><blockquote>
+<p><em>“Proof is what lies at the heart of maths, and is what marks it out from other sciences. Other sciences have hypotheses that are tested against experimental evidence until they fail, and are overtaken by new hypotheses. In maths, absolute proof is the goal, and once something is proved, it is proved forever, with no room for change.”</em>
+~ Simon Singh, <strong>Fermat’s Enigma: The Epic Quest to Solve the World’s Greatest Mathematical Problem</strong><sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label" class="internal alias">1</a></sup></p>
+</blockquote>
+<p>The book is part history, part mystery (since we get to know about the proof only in the end), part short biographies of eminent personalities, and also a compendium of key mathematical principles. As Simon Singh says in the book - “<em>The Last Theorem is at the heart of an intriguing saga of courage, skulduggery, cunning, and tragedy, involving all the greatest heroes of mathematics.</em>” Kudos to him for writing such an engaging book.</p>
+<p>Also, the book references so many other books that just going through the titles is very enriching. It is like going to the favorite section of a library and looking at all the titles that you want to read at some point. At the end of the book, there is a section named “Suggestions for further reading”. Going through the list is like recalling many notable incidents and stories in the book.</p>
+<p>Here are some notes from me on each chapter. The title of each chapter is quite interesting and makes you want to read to find out what is inside.</p>
+<h4 id="1-i-think-ill-stop-here">1. “I Think I’ll Stop Here”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-i-think-ill-stop-here" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>June 23, 1993, Cambridge</strong> - Andrew Wiles is presenting his proof of Fermat’s Last Theorem at the Newton Institute in his hometown of Cambridge.</li>
+<li><strong>The Last Problem</strong> - The book goes into a flashback, to a time when 10-year old Wiles discovered <em>The Last Problem</em>, by E.T. Bell in a library. This sparked his life-long passion to solve Fermat’s last theorem. Then it goes into the origins of this problem, starting with Pythagoras. Many pages are dedicated to Pythagoras and the Pythagoras Brotherhood. It was fascinating to know how extraordinary and influential Pythagoras really was. He probably treated numbers as friends like Ramanujam did. It talks about Perfect numbers (sum of divisors = the number), defective numbers (sum of divisors &lt; the number), excessive numbers (sum of divisors > the number). It was great to know that powers of two - 4, 8, 16, 32 are slightly defective (sum of divisors = the number - 1) and that there are no numbers that are slightly excessive (sum of divisors = the number + 1). Intriguing tidbits.</li>
+<li><strong>Everything is Number</strong> - This was a fascinating section where he talks about how numbers and proportions are related to music. Octaves and harmonic notes are all related to simple fractions. And then he says, you look anywhere in the universe, numbers manifest in all kinds of physical processes. For e.g., the ratio of the length of a river to the distance it covers is pi.</li>
+<li><strong>Absolute Proof</strong> - Here, the book compares Mathematical proof and scientific proof. Scientific theories evolve and get better like peeling an onion. But mathematical proofs are infallible and built on a rock-solid foundation that stays strong to eternity. Wow!</li>
+<li><strong>An infinity of Triples</strong> - This gives an account of how Pythagoras dies. In many ways, like romantic heroes of novels, famous Mathematicians seem to die tragic deaths in the hands of jealous adversaries.</li>
+<li><strong>From Pythagoras’s Theorem to Fermat’s Last Theorem</strong> - Pythagoras equation (x^2 + y^2 = z^2) seems quite innocuous (intuitive even when you consider right-angle triangles). But the moment the powers are changed to cube or higher, you get an equation that is quite complex to prove.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>A Mathematician’s Apology</strong> - G. H. Hardy</li>
+<li><strong>The Last Problem</strong> - E.T. Bell</li>
+<li><strong>The City of God</strong> - St. Augustine. “God created all things in six days because this number is perfect.”</li>
+<li><strong><a href="https://www.amazon.com/Iamblichus-Life-Pythagoras-Thomas-Taylor/dp/0892811528" class="external">Iamblichus’ Life of Pythagoras<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></strong> Iamblichus was a fourth-century scholar who wrote nine books about the Pythagorean sect.</li>
+</ul>
+</li>
+<li><strong>Other books mentioned in the Appendix</strong>
+<ul>
+<li><strong>Pythagoras – A Short Account of His Life and Philosophy</strong> - Leslie Ralph</li>
+<li><strong>Pythagoras – A Life</strong> - Peter Gorman</li>
+<li><strong>A History of Greek Mathematics, Vols. 1 and 2</strong> - Sir Thomas Heath</li>
+<li><strong>Mathematical Magic Show</strong> - Martin Gardner</li>
+<li><strong>River meandering as a self-organization process</strong> - Hans-Henrik Støllum</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-the-riddler">2. The Riddler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-the-riddler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>This chapter is about Pierre de Fermat, a 17th-century mathematician. He was a civil servant by the day and a Mathematician on the side. Mathematicians were quite secretive during those days with their proofs. Father Mersenne tried to change that and encouraged everyone to exchange ideas. Fermat exchanged ideas with Mersenne but not anyone else till he happened to correspond with Pascal. Fermat and Pascal came up with an entirely new branch of Mathematics - Probability theory! Fermat was also involved in the founding of Calculus.</li>
+<li>A puzzle - Imagine a soccer field with 23 people on it, two teams of 11 players, and the referee. What is the probability that any two of those 23 people share the same birthday? It is a bit over 50%!</li>
+<li><strong>The Evolution of Number Theory</strong> - This section talks about the evolution of Mathematics after Pythagoras’s time. The main person of interest is Euclid. Alexandrian library and the tragic loss of knowledge due to the burning of books are mentioned. Euclid’s <em>Arithmetica</em> survived.</li>
+<li><strong>Birth of a Riddle</strong> - Fermat was busy with his judicial duties but used all of his spare time for Mathematics. Claude Bachet (reputedly the most learned man in France) published a Latin translation of <em>Arithmetica</em>, which Fermat happened to read. Fermat wrote logic and comments on the margins of the book.</li>
+<li><strong>The Marginal Note</strong> - In the margin of his <em>Arithmetica (Book 2)</em>, next to Problem 8, Fermat wrote an observation about the equation - x^n + y^n = z^n. That there is no number that satisfies this equation and that he had a beautiful proof that the margin could not hold! This statement teased and tormented mathematicians for the next three centuries.</li>
+<li><strong>The Last Theorem Published at Last</strong> - Fermat’s son, Clement-Samuel publishes his father’s work. Leonard Euler, a great mathematician of the time, attempted to give proofs to many of Fermat’s theorems. Euler used the concept of imaginary numbers to prove the theorem for n=3, but could not generalize it.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>The Devil and Simon Flagg</strong> by Arthur Porges</li>
+<li><strong>Mathematics of Great Amateurs</strong> by Julian Coolidge</li>
+<li><strong>The Mathematical Career of Pierre de Fermat</strong>, by Michael Mahoney</li>
+<li><strong>Archimedes’ Revenge</strong>, by Paul Hoffman</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-a-mathematical-disgrace">3. A Mathematical Disgrace<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-a-mathematical-disgrace" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>The Mathematical Cyclops</strong> - This section of the chapter is mostly about Leonard Euler. Was surprised to know that Euler was close friends with the Bernoullis. “Three-body Problem” reminded me of the upcoming Netflix series that the GoT showrunners David Benioff &amp; D.B. Weiss were going to be writing and producing. This section was one of the best. This book is full of geniuses but Euler’s story was truly remarkable. He was completely blind in the last few years of his life but was still working on things.</li>
+<li><strong>A Petty Pace</strong> - This section talks about prime numbers and the importance of prime factorization in cryptography.</li>
+<li><strong>Monsieur Le Blanc</strong> - This section is about Sophie Germain. Singh talks about various women in the history of Mathematics leading to this point and it was a testament of human triumph in the face of adversities. Interestingly Sophie Germain’s contribution to Mathematics, specifically Fermat’s theorem, may have been attributed to Monsieur Le Blanc (a pseudonym that Sophie used) if Napoleon did not attack Prussia at the time! Sophie wrote a letter to a General friend to guarantee Gauss’s safety.</li>
+<li><strong>The Sealed Envelopes</strong> -  Dirichlet and Legendre independently proved the theorem for n=5, based on Sophie Germain’s work. Lamé proved it for n=7. The French Academy of Sciences offered 3,000 Francs to any mathematician who could solve Fermat’s Last Theorem. Lamé and Cauchy - both great mathematicians of the time, announced that they were on the verge of the proof and submitted sealed envelopes to the academy. Kummer pointed out a fatal flaw regarding using unique factorization.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>Men of Mathematics</strong>, by E.T. Bell.</li>
+<li><strong>The periodical cicada problem</strong>, by Monte Lloyd and Henry S. Dybas.</li>
+<li><strong>Women in Mathematics</strong>, by Lynn M. Osen.</li>
+<li><strong>Math Equals: Biographies of Women Mathematicians+Related Activities</strong>, by Teri Perl.</li>
+<li><strong>Women in Science</strong>, by H. J. Mozans.</li>
+<li><strong>Sophie Germain</strong>, by Amy Dahan Dalmédico.</li>
+<li><strong>Fermat’s Last Theorem – A Genetic Introduction to Algebraic Number Theory</strong>, by Harold M. Edwards.</li>
+<li><strong>Elementary Number Theory</strong>, by David Burton.</li>
+<li><strong>Various communications</strong>, by A. Cauchy.</li>
+<li><strong>Note au sujet de la demonstration du theoreme de Fermat</strong>, by G. Lamé.</li>
+<li><strong>Extrait d’une lettre de M. Kummer à M. Liouville</strong> by E.E. Kummer.</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-into-abstraction">4. Into Abstraction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-into-abstraction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>This section has the story of Paul Wolfskehl, a super rich guy who sets out to commit suicide after a woman rejects him. He is so efficient that he plans everything meticulously, writes his will, letters to family, etc., and even has some spare time before the appointed hour! So lucky for the world!! To keep himself engaged in the spare time, he goes to the library to read something and finds Kummer’s paper. He finds a flaw in the logic and spends the night engrossed in developing a mini-proof, thereby avoiding suicide. Upon his death many years later, he bequeathed a reward of 100,000 Marks (approximately the equivalent of a million dollars by today’s standards) to anyone who could prove Fermat’s last theorem. This prize heralded a new era of interest to solve the theorem and many other mathematical puzzles.</li>
+<li><strong>The Era of Puzzles, Riddles, and Enigmas</strong> - This section goes over the history of puzzles and how they were very popular in the 1800s. Interestingly Lewis Carroll was very interested in puzzles and had set out to write a giant compendium of puzzles. When Wolfskehl prize was announced, there was a lot of frenzy and there was an avalanche of entries sent.</li>
+<li><strong>The Foundations of Knowledge</strong> - This section is about the importance of logic and how Mathematics is strongly built on the foundation of logic. David Hilbert set out to logically rebuild/prove all the mathematical knowledge and make a list of unsolved problems that had to be proved. But Kurt Gödel went on to prove that it was not possible, that from fundamental axioms it is possible to create statements that can never be true or false. “This statement does not have any proof”.</li>
+<li><strong>The Compulsion of Curiosity</strong> - Though Gödel’s theorems of undecidability had put some elements of doubt on whether Fermat’s theorem would ever be proven, it couldn’t dissuade the scores of fanatics.</li>
+<li><strong>The Brute Force Approach</strong> - Invention of computers and the usage of brute force approaches.</li>
+<li><strong>The Graduate</strong> - John Coates, Andrew Wiles’ Ph.D. supervisor encouraged Wiles to study an area of mathematics known as elliptic curves, which proved very useful later on to solve Fermat’s last theorem.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>3.1416 and All That</strong>, by P.J. Davis and W.G. Chinn.</li>
+<li><strong>The Penguin Dictionary of Curious and Interesting Numbers</strong>, by David Wells.</li>
+<li><strong>The Penguin Dictionary of Curious and Interesting Puzzles</strong>, by David Wells.</li>
+<li><strong>Sam Loyd and his Puzzles</strong>, by Sam Loyd (II).</li>
+<li><strong>Mathematical Puzzles of Sam Loyd</strong>, by Sam Loyd, edited by Martin Gardner.</li>
+<li><strong>Riddles in Mathematics</strong>, by Eugene P. Northropp.</li>
+<li><strong>13 Lectures on Fermat’s Last Theorem</strong>, by Paulo Ribenboim.</li>
+<li><strong>Mathematics: The Science of Patterns</strong>, by Keith Devlin.</li>
+<li><strong>Mathematics: The New Golden Age</strong>, by Keith Devlin.</li>
+<li><strong>The Concepts of Modern Mathematics</strong>, by Ian Stewart.</li>
+<li><strong>Principia Mathematica</strong>, by Bertrand Russell and Alfred North Whitehead.</li>
+<li><strong>Kurt Gödel</strong>, by G. Kreisel.</li>
+<li><strong>A Mathematician’s Apology</strong>, by G.H. Hardy.</li>
+<li><strong>Alan Turing: The Enigma of Intelligence</strong>, by Andrew Hodges.</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-proof-by-contradiction">5. Proof by Contradiction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-proof-by-contradiction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>This section covers the story of Taniyama and Shimura and their study of modular forms.</li>
+<li><strong>Wishful Thinking</strong> - Taniyama and Shimura shock the mathematical community by suggesting that elliptic equations and modular forms were effectively one and the same thing.</li>
+<li><strong>Death of a Genius</strong> - Tragic death of Taniyama and later his fiance Misako, through suicide.</li>
+<li><strong>Philosophy of Goodness</strong> - Following Taniyama’s death, Shimura focuses his efforts on understanding the exact relationship between elliptic equations and modular forms. This section gives more details on Taniyama-Shimura conjecture and the importance of bridges that connect separate fields.</li>
+<li><strong>The Missing Link</strong> - Insights from Gerhard Frey &amp; later Ken Ribet, the inference that Taniyama-Shimura Conjecture implied Fermat’s Last Theorem.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>Yutaka Taniyama and his time</strong>, by Goro Shimura.</li>
+<li><strong>Links between stable elliptic curves and certain diophantine equations</strong>, by Gerhard Frey.</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-the-secret-calculation">6. The Secret Calculation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-the-secret-calculation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>The Attic Recluse</strong> - Wiles makes the decision to work in complete isolation and secrecy for many years once he starts working on the proof.</li>
+<li><strong>Dueling with Infinity</strong> - Wiles had to prove the Taniyama-Shimura conjecture in order to prove Fermat’s last theorem. He employs <em>Mathematical Induction</em> to aid with the proof. This section has the tragic story of Galois.</li>
+<li><strong>Toppling the first Domino</strong> - Wiles had already spent two years into the proof and using Galois’ Group Theory, he had solved parts of it. He was able to ‘sort’ the infinite number of elliptical equations to groups and prove the Taniyama-Shimura Conjecture for the first element of each group.</li>
+<li><strong>“Fermat’s Last Theorem Solved?”</strong> - Wiles reads a news article that said the theorem was solved. But thankfully, it turns out to be not the case!</li>
+<li><strong>“The Dark Mansion”</strong> - Reminded me of the <a href="../../books/2006-07-02-fermats-last-theorem/" class="internal alias" data-slug="books/2006-07-02-fermats-last-theorem/index">post</a> made on Amir Aczel’s book 15 years ago!</li>
+<li><strong>The Method of Kolyvagin and Flach</strong> - After a couple of years on Iwasawa theory, Wiles gave up that path and then tried Kolyvagin-Flach method with help from Nick Katz. It was amazing that Katz came on board and grasped 6 years of research in a short time.</li>
+<li><strong>The Lecture of the Century</strong> - Andrew Wiles finally delivered his proof in a series of lectures in 1993. It is one of these lectures that the book starts with.</li>
+<li><strong>The Aftermath</strong> - It became newspaper headlines, including NYT and everyone congratulated Wiles. People magazine even listed him among “the 25 most intriguing people of the year” along with Princess Diana and Oprah Winfrey.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>Genius and Biographers: the Fictionalization of Evariste Galois</strong>, by T. Rothman.</li>
+<li><strong>La vie d’Evariste Galois</strong>, by Paul Depuy.</li>
+<li><strong>Mes Memoirs</strong>, by Alexandre Dumas.</li>
+<li><strong>Notes on Fermat’s Last Theorem</strong>, by Alf van der Poorten.</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-a-slight-problem">7. A Slight Problem<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-a-slight-problem" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>Manuscripts with detailed proof were submitted. Instead of the usual 1-3 referees, 6 were appointed. the 200-page proof was divided into six sections and each of the referees took responsibility for one of these chapters. Nick Katz was one of the referees and he found a flaw.</li>
+<li><strong>The Carpet Fitter</strong> - Initially, Wiles thought it was a minor problem and assured Katz that the solution was right around the corner. But months passed. Word got out and there was a lot of bad publicity. Despite the pressure to release the manuscript publicly, Wiles did not.</li>
+<li><strong>The Nightmare E-mail</strong> - There was an email circulating around that said proof was found in a different way. That turned out to an April fools joke.</li>
+<li><strong>The Birthday Present</strong> - Wiles found a solution just short of his wife’s birthday and handed over the complete manuscript to her as a birthday present.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>Modular elliptic curves and Fermat’s Last Theorem</strong>, by Andrew Wiles.</li>
+<li><strong>Ring-theoretic properties of certain Hecke algebras</strong>, by Richard Taylor and Andrew Wiles.</li>
+</ul>
+</li>
+</ul>
+<h4 id="epilogue-grand-unified-mathematics">Epilogue: Grand Unified Mathematics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#epilogue-grand-unified-mathematics" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>Once again Wiles found himself on the cover of NYT. John Coates was quoted saying - “In mathematical terms, the final proof is the equivalent of splitting the atom or finding the structure of DNA.” On June 27, 1997, Andrew Wiles collected the Wolfskehl Prize.</li>
+<li><strong>Books mentioned</strong>
+<ul>
+<li><strong>An elementary introduction to the Langlands program</strong>, by Stephen Gelbart</li>
+</ul>
+</li>
+</ul>
+<h4 id="appendixes">Appendixes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#appendixes" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>Appendix 1. The Proof of Pythagoras’s Theorem</li>
+<li>Appendix 2. Euclid’s Proof that sqrt(2) is Irrational</li>
+<li>Appendix 3. The Riddle of Diophantus’s Age</li>
+<li>Appendix 4. Bachet’s Weighing Problem</li>
+<li>Appendix 5. Euclid’s Proof That There Are an Infinite Number of Pythagorean Triples</li>
+<li>Appendix 6. Straying into Absurdity</li>
+<li>Appendix 7. Letter About Wolfskehl Prize</li>
+<li>Appendix 8. The Axioms of Arithmetic</li>
+<li>Appendix 9. Game Theory and the Truel</li>
+<li>Appendix 10. An Example of Proof by Induction</li>
+</ul>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#footnote-label" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li id="user-content-fn-1">
+<p>Singh, Simon. <a href="https://www.amazon.com/Fermats-Enigma-Greatest-Mathematical-Problem/dp/0385493622" class="external">Fermat’s Enigma: The Quest to Solve the World’s Greatest Mathematical Problem<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. Knopf Doubleday Publishing Group. Kindle Edition. <a href="#user-content-fnref-1" data-footnote-backref aria-label="Back to reference 1" class="data-footnote-backref internal alias">↩</a></p>
+</li>
+</ol>
+</section></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../Lists/My-Reading-List" class="internal">Reading List</a></li><li class="overflow-end"></li></ul></div><div class="recent-notes desktop-only"><h3>Recent Notes</h3><ul class="recent-ul"><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-05-25---(Readwise)---Wisereads-Vol.-92-—-Husk-by-Nat-Eliason,-Domenic-Denicola-on-Spaced-Repetition,-and-More" class="internal">2025-05-25 - (Readwise) - Wisereads Vol. 92 — Husk by Nat Eliason, Domenic Denicola on Spaced Repetition, and More</a></h3></div><p class="meta"><time datetime="2025-06-20T22:47:43.850Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-04-01---skincontact.substack.com---21-Observations-From-People-Watching" class="internal">2025-04-01 - skincontact.substack.com - 21 Observations From People Watching</a></h3></div><p class="meta"><time datetime="2025-06-20T22:47:43.834Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-05-02---McLennan---My-Miserable-Week-in-the-‘Happiest-Country-on-Earth’---The-New-York-Times" class="internal">2025-05-02 - McLennan - My Miserable Week in the ‘Happiest Country on Earth’ - The New York Times</a></h3></div><p class="meta"><time datetime="2025-06-20T13:47:22.503Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-06-07---Walters---Red,-Red-Stuff-The-Color-of-Tragedy" class="internal">2025-06-07 - Walters - Red, Red Stuff The Color of Tragedy</a></h3></div><p class="meta"><time datetime="2025-06-20T13:47:22.490Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-05-11---(Readwise)---Wisereads-Vol.-90-—-Show-Your-Work!-By-Austin-Kleon,-the-‘Happiest-Country-on-Earth’,-and-More" class="internal">2025-05-11 - (Readwise) - Wisereads Vol. 90 — Show Your Work! By Austin Kleon, the ‘Happiest Country on Earth’, and More</a></h3></div><p class="meta"><time datetime="2025-06-20T06:10:07.091Z">Jun 19, 2025</time></p></div></li></ul></div></div><footer class><p>© 2025 Robinson Raju, All Rights Reserved <br/></p><ul><li><a href="https://github.com/robinsonraju">GitHub</a></li><li><a href="https://scholar.google.com/citations?user=TxqnZk8AAAAJ&amp;hl=en">Google Scholar</a></li><li><a href="https://www.linkedin.com/in/robinsonraju/">LinkedIn</a></li><li><a href="https://substack.com/@robinsonraju">Substack</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../../postscript.js" type="module"></script></html>

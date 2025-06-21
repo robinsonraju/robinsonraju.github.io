@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Ethics and Technology by Herman Tavani</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Text:wght@400;700&amp;family=Noto Serif:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="✍️ Rob's Notes"/><meta property="og:title" content="Ethics and Technology by Herman Tavani"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Ethics and Technology by Herman Tavani"/><meta name="twitter:description" content="Textbook site by Wiley is here."/><meta property="og:description" content="Textbook site by Wiley is here."/><meta property="og:image:alt" content="Textbook site by Wiley is here."/><meta property="twitter:domain" content="robinsonraju.blog"/><meta property="og:url" content="https://robinsonraju.blog/General-Notes/Text-Books/Ethics-and-Technology"/><meta property="twitter:url" content="https://robinsonraju.blog/General-Notes/Text-Books/Ethics-and-Technology"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Textbook site by Wiley is here."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL3JvYi9SZXBvc2l0b3JpZXMvZ2l0L1BlcnNvbmFsL1dlYnNpdGUvcnItbm90ZXMvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://robinsonraju.blog/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://robinsonraju.blog/General-Notes/Text-Books/Ethics-and-Technology-og-image.webp"/><meta property="og:image:url" content="https://robinsonraju.blog/General-Notes/Text-Books/Ethics-and-Technology-og-image.webp"/><meta name="twitter:image" content="https://robinsonraju.blog/General-Notes/Text-Books/Ethics-and-Technology-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="General-Notes/Text-Books/Ethics-and-Technology"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">✍️ Rob's Notes</a></h2><div class="spacer mobile-only"></div><div style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-1"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../General-Notes/">General Notes</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../General-Notes/Text-Books/">Text Books</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Ethics and Technology by Herman Tavani</a></div></nav><h1 class="article-title">Ethics and Technology by Herman Tavani</h1><p show-comma="true" class="content-meta"><time datetime="2024-05-15T00:00:00.000Z">May 14, 2024</time><span>13 min read</span></p><ul class="tags"><li><a href="../../tags/Information-Technology" class="internal tag-link">Information-Technology</a></li><li><a href="../../tags/Ethics" class="internal tag-link">Ethics</a></li><li><a href="../../tags/Non-Fiction" class="internal tag-link">Non-Fiction</a></li><li><a href="../../tags/Textbook" class="internal tag-link">Textbook</a></li></ul></div></div><article class="popover-hint"><p>Textbook site by Wiley is <a href="https://www.wiley.com/en-us/Ethics+and+Technology%3A+Controversies%2C+Questions%2C+and+Strategies+for+Ethical+Computing%2C+5th+Edition-p-9781119239758" class="external">here<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.</p>
+<h2 id="table-of-contents">Table of Contents<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#table-of-contents" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>• CHAPTER 1: Introduction to Cyberethics: Concepts, Perspectives, and Methodological Frameworks</p>
+<ul>
+<li>Scenario 1–1: Hacking into the Mobile Phones of Celebrities</li>
+<li>1.1 Defining Key Terms: Cyberethics and Cybertechnology
+• 1.1.1 What Is Cybertechnology?
+• 1.1.2 Why the Term Cyberethics?</li>
+<li>1.2 The Cyberethics Evolution: Four Developmental Phases in Cybertechnology</li>
+<li>1.3 Are Cyberethics Issues Unique Ethical Issues?
+• Scenario 1–2: Developing the Code for a Computerized Weapon System
+• Scenario 1–3: Digital Piracy
+• 1.3.1 Distinguishing between Unique Technological Features and Unique Ethical Issues
+• 1.3.2 An Alternative Strategy for Analyzing the Debate about the Uniqueness of Cyberethics Issues
+• 1.3.3 A Policy Vacuum in Duplicating Computer Software</li>
+<li>1.4 Cyberethics as a Branch of Applied Ethics: Three Distinct Perspectives
+• 1.4.1 Perspective #1: Cyberethics as a Field of Professional Ethics
+• 1.4.2 Perspective #2: Cyberethics as a Field of Philosophical Ethics
+• 1.4.3 Perspective #3: Cyberethics as a Field of Sociological/Descriptive Ethics
+• Scenario 1–4: The Impact of Technology X on the Pleasantville Community</li>
+<li>1.5 A Comprehensive Cyberethics Methodology
+• 1.5.1 A “Disclosive” Method for Cyberethics
+• 1.5.2 An Interdisciplinary and Multilevel Method for Analyzing Cyberethics Issues</li>
+<li>1.6 A Comprehensive Strategy for Approaching Cyberethics Issues</li>
+<li>1.7 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 2: Ethical Concepts And Ethical Theories: Frameworks For Analyzing Moral Issues</p>
+<ul>
+<li>Scenario 2–1: The Case of the “Runaway Trolley”: A Classic Moral Dilemma</li>
+<li>2.1 Ethics and Morality
+• 2.1.1 What Is Morality?
+• 2.1.2 The Study of Morality: Three Distinct Approaches for Evaluating and Justifying the Rules Comprising a Moral System</li>
+<li>2.2 Discussion Stoppers as Roadblocks to Moral Discourse
+• 2.2.1 Discussion Stopper #1: People Disagree on Solutions to Moral Issues
+• 2.2.2 Discussion Stopper #2: Who Am I to Judge Others?
+• 2.2.3 Discussion Stopper #3: Morality Is Simply a Private Matter
+• 2.2.4 Discussion Stopper #4: Morality Is Simply a Matter for Individual Cultures to Decide
+• Scenario 2–2: The Price of Defending Moral Relativism</li>
+<li>2.3 Why Do We Need Ethical Theories?</li>
+<li>2.4 Consequence‐Based Ethical Theories
+• 2.4.1 Act Utilitarianism
+• Scenario 2–3: A Controversial Policy in Newmerica
+• 2.4.2 Rule Utilitarianism</li>
+<li>2.5 Duty‐Based Ethical Theories
+• 2.5.1 Rule Deontology
+• Scenario 2–4: Making an Exception for Oneself
+• 2.5.2 Act Deontology
+• Scenario 2–5: A Dilemma Involving Conflicting Duties</li>
+<li>2.6 Contract‐Based Ethical Theories
+• 2.6.1 Some Criticisms of Contract‐Based Theories
+• 2.6.2 Rights‐Based Contract Theories</li>
+<li>2.7 Character‐Based Ethical Theories
+• 2.7.1 Being a Moral Person vs. Following Moral Rules
+• 2.7.2 Acquiring the “Correct” Habits</li>
+<li>2.8 Integrating Aspects of Classical Ethical Theories into a Single Comprehensive Theory
+• 2.8.1 Moor’s Just‐Consequentialist Theory and Its Application to Cybertechnology
+• 2.8.2 Key Elements in Moor’s Just‐Consequentialist Framework</li>
+<li>2.9 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 3: Critical Reasoning Skills for Evaluating Disputes in Cyberethics</p>
+<ul>
+<li>SCENARIO 3–1: Reasoning About Whether to Download Software from “Sharester”</li>
+<li>3.1 What Is Critical Reasoning?
+• 3.1.1 Some Basic Concepts: (Logical) Arguments and Claims
+• 3.1.2 The Role of Arguments
+• 3.1.3 The Basic Structure of an Argument</li>
+<li>3.2 Constructing an Argument</li>
+<li>3.3 Valid Arguments</li>
+<li>3.4 Sound Arguments</li>
+<li>3.5 Invalid Arguments</li>
+<li>3.6 Inductive Arguments</li>
+<li>3.7 Fallacious Arguments</li>
+<li>3.8 A Seven‐Step Strategy for Evaluating Arguments</li>
+<li>3.9 Identifying Some Common Fallacies
+• 3.9.1 Ad Hominem Argument
+• 3.9.2 Slippery Slope Argument
+• 3.9.3 Fallacy of Appeal to Authority
+• 3.9.4 False Cause Fallacy
+• 3.9.5 Fallacy of Composition/Fallacy of Division
+• 3.9.6 Fallacy of Ambiguity/Equivocation
+• 3.9.7 The False Dichotomy/Either–Or Fallacy/All‐or‐Nothing Fallacy
+• 3.9.8 The Virtuality Fallacy</li>
+<li>3.10 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 4: Professional Ethics, Codes of Conduct, and Moral Responsibility</p>
+<ul>
+<li>Scenario 4–1: Fatalities Involving the Oerlikon GDF‐005 Robotic Cannon</li>
+<li>4.1 What Is Professional Ethics?
+• 4.1.1 What Is a Profession?
+• 4.1.2 Who Is a Professional?
+• 4.1.3 Who Is a Computer/IT Professional?</li>
+<li>4.2 Do Computer/IT Professionals Have Any Special Moral Responsibilities?</li>
+<li>4.3 Professional Codes of Ethics and Codes of Conduct
+• 4.3.1 The Purpose of Professional Codes
+• 4.3.2 Some Criticisms of Professional Codes
+• 4.3.3 Defending Professional Codes
+• 4.3.4 The IEEE‐CS/ACM Software Engineering Code of Ethics and Professional Practice</li>
+<li>4.4 Conflicts of Professional Responsibility: Employee Loyalty and Whistle‐Blowing
+• 4.4.1 Do Employees Have an Obligation of Loyalty to Employers?
+• 4.4.2 Whistle‐Blowing
+• Scenario 4–2: NSA Surveillance and the Case of Edward Snowden</li>
+<li>4.5 Moral Responsibility, Legal Liability, and Accountability
+• 4.5.1 Distinguishing Responsibility from Liability and Accountability
+• 4.5.2 Accountability and the Problem of “Many Hands”
+• Scenario 4–3: The Case of the Therac‐25 Machine
+• 4.5.3 Legal Liability and Moral Accountability</li>
+<li>4.6 Do Some Computer Corporations Have Special Moral Obligations?</li>
+<li>4.7 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 5: Privacy and Cyberspace</p>
+<ul>
+<li>Scenario 5–1: A New NSA Data Center</li>
+<li>5.1 Privacy in the Digital Age: Who Is Affected and Why Should We Worry?
+• 5.1.1 Whose Privacy Is Threatened by Cybertechnology?
+• 5.1.2 Are Any Privacy Concerns Generated by Cybertechnology Unique or Special?</li>
+<li>5.2 What Is Personal Privacy?
+• 5.2.1 Accessibility Privacy: Freedom from Unwarranted Intrusion
+• 5.2.2 Decisional Privacy: Freedom from Interference in One’s Personal Affairs
+• 5.2.3 Informational Privacy: Control over the Flow of Personal Information
+• 5.2.4 A Comprehensive Account of Privacy
+• Scenario 5–2: Descriptive Privacy
+• Scenario 5–3: Normative Privacy
+• 5.2.5 Privacy as “Contextual Integrity”
+• Scenario 5–4: Preserving Contextual Integrity in a University Seminar</li>
+<li>5.3 Why Is Privacy Important?
+• 5.3.1 Is Privacy an Intrinsic Value?
+• 5.3.2 Privacy as a Social Value</li>
+<li>5.4 Gathering Personal Data: Surveillance, Recording, and Tracking Techniques
+• 5.4.1 “Dataveillance” Techniques
+• 5.4.2 Internet Cookies
+• 5.4.3 RFID Technology
+• 5.4.4 Cybertechnology and Government Surveillance</li>
+<li>5.5 Analyzing Personal Data: Big Data, Data Mining, and Web Mining
+• 5.5.1 Big Data: What, Exactly, Is It, and Why Does It Threaten Privacy?
+• 5.5.2 Data Mining and Personal Privacy
+• Scenario 5–5: Data Mining at the XYZ Credit Union
+• 5.5.3 Web Mining: Analyzing Personal Data Acquired from Our Interactions Online</li>
+<li>5.6 Protecting Personal Privacy in Public Space
+• 5.6.1 PPI vs. NPI
+• Scenario 5–6: Shopping at SuperMart
+• Scenario 5–7: Shopping at Nile.com
+• 5.6.2 Search Engines and the Disclosure of Personal Information</li>
+<li>5.7 Privacy Legislation and Industry Self‐Regulation
+• 5.7.1 Industry Self‐Regulation and Privacy‐Enhancing Tools
+• 5.7.2 Privacy Laws and Data Protection Principles</li>
+<li>5.8 A Right to “Be Forgotten” (or to “Erasure”) in the Digital Age
+• Scenario 5–8: An Arrest for an Underage Drinking Incident 20 Years Ago
+• 5.8.1 Arguments Opposing RTBF
+• 5.8.2 Arguments Defending RTBF
+• 5.8.3 Establishing “Appropriate” Criteria</li>
+<li>5.9 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 6: Security in Cyberspace</p>
+<ul>
+<li>Scenario 6–1: The “Olympic Games” Operation and the Stuxnet Worm</li>
+<li>6.1 Security in the Context of Cybertechnology
+• 6.1.1 Cybersecurity as Related to Cybercrime
+• 6.1.2 Security and Privacy: Some Similarities and Some Differences</li>
+<li>6.2 Three Categories of Cybersecurity
+• 6.2.1 Data Security: Confidentiality, Integrity, and Availability of Information
+• 6.2.2 System Security: Viruses, Worms, and Malware
+• 6.2.3 Network Security: Protecting our Infrastructure
+• Scenario 6–2: The “GhostNet” Controversy</li>
+<li>6.3 Cloud Computing and Security
+• 6.3.1 Deployment and Service/Delivery Models for the Cloud
+• 6.3.2 Securing User Data Residing in the Cloud
+• 6.3.3 Assessing Risk in the Cloud and in the Context of Cybersecurity</li>
+<li>6.4 Hacking and “The Hacker Ethic”
+• 6.4.1 What Is “The Hacker Ethic”?
+• 6.4.2 Are Computer Break‐ins Ever Ethically Justifiable?</li>
+<li>6.5 Cyberterrorism
+• 6.5.1 Cyberterrorism vs. Hacktivism
+• Scenario 6–3: Anonymous and the “Operation Payback” Attack
+• 6.5.2 Cybertechnology and Terrorist Organizations</li>
+<li>6.6 Information Warfare (IW)
+• 6.6.1 Information Warfare vs. Conventional Warfare
+• 6.6.2 Potential Consequences for Nations that Engage in IW</li>
+<li>6.7 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 7: Cybercrime and Cyber‐Related Crimes</p>
+<ul>
+<li>Scenario 7–1: Creating a Fake Facebook Account to Catch Criminals</li>
+<li>7.1 Cybercrimes and Cybercriminals
+• 7.1.1 Background Events: A Brief Sketch
+• 7.1.2 A Typical Cybercriminal</li>
+<li>7.2 Hacking, Cracking, and Counter Hacking
+• 7.2.1 Hacking vs. Cracking
+• 7.2.2 Active Defense Hacking: Can Acts of “Hacking Back” or Counter Hacking Ever Be Morally Justified?</li>
+<li>7.3 Defining Cybercrime
+• 7.3.1 Determining the Criteria
+• 7.3.2 A Preliminary Definition of Cybercrime
+• 7.3.3 Framing a Coherent and Comprehensive Definition of Cybercrime</li>
+<li>7.4 Three Categories of Cybercrime: Piracy, Trespass, and Vandalism in Cyberspace</li>
+<li>7.5 Cyber‐Related Crimes
+• 7.5.1 Some Examples of Cyber‐Exacerbated vs. Cyber‐Assisted Crimes
+• 7.5.2 Identity Theft</li>
+<li>7.6 Technologies and Tools for Combating Cybercrime
+• 7.6.1 Biometric Technologies
+• 7.6.2 Keystroke‐Monitoring Software and Packet‐Sniffing Programs</li>
+<li>7.7 Programs and Techniques Designed to Combat Cybercrime in the United States
+• 7.7.1 Entrapment and “Sting” Operations to Catch Internet Pedophiles
+• Scenario 7–2: Entrapment on the Internet
+• 7.7.2 Enhanced Government Surveillance Techniques and the Patriot Act</li>
+<li>7.8 National and International Laws to Combat Cybercrime
+• 7.8.1 The Problem of Jurisdiction in Cyberspace
+• Scenario 7–3: A Virtual Casino
+• Scenario 7–4: Prosecuting a Computer Corporation in Multiple Countries
+• 7.8.2 Some International Laws and Conventions Affecting Cybercrime
+• Scenario 7–5: The Pirate Bay Web Site</li>
+<li>7.9 Cybercrime and the Free Press: The Wikileaks Controversy
+• 7.9.1 Are WikiLeaks’ Practices Ethical?
+• 7.9.2 Are WikiLeaks’ Practices Criminal?
+• 7.9.3 WikiLeaks and the Free Press</li>
+<li>7.10 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 8: Intellectual Property Disputes in Cyberspace</p>
+<ul>
+<li>Scenario 8–1: Streaming Music Online</li>
+<li>8.1 What Is Intellectual Property?
+• 8.1.1 Intellectual Objects
+• 8.1.2 Why Protect Intellectual Objects?
+• 8.1.3 Software as Intellectual Property
+• 8.1.4 Evaluating a Popular Argument Used by the Software Industry to Show Why It Is Morally Wrong to Copy Proprietary Software</li>
+<li>8.2 Copyright Law and Digital Media
+• 8.2.1 The Evolution of Copyright Law in the United States
+• 8.2.2 The Fair‐Use and First‐Sale Provisions of Copyright Law
+• 8.2.3 Software Piracy as Copyright Infringement
+• 8.2.4 Napster and the Ongoing Battles over Sharing Digital Music</li>
+<li>8.3 Patents, Trademarks, and Trade Secrets
+• 8.3.1 Patent Protections
+• 8.3.2 Trademarks
+• 8.3.3 Trade Secrets</li>
+<li>8.4 Jurisdictional Issues Involving Intellectual Property Laws</li>
+<li>8.5 Philosophical Foundations for Intellectual Property Rights
+• 8.5.1 The Labor Theory of Property
+• Scenario 8–2: DEF Corporation vs. XYZ Inc.
+• 8.5.2 The Utilitarian Theory of Property
+• Scenario 8–3: Sam’s e‐Book Reader Add‐on Device
+• 8.5.3 The Personality Theory of Property
+• Scenario 8–4: Angela’s B++ Programming Tool</li>
+<li>8.6 The “Free Software” and “Open Source” Movements
+• 8.6.1 GNU and the Free Software Foundation
+• 8.6.2 The “Open Source Software” Movement: OSS vs. FSF</li>
+<li>8.7 The “Common Good” Approach: An Alternative Framework for Analyzing the Intellectual Property Debate
+• 8.7.1 Information Wants to be Shared vs. Information Wants to be Free
+• 8.7.2 Preserving the Information Commons
+• 8.7.3 The Fate of the Information Commons: Could the Public Domain of Ideas Eventually Disappear?
+• 8.7.4 The Creative Commons</li>
+<li>8.8 PIPA, SOPA, and RWA Legislation: Current Battlegrounds in the Intellectual Property War
+• 8.8.1 The PIPA and SOPA Battles
+• 8.8.2 RWA and Public Access to Health‐Related Information
+• Scenario 8–5: Elsevier Press and “The Cost of Knowledge” Boycott
+• 8.8.3 Intellectual Property Battles in the Near Future</li>
+<li>8.9 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 9: Regulating Commerce and Speech in Cyberspace</p>
+<ul>
+<li>Scenario 9–1: Anonymous and the Ku Klux Klan</li>
+<li>9.1 Introduction and Background Issues: Some Key Questions and Critical Distinctions Affecting Internet Regulation
+• 9.1.1 Is Cyberspace a Medium or a Place?
+• 9.1.2 Two Categories of Cyberspace Regulation: Regulating Content and Regulating Process
+• 9.1.3 Four Modes of Regulation: The Lessig Model</li>
+<li>9.2 Digital Rights Management (DRM)
+• 9.2.1 Some Implications of DRM for Public Policy Debates Affecting Copyright Law
+• 9.2.2 DRM and the Music Industry
+• Scenario 9–2: The Sony Rootkit Controversy</li>
+<li>9.3 E‐Mail Spam
+• 9.3.1 Defining Spam
+• 9.3.2 Why Is Spam Morally Objectionable?</li>
+<li>9.4 Free Speech vs. Censorship and Content Control in Cyberspace
+• 9.4.1 Protecting Free Speech
+• 9.4.2 Defining Censorship</li>
+<li>9.5 Pornography in Cyberspace
+• 9.5.1 Interpreting “Community Standards” in Cyberspace
+• 9.5.2 Internet Pornography Laws and Protecting Children Online
+• 9.5.3 Virtual Child Pornography
+• 9.5.4 Sexting and Its Implications for Current Child Pornography Laws
+• Scenario 9–3: A Sexting Incident Involving Greensburg Salem High School</li>
+<li>9.6 Hate Speech and Speech that Can Cause Physical Harm to Others
+• 9.6.1 Hate Speech on the Web
+• 9.6.2 Online “Speech” that Can Cause Physical Harm to Others</li>
+<li>9.7 “Network Neutrality” and the Future of Internet Regulation
+• 9.7.1 Defining Network Neutrality
+• 9.7.2 Some Arguments Advanced by Net Neutrality’s Proponents and Opponents
+• 9.7.3 Future Implications for the Net Neutrality Debate</li>
+<li>9.8 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 10: The Digital Divide, Democracy, and Work</p>
+<ul>
+<li>Scenario 10–1: Digital Devices, Social Media, Democracy, and the “Arab Spring”</li>
+<li>10.1 The Digital Divide
+• 10.1.1 The Global Digital Divide
+• 10.1.2 The Digital Divide within Nations
+• Scenario 10–2: Providing In‐Home Internet Service for Public School Students
+• 10.1.3 Is the Digital Divide an Ethical Issue?</li>
+<li>10.2 Cybertechnology and the Disabled</li>
+<li>10.3 Cybertechnology and Race
+• 10.3.1 Internet Usage Patterns
+• 10.3.2 Racism and the Internet</li>
+<li>10.4 Cybertechnology and Gender
+• 10.4.1 Access to High‐Technology Jobs
+• 10.4.2 Gender Bias in Software Design and Video Games</li>
+<li>10.5 Cybertechnology, Democracy, and Democratic Ideals
+• 10.5.1 Has Cybertechnology Enhanced or Threatened Democracy?
+• 10.5.2 How has Cybertechnology Affected Political Elections in Democratic Nations?</li>
+<li>10.6 The Transformation and the Quality of Work
+• 10.6.1 Job Displacement and the Transformed Workplace
+• 10.6.2 The Quality of Work Life in the Digital Era
+• Scenario 10–3: Employee Monitoring and the Case of Ontario vs. Quon</li>
+<li>10.7 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 11: Online Communities, Virtual Reality, and Artificial Intelligence</p>
+<ul>
+<li>Scenario 11–1: Ralph’s Online Friends and Artificial Companions</li>
+<li>11.1 Online Communities and Social Networking Services
+• 11.1.1 Online Communities vs. Traditional Communities
+• 11.1.2 Blogs and Some Controversial Aspects of the Blogosphere
+• Scenario 11–2: “The Washingtonienne” Blogger
+• 11.1.3 Some Pros and Cons of SNSs (and Other Online Communities)
+• Scenario 11–3: A Suicide Resulting from Deception on MySpace</li>
+<li>11.2 Virtual Environments and Virtual Reality
+• 11.2.1 What Is Virtual Reality (VR)?
+• 11.2.2 Ethical Aspects of VR Applications</li>
+<li>11.3 Artificial Intelligence (AI)
+• 11.3.1 What Is AI? A Brief Overview
+• 11.3.2 The Turing Test and John Searle’s “Chinese Room” Argument
+• 11.3.3 Cyborgs and Human–Machine Relationships</li>
+<li>11.4 Extending Moral Consideration to AI Entities
+• Scenario 11–4: Artificial Children
+• 11.4.1 Determining Which Kinds of Beings/Entities Deserve Moral Consideration
+• 11.4.2 Moral Patients vs. Moral Agents</li>
+<li>11.5 Chapter Summary</li>
+</ul>
+<p>• CHAPTER 12: Ethical Aspects of Emerging and Converging Technologies</p>
+<ul>
+<li>Scenario 12–1: When “Things” Communicate with One Another</li>
+<li>12.1 Converging Technologies and Technological Convergence</li>
+<li>12.2 Ambient Intelligence (AmI) and Ubiquitous Computing
+• 12.2.1 Pervasive Computing, Ubiquitous Communication, and Intelligent User Interfaces
+• 12.2.2 Ethical and Social Aspects of AmI
+• Scenario 12–2: E. M. Forster’s “(Pre)Cautionary Tale”
+• Scenario 12–3: Jeremy Bentham’s “Panopticon/Inspection House” (Thought Experiment)</li>
+<li>12.3 Nanotechnology and Nanocomputing
+• 12.3.1 Nanotechnology: A Brief Overview
+• 12.3.2 Ethical Issues in Nanotechnology and Nanocomputing</li>
+<li>12.4 Autonomous Machines
+• 12.4.1 What Is an AM?
+• 12.4.2 Some Ethical and Philosophical Questions Pertaining to AMs</li>
+<li>12.5 Machine Ethics and Moral Machines
+• 12.5.1 What Is Machine Ethics?
+• 12.5.2 Designing Moral Machines</li>
+<li>12.6 A “Dynamic” Ethical Framework for Guiding Research in New and Emerging Technologies
+• 12.6.1 Is an ELSI‐Like Model Adequate for New/Emerging Technologies?
+• 12.6.2 A “Dynamic Ethics” Model</li>
+<li>12.7 Chapter Summary</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../What-I-Read-Last-Week" class="internal">What I Read Last Week</a></li><li class="overflow-end"></li></ul></div><div class="recent-notes desktop-only"><h3>Recent Notes</h3><ul class="recent-ul"><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-05-25---(Readwise)---Wisereads-Vol.-92-—-Husk-by-Nat-Eliason,-Domenic-Denicola-on-Spaced-Repetition,-and-More" class="internal">2025-05-25 - (Readwise) - Wisereads Vol. 92 — Husk by Nat Eliason, Domenic Denicola on Spaced Repetition, and More</a></h3></div><p class="meta"><time datetime="2025-06-20T22:47:43.850Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-04-01---skincontact.substack.com---21-Observations-From-People-Watching" class="internal">2025-04-01 - skincontact.substack.com - 21 Observations From People Watching</a></h3></div><p class="meta"><time datetime="2025-06-20T22:47:43.834Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-05-02---McLennan---My-Miserable-Week-in-the-‘Happiest-Country-on-Earth’---The-New-York-Times" class="internal">2025-05-02 - McLennan - My Miserable Week in the ‘Happiest Country on Earth’ - The New York Times</a></h3></div><p class="meta"><time datetime="2025-06-20T13:47:22.503Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-06-07---Walters---Red,-Red-Stuff-The-Color-of-Tragedy" class="internal">2025-06-07 - Walters - Red, Red Stuff The Color of Tragedy</a></h3></div><p class="meta"><time datetime="2025-06-20T13:47:22.490Z">Jun 20, 2025</time></p></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="../../Readwise/Articles/2025-05-11---(Readwise)---Wisereads-Vol.-90-—-Show-Your-Work!-By-Austin-Kleon,-the-‘Happiest-Country-on-Earth’,-and-More" class="internal">2025-05-11 - (Readwise) - Wisereads Vol. 90 — Show Your Work! By Austin Kleon, the ‘Happiest Country on Earth’, and More</a></h3></div><p class="meta"><time datetime="2025-06-20T06:10:07.091Z">Jun 19, 2025</time></p></div></li></ul></div></div><footer class><p>© 2025 Robinson Raju, All Rights Reserved <br/></p><ul><li><a href="https://github.com/robinsonraju">GitHub</a></li><li><a href="https://scholar.google.com/citations?user=TxqnZk8AAAAJ&amp;hl=en">Google Scholar</a></li><li><a href="https://www.linkedin.com/in/robinsonraju/">LinkedIn</a></li><li><a href="https://substack.com/@robinsonraju">Substack</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../../postscript.js" type="module"></script></html>
