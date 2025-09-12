@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus on Egypt: Part 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Papyrus -->
+    <!-- Application Structure Plan: The SPA is a single, comprehensive document designed for both digital viewing and printing. Content is organized into four thematic sections: "Rulers & Legends," "Great Egyptian Works," "The Rise of Amasis," and "Amasis & The Greeks." This non-linear, topical structure allows a user to quickly locate and synthesize information on a given subject. All information is presented on the page to eliminate the need for pop-ups or hidden content, making it immediately accessible for study or for a poster-style printout. -->
+    <!-- Visualization & Content Choices: Content is presented using a variety of textual and structural formats. The "Rulers & Legends" section uses cards to detail the stories of each king, including the famous tale of the master thief and the pyramid builders. "Great Egyptian Works" uses a clear, grid-based layout to highlight the scale of the Labyrinth and Lake Moeris. "The Rise of Amasis" and "Amasis & The Greeks" sections use descriptive cards to detail the political intrigue and the king's character and policies. All content is static, designed for direct consumption, and all graphics are created with structured HTML and CSS to avoid any SVG or Mermaid JS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF5;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border: 1px solid #EAE0D5;
+            border-radius: 0.5rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid #C0A080;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            background-color: #C0A080;
+            border-radius: 50%;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .nav-link {
+                color: black !important;
+                border-bottom: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-[#FDFBF5] py-6 border-b border-gray-200">
+        <nav class="container mx-auto px-6 flex flex-col items-center">
+            <h1 class="text-3xl font-bold mb-4 text-[#6D4C41]">Herodotus on Egypt: Part 3 Summary</h1>
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-gray-600">
+                <li><a href="#rulers" class="nav-link pb-1 hover:text-[#C0A080]">Rulers & Legends</a></li>
+                <li><a href="#works" class="nav-link pb-1 hover:text-[#C0A080]">Great Egyptian Works</a></li>
+                <li><a href="#amasis-rise" class="nav-link pb-1 hover:text-[#C0A080]">The Rise of Amasis</a></li>
+                <li><a href="#amasis-reign" class="nav-link pb-1 hover:text-[#C0A080]">Amasis & The Greeks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 lg:p-12">
+
+        <section id="rulers" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#6D4C41]">Rulers & Legends</h2>
+            <p class="text-center max-w-3xl mx-auto text-gray-600 mb-8">This section details the stories of several Egyptian kings, from the wealthy Rhampsinitus and the tyrannical pyramid builders to the just Mycerinus and the blind Anysis. Their reigns are marked by legendary tales, great construction projects, and periods of both prosperity and strife.</p>
+            <div class="space-y-6">
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">Rhampsinitus</h3>
+                    <p class="text-gray-700 mt-2">A king of immense wealth who built a special treasury. A master thief, who knew a secret stone could be removed, stole from it repeatedly. After his brother was caught in a trap and killed, the surviving thief cleverly stole his body from the guards. The king, impressed by his cunning, offered him his daughter in marriage.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">Cheops & Chephren</h3>
+                    <p class="text-gray-700 mt-2">Cheops plunged the country into misery, forcing 100,000 men to labor for 10 years on a causeway and 20 years on his Great Pyramid. His daughter also built a smaller pyramid from stones given to her by men she slept with to earn money for her father. His brother, Chephren, succeeded him and ruled with the same cruelty, building his own pyramid which was slightly smaller and had no underground chambers.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">Mycerinus</h3>
+                    <p class="text-gray-700 mt-2">The son of Cheops, Mycerinus was a just and pious king who reopened the temples. An oracle told him he would only live for six years because his piety went against a divine fate for Egypt to suffer for 150 years. He tried to defy the oracle by turning night into day with lamps, enjoying himself constantly to live "12 years in six."</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">Asychis & Anysis</h3>
+                    <p class="text-gray-700 mt-2">Asychis built a magnificent brick pyramid to surpass the stone ones. His successor, the blind King Anysis, was driven into the marshes by an Ethiopian invasion led by King Sabacos. Sabacos ruled justly for 50 years, forcing criminals to elevate the ground of their cities instead of killing them. Sabacos eventually left after a dream, and Anysis returned to rule.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#6D4C41]">Great Egyptian Works</h2>
+            <p class="text-center max-w-3xl mx-auto text-gray-600 mb-8">Herodotus marveled at the immense scale of Egyptian architecture and engineering. He described several structures that he believed surpassed all the great works of the Greeks, including the colossal Labyrinth and the massive, artificial Lake Moeris.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl mb-2 text-[#A1887F]">The Labyrinth</h3>
+                    <p>Built by the twelve kings, Herodotus found this building to be more impressive than the pyramids. It featured 12 roofed courts, half above and half below ground, with a total of 3,000 chambers. He was only allowed to see the upper chambers, which he described as an intricate maze of passages, courtyards, and colonnades carved with figures.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl mb-2 text-[#A1887F]">Lake Moeris</h3>
+                    <p>Adjacent to the Labyrinth, this artificial lake was an astonishing engineering feat. It measured 3,600 furlongs (60 schoenes) in circumference and was up to 50 fathoms deep. It was fed by a canal from the Nile and featured two colossal pyramids in its center, which sat half-submerged and were each 100 fathoms high.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="amasis-rise" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#6D4C41]">The Rise of Amasis</h2>
+            <p class="text-center max-w-3xl mx-auto text-gray-600 mb-8">This section chronicles the political turmoil following the priest-king Sethos, the brief rule of the twelve kings, and the dramatic rise of Amasis to the throne, which was foretold by an oracle.</p>
+            <div class="space-y-6">
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">The Priest-King Sethos</h3>
+                    <p class="text-gray-700 mt-2">A priest who took the throne and disrespected the warrior class by taking away their lands. When an Assyrian army invaded, the warriors refused to fight. Sethos was saved by a dream and a swarm of mice that chewed the enemies' bowstrings and quivers, leading to their defeat.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">The Twelve Kings and the Oracle</h3>
+                    <p class="text-gray-700 mt-2">After Sethos, Egypt was divided among 12 kings who ruled peacefully, bound by an oracle that said whoever poured a libation from a bronze cup would rule all of Egypt. When one of the kings, Psammetichus, used his bronze helmet to pour a libation by mistake, the others banished him in fear.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-[#A1887F]">The Brazen Men</h3>
+                    <p class="text-gray-700 mt-2">Psammetichus sought revenge, receiving an oracle that prophesied his victory with the arrival of "brazen men from the sea." Soon after, he saw a group of Carian and Ionian pirates in their bronze armor. Recognizing the prophecy, he hired them as mercenaries to defeat the other 11 kings and become the sole ruler of Egypt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="amasis-reign" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#6D4C41]">Amasis & The Greeks</h2>
+            <p class="text-center max-w-3xl mx-auto text-gray-600 mb-8">This section focuses on the reign of King Amasis, a shrewd ruler who rose from humble origins. Herodotus details his clever tricks to maintain authority, his building projects, and his unusually friendly relationship with the Greeks.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl mb-2 text-[#A1887F]">The Clever King</h3>
+                    <p>Amasis, formerly a common man, won his subjects' respect by turning a golden foot-pan into a sacred image. When the people worshiped it, he revealed its profane origin, telling them it was the same as him: once an ordinary object, now a thing to be revered. He also famously compared a king's life to a bow, arguing that it must be unstrung from time to time to avoid breaking.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl mb-2 text-[#A1887F]">Building Projects</h3>
+                    <p>Amasis contributed greatly to the temples of Egypt, adding a massive gateway to the Temple of Minerva at Sais. He also commissioned a colossal stone chamber from Elephantine that took 2,000 men three years to move. Due to an omen, it was left at the entrance to the temple.</p>
+                </div>
+                <div class="card p-6 col-span-1 md:col-span-2">
+                    <h3 class="font-bold text-xl mb-2 text-[#A1887F]">Friendly to the Greeks</h3>
+                    <p>Amasis was the first king to show great favor to the Greeks. He gave them the city of Naucratis for their residence and dedicated lands for them to build temples. He also sent lavish gifts to Greek temples, including a statue to the temple of Minerva at Lindus and statues to the Samian Juno. He even took a Greek wife from Cyrene named Ladice.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('font-bold', 'text-[#6D4C41]');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('font-bold', 'text-[#6D4C41]');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
