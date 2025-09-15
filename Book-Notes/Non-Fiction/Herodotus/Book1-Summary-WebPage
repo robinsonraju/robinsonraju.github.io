@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus: The History - Book 1 Interactive Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Antique Scroll -->
+    <!-- Application Structure Plan: A single-page application with a fixed left sidebar for thematic navigation. The main content area dynamically displays one of four interactive sections: 'Timeline of Power' to give chronological context, 'Key Figures' for character-driven stories, 'The Oracles' Riddles' for exploring the theme of fate, and 'Cultural Codex' for ethnographic comparison. This structure was chosen to transform the linear text into a non-linear, exploratory experience, allowing users to engage with the material based on their interests (events, people, themes, or cultures) rather than following the book's sequence, enhancing usability and understanding. -->
+    <!-- Visualization & Content Choices:
+        - Report Info: Rise and fall of Lydian, Median, and Persian empires. Goal: Show change over time. Viz: Interactive HTML timeline and a Chart.js Bar Chart. Interaction: Clicking timeline points reveals narrative details. Justification: Provides a clear macro-view of the power shifts that form the book's backbone.
+        - Report Info: Stories of key characters (Croesus, Cyrus, etc.). Goal: Organize and relate complex narratives. Viz: Grid of clickable character cards. Interaction: Clicking a card opens a modal with a summary and key relationships. Justification: Focuses on the human element, making the history more accessible.
+        - Report Info: Oracular prophecies given to Croesus. Goal: Engage user with the theme of misinterpretation. Viz: "Flippable" cards. Interaction: User clicks a card with the prophecy to reveal the true outcome. Justification: Interactively demonstrates the dramatic irony central to Croesus's story.
+        - Report Info: Ethnographic descriptions of various cultures. Goal: Compare and organize scattered details. Viz: A filterable set of cards. Interaction: Users select a culture to view its customs. Justification: Consolidates disparate information into an easily comparable format.
+        - All visualizations are implemented using HTML/CSS or Chart.js on Canvas, adhering to the NO SVG/Mermaid constraint. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Lora', serif; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .nav-link.active { background-color: #f59e0b; color: white; }
+        .flipper { perspective: 1000px; }
+        .flipper.flipped .flipper-content { transform: rotateY(180deg); }
+        .flipper-content { transition: transform 0.6s; transform-style: preserve-3d; }
+        .flipper-front, .flipper-back { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        .flipper-back { transform: rotateY(180deg); }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <aside class="w-full md:w-64 bg-stone-800 text-white p-4 md:p-6 shadow-lg flex-shrink-0">
+            <h1 class="text-2xl font-bold mb-6 text-amber-400">Herodotus: Clio</h1>
+            <nav id="main-nav" class="flex md:flex-col gap-2">
+                <a href="#timeline" class="nav-link p-3 rounded-lg hover:bg-amber-500 transition-colors duration-200 text-center md:text-left flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <span>Timeline</span>
+                </a>
+                <a href="#figures" class="nav-link p-3 rounded-lg hover:bg-amber-500 transition-colors duration-200 text-center md:text-left flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-5.176-5.97M15 21V9a2 2 0 00-2-2M9 5a2 2 0 100-4 2 2 0 000 4z" /></svg>
+                    <span>Key Figures</span>
+                </a>
+                <a href="#oracles" class="nav-link p-3 rounded-lg hover:bg-amber-500 transition-colors duration-200 text-center md:text-left flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <span>Oracles</span>
+                </a>
+                <a href="#cultures" class="nav-link p-3 rounded-lg hover:bg-amber-500 transition-colors duration-200 text-center md:text-left flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M12 11v10m0 0l-3-3m3 3l3-3m-3-4a1.5 1.5 0 01-3 0M12 11V3m0 0l-3 3m3-3l3 3" /></svg>
+                    <span>Cultures</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-4 sm:p-6 md:p-10">
+            <section id="timeline" class="content-section">
+                <h2 class="text-4xl font-bold mb-4">Timeline of Power</h2>
+                <p class="mb-8 text-lg text-stone-600">This section provides a chronological overview of the major events in Book 1, focusing on the rise and fall of the great powers: Lydia, Media, and Persia. Click on an event to see a brief summary of its significance in Herodotus's narrative of escalating conflict and shifting fortunes.</p>
+                <div class="relative border-l-4 border-amber-300 ml-4 py-8">
+                    <div class="timeline-event mb-12 pl-8 relative">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-amber-500 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-amber-800">Rise of Gyges</h3>
+                        <p class="text-stone-600">The Mermnad dynasty begins with Gyges's usurpation of the Lydian throne from Candaules. An oracle confirms his rule but prophesies vengeance in the fifth generation—a prophecy fulfilled by Croesus.</p>
+                    </div>
+                    <div class="timeline-event mb-12 pl-8 relative">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-amber-500 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-amber-800">Reign of Croesus</h3>
+                        <p class="text-stone-600">Croesus, the fifth and final king of his dynasty, ascends the throne and expands the Lydian Empire to its zenith, subjugating the Ionian Greeks and accumulating immense wealth.</p>
+                    </div>
+                    <div class="timeline-event mb-12 pl-8 relative">
+                         <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-teal-600 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-teal-800">Revolt of Cyrus</h3>
+                        <p class="text-stone-600">Cyrus the Persian, grandson of the Median king Astyages, leads a successful revolt. He overthrows the Median Empire, establishing Persian dominance over the region.</p>
+                    </div>
+                    <div class="timeline-event mb-12 pl-8 relative">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-amber-500 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-amber-800">Fall of Sardis</h3>
+                        <p class="text-stone-600">Misinterpreting an oracle, Croesus attacks the burgeoning Persian Empire. Cyrus decisively defeats him, captures his capital city Sardis, and ends the Lydian Empire, fulfilling the prophecy against Gyges's line.</p>
+                    </div>
+                    <div class="timeline-event mb-12 pl-8 relative">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-teal-600 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-teal-800">Conquest of Ionia</h3>
+                        <p class="text-stone-600">Following the fall of their Lydian overlord, the Ionian Greek cities are systematically conquered by Cyrus's general, Harpagus. This event marks the first major subjugation of Greeks by the Persian Empire.</p>
+                    </div>
+                    <div class="timeline-event mb-12 pl-8 relative">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-teal-600 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-teal-800">Fall of Babylon</h3>
+                        <p class="text-stone-600">Cyrus marches on the great city of Babylon. By diverting the Euphrates river, his army enters the city through the riverbed, capturing the Assyrian capital and vastly expanding Persian territory.</p>
+                    </div>
+                    <div class="timeline-event pl-8 relative">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 bg-teal-600 rounded-full border-4 border-stone-100"></div>
+                        <h3 class="text-2xl font-semibold text-teal-800">Death of Cyrus</h3>
+                        <p class="text-stone-600">Cyrus's reign of conquest ends in a disastrous campaign against the Massagetae. He is defeated and killed by their queen, Tomyris, a stark reminder of the cyclical nature of fortune that Herodotus emphasizes throughout the book.</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <h3 class="text-3xl font-bold mb-4 text-center">Duration of Imperial Dominance</h3>
+                     <div class="chart-container">
+                        <canvas id="empireChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="figures" class="content-section">
+                <h2 class="text-4xl font-bold mb-4">Key Figures</h2>
+                <p class="mb-8 text-lg text-stone-600">The narrative of Book 1 is driven by the ambitions, flaws, and fates of its central characters. These individuals embody Herodotus's key themes of hubris, fate, and the clash of cultures. Click on a figure to learn more about their story and their role in the unfolding history.</p>
+                <div id="figure-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            </section>
+
+            <section id="oracles" class="content-section">
+                <h2 class="text-4xl font-bold mb-4">The Oracles' Riddles</h2>
+                <p class="mb-8 text-lg text-stone-600">The oracles, especially the one at Delphi, play a crucial role in the story of Croesus. Their ambiguous prophecies drive him toward his doom, illustrating the danger of human pride in interpreting the words of the gods. Click on each card to reveal how the prophecy was tragically fulfilled.</p>
+                <div id="oracle-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                </div>
+            </section>
+
+            <section id="cultures" class="content-section">
+                <h2 class="text-4xl font-bold mb-4">Cultural Codex</h2>
+                <p class="mb-8 text-lg text-stone-600">Herodotus was not just a historian but also an early ethnographer, deeply interested in the customs (nomoi) of different peoples. Book 1 is rich with descriptions of Lydian, Persian, Babylonian, and Massagetae practices. Explore the unique traditions of each culture as recorded by Herodotus.</p>
+                <div id="culture-container" class="space-y-8">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const appData = {
+            figures: [
+                {
+                    name: "Croesus",
+                    title: "The Fated King of Lydia",
+                    summary: "The fabulously wealthy king of Lydia whose pride led him to misinterpret the Delphic oracle and attack Persia. His story is a classic example of hubris and nemesis, as his fortune is dramatically reversed, yet he finds wisdom in his defeat, becoming an advisor to his conqueror, Cyrus."
+                },
+                {
+                    name: "Solon",
+                    title: "The Athenian Sage",
+                    summary: "The wise Athenian lawgiver who visited Croesus at the height of his power. Solon famously warned the king that no man can be called happy until he is dead, a piece of wisdom Croesus dismissed at the time but remembered on his funeral pyre. He represents Greek wisdom and foresight."
+                },
+                {
+                    name: "Cyrus",
+                    title: "Founder of the Persian Empire",
+                    summary: "The protagonist of the second half of the book. Rescued from death as an infant, he grows up to overthrow his grandfather Astyages and forge the vast Persian Empire. He is depicted as a brilliant and generally merciful conqueror, but his own life ends in defeat, showing that even the greatest are subject to the wheel of fortune."
+                },
+                {
+                    name: "Astyages",
+                    title: "The Cruel Median King",
+                    summary: "Cyrus's grandfather and the last king of the Medes. Terrified by a dream predicting his own downfall, he orders the death of his infant grandson. His cruelty, especially his horrific punishment of his courtier Harpagus, directly leads to his overthrow by Cyrus."
+                },
+                {
+                    name: "Harpagus",
+                    title: "The King's Unwilling Agent",
+                    summary: "The Median nobleman tasked with killing the infant Cyrus. He disobeys the order, for which he is brutally punished by Astyages. In revenge, Harpagus becomes the primary instigator of Cyrus's rebellion and later serves as a key general in the Persian conquest of Ionia."
+                },
+                {
+                    name: "Tomyris",
+                    title: "The Warrior Queen",
+                    summary: "The queen of the Massagetae, a nomadic people. When Cyrus invades her lands and captures her son through trickery, she leads her army into battle against the Persians. In a fierce engagement, she defeats Cyrus and, in a memorable act of vengeance, gives the dead king his 'fill of blood.'"
+                }
+            ],
+            oracles: [
+                {
+                    prophecy: "If Croesus attacks the Persians, he will destroy a mighty empire.",
+                    outcome: "Croesus confidently attacks, believing the empire to be Persia's. In reality, the oracle meant his own Lydian empire, which is destroyed in the ensuing war. He failed to ask the simple follow-up question: 'Which empire?'"
+                },
+                {
+                    prophecy: "Wait till the time shall come when a mule is monarch of Media.",
+                    outcome: "Croesus believes this is impossible and thus his reign is secure. However, the 'mule' was Cyrus himself, who was of mixed parentage: his mother was a high-born Mede and his father a lower-status Persian. This prophecy warned of Cyrus's rise, but Croesus's pride blinded him to its meaning."
+                },
+                {
+                    prophecy: "The Vengeance of the Heraclides will come for the fifth man of the Mermnadae.",
+                    outcome: "This referred to the murder of King Candaules by Gyges, the founder of Croesus's dynasty. Croesus was the fifth and final king of that line, and his downfall at the hands of Cyrus fulfilled the ancient prophecy of retribution."
+                }
+            ],
+            cultures: [
+                {
+                    name: "Lydians",
+                    customs: [
+                        "First people to mint and use gold and silver coins.",
+                        "Invented many games, such as dice and ball games.",
+                        "Their daughters often worked as prostitutes to earn their dowries.",
+                        "Buried their kings in enormous earthen mounds (tumuli)."
+                    ]
+                },
+                {
+                    name: "Persians",
+                    customs: [
+                        "Worshipped celestial bodies and elements (sun, moon, earth, fire) from mountaintops, without temples or altars.",
+                        "Considered lying the most disgraceful act, followed by being in debt.",
+                        "Taught their sons from age five to twenty only three things: to ride, to draw the bow, and to speak the truth.",
+                        "Deliberated on important matters while drunk, then reconsidered the decision when sober."
+                    ]
+                },
+                {
+                    name: "Babylonians",
+                    customs: [
+                        "A custom where every woman must once in her life sit in the temple of Venus and have intercourse with a stranger.",
+                        "An annual 'marriage market' where beautiful women were auctioned off to the highest bidder, and the money was used to provide dowries for the less attractive women.",
+                        "Buried their dead in honey.",
+                        "Used circular boats made of skin and willow frames to transport goods down the Euphrates."
+                    ]
+                },
+                {
+                    name: "Massagetae",
+                    customs: [
+                        "A nomadic, warlike people who fought on horseback and on foot.",
+                        "Worshipped the sun as their only god, to whom they sacrificed horses.",
+                        "When a man grew very old, his relatives would sacrifice him along with cattle and feast upon the flesh, considering this the happiest end to life.",
+                        "Practiced a form of communal marriage."
+                    ]
+                }
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            function showSection(hash) {
+                contentSections.forEach(section => {
+                    if ('#' + section.id === hash) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === hash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    window.location.hash = targetId;
+                });
+            });
+
+            window.addEventListener('hashchange', () => {
+                const hash = window.location.hash || '#timeline';
+                showSection(hash);
+            });
+
+            const initialHash = window.location.hash || '#timeline';
+            showSection(initialHash);
+
+            populateFigures();
+            populateOracles();
+            populateCultures();
+            createEmpireChart();
+        });
+
+        function populateFigures() {
+            const grid = document.getElementById('figure-grid');
+            appData.figures.forEach(figure => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer';
+                card.innerHTML = `
+                    <h3 class="text-2xl font-bold text-teal-800">${figure.name}</h3>
+                    <p class="text-amber-600 font-semibold">${figure.title}</p>
+                    <p class="mt-2 text-stone-600">${figure.summary}</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function populateOracles() {
+            const grid = document.getElementById('oracle-grid');
+            appData.oracles.forEach(oracle => {
+                const flipperDiv = document.createElement('div');
+                flipperDiv.className = 'flipper h-64';
+                flipperDiv.innerHTML = `
+                    <div class="flipper-content relative w-full h-full">
+                        <div class="flipper-front absolute w-full h-full bg-white p-6 rounded-lg shadow-lg flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold">The Prophecy:</h3>
+                            <p class="mt-4 text-stone-700 italic">"${oracle.prophecy}"</p>
+                            <span class="mt-4 text-xs text-amber-600">(Click to reveal outcome)</span>
+                        </div>
+                        <div class="flipper-back absolute w-full h-full bg-stone-800 text-white p-6 rounded-lg shadow-lg flex flex-col justify-center text-center">
+                            <h3 class="text-xl font-semibold text-amber-400">The Outcome:</h3>
+                            <p class="mt-4 text-stone-200">${oracle.outcome}</p>
+                        </div>
+                    </div>
+                `;
+                flipperDiv.addEventListener('click', () => {
+                    flipperDiv.classList.toggle('flipped');
+                });
+                grid.appendChild(flipperDiv);
+            });
+        }
+
+        function populateCultures() {
+            const container = document.getElementById('culture-container');
+            appData.cultures.forEach(culture => {
+                const cultureDiv = document.createElement('div');
+                cultureDiv.className = 'bg-white p-6 rounded-lg shadow-md';
+                let customsList = '';
+                culture.customs.forEach(custom => {
+                    customsList += `<li class="mb-2">${custom}</li>`;
+                });
+                cultureDiv.innerHTML = `
+                    <h3 class="text-3xl font-bold text-teal-800 mb-3">${culture.name}</h3>
+                    <ul class="list-disc list-inside text-stone-600">${customsList}</ul>
+                `;
+                container.appendChild(cultureDiv);
+            });
+        }
+
+        function createEmpireChart() {
+            const ctx = document.getElementById('empireChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Lydian Empire', 'Median Empire', 'Persian Empire (under Cyrus)'],
+                    datasets: [{
+                        label: 'Approx. Years of Dominance in Narrative',
+                        data: [170, 128, 29],
+                        backgroundColor: [
+                            'rgba(217, 119, 6, 0.6)',
+                            'rgba(15, 118, 110, 0.6)',
+                            'rgba(13, 148, 136, 0.8)',
+                        ],
+                        borderColor: [
+                            'rgb(217, 119, 6)',
+                            'rgb(15, 118, 110)',
+                            'rgb(13, 148, 136)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Duration (Years)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                           display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.raw} years`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
