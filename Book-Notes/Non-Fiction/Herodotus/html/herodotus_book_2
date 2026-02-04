@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus's Egypt: An Interactive History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Papyrus Neutrals -->
+    <!-- Application Structure Plan: The SPA is organized into five thematic sections (Nile, Customs, Gods, Kings, Wonders) accessible via a top navigation bar. This non-linear structure allows users to explore topics of interest freely, rather than following the book's narrative sequentially. The core interaction is a horizontal timeline of kings, making the dense historical information digestible and engaging. A bar chart compares reign lengths for a quantitative overview. This design prioritizes user-driven exploration and thematic understanding over a simple text summary. -->
+    <!-- Visualization & Content Choices: 1. Kings' Reigns: Goal: Compare historical periods. Viz: Horizontal Bar Chart (Chart.js/Canvas). Interaction: Tooltips on hover. Justification: Provides a quick visual comparison of the duration and impact of key rulers. 2. Timeline of Kings: Goal: Organize chronology. Method: Interactive HTML/CSS timeline. Interaction: Clicking a king's name reveals a detailed info card (JS). Justification: Breaks down the long, complex list of monarchs into manageable, explorable segments. 3. Egyptian Customs: Goal: Inform/Organize. Method: Grid of info cards (HTML/Tailwind). Interaction: Simple, clear presentation. Justification: Highlights the unique cultural aspects Herodotus noted in an easily scannable format. NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF5;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #A0522D;
+            border-bottom-color: #A0522D;
+        }
+        .timeline-container {
+            scrollbar-width: thin;
+            scrollbar-color: #A0522D #E5E0D5;
+        }
+        .timeline-item {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .timeline-item.active {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border-color: #A0522D;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF5]">
+
+    <header class="bg-[#FDFBF5]/80 backdrop-blur-md sticky top-0 z-50 border-b border-[#E5E0D5]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-[#A0522D]">Herodotus's Egypt</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#nile" class="nav-link text-lg">The Nile</a>
+                <a href="#customs" class="nav-link text-lg">Customs</a>
+                <a href="#gods" class="nav-link text-lg">Gods & Rituals</a>
+                <a href="#kings" class="nav-link text-lg">Kings</a>
+                <a href="#wonders" class="nav-link text-lg">Wonders</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF5] py-4">
+             <a href="#nile" class="block text-center py-2 nav-link">The Nile</a>
+             <a href="#customs" class="block text-center py-2 nav-link">Customs</a>
+             <a href="#gods" class="block text-center py-2 nav-link">Gods & Rituals</a>
+             <a href="#kings" class="block text-center py-2 nav-link">Kings</a>
+             <a href="#wonders" class="block text-center py-2 nav-link">Wonders</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <section class="text-center py-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-[#363636] mb-4">Exploring Ancient Egypt Through the Eyes of Herodotus</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
+                An interactive journey into Book 2 of *The History*, where the "Father of History" documents the geography, culture, and rulers of a civilization that fascinated the ancient world.
+            </p>
+        </section>
+
+        <section id="nile" class="py-16">
+            <h3 class="text-3xl font-bold text-center mb-2 text-[#A0522D]">The Land of the Nile</h3>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">Herodotus famously called Egypt "the gift of the river." He was captivated by the Nile's mysterious annual flooding, which was the lifeblood of the nation. He dismissed the common Greek theories and proposed his own, showcasing his method of inquiry and rational thought.</p>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="bg-white rounded-lg shadow-md p-6 border border-[#E5E0D5]">
+                    <h4 class="text-xl font-bold mb-4">Herodotus's Investigation</h4>
+                    <p class="mb-4">Herodotus systematically rejected three prevailing Greek explanations for the Nile's summer floods:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Etesian Winds:</strong> He argued that the winds often didn't blow, yet the Nile still flooded, and other rivers facing these winds didn't behave similarly.</li>
+                        <li><strong>Flow from the Ocean:</strong> He dismissed this as an unscientific and "marvellous" tale rooted in myth, not observation.</li>
+                        <li><strong>Melting Snows:</strong> He found this impossible, reasoning that a river flowing from the hottest regions of the world (Libya and Ethiopia) could not be fed by snow.</li>
+                    </ul>
+                </div>
+                <div class="bg-[#A0522D] text-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-xl font-bold mb-4">His Own Theory</h4>
+                    <p class="mb-4">Herodotus's own hypothesis, while incorrect, was based on his understanding of meteorology:</p>
+                    <p class="text-lg">During winter, the sun is driven by storms into the "upper parts of Libya" (the south). There, it evaporates vast quantities of water from the Nile's sources, keeping the river low. When summer arrives, the sun returns to its normal path in the north. No longer subjected to this intense evaporation, the Nile's waters are free to swell and flood the lands of Egypt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="customs" class="py-16 bg-[#F9F6F0] -mx-6 px-6">
+             <h3 class="text-3xl font-bold text-center mb-2 text-[#A0522D]">A World Reversed</h3>
+             <p class="text-lg text-center max-w-3xl mx-auto mb-12">The historian was struck by how many Egyptian customs were the inverse of Greek practices. This "otherness" was a central theme of his account, highlighting the unique character of Egyptian civilization.</p>
+             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow border border-[#E5E0D5] text-center">
+                    <div class="text-4xl mb-3">♀️</div>
+                    <h4 class="font-bold text-lg">Gender Roles</h4>
+                    <p class="text-sm">Women attended markets and engaged in trade, while men stayed home to weave.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow border border-[#E5E0D5] text-center">
+                    <div class="text-4xl mb-3">✍️</div>
+                    <h4 class="font-bold text-lg">Writing</h4>
+                    <p class="text-sm">They wrote from right to left, the opposite of the Greek method.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow border border-[#E5E0D5] text-center">
+                    <div class="text-4xl mb-3">🏛️</div>
+                    <h4 class="font-bold text-lg">Mourning</h4>
+                    <p class="text-sm">Priests were shaven-headed, but in mourning, Egyptians let their hair and beards grow long.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow border border-[#E5E0D5] text-center">
+                    <div class="text-4xl mb-3">🐾</div>
+                    <h4 class="font-bold text-lg">Animals</h4>
+                    <p class="text-sm">Animals lived alongside humans and many, like cats and ibises, were held sacred.</p>
+                </div>
+             </div>
+        </section>
+
+        <section id="gods" class="py-16">
+            <h3 class="text-3xl font-bold text-center mb-2 text-[#A0522D]">Gods & Rituals</h3>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">Herodotus was convinced that Greek religion was heavily indebted to Egypt. He meticulously documented Egyptian religious practices and drew direct parallels between the two pantheons, believing the names and rituals of the gods were brought to Greece from Egypt.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 border border-[#E5E0D5]">
+                    <h4 class="text-xl font-bold mb-4">Egyptian Origins of Greek Gods</h4>
+                    <p class="mb-4">Herodotus claimed that "almost all the names of the gods came into Greece from Egypt." He provides a comparative list:</p>
+                     <div class="grid grid-cols-2 gap-4 text-center">
+                        <div><p class="font-semibold">Amun</p><p class="text-sm text-gray-600">Zeus</p></div>
+                        <div><p class="font-semibold">Osiris</p><p class="text-sm text-gray-600">Dionysus</p></div>
+                        <div><p class="font-semibold">Isis</p><p class="text-sm text-gray-600">Demeter</p></div>
+                        <div><p class="font-semibold">Horus</p><p class="text-sm text-gray-600">Apollo</p></div>
+                        <div><p class="font-semibold">Bubastis</p><p class="text-sm text-gray-600">Artemis</p></div>
+                        <div><p class="font-semibold">Seth</p><p class="text-sm text-gray-600">Typhon</p></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 border border-[#E5E0D5]">
+                    <h4 class="text-xl font-bold mb-4">Sacred Rites and Animals</h4>
+                    <p class="mb-4">Religious life was governed by strict rules of purity and complex rituals. The Egyptians' veneration for animals was particularly notable:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Cats:</strong> Mourned by shaving eyebrows. Exported to Bubastis for embalming.</li>
+                        <li><strong>Ibises & Hawks:</strong> Killing one, even accidentally, was punishable by death.</li>
+                        <li><strong>Apis Bull:</strong> A sacred bull believed to be an incarnation of a god, worshipped at Memphis.</li>
+                        <li><strong>Crocodiles:</strong> Venerated in some regions (like Thebes) but hunted in others (like Elephantine).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="kings" class="py-16 bg-[#F9F6F0] -mx-6 px-6">
+            <h3 class="text-3xl font-bold text-center mb-2 text-[#A0522D]">A Dynasty of Kings</h3>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">Herodotus recounts the history of Egypt through the reigns of its monarchs, as told to him by the priests. This history blends myth, folktale, and factual accounts. Explore the timeline below to learn about the key rulers and the stories that defined their legacies.</p>
+
+            <div class="relative w-full">
+                <div id="timeline-container" class="timeline-container flex overflow-x-auto space-x-8 pb-8">
+                </div>
+            </div>
+
+            <div id="king-details" class="mt-8 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl border border-[#E5E0D5] transition-opacity duration-500 opacity-0">
+                <h4 id="king-name" class="text-2xl font-bold text-[#A0522D] mb-2"></h4>
+                <p id="king-title" class="font-medium text-gray-500 mb-4"></p>
+                <p id="king-description" class="text-gray-700 leading-relaxed"></p>
+            </div>
+
+            <div class="mt-16">
+                <h4 class="text-2xl font-bold text-center mb-8">A Comparison of Reigns</h4>
+                 <div class="chart-container">
+                    <canvas id="reignsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="wonders" class="py-16">
+            <h3 class="text-3xl font-bold text-center mb-2 text-[#A0522D]">Wonders of a Lost World</h3>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">The architectural achievements of the Egyptians left Herodotus in awe. He considered their greatest works to surpass even the finest structures of the Greeks, testifying to the immense power and resources of the pharaohs.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-8 border border-[#E5E0D5]">
+                    <h4 class="text-2xl font-bold mb-3">The Pyramids</h4>
+                    <p class="mb-4">Herodotus attributes the Great Pyramids to the tyrannical reigns of Cheops and Chephren. He reports that the Great Pyramid took 100,000 men, working in three-month shifts, a total of 20 years to complete. An inscription, he was told, recorded the vast sums spent on radishes, onions, and garlic for the laborers.</p>
+                    <ul class="space-y-1 text-gray-700">
+                        <li><strong>Builder:</strong> King Cheops</li>
+                        <li><strong>Reign:</strong> 50 years</li>
+                        <li><strong>Labor Force:</strong> 100,000 men</li>
+                        <li><strong>Construction Time:</strong> 20 years</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 border border-[#E5E0D5]">
+                    <h4 class="text-2xl font-bold mb-3">The Labyrinth</h4>
+                    <p class="mb-4">More impressive to Herodotus than even the pyramids, the Labyrinth was a massive complex near Lake Moeris. He claimed it contained twelve roofed courts and three thousand chambers, half above ground and half below. He described it as a bewildering maze of passages from courts to rooms to colonnades that "excelled all other human productions."</p>
+                    <ul class="space-y-1 text-gray-700">
+                        <li><strong>Courts:</strong> 12 roofed courts</li>
+                        <li><strong>Chambers:</strong> 3,000 total</li>
+                        <li><strong>Levels:</strong> 1,500 above ground, 1,500 below</li>
+                        <li><strong>Herodotus's Verdict:</strong> "Surpasses the pyramids."</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-[#E5E0D5] mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <p>Interactive Visualization by AI. Based on the text of Herodotus, *The History*, Book 2.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const kingsData = [
+                {
+                    name: 'Men',
+                    title: 'The First King',
+                    description: 'According to the priests, Men was the first mortal king of Egypt. He is credited with the monumental feat of raising a dyke to divert the Nile\'s course, drying the land on which he then founded the city of Memphis. He also built the great temple of Vulcan.'
+                },
+                {
+                    name: 'Nitocris',
+                    title: 'The Avenger Queen',
+                    description: 'The only native queen in a list of 330 monarchs. She came to power after her brother, the king, was murdered by his subjects. To avenge him, she built a vast underground chamber, invited the murderers to a banquet there, and then drowned them all by flooding it with water from the Nile.'
+                },
+                {
+                    name: 'Sesostris',
+                    title: 'The Great Conqueror',
+                    description: 'A legendary warrior-king who is said to have conquered all of Asia and parts of Europe, including Scythia and Thrace. He erected pillars in conquered lands, sometimes with inscriptions mocking his foes. He also dug the many canals that crisscross Egypt and was the first to divide the land into plots for taxation, which Herodotus believes was the origin of geometry.'
+                },
+                 {
+                    name: 'Rhampsinitus',
+                    title: 'The Rich King & the Thief',
+                    description: 'A king of immense wealth who built a stone treasury. Herodotus relates a long, elaborate folktale about a clever thief who repeatedly plundered the treasury, outsmarted the king\'s traps, and even tricked the king\'s daughter, eventually earning the king\'s admiration and marrying the princess.'
+                },
+                {
+                    name: 'Cheops & Chephren',
+                    title: 'The Pyramid Builders',
+                    description: 'Herodotus portrays these two kings as cruel tyrants. Cheops (reigned 50 years) closed the temples, forbade sacrifices, and forced the entire population into labor to build his Great Pyramid. His brother Chephren (reigned 56 years) continued this oppressive rule, building the second pyramid. The Egyptians so hated their memory that they would not even speak their names.'
+                },
+                {
+                    name: 'Mycerinus',
+                    title: 'The Pious King',
+                    description: 'The son of Cheops, he disapproved of his father\'s cruelty, reopened the temples, and ruled with justice. Calamity struck when his daughter died, and an oracle then foretold he had only six years to live. To prove the oracle false, he spent his remaining years feasting day and night, turning the six years into twelve.'
+                },
+                {
+                    name: 'Psammetichus',
+                    title: 'The Unifier',
+                    description: 'One of twelve kings ruling a divided Egypt. An oracle foretold that whoever poured a libation from a bronze cup would rule all of Egypt. When Psammetichus used his bronze helmet for lack of a golden cup, the other kings exiled him. Another oracle promised him vengeance from "brazen men from the sea," which was fulfilled when Ionian and Carian pirates in bronze armor landed in Egypt. With their help, he defeated the other kings and became sole ruler.'
+                },
+                {
+                    name: 'Amasis',
+                    title: 'The Clever King',
+                    description: 'A commoner who was made king by a rebellion against the previous monarch, Apries. He won over the nobility, who initially scorned his humble origins, with a clever parable about a golden foot-pan. His reign was said to be the most prosperous time in Egypt\'s history. He was known for being a friend to the Greeks, granting them the city of Naucratis for trade.'
+                }
+            ];
+
+            const timelineContainer = document.getElementById('timeline-container');
+            const kingDetails = document.getElementById('king-details');
+            const kingName = document.getElementById('king-name');
+            const kingTitle = document.getElementById('king-title');
+            const kingDescription = document.getElementById('king-description');
+
+            kingsData.forEach((king, index) => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item relative flex-shrink-0 w-48 bg-white p-4 rounded-lg shadow border-2 border-transparent';
+                item.dataset.index = index;
+
+                const dot = document.createElement('div');
+                dot.className = 'absolute -top-3 left-1/2 -ml-3 h-6 w-6 rounded-full bg-[#A0522D] border-4 border-[#F9F6F0]';
+                item.appendChild(dot);
+
+                const name = document.createElement('h5');
+                name.className = 'font-bold text-center mt-2';
+                name.textContent = king.name;
+                item.appendChild(name);
+
+                timelineContainer.appendChild(item);
+            });
+
+            const line = document.createElement('div');
+            line.className = 'absolute top-0 left-0 w-full h-1.5 bg-[#E5E0D5] rounded-full';
+            timelineContainer.prepend(line);
+
+
+            let activeItem = null;
+            timelineContainer.addEventListener('click', (e) => {
+                const targetItem = e.target.closest('.timeline-item');
+                if (!targetItem) return;
+
+                const index = targetItem.dataset.index;
+                const king = kingsData[index];
+
+                if (activeItem) {
+                    activeItem.classList.remove('active');
+                }
+                targetItem.classList.add('active');
+                activeItem = targetItem;
+
+                kingName.textContent = king.name;
+                kingTitle.textContent = king.title;
+                kingDescription.textContent = king.description;
+                kingDetails.classList.remove('opacity-0');
+            });
+
+            if(kingsData.length > 0) {
+                 timelineContainer.querySelector('.timeline-item').click();
+            }
+
+            const ctx = document.getElementById('reignsChart').getContext('2d');
+            const reignsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Cheops', 'Chephren', 'Mycerinus (Predicted)', 'Psammetichus', 'Amasis'],
+                    datasets: [{
+                        label: 'Length of Reign (Years)',
+                        data: [50, 56, 6, 54, 44],
+                        backgroundColor: 'rgba(160, 82, 45, 0.7)',
+                        borderColor: 'rgba(160, 82, 45, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Reported Reign Lengths of Key Pharaohs'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.raw + ' years';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                           beginAtZero: true,
+                           title: {
+                               display: true,
+                               text: 'Years'
+                           }
+                        }
+                    }
+                }
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if(!mobileMenu.classList.contains('hidden')){
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
