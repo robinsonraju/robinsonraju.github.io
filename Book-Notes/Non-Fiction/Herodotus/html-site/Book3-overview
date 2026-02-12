@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus: The History - Book 3 (Thalia)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Parchment -->
+    <!-- Application Structure Plan: A single-page application with a fixed top navigation bar allowing users to switch between four distinct, thematic sections: "Reign of Cambyses," "Rise of Darius," "Key Figures," and "The Persian Empire." This non-linear, thematic structure is chosen over a chronological text dump to make the complex narrative more digestible and engaging. Users can explore topics of interest in any order. Key interactions include a clickable timeline for Cambyses, an interactive module for the constitutional debate, a filterable gallery for key figures, and a data visualization chart for the empire's tributes. This design prioritizes user-driven exploration and understanding of the core power shifts, characters, and organizational structure detailed in the report. -->
+    <!-- Visualization & Content Choices:
+        - Reign of Cambyses: Goal: Show change over time. Method: Interactive timeline with cards (HTML/CSS/JS). Interaction: Clicking a card reveals details. Justification: Organizes a chaotic reign into key, explorable events. Library: Vanilla JS.
+        - Rise of Darius: Goal: Explain a complex event. Method: Interactive "Constitutional Debate" component (HTML/CSS/JS). Interaction: Buttons reveal the arguments for Monarchy, Oligarchy, and Democracy. Justification: Turns a dense political discourse into a clear, interactive comparison of ideas. Library: Vanilla JS.
+        - Key Figures: Goal: Inform/Organize. Method: A gallery of profile cards (HTML/CSS/JS). Interaction: Clicking a profile reveals a detailed biography. Justification: Provides quick access to the main actors' stories, separating them from the main narrative for clarity. Library: Vanilla JS.
+        - The Persian Empire: Goal: Compare/Inform. Method: Horizontal Bar Chart (Chart.js/Canvas). Interaction: Tooltips on hover show precise tribute data. Justification: Translates a long list of numerical data into an instantly understandable visual comparison of provincial wealth, which is far more effective than text alone. Library: Chart.js.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF5;
+            color: #4A4A4A;
+        }
+
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .nav-link.active {
+            color: #C0A080;
+            border-bottom-color: #C0A080;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 600px;
+            max-height: 80vh;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-10 border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-2xl font-bold text-gray-800">Herodotus: Book 3</span>
+                <div class="hidden sm:flex sm:space-x-8">
+                    <a href="#cambyses"
+                        class="nav-link text-gray-500 hover:text-gray-900 border-b-2 border-transparent pb-1">Reign of
+                        Cambyses</a>
+                    <a href="#darius"
+                        class="nav-link text-gray-500 hover:text-gray-900 border-b-2 border-transparent pb-1">Rise of
+                        Darius</a>
+                    <a href="#figures"
+                        class="nav-link text-gray-500 hover:text-gray-900 border-b-2 border-transparent pb-1">Key
+                        Figures</a>
+                    <a href="#empire"
+                        class="nav-link text-gray-500 hover:text-gray-900 border-b-2 border-transparent pb-1">The
+                        Persian Empire</a>
+                </div>
+                <div class="sm:hidden">
+                    <select id="mobile-nav"
+                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                        <option value="#cambyses">Reign of Cambyses</option>
+                        <option value="#darius">Rise of Darius</option>
+                        <option value="#figures">Key Figures</option>
+                        <option value="#empire">The Persian Empire</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Introduction Section -->
+        <section id="intro" class="content-section active text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">The History, Book 3: Thalia</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">An interactive exploration of Cambyses'
+                madness, the usurpation by the Magi, and the dramatic rise of Darius I. This section of Herodotus' work
+                chronicles a tumultuous period of transition for the Achaemenid Empire, filled with conquest,
+                conspiracy, and divine retribution. Select a topic above to begin your journey.</p>
+        </section>
+
+        <!-- Reign of Cambyses Section -->
+        <section id="cambyses" class="content-section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">The Reign of Cambyses</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">From the conquest of Egypt to a descent into
+                    madness, the reign of Cyrus's son was short, brutal, and transformative. This section details the
+                    key campaigns and the impious acts that Herodotus claims led to his downfall.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Conquest of Egypt</h3>
+                    <p class="text-gray-600">Fueled by a deceptive marriage proposal and guided by the traitor Phanes,
+                        Cambyses successfully crosses the desert to defeat the Egyptians at Pelusium. He captures
+                        Memphis and subjects the Pharaoh Psammenitus to a cruel psychological test before ultimately
+                        executing him. His campaign concludes with the ultimate impiety: the scourging and burning of
+                        the embalmed corpse of the former Pharaoh Amasis.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Failed Expeditions</h3>
+                    <p class="text-gray-600">Cambyses' ambition overreached his planning. An expedition against Carthage
+                        was canceled when his Phoenician fleet refused to attack their kin. His march against the
+                        long-lived Ethiopians ended in disaster, with his army resorting to cannibalism due to lack of
+                        supplies. Finally, a force of 50,000 men sent to conquer the Siwa Oasis vanished without a
+                        trace, allegedly swallowed by a massive sandstorm.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Descent into Madness</h3>
+                    <p class="text-gray-600">Herodotus attributes Cambyses' madness to his sacrilege against the sacred
+                        Apis bull, which he fatally stabbed in a fit of rage. This act allegedly unleashed a series of
+                        atrocities: the secret murder of his brother Smerdis, the killing of his sister-wife, and wanton
+                        cruelty against his closest advisors, cementing his reputation as a paranoid and impious tyrant.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rise of Darius Section -->
+        <section id="darius" class="content-section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">The Rise of Darius</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">While Cambyses was dying, a conspiracy unfolded
+                    that placed an imposter on the Persian throne. This section explores the uncovering of the fraud,
+                    the famous constitutional debate among the conspirators, and the clever ploy that secured the crown
+                    for Darius.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8 items-start">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">The Magi Usurpation</h3>
+                    <p class="text-gray-600 mb-4">With Cambyses away, two Magi brothers conspire to seize power. One,
+                        who bears a striking resemblance to Cambyses' murdered brother Smerdis, is placed on the throne.
+                        The fraud is eventually uncovered by the nobleman Otanes, whose daughter confirms the new king
+                        is an imposter by discovering he has no ears—they had been cut off for a past crime. Otanes
+                        gathers six other nobles, including Darius, to overthrow the false king.</p>
+                    <h3 class="text-xl font-bold mb-2 mt-6">The King is Chosen</h3>
+                    <p class="text-gray-600">The seven conspirators agree that the next king will be the one whose horse
+                        neighs first at sunrise. Darius's clever groom, Œbares, ensures his master's victory by leading
+                        Darius's stallion to a mare the night before. At the appointed time, the horse neighs, a clap of
+                        thunder seals the omen, and Darius is acclaimed as the new King of Persia.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">The Great Constitutional Debate</h3>
+                    <p class="text-gray-600 mb-4">After slaying the Magi, the seven conspirators held a legendary debate
+                        on the best form of government for Persia. Click below to explore their arguments.</p>
+                    <div id="debate-buttons" class="flex flex-wrap gap-2 mb-4">
+                        <button data-arg="monarchy"
+                            class="debate-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full">Monarchy</button>
+                        <button data-arg="oligarchy"
+                            class="debate-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full">Oligarchy</button>
+                        <button data-arg="democracy"
+                            class="debate-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full">Democracy</button>
+                    </div>
+                    <div id="debate-content" class="p-4 bg-gray-50 rounded-lg">
+                        <div id="monarchy-arg" class="debate-text hidden">
+                            <h4 class="font-bold">Darius's Argument for Monarchy</h4>
+                            <p>Rule by the single best man is the superior form. His counsels are wisest, and his
+                                actions against enemies are most secret and effective. Oligarchies dissolve into feuds,
+                                and democracies into corruption, both eventually leading back to monarchy anyway.</p>
+                        </div>
+                        <div id="oligarchy-arg" class="debate-text hidden">
+                            <h4 class="font-bold">Megabyzus's Argument for Oligarchy</h4>
+                            <p>While monarchy is tyrannical, democracy is worse—it is the rule of an ignorant and wanton
+                                mob. The best course is to entrust power to a select group of the worthiest citizens,
+                                whose counsels will be the most sound.</p>
+                        </div>
+                        <div id="democracy-arg" class="debate-text hidden">
+                            <h4 class="font-bold">Otanes's Argument for Democracy (Isonomy)</h4>
+                            <p>Monarchy is neither good nor pleasant, as unchecked power corrupts even the best men,
+                                leading to pride, envy, and violence. The rule of the many is fairest, with magistrates
+                                held accountable and all measures decided by the community.</p>
+                        </div>
+                        <div id="debate-placeholder">
+                            <p class="text-gray-500">Select a form of government to see the argument for it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Figures Section -->
+        <section id="figures" class="content-section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Key Figures</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Book 3 is driven by the ambitions and fates of
+                    powerful individuals. Explore the stories of the kings, tyrants, and conspirators who shaped this
+                    era. Click on a name to learn more.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="figures-grid">
+                <!-- Figure cards will be injected here by JS -->
+            </div>
+        </section>
+
+        <!-- The Persian Empire Section -->
+        <section id="empire" class="content-section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">The Persian Empire Under Darius</h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">One of Darius's first acts was to organize the
+                    empire into a coherent administrative system. He established twenty satrapies, each responsible for
+                    a fixed annual tribute. This chart visualizes the immense wealth flowing into the Persian treasury
+                    from across the known world.</p>
+            </div>
+            <div class="card p-4 sm:p-6">
+                <div class="chart-container">
+                    <canvas id="tributeChart"></canvas>
+                </div>
+            </div>
+        </section>
+        <nav class="mt-8 py-6 border-t border-amber-200 flex justify-between items-center bg-amber-50 rounded-lg p-4">
+            <a href="Book2-overview.html"
+                class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+                <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book II
+            </a>
+
+            <a href="index.html"
+                class="flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+                <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+            </a>
+
+            <a href="Book4-overview.html"
+                class="w-1/3 flex justify-end items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group text-right">
+                Next: Book IV <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+        </nav>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNav = document.getElementById('mobile-nav');
+            const contentSections = document.querySelectorAll('.content-section');
+            const debateButtons = document.querySelectorAll('.debate-btn');
+            const debateTexts = document.querySelectorAll('.debate-text');
+            const debatePlaceholder = document.getElementById('debate-placeholder');
+
+            const figuresData = [
+                { name: 'Cambyses II', title: 'King of Persia', description: 'Son of Cyrus the Great, his reign was marked by the conquest of Egypt and a subsequent descent into madness and tyranny. His impious acts, particularly the slaying of the Apis Bull, were seen by Herodotus as the cause of his downfall.' },
+                { name: 'Darius I', title: 'King of Persia', description: 'One of the seven conspirators against the Magi. Through cunning and political skill, he secured the throne and became one of Persia\'s greatest rulers, known for organizing the empire into satrapies and establishing a fixed system of tribute.' },
+                { name: 'Polycrates', title: 'Tyrant of Samos', description: 'A Greek ruler whose immense and unbroken good fortune was legendary. Warned by King Amasis of Egypt to avert divine envy, his inability to escape his own luck led to a treacherous and gruesome death at the hands of the Persian satrap Oroetes.' },
+                { name: 'Otanes', title: 'Persian Nobleman', description: 'The first to suspect the Magi usurpation. He organized the conspiracy of the seven and, in the subsequent debate, famously argued for establishing a democracy in Persia. He withdrew from the contest for the throne, securing freedom for his family.' },
+                { name: 'Zopyrus', title: 'Persian Nobleman', description: 'A hero of the siege of Babylon. To trick the Babylonians, he mutilated himself horribly and pretended to be a deserter. His sacrifice allowed Darius to capture the rebellious city, earning him immense honor.' },
+                { name: 'Amasis', title: 'Pharaoh of Egypt', description: 'The long-reigning and prosperous Pharaoh who ruled before the Persian invasion. His cautious and wise counsel to Polycrates about the dangers of excessive good fortune is a central theme of that narrative. He died just before Cambyses\'s army arrived.' },
+            ];
+
+            const figuresGrid = document.getElementById('figures-grid');
+            figuresData.forEach(figure => {
+                const card = document.createElement('div');
+                card.className = 'card p-6 cursor-pointer';
+                card.innerHTML = `
+                    <h3 class="text-xl font-bold mb-2">${figure.name}</h3>
+                    <p class="text-sm font-medium text-gray-500 mb-4">${figure.title}</p>
+                    <div class="figure-desc hidden">
+                         <p class="text-gray-600">${figure.description}</p>
+                    </div>
+                    <p class="text-blue-500 text-sm mt-2 font-semibold read-more">Read More...</p>
+                `;
+                figuresGrid.appendChild(card);
+
+                card.addEventListener('click', () => {
+                    const desc = card.querySelector('.figure-desc');
+                    const readMore = card.querySelector('.read-more');
+                    const isHidden = desc.classList.contains('hidden');
+
+                    if (isHidden) {
+                        desc.classList.remove('hidden');
+                        readMore.textContent = 'Read Less...';
+                    } else {
+                        desc.classList.add('hidden');
+                        readMore.textContent = 'Read More...';
+                    }
+                });
+            });
+
+
+            function setActiveSection(hash) {
+                const targetHash = hash || '#intro';
+
+                contentSections.forEach(section => {
+                    if ('#' + section.id === targetHash) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === targetHash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                if (mobileNav.value !== targetHash) {
+                    mobileNav.value = targetHash;
+                }
+
+                if (targetHash === '#empire') {
+                    renderChart();
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetHash = link.getAttribute('href');
+                    setActiveSection(targetHash);
+                    window.history.pushState(null, null, targetHash);
+                });
+            });
+
+            mobileNav.addEventListener('change', () => {
+                const targetHash = mobileNav.value;
+                setActiveSection(targetHash);
+                window.history.pushState(null, null, targetHash);
+            });
+
+            window.addEventListener('popstate', () => {
+                setActiveSection(window.location.hash);
+            });
+
+            setActiveSection(window.location.hash || '#cambyses');
+
+
+            debateButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const arg = button.dataset.arg;
+
+                    debateButtons.forEach(btn => {
+                        btn.classList.remove('bg-C0A080', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-800');
+                    });
+
+                    button.classList.add('bg-C0A080', 'text-white');
+                    button.classList.remove('bg-gray-200', 'text-gray-800');
+
+                    debateTexts.forEach(text => text.classList.add('hidden'));
+
+                    const activeText = document.getElementById(`${arg}-arg`);
+                    if (activeText) {
+                        activeText.classList.remove('hidden');
+                        debatePlaceholder.classList.add('hidden');
+                    }
+                });
+            });
+
+            let tributeChartInstance = null;
+            function renderChart() {
+                if (tributeChartInstance) {
+                    return;
+                }
+                const ctx = document.getElementById('tributeChart').getContext('2d');
+
+                const satrapyData = {
+                    labels: [
+                        '1: Ionia, etc.', '2: Lydia, etc.', '3: Hellespont, Phrygia, etc.', '4: Cilicia', '5: Phoenicia, Palestine, Cyprus',
+                        '6: Egypt, Libya, etc.', '7: Sattagydia, etc.', '8: Susa (Cissia)', '9: Babylonia, Assyria', '10: Media, etc.',
+                        '11: Caspians, etc.', '12: Bactria, etc.', '13: Armenia, etc.', '14: Sagartia, etc.', '15: Sacans, Caspians',
+                        '16: Parthia, etc.', '17: Paricanians, Ethiopians (Asia)', '18: Matieni, etc.', '19: Moschi, etc.', '20: India (Gold Dust)'
+                    ],
+                    values: [
+                        400, 500, 360, 360, 350, 700, 170, 300, 1000, 450, 200, 360, 400, 600, 250, 300, 400, 200, 300, 4680
+                    ]
+                };
+
+                tributeChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: satrapyData.labels,
+                        datasets: [{
+                            label: 'Annual Tribute in Babylonian Silver Talents',
+                            data: satrapyData.values,
+                            backgroundColor: '#C0A080',
+                            borderColor: '#A6846A',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: 'Annual Tribute of the Persian Satrapies under Darius I',
+                                font: {
+                                    size: 18
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.x !== null) {
+                                            if (context.label === '20: India (Gold Dust)') {
+                                                label += `${context.parsed.x} (from 360 talents of gold)`;
+                                            } else {
+                                                label += `${context.parsed.x} talents`;
+                                            }
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Silver Talents'
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    autoSkip: false,
+                                    font: {
+                                        size: 10
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

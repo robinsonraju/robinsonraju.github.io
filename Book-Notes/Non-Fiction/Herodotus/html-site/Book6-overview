@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus Book VI: Erato - Interactive Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #FDFBF7;
+            /* Cream/Papyrus background */
+            color: #1F2937;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F3F4F6;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D97706;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B45309;
+        }
+
+        /* Chart Container Standards */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            /* Prevent excessive width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Battle Map Grid */
+        .battle-grid {
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 2px;
+            aspect-ratio: 2/1;
+            background-color: #E5E7EB;
+            border: 2px solid #9CA3AF;
+        }
+
+        .unit {
+            transition: all 0.5s ease;
+            border-radius: 2px;
+        }
+
+        .greek-unit {
+            background-color: #D97706;
+        }
+
+        /* Terracotta */
+        .persian-unit {
+            background-color: #4B5563;
+        }
+
+        /* Iron Gray */
+        .fleeing {
+            opacity: 0.3;
+            transform: scale(0.8);
+        }
+    </style>
+    <!-- Chosen Palette: Grecian Pottery (Terracotta #D97706, Iron #4B5563, Papyrus #FDFBF7) -->
+    <!-- Application Structure Plan: 
+         1. Hero Section: Title and Introduction.
+         2. The Ionian Tragedy: Interactive breakdown of the Battle of Lade forces and the fall of Miletus.
+         3. Spartan Intrigue: Tabbed interface comparing the fates of Kings Cleomenes and Demaratus.
+         4. The Road to Marathon: Step-by-step visual timeline of the Persian island-hopping campaign.
+         5. The Battle of Marathon: Interactive tactical map (CSS Grid) simulating the battle phases and a casualty comparison chart.
+         6. Aftermath: The fall of Miltiades and summary of the Alcmaeonidae defense.
+         Why: This thematic flow follows the narrative arc of Book 6, grouping complex political and military events into digestible, interactive modules.
+    -->
+    <!-- Visualization & Content Choices:
+         1. Battle of Lade: Doughnut Chart (Ionian Contingents) & Bar Chart (Total Fleets). Goal: Show the disparity and disunity.
+         2. Spartan Kings: Interactive Cards. Goal: Simplify complex political backstabbing.
+         3. Marathon Tactics: CSS Grid Animation. Goal: visualize the 'weak center, strong wings' strategy described in text. NO SVG used.
+         4. Casualties: Bar Chart. Goal: Highlight the miraculous nature of the victory (6400 vs 192).
+         5. Data Source: All numbers and narratives derived strictly from Herodotus Book 6 text.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md border-b-4 border-amber-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-gray-800 serif-font">Erato</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <button onclick="scrollToSection('ionia')"
+                        class="text-gray-600 hover:text-amber-600 transition font-medium">Ionia Falls</button>
+                    <button onclick="scrollToSection('sparta')"
+                        class="text-gray-600 hover:text-amber-600 transition font-medium">Spartan Intrigue</button>
+                    <button onclick="scrollToSection('marathon')"
+                        class="text-gray-600 hover:text-amber-600 transition font-medium">Marathon</button>
+                    <button onclick="scrollToSection('aftermath')"
+                        class="text-gray-600 hover:text-amber-600 transition font-medium">Legacy</button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-amber-600 focus:outline-none">
+                        <span class="text-2xl">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <button onclick="scrollToSection('ionia')"
+                    class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600">Ionia
+                    Falls</button>
+                <button onclick="scrollToSection('sparta')"
+                    class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600">Spartan
+                    Intrigue</button>
+                <button onclick="scrollToSection('marathon')"
+                    class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600">Marathon</button>
+                <button onclick="scrollToSection('aftermath')"
+                    class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600">Legacy</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-900 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-amber-500">The History: Book VI</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-8">From the flames of Miletus to the shores of
+                Marathon.</p>
+            <div class="w-24 h-1 bg-amber-500 mx-auto rounded"></div>
+            <p class="mt-6 text-gray-400 max-w-2xl mx-auto">
+                Explore Herodotus' account of the Ionian Revolt's tragic end, the labyrinthine politics of Sparta, and
+                the miraculous Athenian victory that saved Greece.
+            </p>
+        </div>
+    </header>
+
+    <!-- SECTION 1: THE IONIAN TRAGEDY -->
+    <section id="ionia" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">The Fall of Ionia</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                The revolt instigated by Aristagoras and Histiaeus crumbles. At the Battle of Lade, the Ionian fleet
+                faces the might of Persia. Explore the disparity in forces and the devastating betrayal that sealed
+                Miletus' fate.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Text & Context -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-600">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">The Battle of Lade</h3>
+                    <p class="text-gray-600">
+                        The Ionian fleet gathered at Lade to defend Miletus. Despite training attempts by
+                        <strong>Dionysius the Phocaean</strong>, discipline broke down. The Persians, with 600 ships,
+                        capitalized on internal discord.
+                    </p>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">The Betrayal</h3>
+                    <p class="text-gray-700 italic">
+                        "The Samians, according to the agreement which they had made with Aeaces... hoisted sail, and
+                        quitting their post bore away for Samos."
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">— Herodotus, Ch. 14</p>
+                    <div class="mt-4">
+                        <button id="show-fate-btn"
+                            class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 transition">Reveal
+                            Miletus' Fate</button>
+                        <p id="miletus-fate"
+                            class="hidden mt-3 text-red-700 font-semibold border-t pt-2 border-red-200">
+                            Miletus was besieged and taken. The men were slain, women and children enslaved, and the
+                            temple at Didyma plundered and burnt. The Ionian Revolt ended in total subjugation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Charts -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-center font-bold text-gray-700 mb-4">Naval Strength at Lade</h3>
+
+                <!-- Chart Container -->
+                <div class="chart-container mb-8">
+                    <canvas id="ladeChart"></canvas>
+                </div>
+
+                <div class="text-center text-sm text-gray-500">
+                    <p>Total Ionian Ships: <span class="font-bold text-amber-600">353</span> | Persian Ships: <span
+                            class="font-bold text-gray-700">600</span></p>
+                    <p class="mt-1">Click the chart slices to see specific contingent sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full h-px bg-gray-200 max-w-5xl mx-auto"></div>
+
+    <!-- SECTION 2: SPARTAN INTRIGUE -->
+    <section id="sparta" class="py-16 px-4 max-w-7xl mx-auto bg-gray-50">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Spartan Shadows</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                While Persia advanced, Sparta was consumed by internal rivalry. The dual monarchy of the Agiads and
+                Eurypontids turned toxic as King Cleomenes plotted against his co-king Demaratus.
+            </p>
+        </div>
+
+        <!-- Interactive Card Switcher -->
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+
+            <!-- Controls -->
+            <div class="md:w-1/3 space-y-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Key Figures</h3>
+                <button onclick="showSpartan('cleomenes')" id="btn-cleomenes"
+                    class="w-full text-left p-4 rounded-lg bg-white shadow hover:bg-amber-50 border-l-4 border-amber-600 transition">
+                    <div class="font-bold text-gray-800">Cleomenes I</div>
+                    <div class="text-sm text-gray-500">The Ruthless Manipulator</div>
+                </button>
+                <button onclick="showSpartan('demaratus')" id="btn-demaratus"
+                    class="w-full text-left p-4 rounded-lg bg-white shadow hover:bg-amber-50 border-l-4 border-transparent transition opacity-70">
+                    <div class="font-bold text-gray-800">Demaratus</div>
+                    <div class="text-sm text-gray-500">The Exiled King</div>
+                </button>
+                <div class="bg-gray-200 p-4 rounded text-sm text-gray-700 mt-6">
+                    <strong>Context:</strong> Sparta had two kings from two houses (Agiads & Eurypontids). Cleomenes
+                    bribed the Oracle at Delphi to declare Demaratus illegitimate.
+                </div>
+            </div>
+
+            <!-- Display Area -->
+            <div class="md:w-2/3 bg-white rounded-xl shadow-xl overflow-hidden relative min-h-[300px]">
+
+                <!-- Cleomenes Content -->
+                <div id="content-cleomenes" class="p-8 transition-opacity duration-300">
+                    <h3 class="text-2xl font-bold text-amber-700 mb-4">Cleomenes: The Madness of Power</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-amber-500 mr-2">➤</span> <strong>The
+                                Plot:</strong> Bribed the Pythian priestess Cobon to declare Demaratus illegitimate.
+                        </li>
+                        <li class="flex items-start"><span class="text-amber-500 mr-2">➤</span> <strong>The
+                                Action:</strong> Successfully deposed Demaratus and installed Leotychides.</li>
+                        <li class="flex items-start"><span class="text-amber-500 mr-2">➤</span> <strong>The
+                                Fall:</strong> Fled to Thessaly/Arcadia when his bribery was revealed. Returned to
+                            Sparta but descended into madness.</li>
+                        <li class="flex items-start"><span class="text-amber-500 mr-2">➤</span> <strong>The
+                                End:</strong> Committed suicide in prison by horribly mutilating himself with a knife.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Demaratus Content -->
+                <div id="content-demaratus" class="hidden p-8 transition-opacity duration-300">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">Demaratus: The King in Exile</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">➤</span> <strong>The
+                                Accusation:</strong> Accused of not being the son of King Ariston due to a premature
+                            birth comment.</li>
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">➤</span> <strong>The
+                                Humiliation:</strong> Deposed and mocked by Leotychides at the Gymnopaediae festival.
+                        </li>
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">➤</span> <strong>The
+                                Flight:</strong> Sacrificed to Zeus, questioned his mother (who claimed a hero-spirit
+                            father), and fled to Persia.</li>
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">➤</span> <strong>The
+                                Irony:</strong> Became an advisor to Darius and Xerxes, marching against Greece.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE INVASION & MARATHON -->
+    <section id="marathon" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="mb-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">The Battle of Marathon</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Led by Datis and Artaphernes, guided by the traitor Hippias, the Persians landed at Marathon.
+                With the Spartans delayed by religious festival, the Athenians stood alone (aided only by Plataea).
+            </p>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="bg-amber-100 p-4 rounded text-center">
+                <div class="text-3xl font-bold text-amber-800">192</div>
+                <div class="text-sm text-amber-900">Athenian Dead</div>
+            </div>
+            <div class="bg-gray-200 p-4 rounded text-center">
+                <div class="text-3xl font-bold text-gray-800">6,400</div>
+                <div class="text-sm text-gray-700">Persian Dead</div>
+            </div>
+            <div class="bg-blue-100 p-4 rounded text-center">
+                <div class="text-3xl font-bold text-blue-800">10</div>
+                <div class="text-sm text-blue-900">Athenian Generals</div>
+            </div>
+            <div class="bg-red-100 p-4 rounded text-center">
+                <div class="text-3xl font-bold text-red-800">1</div>
+                <div class="text-sm text-red-900">Traitor (Hippias)</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left: Interactive Battle Map -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-lg border border-gray-200 p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-gray-800">Tactical Simulation</h3>
+                    <div class="space-x-2">
+                        <button onclick="setBattlePhase(1)"
+                            class="px-3 py-1 text-sm bg-gray-200 hover:bg-amber-200 rounded transition font-bold"
+                            id="p1-btn">Phase 1: Formation</button>
+                        <button onclick="setBattlePhase(2)"
+                            class="px-3 py-1 text-sm bg-gray-200 hover:bg-amber-200 rounded transition font-bold"
+                            id="p2-btn">Phase 2: The Charge</button>
+                        <button onclick="setBattlePhase(3)"
+                            class="px-3 py-1 text-sm bg-gray-200 hover:bg-amber-200 rounded transition font-bold"
+                            id="p3-btn">Phase 3: Envelopment</button>
+                    </div>
+                </div>
+
+                <!-- The Grid Viz -->
+                <div
+                    class="relative w-full aspect-[2/1] bg-stone-100 border-2 border-stone-300 rounded overflow-hidden p-2">
+                    <div id="battle-grid" class="w-full h-full grid grid-cols-10 grid-rows-6 gap-1">
+                        <!-- Grid cells populated by JS -->
+                    </div>
+                    <!-- Labels -->
+                    <div class="absolute bottom-2 left-2 text-amber-700 font-bold text-xs">GREEKS</div>
+                    <div class="absolute top-2 right-2 text-gray-700 font-bold text-xs">PERSIANS</div>
+                </div>
+
+                <p id="battle-desc" class="mt-4 text-gray-600 italic border-l-4 border-amber-500 pl-3">
+                    Click a phase to see the tactic.
+                </p>
+            </div>
+
+            <!-- Right: Miltiades & The Speech -->
+            <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-3">Miltiades' Decision</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        The generals were split 5-5 on whether to fight. Miltiades appealed to the Polemarch
+                        <strong>Callimachus</strong>:
+                    </p>
+                    <div class="bg-white p-4 rounded shadow-inner italic text-gray-600 text-sm mb-4">
+                        "With thee it rests, Callimachus, either to bring Athens to slavery, or, by securing her
+                        freedom, to leave behind thee to all future generations a memory beyond even Harmodius and
+                        Aristogeiton."
+                    </div>
+                    <p class="text-gray-700 text-sm">
+                        Callimachus cast the deciding vote. He died bravely in the battle.
+                    </p>
+                </div>
+
+                <div class="mt-6 border-t pt-4">
+                    <h4 class="font-bold text-gray-800 text-sm mb-2">Casualty Comparison</h4>
+                    <div class="chart-container" style="height: 150px; width: 100%;">
+                        <canvas id="casualtyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: AFTERMATH & LEGACY -->
+    <section id="aftermath" class="py-16 px-4 max-w-7xl mx-auto bg-white">
+        <div class="mb-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">The Aftermath</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Victory brought glory, but also new conflicts. The Persians retreated, but internal Athenian politics
+                claimed the hero of Marathon.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- The Shield Signal -->
+            <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                        ?</div>
+                    <h3 class="text-xl font-bold text-gray-800">The Mystery of the Shield</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    A shield was flashed as a signal to the Persians to attack Athens while the army was at Marathon.
+                    Rumors blamed the <strong>Alcmaeonidae</strong> family.
+                </p>
+                <p class="text-gray-600 text-sm italic">
+                    "I cannot bring myself to believe that they held up a shield... for they were men who had remained
+                    in exile during the whole time the tyranny lasted." — Herodotus
+                </p>
+            </div>
+
+            <!-- Fall of Miltiades -->
+            <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                        †</div>
+                    <h3 class="text-xl font-bold text-gray-800">The Fall of Miltiades</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Miltiades requested a fleet for a secret expedition (against Paros). He failed, was wounded, and
+                    returned to Athens.
+                </p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li>• Tried for "deceiving the people".</li>
+                    <li>• Fined 50 talents.</li>
+                    <li>• Died of gangrene from his thigh wound.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 py-6 border-t border-amber-200 flex justify-between items-center bg-amber-50 rounded-lg mb-8">
+        <a href="Book5-overview.html"
+            class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+            <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book V
+        </a>
+
+        <a href="index.html"
+            class="flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+            <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+        </a>
+
+        <a href="Book7-overview.html"
+            class="w-1/3 flex justify-end items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group text-right">
+            Next: Book VII <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+        <p>Interactive Analysis based on Herodotus Book VI.</p>
+        <p class="text-xs mt-2">Generated for educational purposes.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- DATA STORE ---
+        const appData = {
+            ladeFleet: {
+                labels: ['Chios', 'Miletus', 'Lesbos', 'Samos', 'Teos', 'Priene', 'Erythrae', 'Myus', 'Phocaea'],
+                data: [100, 80, 70, 60, 17, 12, 8, 3, 3], // Total 353
+                totalIonian: 353,
+                totalPersian: 600
+            },
+            battlePhases: {
+                1: "Phase 1: The Standoff. The Greeks (Orange) line up with a weak center and strong wings. The Persians (Gray) mass their strength in the center.",
+                2: "Phase 2: The Run. The Athenians charge at a run! The center clashes. The weak Greek center is pushed back by the Persians/Sacae.",
+                3: "Phase 3: The Envelopment. The Greek wings defeat the Persian wings, then turn inward to crush the Persian center. Panic ensues."
+            }
+        };
+
+        // --- CHART INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', function () {
+            initLadeChart();
+            initCasualtyChart();
+            renderBattleGrid(1); // Init battle map
+
+            // Mobile Menu Toggle
+            document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+
+            // Miltiades Fate Toggle
+            document.getElementById('show-fate-btn').addEventListener('click', function () {
+                document.getElementById('miletus-fate').classList.remove('hidden');
+                this.classList.add('hidden');
+            });
+        });
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // --- CHART.JS CONFIG ---
+
+        // 1. Lade Fleet Chart (Doughnut)
+        function initLadeChart() {
+            const ctx = document.getElementById('ladeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: appData.ladeFleet.labels,
+                    datasets: [{
+                        label: 'Number of Ships',
+                        data: appData.ladeFleet.data,
+                        backgroundColor: [
+                            '#B45309', '#D97706', '#F59E0B', '#FCD34D', // Ambers
+                            '#78350F', '#92400E', '#4B5563', '#6B7280', '#9CA3AF' // Earths/Grays
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } },
+                        title: { display: true, text: 'Ionian Fleet Composition (353 Ships)' },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function (context) {
+                                    return `vs Persian Fleet: 600 ships`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 2. Casualty Chart (Horizontal Bar)
+        function initCasualtyChart() {
+            const ctx = document.getElementById('casualtyChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                indexAxis: 'y',
+                data: {
+                    labels: ['Athenians', 'Persians'],
+                    datasets: [{
+                        label: 'Casualties',
+                        data: [192, 6400],
+                        backgroundColor: ['#D97706', '#4B5563']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, grid: { display: false } },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // --- SPARTAN TABS LOGIC ---
+        function showSpartan(king) {
+            // Reset buttons
+            document.getElementById('btn-cleomenes').classList.remove('border-amber-600');
+            document.getElementById('btn-cleomenes').classList.add('border-transparent', 'opacity-70');
+            document.getElementById('btn-demaratus').classList.remove('border-amber-600');
+            document.getElementById('btn-demaratus').classList.add('border-transparent', 'opacity-70');
+
+            // Highlight active button
+            document.getElementById('btn-' + king).classList.remove('border-transparent', 'opacity-70');
+            document.getElementById('btn-' + king).classList.add('border-amber-600');
+
+            // Hide all content
+            document.getElementById('content-cleomenes').classList.add('hidden');
+            document.getElementById('content-demaratus').classList.add('hidden');
+
+            // Show active content
+            document.getElementById('content-' + king).classList.remove('hidden');
+        }
+
+        // --- BATTLE MAP LOGIC (CSS GRID) ---
+        function renderBattleGrid(phase) {
+            const grid = document.getElementById('battle-grid');
+            grid.innerHTML = ''; // Clear
+
+            // Update Description and Buttons
+            document.getElementById('battle-desc').innerText = appData.battlePhases[phase];
+            [1, 2, 3].forEach(n => {
+                const btn = document.getElementById(`p${n}-btn`);
+                if (n === phase) {
+                    btn.classList.add('bg-amber-400', 'text-white');
+                    btn.classList.remove('bg-gray-200');
+                } else {
+                    btn.classList.remove('bg-amber-400', 'text-white');
+                    btn.classList.add('bg-gray-200');
+                }
+            });
+
+            // Grid: 10 columns x 6 rows (60 cells)
+            // Logic to color cells based on phase
+            for (let i = 0; i < 60; i++) {
+                const cell = document.createElement('div');
+                cell.classList.add('unit');
+
+                const row = Math.floor(i / 10);
+                const col = i % 10;
+
+                // PHASE 1: STANDOFF
+                if (phase === 1) {
+                    // Greeks (Left): Strong wings (Rows 0,1 & 4,5), Weak center (Rows 2,3)
+                    if (col === 1) {
+                        if (row < 2 || row > 3) cell.classList.add('greek-unit'); // Strong wings
+                    }
+                    if (col === 0 && (row === 2 || row === 3)) cell.classList.add('greek-unit', 'opacity-50'); // Weak center back
+
+                    // Persians (Right): Massed
+                    if (col > 6) cell.classList.add('persian-unit');
+                }
+
+                // PHASE 2: CHARGE & CLASH
+                if (phase === 2) {
+                    // Greeks moved right
+                    if (col === 5) {
+                        if (row < 2 || row > 3) cell.classList.add('greek-unit'); // Wings engaged
+                    }
+                    if (col === 4 && (row === 2 || row === 3)) cell.classList.add('greek-unit', 'opacity-50'); // Center lagging/pushed
+
+                    // Persians
+                    if (col === 6) cell.classList.add('persian-unit');
+                    if (col === 5 && (row === 2 || row === 3)) cell.classList.add('persian-unit'); // Center pushing Greeks
+                }
+
+                // PHASE 3: ENVELOPMENT
+                if (phase === 3) {
+                    // Greek Wings turned in
+                    if (col === 6 && (row === 0 || row === 5)) cell.classList.add('greek-unit');
+
+                    // Persian Center Crushed
+                    if (col === 6 && (row > 1 && row < 4)) cell.classList.add('persian-unit', 'fleeing');
+
+                    // Greek Center Holding
+                    if (col === 5 && (row === 2 || row === 3)) cell.classList.add('greek-unit');
+                }
+
+                grid.appendChild(cell);
+            }
+        }
+
+        function setBattlePhase(p) {
+            renderBattleGrid(p);
+        }
+
+    </script>
+</body>
+
+</html>

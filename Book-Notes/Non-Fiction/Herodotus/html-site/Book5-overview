@@ -1,0 +1,719 @@
+<!-- Chosen Palette: Parchment & Ink (Amber/Stone/Blue) -->
+<!-- Application Structure Plan: A thematic, 5-section SPA (Home, Timeline, Players, Context, Data). This dashboard-style IA was chosen over a linear book structure to serve user tasks. Users can either follow the main plot ('Timeline'), explore key figures ('Players'), understand the complex background ('Context'), or see hard data ('Data'). This non-linear approach, unified by a JS-powered nav, makes Herodotus's dense, digressive narrative much more accessible and digestible for a modern web user. -->
+<!-- Visualization & Content Choices: 1. Chain of Events (Home): HTML/CSS diagram (Goal: Organize) -> Flexbox/borders for a 'no-SVG' flowchart. 2. Key Players (Players): JS-toggle cards (Goal: Inform) -> Interactive grid for quick lookup. 3. Digressions (Context): JS-powered tabs (Goal: Organize) -> Manages the book's most complex feature (digressions) without overwhelming the user. 4. Rebel Fleet (Data): Donut Chart (Goal: Compare) -> Chart.js to show proportions (20 vs 5 ships). 5. Casualties (Data): Bar Chart (Goal: Compare) -> Chart.js to show Carian vs Persian losses. All charts use Canvas and are in responsive, max-width containers. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus: Book V - The Ionian Revolt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefbec;
+            color: #292524;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Merriweather', serif;
+            color: #92400e;
+        }
+
+        .nav-link {
+            transition: color 0.2s, border-color 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            border-bottom-color: #b45309;
+            color: #92400e;
+        }
+
+        .tab-link {
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        .tab-link.active {
+            background-color: #b45309;
+            color: #ffffff;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 256px;
+        }
+
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 320px;
+            }
+        }
+
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 0.5rem;
+            position: relative;
+        }
+
+        .flow-step-content {
+            border: 2px solid #fde68a;
+            background: #fffbeb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: #d97706;
+            margin: 0 0.5rem;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .flow-arrow {
+                display: block;
+            }
+
+            .flow-step {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-amber-50 text-stone-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl font-bold text-amber-800">Herodotus: Book V</h1>
+                    <p class="text-lg text-stone-600">Terpsichore & The Ionian Revolt</p>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <button class="nav-link active text-lg font-semibold text-stone-600 pb-1"
+                        data-target="home">Overview</button>
+                    <button class="nav-link text-lg font-semibold text-stone-600 pb-1" data-target="timeline">Main
+                        Narrative</button>
+                    <button class="nav-link text-lg font-semibold text-stone-600 pb-1" data-target="players">Key
+                        Players</button>
+                    <button class="nav-link text-lg font-semibold text-stone-600 pb-1" data-target="context">Context &
+                        Digressions</button>
+                    <button class="nav-link text-lg font-semibold text-stone-600 pb-1" data-target="data">By the
+                        Numbers</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section: Home / Overview -->
+        <section id="home" class="app-section">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">The Spark of a World War</h2>
+                <p class="text-lg text-stone-700 mb-6">
+                    Book V, "Terpsichore," is one of the most pivotal sections in Herodotus's <i>The History</i>. It
+                    masterfully bridges the gap between Persian expansion in Europe and the cataclysmic conflict we now
+                    call the Persian Wars. This book details the complex web of personal ambition, political
+                    miscalculation, and simmering resentment that culminated in the <b>Ionian Revolt</b>. This
+                    application allows you to explore that story not as a linear text, but as an interconnected series
+                    of events, people, and crucial background details.
+                </p>
+                <h3 class="text-xl font-semibold mb-4">The Chain of Causation</h3>
+                <p class="text-stone-700 mb-6">The Ionian Revolt wasn't a single event. It was the result of a fragile
+                    power dynamic, set in motion by a few ambitious men. This flow diagram, built entirely with HTML and
+                    CSS, shows the critical path to war.</p>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                    <div class="flow-step">
+                        <div class="flow-step-content">
+                            <h4 class="font-bold text-amber-700">1. Histiaeus's Ambition</h4>
+                            <p>The tyrant of Miletus, Histiaeus, is "promoted" to Susa by a suspicious King Darius,
+                                leaving him powerless and exiled.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow font-merriweather">→</div>
+                    <div class="flow-step">
+                        <div class="flow-step-content">
+                            <h4 class="font-bold text-amber-700">2. Aristagoras's Failure</h4>
+                            <p>His deputy, Aristagoras, leads a costly and disastrous Persian expedition against Naxos,
+                                fearing for his life and position.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow font-merriweather">→</div>
+                    <div class="flow-step">
+                        <div class="flow-step-content">
+                            <h4 class="font-bold text-amber-700">3. The Dual Motive</h4>
+                            <p>To escape punishment, Aristagoras plots revolt. Simultaneously, Histiaeus sends a secret
+                                message (via tattooed slave) urging the same, hoping to be sent back to quell it.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow font-merriweather">→</div>
+                    <div class="flow-step">
+                        <div class="flow-step-content">
+                            <h4 class="font-bold text-red-700">4. THE REVOLT</h4>
+                            <p>Aristagoras seeks allies in Greece, gets 20 ships from Athens, and together they burn the
+                                Persian capital of Sardis, making war inevitable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Main Narrative Timeline -->
+        <section id="timeline" class="app-section hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Main Narrative: The Revolt Unfolds</h2>
+                <p class="text-lg text-stone-700 mb-6">This section follows the main plot of Book V, focusing on the key
+                    actions that led to and comprised the <b>Ionian Revolt</b>. Herodotus frequently pauses for
+                    digressions, which are explored in the "Context" tab.</p>
+                <div class="relative border-l-4 border-amber-200 ml-4 py-4">
+
+                    <div class="mb-8 ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">1</span>
+                        </span>
+                        <h3 class="text-xl font-semibold">Persian Consolidation</h3>
+                        <p class="text-stone-700">Megabazus subdues Thrace and demands submission from Macedon. King
+                            Amyntas agrees, but his son <b>Alexander I</b> murders the Persian envoys for insulting the
+                            Macedonian women, a crime he cleverly conceals.</p>
+                    </div>
+
+                    <div class="mb-8 ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">2</span>
+                        </span>
+                        <h3 class="text-xl font-semibold">The Naxian Expedition</h3>
+                        <p class="text-stone-700"><b>Aristagoras</b>, deputy-tyrant of Miletus, convinces the Persian
+                            satrap Artaphernes to fund an invasion of Naxos. The expedition fails after a 4-month siege
+                            due to infighting between Aristagoras and the Persian general Megabates, who warns the
+                            Naxians.</p>
+                    </div>
+
+                    <div class="mb-8 ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">3</span>
+                        </span>
+                        <h3 class="text-xl font-semibold">Aristagoras in Greece</h3>
+                        <p class="text-stone-700">Fearing punishment, Aristagoras revolts. He sails to Greece for aid.
+                            He fails to persuade King Cleomenes of Sparta, who is put off by the "three-month journey"
+                            to Susa. He succeeds in Athens, winning <b>20 ships</b>.</p>
+                    </div>
+
+                    <div class="mb-8 ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">4a</span>
+                        </span>
+                        <h3 class="text-xl font-semibold text-red-700">The Burning of Sardis</h3>
+                        <p class="text-stone-700">The Ionians and their new Athenian allies march inland and burn the
+                            Persian regional capital of <b>Sardis</b>. This act is the point of no return. The Greeks
+                            are routed in a counter-attack near Ephesus, and the Athenians sail home.</p>
+                    </div>
+
+                    <div class="mb-8 ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">4b</span>
+                        </span>
+                        <h3 class="text-xl font-semibold">Darius's Vow</h3>
+                        <p class="text-stone-700">When King Darius hears of the burning of Sardis and the Athenian
+                            involvement, he famously asks, "Who are the Athenians?" He then shoots an arrow into the
+                            sky, praying for vengeance, and orders a servant to remind him three times at every meal:
+                            <b>"Master, remember the Athenians."</b></p>
+                    </div>
+
+                    <div class="mb-8 ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">5</span>
+                        </span>
+                        <h3 class="text-xl font-semibold">The Revolt Spreads & Fails</h3>
+                        <p class="text-stone-700">The revolt spreads to Cyprus, which is reconquered by the Persians
+                            after a year. The Persian generals begin systematically retaking the Ionian cities. The
+                            Carians resist fiercely, even ambushing and killing one Persian general, but are worn down
+                            by numbers.</p>
+                    </div>
+
+                    <div class="ml-8">
+                        <span
+                            class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-amber-200 rounded-full ring-8 ring-white">
+                            <span class="font-bold text-amber-800">6</span>
+                        </span>
+                        <h3 class="text-xl font-semibold">The Death of Aristagoras</h3>
+                        <p class="text-stone-700">The "man of but little courage" who started the war,
+                            <b>Aristagoras</b>, sees the revolt is failing. He abandons Ionia and flees to Thrace, where
+                            he is cut off and killed, ending his turbulent career.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Key Players -->
+        <section id="players" class="app-section hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Dramatis Personae</h2>
+                <p class="text-lg text-stone-700 mb-6">History is driven by people. Click on any of the key figures from
+                    Book V to see their motivations, key actions, and their ultimate fate in the narrative.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Player Card: Aristagoras -->
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold">Aristagoras</h3>
+                        <p class="text-stone-600 mb-3">Tyrant-in-Charge of Miletus</p>
+                        <button class="toggle-btn text-blue-700 font-semibold" data-toggle="player-aristagoras">Show
+                            Details +</button>
+                        <div id="player-aristagoras" class="hidden mt-4 text-stone-700">
+                            <p>The nephew and son-in-law of Histiaeus, <b>Aristagoras</b> is the prime mover of the
+                                Ionian Revolt. His ambition leads to the failed Naxian expedition. Fearing punishment,
+                                he incites all of Ionia to rebel, seeking aid from Sparta (fail) and Athens (success).
+                                He is ultimately shown to be a coward, fleeing the revolt he began and dying in Thrace.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Player Card: Histiaeus -->
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold">Histiaeus</h3>
+                        <p class="text-stone-600 mb-3">The Exiled Tyrant of Miletus</p>
+                        <button class="toggle-btn text-blue-700 font-semibold" data-toggle="player-histiaeus">Show
+                            Details +</button>
+                        <div id="player-histiaeus" class="hidden mt-4 text-stone-700">
+                            <p>The true, but absent, tyrant of Miletus. His ambition in Thrace lands him in "honorable"
+                                exile at King Darius's court in Susa. He secretly encourages Aristagoras to revolt,
+                                hoping the chaos will force Darius to send him back to Ionia to stop it. He successfully
+                                deceives Darius and is released at the end of Book V.</p>
+                        </div>
+                    </div>
+
+                    <!-- Player Card: Darius -->
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold">King Darius</h3>
+                        <p class="text-stone-600 mb-3">King of Persia</p>
+                        <button class="toggle-btn text-blue-700 font-semibold" data-toggle="player-darius">Show Details
+                            +</button>
+                        <div id="player-darius" class="hidden mt-4 text-stone-700">
+                            <p>The Great King. He is initially shown to be shrewd, removing Histiaeus on suspicion.
+                                However, he is deceived by Histiaeus's silver tongue. After the burning of Sardis, his
+                                focus shifts entirely to one goal: revenge against Athens. His vow, <b>"Master, remember
+                                    the Athenians,"</b> sets the stage for the Persian Wars.</p>
+                        </div>
+                    </div>
+
+                    <!-- Player Card: Cleomenes I -->
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold">Cleomenes I</h3>
+                        <p class="text-stone-600 mb-3">King of Sparta</p>
+                        <button class="toggle-btn text-blue-700 font-semibold" data-toggle="player-cleomenes">Show
+                            Details +</button>
+                        <div id="player-cleomenes" class="hidden mt-4 text-stone-700">
+                            <p>The pragmatic and harsh King of Sparta. He is involved in liberating Athens from its
+                                tyrants, but later tries to install his own puppet ruler. When Aristagoras asks for aid,
+                                Cleomenes pragmatically refuses upon hearing the "three-month journey" to Susa. He is
+                                incorruptible, heeding his young daughter <b>Gorgo's</b> warning to leave before
+                                Aristagoras's bribe taints him.</p>
+                        </div>
+                    </div>
+
+                    <!-- Player Card: Alexander I -->
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold">Alexander I</h3>
+                        <p class="text-stone-600 mb-3">Prince of Macedon</p>
+                        <button class="toggle-btn text-blue-700 font-semibold" data-toggle="player-alexander">Show
+                            Details +</button>
+                        <div id="player-alexander" class="hidden mt-4 text-stone-700">
+                            <p>The son of King Amyntas. He proves himself to be ruthless and clever, murdering the
+                                overbearing Persian envoys and then covering up the crime by marrying his sister to the
+                                Persian investigator. Herodotus uses him to establish the Greekness of the Macedonian
+                                royal line, a crucial point for later Greek history.</p>
+                        </div>
+                    </div>
+
+                    <!-- Player Card: Sosicles -->
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold">Sosicles</h3>
+                        <p class="text-stone-600 mb-3">Corinthian Delegate</p>
+                        <button class="toggle-btn text-blue-700 font-semibold" data-toggle="player-sosicles">Show
+                            Details +</button>
+                        <div id="player-sosicles" class="hidden mt-4 text-stone-700">
+                            <p>A Corinthian envoy to Sparta. When the Spartans propose restoring the tyrant Hippias to
+                                Athens, Sosicles delivers a powerful speech against tyranny, warning the Spartans that
+                                <b>"there is nothing in the whole world so unjust, nothing so bloody."</b> He uses the
+                                entire history of Corinth's own brutal tyrants (Cypselus and Periander) as his proof,
+                                and his speech successfully scuttles the Spartan plan.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Context & Digressions -->
+        <section id="context" class="app-section hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Context & Digressions</h2>
+                <p class="text-lg text-stone-700 mb-6">To understand <i>why</i> events happened, Herodotus pauses the
+                    main story to provide crucial background. These "digressions" are the key to understanding the
+                    political landscape of the time. This section organizes those digressions by topic.</p>
+
+                <div class="mb-4 border-b border-gray-200">
+                    <nav class="flex flex-wrap -mb-px" aria-label="Tabs">
+                        <button class="tab-link active font-semibold py-2 px-4 rounded-t-lg"
+                            data-context-target="athens">The Liberation of Athens</button>
+                        <button class="tab-link font-semibold py-2 px-4 rounded-t-lg" data-context-target="corinth">The
+                            Tyrants of Corinth</button>
+                        <button class="tab-link font-semibold py-2 px-4 rounded-t-lg"
+                            data-context-target="sparta">Spartan Kings & Dorieus</button>
+                        <button class="tab-link font-semibold py-2 px-4 rounded-t-lg"
+                            data-context-target="customs">Customs of Nations</button>
+                    </nav>
+                </div>
+
+                <div id="context-athens" class="context-tab">
+                    <h3 class="text-xl font-semibold mb-3">Why Athens was Free (and Hated Sparta)</h3>
+                    <p class="text-stone-700 mb-4">When Aristagoras arrives in Athens, it is a new, chaotic, and proud
+                        democracy. Herodotus explains how this happened:
+                    <ul class="list-disc list-inside ml-4 space-y-2 text-stone-700">
+                        <li>The Alcmaeonidae, an exiled noble family, bribed the Delphic Oracle.</li>
+                        <li>The Oracle repeatedly told the Spartans to "free Athens" from its tyrants, the
+                            Pisistratidae.</li>
+                        <li>Sparta, obeying the oracle, sent King Cleomenes, who besieged and expelled the tyrants (who
+                            had ruled for 36 years).</li>
+                        <li>Immediately after, the Athenian Clisthenes (an Alcmaeonid) and the Spartan-backed Isagoras
+                            vied for power.</li>
+                        <li>Cleomenes returned to install Isagoras, but the Athenian people rose up, trapped Cleomenes
+                            on the Acropolis, and forced him to surrender.</li>
+                        <li>This victory led to Clisthenes's democratic reforms (creating 10 tribes) and a deep Athenian
+                            resentment of Spartan interference.</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div id="context-corinth" class="context-tab hidden">
+                    <h3 class="text-xl font-semibold mb-3">Sosicles's Warning: The Evils of Tyranny</h3>
+                    <p class="text-stone-700 mb-4">When Sparta proposes restoring the tyrant Hippias to Athens, the
+                        Corinthian delegate Sosicles shuts down the entire plan with a powerful speech. He relates the
+                        story of Corinth's own horrific experience with tyranny:
+                    <ul class="list-disc list-inside ml-4 space-y-2 text-stone-700">
+                        <li><b>Cypselus:</b> Born to a lame mother from the ruling class, he was hidden in a 'cypsel'
+                            (chest) to escape murder. He grew up to overthrow the oligarchy, becoming a harsh ruler who
+                            banished or killed many.</li>
+                        <li><b>Periander:</b> His son, Periander, was even worse. He learned from the tyrant of Miletus
+                            to "cut down the tallest ears of corn," (i.e., kill all prominent citizens).</li>
+                        <li><b>A Brutal Token:</b> In one famous story, Periander murdered his wife Melissa. When he
+                            consulted her ghost at an oracle, she refused to speak, saying she was "cold" because her
+                            clothes had been buried, not burnt. Periander then gathered all the women of Corinth,
+                            stripped them naked, and burned their clothing in a pit to appease her.</li>
+                    </ul>
+                    </I>
+                    <p class="text-stone-700 mt-4">This speech, filled with graphic detail, convinces the allies that
+                        tyranny is an evil they should not be spreading, and the plan to restore Hippias is abandoned.
+                    </p>
+                </div>
+
+                <div id="context-sparta" class="context-tab hidden">
+                    <h3 class="text-xl font-semibold mb-3">The Spartan Royal Line & a Failed Colony</h3>
+                    <p class="text-stone-700 mb-4">To explain why Cleomenes was king, Herodotus details the Spartan
+                        royal succession. Cleomenes's father, King Anaxandridas, had two wives (a Spartan taboo).
+                    <ul class="list-disc list-inside ml-4 space-y-2 text-stone-700">
+                        <li><b>Cleomenes:</b> The eldest son by the second wife, seen as "not right in his mind" but
+                            king by law.</li>
+                        <li><b>Dorieus:</b> The second son (by the first wife), who was furious he was not chosen king
+                            over his half-brother.</li>
+                        <li><b>A Cautionary Tale:</b> Dorieus, in a rage, left Sparta to found his own colony. He
+                            ignored proper oracles and customs and, after a brief stint helping Crotona fight Sybaris in
+                            Italy, was ultimately killed in Sicily.</li>
+                    </ul>
+                    </p>
+                    <p class="text-stone-700 mt-4">This story serves as a counter-point to the Ionian endeavor:
+                        Dorieus's ambitious, ill-fated Western expedition mirrors the Ionian's ambitious, ill-fated
+                        Eastern revolt. It also explains why Cleomenes's more famous brother, Leonidas, was not yet
+                        king.</p>
+                </div>
+
+                <div id="context-customs" class="context-tab hidden">
+                    <h3 class="text-xl font-semibold mb-3">Customs of Nations</h3>
+                    <p class="text-stone-700 mb-4">At the book's opening, Herodotus details the customs of the Thracians
+                        and Paeonians, showcasing the "barbarian" world the Persians were subduing.
+                    <ul class="list-disc list-inside ml-4 space-y-2 text-stone-700">
+                        <li><b>Thracians:</b> The "most powerful people in the world, except... the Indians," but too
+                            disunited to be effective. They sell their children, tattoo themselves as a mark of
+                            nobility, and consider idleness honorable.</li>
+                        <li><b>Trausi Tribe:</b> Famously "weep when a child is born" (for the woes it will endure) and
+                            "bury a man with laughter and rejoicings" (for his release from suffering).</li>
+                        <li><b>Paeonian Lake-Dwellers:</b> Live on platforms in Lake Prasias, connected by a single
+                            bridge. They tie their babies' feet with strings to stop them from rolling into the water
+                            and feed their horses fish.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: By the Numbers -->
+        <section id="data" class="app-section hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Book V: By the Numbers</h2>
+                <p class="text-lg text-stone-700 mb-6">While Herodotus's history is primarily qualitative, Book V
+                    contains several hard numbers, estimates, and figures. This section isolates and visualizes that
+                    data. These charts are rendered on HTML &lt;canvas&gt; elements using Chart.js.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold mb-4 text-center">Initial Rebel Fleet (25 Ships)</h3>
+                        <p class="text-stone-700 mb-4 text-center">Aristagoras only secured aid from two cities, one of
+                            which (Eretria) was just paying back an old favor to Miletus.</p>
+                        <div class="chart-container">
+                            <canvas id="fleetChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                        <h3 class="text-xl font-semibold mb-4 text-center">Carian 1st Battle Casualties</h3>
+                        <p class="text-stone-700 mb-4 text-center">In the first major battle in Caria, the Carians were
+                            "overpowered by numbers," suffering five times the casualties of the Persians.</p>
+                        <div class="chart-container">
+                            <canvas id="casualtiesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="border border-amber-200 rounded-lg p-4 bg-amber-50 col-span-1 lg:col-span-2">
+                        <h3 class="text-xl font-semibold mb-4 text-center">The Royal Road: A 3-Month Journey</h3>
+                        <p class="text-stone-700 mb-4 text-center">When Cleomenes heard the true length of the journey
+                            to the Persian capital, he immediately rejected Aristagoras's proposal. Herodotus provides
+                            the exact stats.</p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="bg-white rounded-lg shadow p-6 text-center">
+                                <h4 class="text-3xl font-bold text-amber-800">111</h4>
+                                <p class="text-stone-600">Royal Stations</p>
+                            </div>
+                            <div class="bg-white rounded-lg shadow p-6 text-center">
+                                <h4 class="text-3xl font-bold text-amber-800">~90 Days</h4>
+                                <p class="text-stone-600">Total Journey Time</p>
+                            </div>
+                            <div class="bg-white rounded-lg shadow p-6 text-center">
+                                <h4 class="text-3xl font-bold text-amber-800">14,040</h4>
+                                <p class="text-stone-600">Furlongs (approx. 1,755 miles)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <nav class="mt-8 py-6 border-t border-amber-200 flex justify-between items-center bg-amber-50 rounded-lg p-4">
+            <a href="Book4-overview.html"
+                class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+                <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book IV
+            </a>
+
+            <a href="index.html"
+                class="flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+                <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+            </a>
+
+            <a href="Book6-overview.html"
+                class="w-1/3 flex justify-end items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group text-right">
+                Next: Book VI <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+        </nav>
+    </main>
+
+    <footer class="text-center py-6 mt-8 border-t border-amber-200">
+        <p class="text-stone-600">An interactive exploration of Herodotus's <i>The History</i>, Book V.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.app-section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const target = link.getAttribute('data-target');
+
+                    sections.forEach(section => {
+                        if (section.id === target) {
+                            section.classList.remove('hidden');
+                        } else {
+                            section.classList.add('hidden');
+                        }
+                    });
+
+                    navLinks.forEach(navLink => {
+                        if (navLink.getAttribute('data-target') === target) {
+                            navLink.classList.add('active');
+                        } else {
+                            navLink.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-toggle');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const isHidden = targetElement.classList.toggle('hidden');
+                        button.textContent = isHidden ? 'Show Details +' : 'Hide Details -';
+                    }
+                });
+            });
+
+            const contextTabs = document.querySelectorAll('.tab-link');
+            const contextPanels = document.querySelectorAll('.context-tab');
+
+            contextTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-context-target');
+
+                    contextPanels.forEach(panel => {
+                        if (panel.id === `context-${target}`) {
+                            panel.classList.remove('hidden');
+                        } else {
+                            panel.classList.add('hidden');
+                        }
+                    });
+
+                    contextTabs.forEach(t => {
+                        if (t.getAttribute('data-context-target') === target) {
+                            t.classList.add('active');
+                        } else {
+                            t.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            const fleetCtx = document.getElementById('fleetChart');
+            if (fleetCtx) {
+                new Chart(fleetCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Athens', 'Eretria'],
+                        datasets: [{
+                            label: 'Ships',
+                            data: [20, 5],
+                            backgroundColor: [
+                                '#1d4ed8',
+                                '#a16207'
+                            ],
+                            borderColor: [
+                                '#ffffff',
+                                '#ffffff'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        family: 'Inter',
+                                        size: 14
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return `${context.label}: ${context.raw} ships`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const casualtiesCtx = document.getElementById('casualtiesChart');
+            if (casualtiesCtx) {
+                new Chart(casualtiesCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Carians', 'Persians'],
+                        datasets: [{
+                            label: 'Casualties',
+                            data: [10000, 2000],
+                            backgroundColor: [
+                                '#1d4ed8',
+                                '#be123c'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return `${context.label}: Approx. ${context.raw} killed`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus: Book VIII - The Battle for Greece</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f5f4;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #78716c;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #57534e;
+        }
+
+        /* Chart Container Styling - MANDATORY */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Timeline Connector */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #d6d3d1;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <!-- Chosen Palette: Stone & Sea (Warm Neutrals: #f5f5f4, #e7e5e4; Deep Blue: #1e3a8a; Bronze/Gold: #b45309) -->
+    <!-- Application Structure Plan: A narrative dashboard moving from Data (Fleets) to Action (Timeline/Tactics) to Result (Aftermath). Designed to allow users to "command" the history. -->
+    <!-- Visualization & Content Choices: Chart.js for Fleets (Pie) and Voting (Bar). Interactive Timeline for events. JS Logic for Themistocles' decisions. No SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+
+<body class="bg-stone-100 text-stone-800 font-sans antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-stone-900 text-stone-100 shadow-lg border-b-4 border-orange-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold tracking-wider text-orange-500">URANIA</span>
+                    <span class="ml-2 text-sm text-stone-400 hidden sm:block">Herodotus Book VIII</span>
+                </div>
+                <div class="flex space-x-1 sm:space-x-4">
+                    <button onclick="scrollToSection('fleets')"
+                        class="px-3 py-2 rounded-md text-sm font-medium hover:bg-stone-800 hover:text-white transition">Fleets</button>
+                    <button onclick="scrollToSection('timeline')"
+                        class="px-3 py-2 rounded-md text-sm font-medium hover:bg-stone-800 hover:text-white transition">Timeline</button>
+                    <button onclick="scrollToSection('salamis')"
+                        class="px-3 py-2 rounded-md text-sm font-medium hover:bg-stone-800 hover:text-white transition">Salamis</button>
+                    <button onclick="scrollToSection('aftermath')"
+                        class="px-3 py-2 rounded-md text-sm font-medium hover:bg-stone-800 hover:text-white transition">Aftermath</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-stone-800 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pattern-dots"></div>
+        <!-- CSS pattern fallback if needed, relying on color -->
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">The Wooden Wall</h1>
+            <p class="text-xl md:text-2xl text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                "Trust to the wooden wall... Divine Salamis, thou shalt destroy the children of women."
+            </p>
+            <div class="flex justify-center gap-4">
+                <div class="bg-stone-700/50 p-4 rounded-lg border border-stone-600 backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-orange-500">480 BC</div>
+                    <div class="text-xs text-stone-400 uppercase tracking-widest">Year</div>
+                </div>
+                <div class="bg-stone-700/50 p-4 rounded-lg border border-stone-600 backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-blue-400">378</div>
+                    <div class="text-xs text-stone-400 uppercase tracking-widest">Greek Ships</div>
+                </div>
+                <div class="bg-stone-700/50 p-4 rounded-lg border border-stone-600 backdrop-blur-sm">
+                    <div class="text-3xl font-bold text-red-400">1200+</div>
+                    <div class="text-xs text-stone-400 uppercase tracking-widest">Persian Ships</div>
+                </div>
+            </div>
+            <p class="mt-8 text-sm text-stone-400 italic">Based on Herodotus, The History, Book VIII</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Naval Analytics -->
+    <section id="fleets" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="mb-12 text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-stone-900 mb-4 flex items-center justify-center gap-3">
+                <span class="text-4xl">⚓</span> The Balance of Power
+            </h2>
+            <p class="text-stone-600 text-lg">
+                The Greek resistance relied heavily on naval supremacy. While Sparta held the command under Eurybiades
+                to maintain unity, the data clearly shows Athens provided the bulk of the power. Explore the fleet
+                composition at the two critical engagements: Artemisium and Salamis.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <!-- Controls & Info -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-stone-200 lg:col-span-1">
+                <h3 class="text-xl font-bold text-stone-800 mb-4 border-b pb-2">Fleet Controls</h3>
+
+                <div class="flex gap-2 mb-6">
+                    <button id="btn-artemisium" onclick="updateFleetData('artemisium')"
+                        class="flex-1 py-2 px-4 rounded border border-blue-600 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">
+                        Artemisium
+                    </button>
+                    <button id="btn-salamis" onclick="updateFleetData('salamis')"
+                        class="flex-1 py-2 px-4 rounded border border-stone-300 bg-white text-stone-600 font-semibold hover:bg-stone-100 transition">
+                        Salamis
+                    </button>
+                </div>
+
+                <div id="fleet-context" class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+                    <h4 class="font-bold text-blue-900 mb-2">Battle of Artemisium</h4>
+                    <p class="text-sm text-stone-600 mb-2">
+                        <strong>Total Ships:</strong> 271<br>
+                        <strong>Commander:</strong> Eurybiades (Sparta)<br>
+                        <strong>Key Insight:</strong> Athens provided 127 ships, nearly half the fleet, yet yielded
+                        command to avoid
+                        civil strife.
+                    </p>
+                </div>
+
+                <div class="mt-6 border-t pt-4">
+                    <h4 class="font-bold text-stone-800 mb-2">Key Detail:</h4>
+                    <p id="fleet-detail-text" class="text-sm text-stone-600 italic">
+                        Hover over the chart segments to see specific ship counts per city-state.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visualization -->
+            <div
+                class="bg-white p-6 rounded-xl shadow-md border border-stone-200 lg:col-span-2 flex flex-col items-center">
+                <h3 class="text-lg font-semibold text-stone-500 mb-2 uppercase tracking-widest">Fleet Composition</h3>
+                <!-- Chart Container -->
+                <div class="chart-container">
+                    <canvas id="fleetChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Timeline of Events -->
+    <section id="timeline" class="py-16 bg-stone-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">The Road to Salamis</h2>
+                <p class="text-stone-700">The progression from the indecisive engagements at Artemisium to the total
+                    evacuation of Attica.</p>
+            </div>
+
+            <div class="relative timeline-line space-y-12">
+
+                <!-- Event 1 -->
+                <div class="relative z-10 fade-in">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500 ml-8 md:ml-0 md:w-[45%] md:mr-auto relative">
+                        <div
+                            class="absolute top-6 -left-[42px] md:-right-[42px] md:left-auto w-8 h-8 bg-blue-500 rounded-full border-4 border-stone-200 flex items-center justify-center text-white text-xs font-bold">
+                            1</div>
+                        <h3 class="text-xl font-bold text-stone-800">The Bribe at Artemisium</h3>
+                        <p class="text-sm text-stone-500 mb-2">North Euboea</p>
+                        <p class="text-stone-700">
+                            The Greeks panic and plan to retreat. The Euboeans give Themistocles <strong>30
+                                talents</strong> to keep the fleet there. He bribes Eurybiades (5 talents) and
+                            Adeimantus (3 talents) to stay, keeping the rest.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="relative z-10 fade-in">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500 ml-8 md:ml-auto md:w-[45%] relative">
+                        <div
+                            class="absolute top-6 -left-[42px] w-8 h-8 bg-red-500 rounded-full border-4 border-stone-200 flex items-center justify-center text-white text-xs font-bold">
+                            2</div>
+                        <h3 class="text-xl font-bold text-stone-800">Storms & Skirmishes</h3>
+                        <p class="text-sm text-stone-500 mb-2">The Hollows of Euboea</p>
+                        <p class="text-stone-700">
+                            Persians send 200 ships around Euboea to trap the Greeks. A massive storm destroys them all.
+                            Herodotus claims this was divine intervention to "level the forces."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="relative z-10 fade-in">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-orange-500 ml-8 md:ml-0 md:w-[45%] md:mr-auto relative">
+                        <div
+                            class="absolute top-6 -left-[42px] md:-right-[42px] md:left-auto w-8 h-8 bg-orange-500 rounded-full border-4 border-stone-200 flex items-center justify-center text-white text-xs font-bold">
+                            3</div>
+                        <h3 class="text-xl font-bold text-stone-800">The Fall of Athens</h3>
+                        <p class="text-sm text-stone-500 mb-2">Attica & The Acropolis</p>
+                        <p class="text-stone-700">
+                            Xerxes enters a deserted Athens. The "Wooden Wall" defenders on the Acropolis are massacred.
+                            The temples are burned. The sacred olive tree, however, sprouts a new shoot the next day—a
+                            sign of survival.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="relative z-10 fade-in">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-stone-800 ml-8 md:ml-auto md:w-[45%] relative">
+                        <div
+                            class="absolute top-6 -left-[42px] w-8 h-8 bg-stone-800 rounded-full border-4 border-stone-200 flex items-center justify-center text-white text-xs font-bold">
+                            4</div>
+                        <h3 class="text-xl font-bold text-stone-800">The Council at Salamis</h3>
+                        <p class="text-sm text-stone-500 mb-2">Salamis</p>
+                        <p class="text-stone-700">
+                            Peloponnesians want to retreat to the Isthmus. Themistocles threatens to sail the Athenians
+                            to Italy if they do. He argues that fighting in the <strong>narrow straits</strong> negates
+                            Persian numbers.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Battle Simulator (Salamis) -->
+    <section id="salamis" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-bold text-stone-900 mb-6">⚔️ The Battle of Salamis</h2>
+                <p class="text-lg text-stone-700 mb-6">
+                    The Greeks were cornered, outnumbered, and divided. Victory required not just bravery, but cunning.
+                    Themistocles forced the engagement through deception.
+                </p>
+                <div class="bg-orange-50 border-l-4 border-orange-600 p-4 mb-6">
+                    <p class="italic text-stone-800">
+                        "When men counsel reasonably, reasonable success ensues; but when in their counsels they reject
+                        reason, God does not choose to follow the wanderings of human fancies." — Themistocles
+                    </p>
+                </div>
+
+                <h3 class="text-xl font-bold text-stone-800 mb-4">Strategic Decisions</h3>
+                <p class="text-stone-600 mb-4">Explore the key moves that defined the battle by clicking the cards
+                    below.</p>
+
+                <div class="space-y-4">
+                    <!-- Interaction 1 -->
+                    <div onclick="toggleTactic('tactic1')"
+                        class="cursor-pointer group bg-white p-4 rounded-lg shadow border border-stone-200 hover:border-blue-500 transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-blue-900 group-hover:text-blue-600">The Secret Message (Sicinnus)
+                            </h4>
+                            <span class="text-xl">📩</span>
+                        </div>
+                        <div id="tactic1" class="hidden mt-3 text-sm text-stone-700 border-t pt-2">
+                            Themistocles sent his slave, Sicinnus, to Xerxes claiming the Greeks were fleeing. Xerxes
+                            believed it and sent his ships to block the exits at night, tiring his crews and locking the
+                            Greeks in.
+                        </div>
+                    </div>
+
+                    <!-- Interaction 2 -->
+                    <div onclick="toggleTactic('tactic2')"
+                        class="cursor-pointer group bg-white p-4 rounded-lg shadow border border-stone-200 hover:border-blue-500 transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-blue-900 group-hover:text-blue-600">Artemisia's Ruthlessness</h4>
+                            <span class="text-xl">👑</span>
+                        </div>
+                        <div id="tactic2" class="hidden mt-3 text-sm text-stone-700 border-t pt-2">
+                            Trapped by an Athenian ship, Queen Artemisia rammed and sank a friendly Persian vessel. The
+                            Athenian thought she was an ally and broke off pursuit. Xerxes, seeing the sinking, praised
+                            her valor, not knowing the truth.
+                        </div>
+                    </div>
+
+                    <!-- Interaction 3 -->
+                    <div onclick="toggleTactic('tactic3')"
+                        class="cursor-pointer group bg-white p-4 rounded-lg shadow border border-stone-200 hover:border-blue-500 transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-blue-900 group-hover:text-blue-600">The Narrow Strait</h4>
+                            <span class="text-xl">🌊</span>
+                        </div>
+                        <div id="tactic3" class="hidden mt-3 text-sm text-stone-700 border-t pt-2">
+                            The Persian numbers became a liability. Their ships fouled each other in the tight channel.
+                            The Greeks, keeping formation, picked them off. The Persians who couldn't swim drowned in
+                            mass numbers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-stone-900 rounded-xl p-8 text-stone-300 flex flex-col justify-center items-center relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-6 z-10">Casualty Estimation</h3>
+                <!-- Chart Container -->
+                <div class="chart-container z-10">
+                    <canvas id="battleChart"></canvas>
+                </div>
+                <p class="mt-4 text-xs text-stone-500 z-10 text-center">
+                    *Exact numbers vary by source, but the disproportionate loss is historically agreed upon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Aftermath & Voting -->
+    <section id="aftermath" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">The Prize of Valour</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">
+                    Following the victory, the Greek commanders gathered at the altar of Neptune to vote for the man who
+                    had shown the most merit. The result perfectly illustrates the Greek character: immense pride
+                    tempered by begrudging respect for genius.
+                </p>
+            </div>
+
+            <div class="bg-stone-50 p-6 md:p-10 rounded-2xl shadow-inner border border-stone-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">The Voting Paradox</h3>
+                        <p class="text-stone-700 mb-4">
+                            Each commander was given two votes: one for First Place, one for Second.
+                        </p>
+                        <ul class="space-y-3 text-sm text-stone-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-500 font-bold">1.</span>
+                                <span>Every single commander voted for <strong>themselves</strong> as the most
+                                    meritorious.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 font-bold">2.</span>
+                                <span>The vast majority cast their second vote for <strong>Themistocles</strong>.</span>
+                            </li>
+                        </ul>
+                        <div class="mt-6 bg-yellow-50 p-4 rounded border-l-4 border-yellow-500">
+                            <p class="italic text-stone-800 text-sm">
+                                "Envy hindered the chiefs from coming to a decision... Nevertheless Themistocles was
+                                regarded everywhere as by far the wisest man of all the Greeks."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chart Container -->
+                    <div class="chart-container">
+                        <canvas id="voteChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Retreat -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-stone-800 text-white p-6 rounded-lg">
+                    <h3 class="font-bold text-orange-500 mb-2">The Persian Retreat</h3>
+                    <p class="text-sm text-stone-300">
+                        Fearing the Greeks would destroy the Hellespont bridges, Xerxes fled. He left Mardonius with
+                        300,000 picked men to winter in Thessaly.
+                    </p>
+                </div>
+                <div class="bg-stone-800 text-white p-6 rounded-lg">
+                    <h3 class="font-bold text-blue-400 mb-2">The Siege of Potidaea</h3>
+                    <p class="text-sm text-stone-300">
+                        Artabazus besieged Potidaea. A massive tide (attributed to Neptune) drowned his forces, forcing
+                        a retreat.
+                    </p>
+                </div>
+                <div class="bg-stone-800 text-white p-6 rounded-lg">
+                    <h3 class="font-bold text-white mb-2">The Athenian Refusal</h3>
+                    <p class="text-sm text-stone-300">
+                        Mardonius offered peace. Athens replied: "So long as the sun keeps his present course, we will
+                        never join alliance with Xerxes."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 py-6 border-t border-stone-200 flex justify-between items-center bg-stone-50 rounded-lg mb-8">
+        <a href="Book7-overview.html"
+            class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-orange-800 font-bold transition-colors group">
+            <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book VII
+        </a>
+
+        <a href="index.html"
+            class="flex items-center gap-2 text-stone-600 hover:text-orange-800 font-bold transition-colors group">
+            <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+        </a>
+
+        <a href="Book9-overview.html"
+            class="w-1/3 flex justify-end items-center gap-2 text-stone-600 hover:text-orange-800 font-bold transition-colors group text-right">
+            Next: Book IX <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-500 py-8 text-center border-t border-stone-800">
+        <p class="mb-2">Interactive Report based on Herodotus' <em>The History, Book VIII</em></p>
+        <p class="text-xs">Generated by Canvas Create Webapp</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- State Management ---
+        const fleetData = {
+            artemisium: {
+                labels: ['Athens', 'Corinth', 'Megara', 'Chalcis', 'Aegina', 'Sicyon', 'Sparta', 'Others'],
+                data: [127, 40, 20, 20, 18, 12, 10, 24], // Others = Epidaurus(8)+Eretria(7)+Troezen(5)+Styra(2)+Ceos(2)
+                total: 271,
+                desc: "At Artemisium, Athens provided nearly half the ships (127) but ceded command to Spartan Eurybiades."
+            },
+            salamis: {
+                labels: ['Athens', 'Corinth', 'Aegina', 'Megara', 'Chalcis', 'Sparta', 'Sicyon', 'Others'],
+                data: [180, 40, 30, 20, 20, 16, 15, 57], // Others sum of smaller contingents
+                total: 378,
+                desc: "At Salamis, the fleet grew. Athens increased to 180. Aegina sent their 30 best sailers. The total reached 378 ships."
+            }
+        };
+
+        // --- Charts Initialization ---
+        let fleetChartInstance = null;
+
+        function initCharts() {
+            // 1. Fleet Composition Chart (Doughnut)
+            const ctxFleet = document.getElementById('fleetChart').getContext('2d');
+            fleetChartInstance = new Chart(ctxFleet, {
+                type: 'doughnut',
+                data: {
+                    labels: fleetData.artemisium.labels,
+                    datasets: [{
+                        data: fleetData.artemisium.data,
+                        backgroundColor: [
+                            '#1e3a8a', // Athens (Blue)
+                            '#b45309', // Corinth (Bronze)
+                            '#0ea5e9', // Megara
+                            '#64748b', // Chalcis
+                            '#dc2626', // Aegina (Red)
+                            '#f59e0b', // Sicyon
+                            '#78350f', // Sparta (Dark Red/Brown)
+                            '#a8a29e'  // Others
+                        ],
+                        borderWidth: 1,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { boxWidth: 12, font: { size: 11 } }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.label || '';
+                                    if (label) { label += ': '; }
+                                    let value = context.raw;
+                                    let total = context.chart._metasets[context.datasetIndex].total;
+                                    let percentage = Math.round((value / total) * 100) + '%';
+                                    return label + value + ' ships (' + percentage + ')';
+                                }
+                            }
+                        }
+                    },
+                    layout: { padding: 10 }
+                }
+            });
+
+            // 2. Battle Casualty Chart (Bar/Pie hybrid logic visually) - Using Bar for clarity
+            const ctxBattle = document.getElementById('battleChart').getContext('2d');
+            new Chart(ctxBattle, {
+                type: 'bar',
+                data: {
+                    labels: ['Greek Ships Lost', 'Persian Ships Lost'],
+                    datasets: [{
+                        label: 'Ships',
+                        data: [40, 200], // Estimates based on Herodotus descriptions of "heavy loss" vs "vast number"
+                        backgroundColor: ['#3b82f6', '#ef4444'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: true, text: 'Estimated Naval Losses', color: '#a8a29e' }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#44403c' },
+                            ticks: { color: '#a8a29e' }
+                        },
+                        x: {
+                            ticks: { color: '#a8a29e' }
+                        }
+                    }
+                }
+            });
+
+            // 3. Voting Chart (Bar)
+            const ctxVote = document.getElementById('voteChart').getContext('2d');
+            new Chart(ctxVote, {
+                type: 'bar',
+                data: {
+                    labels: ['Themistocles', 'Eurybiades', 'Adeimantus', 'Others'],
+                    datasets: [
+                        {
+                            label: '1st Place Votes',
+                            data: [1, 1, 1, 1], // Everyone voted for themselves (symbolic 1)
+                            backgroundColor: '#d6d3d1'
+                        },
+                        {
+                            label: '2nd Place Votes',
+                            data: [20, 2, 1, 0], // Themistocles got majority of 2nd place
+                            backgroundColor: '#f97316'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: 'Commander Voting Results' },
+                        tooltip: {
+                            callbacks: {
+                                footer: (tooltipItems) => {
+                                    return tooltipItems[0].datasetIndex === 0 ?
+                                        "Commanders voted for themselves." :
+                                        "Commanders conceded Themistocles was 2nd best.";
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { stacked: true },
+                        x: { stacked: true }
+                    }
+                }
+            });
+        }
+
+        // --- Interactions ---
+
+        function updateFleetData(battle) {
+            const data = fleetData[battle];
+
+            // Update UI Buttons
+            const btnArt = document.getElementById('btn-artemisium');
+            const btnSal = document.getElementById('btn-salamis');
+
+            if (battle === 'artemisium') {
+                btnArt.classList.replace('bg-white', 'bg-blue-600');
+                btnArt.classList.replace('text-stone-600', 'text-white');
+                btnArt.classList.remove('border-stone-300');
+                btnArt.classList.add('border-blue-600');
+
+                btnSal.classList.replace('bg-blue-600', 'bg-white');
+                btnSal.classList.replace('text-white', 'text-stone-600');
+                btnSal.classList.add('border-stone-300');
+                btnSal.classList.remove('border-blue-600');
+
+                document.getElementById('fleet-context').innerHTML = `
+                    <h4 class="font-bold text-blue-900 mb-2">Battle of Artemisium</h4>
+                    <p class="text-sm text-stone-600 mb-2">
+                        <strong>Total Ships:</strong> 271<br>
+                        <strong>Commander:</strong> Eurybiades (Sparta)<br>
+                        <strong>Key Insight:</strong> Athens provided 127 ships, nearly half the fleet, yet yielded command to avoid civil strife.
+                    </p>
+                `;
+            } else {
+                btnSal.classList.replace('bg-white', 'bg-blue-600');
+                btnSal.classList.replace('text-stone-600', 'text-white');
+                btnSal.classList.remove('border-stone-300');
+                btnSal.classList.add('border-blue-600');
+
+                btnArt.classList.replace('bg-blue-600', 'bg-white');
+                btnArt.classList.replace('text-white', 'text-stone-600');
+                btnArt.classList.add('border-stone-300');
+                btnArt.classList.remove('border-blue-600');
+
+                document.getElementById('fleet-context').innerHTML = `
+                    <h4 class="font-bold text-blue-900 mb-2">Battle of Salamis</h4>
+                    <p class="text-sm text-stone-600 mb-2">
+                        <strong>Total Ships:</strong> 378<br>
+                        <strong>Growth:</strong> +107 ships reinforced the fleet.<br>
+                        <strong>Key Insight:</strong> The Athenian contingent grew to 180. The Aeginetans sent their 30 best ships and won the prize of valour.
+                    </p>
+                `;
+            }
+
+            // Update Chart
+            fleetChartInstance.data.labels = data.labels;
+            fleetChartInstance.data.datasets[0].data = data.data;
+            fleetChartInstance.update();
+        }
+
+        function toggleTactic(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // --- Intersection Observer for Fade-in Animations ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initCharts();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+
+    </script>
+</body>
+
+</html>

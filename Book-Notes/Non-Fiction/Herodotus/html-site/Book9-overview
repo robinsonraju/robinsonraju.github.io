@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus Book IX: The Calliope Chronicle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #fdfbf7;
+            /* Parchment-like */
+            color: #2c2926;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        .tab-active {
+            border-bottom: 3px solid #b91c1c;
+            /* Spartan Red */
+            color: #7f1d1d;
+            font-weight: bold;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    <!-- Chosen Palette: Grecian Earth & Bronze. Background: #fdfbf7 (Parchment), Primary: #b91c1c (Spartan Red), Secondary: #1e3a8a (Aegean Blue), Text: #2c2926 (Charcoal), Accents: #d97706 (Gold/Bronze). -->
+    <!-- Application Structure Plan: The app is designed as an interactive historical dossier. It begins with the Strategic Context (Timeline), moves to a Data Dashboard (The Armies), then focuses on the Tactical Battle of Plataea (Interactive Grid 'Map'), covers the Parallel Victory at Mycale, and concludes with the Aftermath & Moral. This structure allows users to first understand the 'when', then the 'who', then the 'how', and finally the 'so what', moving from macro to micro to abstract. -->
+    <!-- Visualization & Content Choices: 
+        1. Context: Interactive Timeline (HTML/JS) to simplify the complex movements before the battle.
+        2. Army Data: Chart.js Bar and Doughnut charts to visualize the specific troop numbers Herodotus provides, highlighting the massive disparity.
+        3. Battle Tactics: An abstract CSS Grid 'Map' to represent the positioning of forces without using static images or SVG, allowing users to click units for details (e.g., the dispute over the wings).
+        4. Casualties: A Bar chart to emphasize the lopsided victory.
+        5. Narrative: Show/Hide text blocks for anecdotes (e.g., Xerxes' family tragedy) to keep the UI clean but content rich.
+        CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-stone-900 text-[#fdfbf7] p-6 shadow-lg border-b-4 border-[#b91c1c]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-wider cinzel text-[#d97706]">CALLIOPE</h1>
+                <p class="text-stone-400 mt-2 text-sm uppercase tracking-widest">Herodotus Book IX • The Final Victory
+                </p>
+            </div>
+            <nav
+                class="flex space-x-2 md:space-x-6 text-xs md:text-sm font-semibold tracking-wide flex-wrap justify-center">
+                <button onclick="navTo('context')"
+                    class="hover:text-[#d97706] transition-colors py-2 px-3 uppercase">Context</button>
+                <button onclick="navTo('armies')" class="hover:text-[#d97706] transition-colors py-2 px-3 uppercase">The
+                    Armies</button>
+                <button onclick="navTo('plataea')"
+                    class="hover:text-[#d97706] transition-colors py-2 px-3 uppercase">Plataea</button>
+                <button onclick="navTo('mycale')"
+                    class="hover:text-[#d97706] transition-colors py-2 px-3 uppercase">Mycale</button>
+                <button onclick="navTo('aftermath')"
+                    class="hover:text-[#d97706] transition-colors py-2 px-3 uppercase">Aftermath</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto w-full p-4 md:p-8 space-y-12">
+
+        <!-- SECTION 1: Context & Timeline -->
+        <section id="context" class="space-y-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-[#b91c1c] mb-4 cinzel">The Road to Plataea</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Following the Persian defeat at Salamis, King Xerxes retreated, leaving his general Mardonius with a
+                    massive army to finish the conquest of Greece. Book IX opens with diplomatic failures and the
+                    resumption of total war. Explore the key events leading to the final confrontation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-8">
+                <!-- Timeline List -->
+                <div class="md:col-span-4 bg-white p-4 rounded-lg shadow border border-stone-200 h-96 overflow-y-auto">
+                    <h3 class="text-xl font-bold mb-4 text-stone-800 border-b pb-2">Chronology</h3>
+                    <div id="timeline-list" class="space-y-2">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <!-- Event Detail View -->
+                <div
+                    class="md:col-span-8 bg-[#fffaf0] p-6 rounded-lg shadow-inner border border-stone-300 flex flex-col justify-center min-h-[24rem]">
+                    <div id="event-display">
+                        <h3 id="event-title" class="text-2xl font-bold text-[#1e3a8a] mb-3 cinzel">Select an Event</h3>
+                        <p id="event-desc" class="text-gray-700 text-lg">Click on a timeline item on the left to explore
+                            the strategic maneuvers of Mardonius and the Greeks.</p>
+                        <div id="event-extra" class="mt-4 p-4 bg-white rounded border-l-4 border-[#d97706] hidden">
+                            <span class="font-bold text-[#d97706] uppercase text-xs block mb-1">Key Insight</span>
+                            <p id="event-insight" class="text-sm italic text-gray-600"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-stone-300">
+
+        <!-- SECTION 2: The Armies (Data Dashboard) -->
+        <section id="armies" class="space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-end border-b border-stone-300 pb-4">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold text-[#b91c1c] cinzel">The Forces Assembled</h2>
+                    <p class="text-gray-600 mt-2">
+                        Herodotus provides a meticulous accounting of the forces at Plataea. The disparity was stark: a
+                        pan-Hellenic coalition facing a massive multi-ethnic imperial army.
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <button onclick="updateArmyChart('total')"
+                        class="bg-stone-200 hover:bg-stone-300 text-stone-800 px-3 py-1 rounded text-sm font-bold mr-2">Total
+                        Strength</button>
+                    <button onclick="updateArmyChart('greek_breakdown')"
+                        class="bg-stone-200 hover:bg-stone-300 text-stone-800 px-3 py-1 rounded text-sm font-bold">Greek
+                        Breakdown</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Chart 1: The Comparison -->
+                <div class="bg-white p-6 rounded-lg shadow border border-stone-200">
+                    <h3 id="chart-title" class="text-center font-bold text-lg mb-4 text-stone-700">Persian vs. Greek
+                        Total Strength</h3>
+                    <div class="chart-container">
+                        <canvas id="armyChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-500 text-center italic">
+                        * Persian numbers include 50,000 Greek "Medizers".
+                    </div>
+                </div>
+
+                <!-- Descriptive Stats -->
+                <div class="space-y-4">
+                    <div class="bg-[#1e3a8a] text-white p-6 rounded-lg shadow card-hover">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="text-xl font-bold cinzel">The Greek Coalition</h4>
+                                <p class="text-blue-200 text-sm">Led by Pausanias (Sparta)</p>
+                            </div>
+                            <span class="text-4xl font-bold">~110,000</span>
+                        </div>
+                        <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="block font-bold text-blue-200">Heavy Hoplites</span>
+                                38,700
+                            </div>
+                            <div>
+                                <span class="block font-bold text-blue-200">Light Armed</span>
+                                69,500 (inc. 35k Helots)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#7f1d1d] text-white p-6 rounded-lg shadow card-hover">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="text-xl font-bold cinzel">The Persian Force</h4>
+                                <p class="text-red-200 text-sm">Led by Mardonius</p>
+                            </div>
+                            <span class="text-4xl font-bold">~350,000</span>
+                        </div>
+                        <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="block font-bold text-red-200">Imperial Troops</span>
+                                300,000 (Persians, Medes, Bactrians, etc.)
+                            </div>
+                            <div>
+                                <span class="block font-bold text-red-200">Greek Medizers</span>
+                                ~50,000 (Thebans, Thessalians, etc.)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded border border-stone-200">
+                        <h4 class="font-bold text-stone-800 mb-2">Key Unit: The Immortals</h4>
+                        <p class="text-sm text-gray-600">The elite Persian unit. Despite their skill, Herodotus notes
+                            they lacked the heavy armor of the Greek Hoplites, a critical disadvantage in the coming
+                            close-quarters combat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-stone-300">
+
+        <!-- SECTION 3: Battle of Plataea (Interactive Grid) -->
+        <section id="plataea" class="space-y-6">
+            <div class="max-w-4xl">
+                <h2 class="text-3xl font-bold text-[#b91c1c] cinzel">The Battle of Plataea</h2>
+                <p class="text-gray-600 mt-2">
+                    A chaotic engagement decided by discipline and heavy armor. The battle was preceded by weeks of
+                    skirmishing, water shortages, and a confused night retreat. Explore the tactical layout below.
+                </p>
+            </div>
+
+            <!-- Tactical Dashboard -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Left: Control Panel -->
+                <div class="lg:col-span-1 space-y-4">
+                    <div class="bg-white p-4 rounded shadow border-l-4 border-[#b91c1c]">
+                        <h3 class="font-bold text-lg mb-2">Battle Phases</h3>
+                        <div class="space-y-2">
+                            <button onclick="setBattlePhase(1)" id="phase-btn-1"
+                                class="w-full text-left p-2 rounded hover:bg-red-50 text-sm transition-colors border border-transparent">1.
+                                The Standoff & Skirmishes</button>
+                            <button onclick="setBattlePhase(2)" id="phase-btn-2"
+                                class="w-full text-left p-2 rounded hover:bg-red-50 text-sm transition-colors border border-transparent">2.
+                                The Confused Retreat</button>
+                            <button onclick="setBattlePhase(3)" id="phase-btn-3"
+                                class="w-full text-left p-2 rounded hover:bg-red-50 text-sm transition-colors border border-transparent">3.
+                                The Persian Charge</button>
+                            <button onclick="setBattlePhase(4)" id="phase-btn-4"
+                                class="w-full text-left p-2 rounded hover:bg-red-50 text-sm transition-colors border border-transparent">4.
+                                The Slaughter at the Fort</button>
+                        </div>
+                    </div>
+
+                    <div id="tactical-info" class="bg-[#fffaf0] p-4 rounded shadow text-sm border border-stone-200">
+                        <h4 class="font-bold text-[#b91c1c] mb-2 uppercase tracking-wide">Tactical Note</h4>
+                        <p id="tactical-text">Select a phase to see the battlefield evolution.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Abstract Map (CSS Grid) -->
+                <div
+                    class="lg:col-span-2 bg-stone-100 p-6 rounded-lg border-2 border-stone-300 relative overflow-hidden min-h-[400px]">
+                    <div class="absolute top-2 right-2 text-xs text-stone-400 font-mono uppercase">North (Thebes)</div>
+                    <div class="absolute bottom-2 left-2 text-xs text-stone-400 font-mono uppercase">South (Cithaeron)
+                    </div>
+
+                    <!-- The Battlefield Container -->
+                    <div id="battlefield" class="w-full h-full relative transition-all duration-500">
+                        <!-- Dynamic Elements injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casualty Report -->
+            <div class="bg-white p-6 rounded-lg shadow border border-stone-200 mt-8">
+                <h3 class="text-xl font-bold text-center mb-4 cinzel">The Cost of Victory</h3>
+                <p class="text-center text-sm text-gray-500 mb-6">The casualty figures provided by Herodotus are
+                    staggeringly lopsided, reflecting the slaughter that occurred once the Persian line broke.</p>
+                <div class="chart-container">
+                    <canvas id="casualtyChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-stone-300">
+
+        <!-- SECTION 4: Mycale & Aftermath -->
+        <section id="mycale" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-[#1e3a8a] cinzel">The Parallel Victory: Mycale</h2>
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                    <p class="text-gray-800 leading-relaxed">
+                        On the very same day as Plataea, rumor reached the Greek fleet at Mycale (Ionia). The Persians,
+                        fearing a naval battle, beached their ships and built a rampart.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li class="flex items-start"><span class="mr-2 text-[#1e3a8a]">🌊</span> <strong>Leotychides'
+                                Stratagem:</strong> He shouted messages to the Ionians in the Persian camp, encouraging
+                            revolt.</li>
+                        <li class="flex items-start"><span class="mr-2 text-[#1e3a8a]">⚔️</span> <strong>The
+                                Battle:</strong> Athenians broke the line of wicker shields. The Persians fled to their
+                            fort.</li>
+                        <li class="flex items-start"><span class="mr-2 text-[#1e3a8a]">🔥</span>
+                            <strong>Revolt:</strong> The Samians and Milesians turned on their Persian masters, guiding
+                            them into traps. The ships were burned.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="bg-stone-800 text-stone-200 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center text-center">
+                <div class="text-5xl mb-4">🏛️</div>
+                <h3 class="text-2xl font-bold cinzel text-[#d97706] mb-2">The Double Blow</h3>
+                <p class="text-sm px-4">Herodotus attributes the synchronized victories to divine providence, noting
+                    that rumors of Pausanias' victory reached Mycale instantaneously across the sea.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Aftermath (Xerxes & Cyrus) -->
+        <section id="aftermath" class="space-y-8 pb-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-[#b91c1c] cinzel">Epilogue: The Wages of Hubris</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Siege of Sestos -->
+                <div class="bg-white p-6 rounded border-t-4 border-stone-600 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2">The Siege of Sestos</h3>
+                    <p class="text-sm text-gray-600">While Spartans returned home, Athenians besieged Sestos to clear
+                        the Hellespont bridges. The cruel Satrap Artayctes was captured and crucified for desecrating
+                        the temple of Protesilaus.</p>
+                </div>
+
+                <!-- Card 2: Xerxes' House (Interactive) -->
+                <div class="bg-white p-6 rounded border-t-4 border-[#7f1d1d] shadow-sm relative overflow-hidden group">
+                    <h3 class="font-bold text-lg mb-2">The Tragedy of Xerxes</h3>
+                    <p class="text-sm text-gray-600 mb-4">A dark tale of lust and mutilation in the court at Susa
+                        involving Xerxes, his brother Masistes, and a robe woven by Queen Amestris.</p>
+                    <button onclick="toggleMasistes()"
+                        class="text-[#b91c1c] text-sm font-bold uppercase hover:underline">Read the Dark Tale</button>
+
+                    <!-- Hidden Overlay -->
+                    <div id="masistes-overlay"
+                        class="absolute inset-0 bg-[#7f1d1d] text-white p-6 transform translate-y-full transition-transform duration-300 flex flex-col justify-center">
+                        <p class="text-sm italic mb-2">"Masistes, thou art my brother... but part with the wife thou now
+                            hast."</p>
+                        <p class="text-xs mb-4">Xerxes lusted after Masistes' wife, then his daughter. Queen Amestris,
+                            jealous of the daughter, mutilated Masistes' wife. Masistes attempted revolt but was slain.
+                        </p>
+                        <button onclick="toggleMasistes()"
+                            class="bg-white text-[#7f1d1d] px-3 py-1 rounded text-xs w-max font-bold">Close</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cyrus' Warning -->
+                <div class="bg-stone-100 p-6 rounded border-t-4 border-[#d97706] shadow-sm">
+                    <h3 class="font-bold text-lg mb-2">Cyrus' Final Warning</h3>
+                    <p class="text-sm text-gray-600 italic">"Soft countries breed soft men."</p>
+                    <p class="text-sm text-gray-600 mt-2">The book concludes with Cyrus the Great advising the Persians
+                        not to leave their rugged land for fertile plains, lest they become slaves instead of rulers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 py-6 border-t border-stone-200 flex justify-between items-center bg-stone-50 rounded-lg mb-8">
+        <a href="Book8-overview.html"
+            class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-[#b91c1c] font-bold transition-colors group">
+            <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book VIII
+        </a>
+
+        <a href="index.html"
+            class="flex items-center gap-2 text-stone-600 hover:text-[#b91c1c] font-bold transition-colors group">
+            <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+        </a>
+
+        <div class="w-1/3"></div> <!-- Spacer for missing Next button -->
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-500 py-8 text-center text-sm">
+        <p>© 2026 Interactive Herodotus • Generated from Book IX "Calliope"</p>
+        <p class="mt-2 text-xs">No SVGs were used in the making of this chronicle.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- DATA STORAGE ---
+
+        const timelineEvents = [
+            {
+                id: 1,
+                title: "Mardonius Retakes Athens",
+                desc: "10 months after Xerxes, Mardonius occupies a deserted Athens again. The Athenians are on Salamis, furious at Spartan delays.",
+                insight: "Mardonius hoped capturing the city would force a peace, but Athenian resolve—and the stoning of the traitor Lycidas—proved otherwise."
+            },
+            {
+                id: 2,
+                title: "Sparta Finally Marches",
+                desc: "After delays for the Hyacinthia festival, Chileiis of Tegea warns Sparta that their Isthmus wall is useless without the Athenian fleet. 5,000 Spartans + 35,000 Helots deploy secretly.",
+                insight: "The secrecy was total; the Argives failed to warn Mardonius in time."
+            },
+            {
+                id: 3,
+                title: "Death of Masistius",
+                desc: "In Boeotia, the Persian cavalry commander Masistius is slain during a skirmish by 300 picked Athenians. The Persians mourn him so loudly it echoes through Boeotia.",
+                insight: "Masistius wore gold scale armor under his tunic; he could only be killed by a strike to the eye."
+            },
+            {
+                id: 4,
+                title: "The Dispute of the Wings",
+                desc: "At Plataea, Tegeans and Athenians argue over who holds the prestigious left wing. Athens wins the honor by citing Marathon and ancient deeds.",
+                insight: "Sparta held the right, Athens the left. The center was filled by other Greek allies."
+            },
+            {
+                id: 5,
+                title: "Supply Lines Cut",
+                desc: "Mardonius' cavalry chokes the Gargaphia spring and intercepts a supply train. The Greeks are thirsty and starving.",
+                insight: "This logistical crisis forced the Greeks to attempt a dangerous night retreat."
+            }
+        ];
+
+        const armyData = {
+            greeks: {
+                hoplites: [10000, 8000, 5000, 3000, 12700], // Sparta, Athens, Corinth, Sicyon, Others
+                labels: ["Spartans (Lacedaemonians)", "Athenians", "Corinthians", "Sicyonians", "Other Allies"]
+            },
+            totals: [110000, 350000] // Greeks, Persians
+        };
+
+        const battlePhases = {
+            1: {
+                title: "Standoff & Skirmish",
+                desc: "Persian cavalry harasses the Greek line. The Gargaphia spring is fouled.",
+                positions: [
+                    { name: "Persian Cavalry", type: "enemy", grid: "row-start-2 col-start-1 col-span-3 bg-red-200 opacity-80" },
+                    { name: "River Asopus", type: "terrain", grid: "row-start-2 col-start-1 col-span-3 border-b-4 border-blue-300" },
+                    { name: "Spartans", type: "ally", grid: "row-start-3 col-start-3 bg-red-800 text-white" },
+                    { name: "Center Allies", type: "ally", grid: "row-start-3 col-start-2 bg-stone-400 text-white" },
+                    { name: "Athenians", type: "ally", grid: "row-start-3 col-start-1 bg-blue-800 text-white" }
+                ]
+            },
+            2: {
+                title: "The Night Retreat",
+                desc: "Greeks attempt to move to 'The Island'. The Center flees too far. Amompharetus refuses to move.",
+                positions: [
+                    { name: "Persian Camp", type: "enemy", grid: "row-start-1 col-start-1 col-span-3 bg-red-100" },
+                    { name: "Amompharetus", type: "ally", grid: "row-start-3 col-start-3 bg-red-600 text-white animate-pulse" },
+                    { name: "Athenians (Moving)", type: "ally", grid: "row-start-4 col-start-1 bg-blue-800 text-white opacity-70" },
+                    { name: "Center (Fled)", type: "ally", grid: "row-start-5 col-start-2 bg-stone-300 text-xs" }
+                ]
+            },
+            3: {
+                title: "Mardonius Charges",
+                desc: "Seeing the disorganized Greeks, Mardonius attacks the Spartans. The Athenians are cut off by Theban Medizers.",
+                positions: [
+                    { name: "Persian Main Force", type: "enemy", grid: "row-start-3 col-start-3 bg-red-500 text-white" },
+                    { name: "Spartans (Fighting)", type: "ally", grid: "row-start-4 col-start-3 bg-red-800 text-white border-4 border-yellow-500" },
+                    { name: "Thebans", type: "enemy", grid: "row-start-3 col-start-1 bg-orange-600 text-white" },
+                    { name: "Athenians", type: "ally", grid: "row-start-4 col-start-1 bg-blue-800 text-white" }
+                ]
+            },
+            4: {
+                title: "Victory & Pursuit",
+                desc: "Mardonius dies. Persians flee to their fort. Greeks breach the wall and slaughter them.",
+                positions: [
+                    { name: "Persian Fort (Breached)", type: "enemy", grid: "row-start-1 col-start-2 col-span-2 bg-stone-700 text-white border-red-500 border-dashed border-4" },
+                    { name: "Spartans & Athenians", type: "ally", grid: "row-start-2 col-start-2 col-span-2 bg-gradient-to-r from-red-800 to-blue-800 text-white" }
+                ]
+            }
+        };
+
+        // --- CHART INSTANCES ---
+        let armyChartInstance = null;
+        let casualtyChartInstance = null;
+
+        // --- INIT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initTimeline();
+            initCharts();
+            setBattlePhase(1); // Default phase
+        });
+
+        // --- TIMELINE LOGIC ---
+        function initTimeline() {
+            const list = document.getElementById('timeline-list');
+            timelineEvents.forEach(event => {
+                const item = document.createElement('div');
+                item.className = "p-3 cursor-pointer hover:bg-stone-100 border-l-4 border-transparent hover:border-[#d97706] transition-all";
+                item.innerHTML = `<h4 class="font-bold text-sm">${event.title}</h4>`;
+                item.onclick = () => selectEvent(event);
+                list.appendChild(item);
+            });
+            // Select first by default
+            selectEvent(timelineEvents[0]);
+        }
+
+        function selectEvent(event) {
+            document.getElementById('event-title').innerText = event.title;
+            document.getElementById('event-desc').innerText = event.desc;
+            document.getElementById('event-insight').innerText = event.insight;
+            document.getElementById('event-extra').classList.remove('hidden');
+        }
+
+        // --- NAVIGATION LOGIC ---
+        function navTo(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMasistes() {
+            const overlay = document.getElementById('masistes-overlay');
+            if (overlay.classList.contains('translate-y-full')) {
+                overlay.classList.remove('translate-y-full');
+            } else {
+                overlay.classList.add('translate-y-full');
+            }
+        }
+
+        // --- CHARTS LOGIC ---
+        function initCharts() {
+            // Army Chart (Default: Totals)
+            const ctxArmy = document.getElementById('armyChart').getContext('2d');
+            armyChartInstance = new Chart(ctxArmy, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Greek Coalition', 'Persian Alliance'],
+                    datasets: [{
+                        data: armyData.totals,
+                        backgroundColor: ['#1e3a8a', '#991b1b'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+
+            // Casualty Chart
+            const ctxCas = document.getElementById('casualtyChart').getContext('2d');
+            casualtyChartInstance = new Chart(ctxCas, {
+                type: 'bar',
+                data: {
+                    labels: ['Spartans', 'Tegeans', 'Athenians', 'Persians (Est. Dead)'],
+                    datasets: [{
+                        label: 'Casualties',
+                        data: [91, 16, 52, 257000], // 300k - 40k escaped - 3k survivors = ~257k
+                        backgroundColor: ['#b91c1c', '#ea580c', '#1e3a8a', '#44403c'],
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: { type: 'logarithmic', title: { display: true, text: 'Logarithmic Scale' } }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return context.parsed.x.toLocaleString() + ' dead';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateArmyChart(view) {
+            if (view === 'total') {
+                document.getElementById('chart-title').innerText = "Persian vs. Greek Total Strength";
+                armyChartInstance.config.type = 'doughnut';
+                armyChartInstance.data.labels = ['Greek Coalition', 'Persian Alliance'];
+                armyChartInstance.data.datasets[0].data = armyData.totals;
+                armyChartInstance.data.datasets[0].backgroundColor = ['#1e3a8a', '#991b1b'];
+            } else {
+                document.getElementById('chart-title').innerText = "Greek Force Breakdown (Hoplites)";
+                armyChartInstance.config.type = 'bar';
+                armyChartInstance.data.labels = armyData.greeks.labels;
+                armyChartInstance.data.datasets[0].data = armyData.greeks.hoplites;
+                armyChartInstance.data.datasets[0].backgroundColor = ['#b91c1c', '#1e3a8a', '#d97706', '#059669', '#6b7280'];
+            }
+            armyChartInstance.update();
+        }
+
+        // --- BATTLEFIELD LOGIC ---
+        function setBattlePhase(phaseId) {
+            const data = battlePhases[phaseId];
+
+            // Update Text
+            document.getElementById('tactical-text').innerHTML = `<strong>${data.title}:</strong> ${data.desc}`;
+
+            // Update Buttons
+            [1, 2, 3, 4].forEach(id => {
+                const btn = document.getElementById(`phase-btn-${id}`);
+                if (id === phaseId) {
+                    btn.classList.add('bg-red-100', 'font-bold', 'text-[#b91c1c]');
+                } else {
+                    btn.classList.remove('bg-red-100', 'font-bold', 'text-[#b91c1c]');
+                }
+            });
+
+            // Update Grid
+            const board = document.getElementById('battlefield');
+            board.className = "w-full h-full relative transition-all duration-500 grid grid-cols-3 grid-rows-5 gap-2 p-4";
+            board.innerHTML = ''; // Clear
+
+            data.positions.forEach(pos => {
+                const el = document.createElement('div');
+                el.className = `${pos.grid} rounded flex items-center justify-center text-center p-2 shadow transition-all duration-700 font-bold text-xs md:text-sm select-none cursor-default`;
+                el.innerText = pos.name;
+                board.appendChild(el);
+            });
+        }
+
+    </script>
+</body>
+
+</html>

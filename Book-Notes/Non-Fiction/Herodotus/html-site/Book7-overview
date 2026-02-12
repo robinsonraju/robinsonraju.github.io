@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus Book VII: The Invasion of Greece</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #fdfbf7;
+            /* Warm parchment */
+            color: #292524;
+            /* Stone 800 */
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif-title {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Chart Container Styling Requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 40vh;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Custom Scrollbar for inner content */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d6bcfa;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b794f4;
+        }
+
+        .nav-item.active {
+            background-color: #c2410c;
+            /* Orange 700 */
+            color: white;
+            border-bottom: 2px solid #7c2d12;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <!-- Chosen Palette: Ancient Pottery (Warm Neutrals, Terracotta Accents, Deep Stone Text) -->
+    <!-- Application Structure Plan: A 'Strategic Command' dashboard structure. 
+         Top Navigation allows switching between thematic views: 
+         1. Prologue (Succession & Decision), 
+         2. The Horde (Army/Fleet Data), 
+         3. Logistics (Bridges/Canals), 
+         4. The Defense (Greek Strategy), 
+         5. Thermopylae (Battle Simulation).
+         This structure breaks the massive linear narrative into digestible, interactive modules focused on 'Who', 'How', and 'What Happened'. -->
+    <!-- Visualization & Content Choices: 
+         - Prologue: Timeline logic (text) to show the chain of events.
+         - The Horde: Doughnut Chart for Fleet Composition (Goal: Compare naval contributions). Interactive Catalogue for Army gear (Goal: Inform/Explore details). Bar Chart for Herodotus's numbers (Goal: Visualize scale).
+         - Logistics: CSS/HTML Schematic diagrams (No SVG) to visualize the Hellespont bridge structure.
+         - Thermopylae: Interactive Phase Stepper to walk through the 3-day battle (Goal: Storytelling).
+         - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-[#1c1917] text-[#f5f5f4] p-4 shadow-lg border-b-4 border-[#c2410c]">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold tracking-wider text-[#ea580c]">POLYMNIA</h1>
+                <p class="text-sm opacity-80 uppercase tracking-widest">Herodotus Book VII • The Persian Invasion</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right hidden md:block">
+                <p class="text-xs text-gray-400">Interactive Historical Report</p>
+                <p class="text-xs text-gray-400">Based on Source Text</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-[#e7e5e4] shadow-md sticky top-0 z-50">
+        <div class="container mx-auto overflow-x-auto">
+            <div class="flex whitespace-nowrap justify-start md:justify-center p-2 space-x-2" id="main-nav">
+                <!-- Nav items injected by JS -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="app-content" class="flex-grow container mx-auto p-4 md:p-8">
+        <!-- Content injected by JS -->
+    </main>
+
+    <nav
+        class="container mx-auto px-4 md:px-8 mt-8 py-6 border-t border-amber-200 flex justify-between items-center bg-amber-50 rounded-lg mb-8">
+        <a href="Book6-overview.html"
+            class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+            <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book VI
+        </a>
+
+        <a href="index.html"
+            class="flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+            <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+        </a>
+
+        <a href="Book8-overview.html"
+            class="w-1/3 flex justify-end items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group text-right">
+            Next: Book VIII <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-[#1c1917] text-gray-500 p-6 text-center mt-8">
+        <p>&copy; Canvas Webapp Generator. Based on Herodotus Book VII.</p>
+    </footer>
+
+    <script>
+        // --- DATA STORE ---
+
+        const state = {
+            currentView: 'prologue',
+            nationSelection: 'Persians',
+            battlePhase: 0
+        };
+
+        const fleetData = {
+            labels: ['Phoenicians & Syrians', 'Egyptians', 'Cyprians', 'Cilicians', 'Pamphylians', 'Lycians', 'Dorians of Asia', 'Carians', 'Ionians', 'Islanders', 'Aeolians', 'Hellespontians'],
+            data: [300, 200, 150, 100, 30, 50, 30, 70, 100, 17, 60, 100],
+            colors: ['#7c2d12', '#9a3412', '#c2410c', '#ea580c', '#f97316', '#fb923c', '#fdba74', '#fed7aa', '#431407', '#57534e', '#78716c', '#a8a29e']
+        };
+
+        const armyData = {
+            // Herodotus's specific estimates
+            labels: ['Infantry', 'Cavalry', 'Camel/Chariot Corps', 'Thracian/Euro Levies', 'Marines'],
+            data: [1700000, 80000, 20000, 300000, 517610], // Based on text calculations
+            tooltips: [
+                '1.7 Million Foot Soldiers from Asia',
+                '80,000 Horsemen',
+                '20,000 Libyans & Arabs',
+                '300,000 European Allies',
+                '517,610 Fleet Crew'
+            ]
+        };
+
+        const nationsCatalogue = {
+            'Persians': {
+                region: 'Asia',
+                gear: 'Soft felt caps (tiaras), sleeved tunics of divers colours, iron scales like fish, trousers, wicker shields, quivers, short spears, large bows, reed arrows, daggers.',
+                commander: 'Otanes'
+            },
+            'Assyrians': {
+                region: 'Asia',
+                gear: 'Brazen helmets plaited strangely, shields, lances, daggers (Egyptian style), wooden clubs with iron knots, linen corselets.',
+                commander: 'Otaspes'
+            },
+            'Scythians (Sacae)': {
+                region: 'Asia',
+                gear: 'Trousers, tall stiff pointed caps, native bows, daggers, battle-axes (sagaris).',
+                commander: 'Hystaspes'
+            },
+            'Indians': {
+                region: 'Asia',
+                gear: 'Cotton dresses, cane bows, cane arrows with iron tips.',
+                commander: 'Pharnazathres'
+            },
+            'Ethiopians': {
+                region: 'Africa',
+                gear: 'Leopard and lion skins, long palm-stem bows, reed arrows with stone tips, antelope horn spears, knotted clubs. Bodies painted half chalk, half vermilion.',
+                commander: 'Arsames'
+            },
+            'Arabians': {
+                region: 'Asia',
+                gear: 'Zeira (long cloak) girded, long bows bending backwards. Mounted on camels.',
+                commander: 'Arsames'
+            },
+            'Thracians': {
+                region: 'Europe',
+                gear: 'Fox skins on heads, tunics, multi-coloured cloaks, fawn-skin buskins, javelins, light targes, short dirks.',
+                commander: 'Bassaces'
+            },
+            'Lycians': {
+                region: 'Asia Minor',
+                gear: 'Greaves, breastplates, cornel-wood bows, featherless reed arrows, javelins, goat skins on shoulders, plumed hats, daggers, falchions.',
+                commander: 'Cybernisus'
+            }
+        };
+
+        const battleTimeline = [
+            {
+                phase: "The Arrival",
+                desc: "Xerxes waits 4 days, expecting the Greeks to flee in terror. He sends a spy who sees the Spartans combing their hair and exercising, which Demaratus explains is a ritual before death.",
+                casualtyText: "No fighting yet."
+            },
+            {
+                phase: "Day 1: The Assault",
+                desc: "Xerxes sends the Medes and Cissians to 'take them alive'. They fall in heaps. The narrow pass nullifies their numbers. The Greeks fight in relays.",
+                casualtyText: "Heavy Persian losses."
+            },
+            {
+                phase: "Day 1: The Immortals",
+                desc: "Xerxes sends his elite 'Immortals' under Hydarnes. They fare no better than the Medes. Spartans use feigned retreat tactics to slaughter pursuers.",
+                casualtyText: "Immortals repelled."
+            },
+            {
+                phase: "Day 2: Stalemate",
+                desc: "Xerxes attacks again, hoping the Greeks are wounded and tired. The Greeks hold the line by fighting in rotation. The Persians withdraw to camp in frustration.",
+                casualtyText: "Persian morale drops."
+            },
+            {
+                phase: "The Betrayal",
+                desc: "Ephialtes of Malis reveals the Anopaea mountain path to Xerxes for a reward. Hydarnes leads troops overnight. The Phocian guards on the mountain retreat to the summit, allowing Persians to pass.",
+                casualtyText: "Greek position compromised."
+            },
+            {
+                phase: "Day 3: The Final Stand",
+                desc: "Leonidas dismisses the allies. 300 Spartans, 700 Thespians, and 400 Thebans remain. They fight outside the wall. Leonidas falls. The Greeks retreat to a hillock and are buried under arrows.",
+                casualtyText: "All Spartans and Thespians slain. Leonidas dead."
+            }
+        ];
+
+        // --- CORE FUNCTIONS ---
+
+        function init() {
+            renderNav();
+            renderContent();
+        }
+
+        function renderNav() {
+            const navItems = [
+                { id: 'prologue', label: '👑 Rise of Xerxes' },
+                { id: 'horde', label: '⚔️ The Horde' },
+                { id: 'logistics', label: '🏗️ Engineering' },
+                { id: 'defense', label: '🛡️ Greek Defense' },
+                { id: 'thermopylae', label: '🔥 Thermopylae' }
+            ];
+
+            const navContainer = document.getElementById('main-nav');
+            navContainer.innerHTML = navItems.map(item => `
+                <button 
+                    onclick="switchView('${item.id}')"
+                    class="nav-item px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 ${state.currentView === item.id ? 'active' : 'text-gray-600 hover:bg-gray-200'}"
+                >
+                    ${item.label}
+                </button>
+            `).join('');
+        }
+
+        function switchView(viewId) {
+            state.currentView = viewId;
+            renderNav();
+            renderContent();
+        }
+
+        function renderContent() {
+            const container = document.getElementById('app-content');
+            container.innerHTML = ''; // Clear content
+            container.className = "flex-grow container mx-auto p-4 md:p-8 fade-in";
+
+            switch (state.currentView) {
+                case 'prologue':
+                    renderPrologue(container);
+                    break;
+                case 'horde':
+                    renderHorde(container);
+                    break;
+                case 'logistics':
+                    renderLogistics(container);
+                    break;
+                case 'defense':
+                    renderDefense(container);
+                    break;
+                case 'thermopylae':
+                    renderThermopylae(container);
+                    break;
+            }
+        }
+
+        // --- VIEW RENDERERS ---
+
+        function renderPrologue(container) {
+            container.innerHTML = `
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="col-span-1 md:col-span-2 text-center mb-6">
+                        <h2 class="text-3xl font-bold mb-4 text-[#c2410c]">From Darius to Xerxes</h2>
+                        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                            The narrative begins with the aftermath of Marathon. Darius's anger fuels preparations for a new war, but death intervenes. This section explores the transition of power and the divine impulses driving the invasion.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#ea580c]">
+                        <h3 class="serif-title text-xl font-bold mb-4">The Succession Crisis</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-3">👑</span>
+                                <div>
+                                    <strong class="block text-gray-900">Darius Dies (486 BCE)</strong>
+                                    <span class="text-gray-600">After 36 years of reign, leaving the Egyptian revolt and Athenian punishment unfinished.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-3">⚔️</span>
+                                <div>
+                                    <strong class="block text-gray-900">The Claimants</strong>
+                                    <span class="text-gray-600">Artabazanes (Eldest) vs. Xerxes (First born during reign, grandson of Cyrus).</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-3">🗣️</span>
+                                <div>
+                                    <strong class="block text-gray-900">Demaratus's Counsel</strong>
+                                    <span class="text-gray-600">The exiled Spartan king advises Xerxes to use the 'born in the purple' argument, securing the throne.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-stone-600">
+                        <h3 class="serif-title text-xl font-bold mb-4">The Decision to Invade</h3>
+                        <div class="bg-stone-100 p-4 rounded mb-4">
+                            <p class="italic text-stone-700">"Master, it is not fitting that they of Athens escape scot-free..."</p>
+                            <p class="text-right text-xs font-bold mt-2">- Mardonius (Hawk)</p>
+                        </div>
+                         <div class="bg-stone-100 p-4 rounded mb-4">
+                            <p class="italic text-stone-700">"Dost thou not see how God smites always the bigger animals... God allows no one to have high thoughts but Himself."</p>
+                            <p class="text-right text-xs font-bold mt-2">- Artabanus (Dove)</p>
+                        </div>
+                        <div class="mt-4 p-4 border border-stone-300 rounded">
+                            <h4 class="font-bold text-[#c2410c]">The Divine Vision</h4>
+                            <p class="text-sm text-gray-600 mt-2">Xerxes wavers, but a tall, beautiful figure haunts his dreams, threatening destruction if he does not march. Even the skeptical Artabanus is convinced when the vision visits him while sleeping in the King's bed.</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderHorde(container) {
+            container.innerHTML = `
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-[#c2410c] text-center">The Mighty Multitude</h2>
+                    <p class="text-center text-gray-700 mb-6 max-w-4xl mx-auto">
+                        Herodotus provides a detailed "Catalogue of Nations," estimating the force at over 2 million fighting men (and 5 million total). While historians doubt the numbers, the diversity of the force is historically significant.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- Fleet Chart -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="serif-title text-xl font-bold mb-4 text-center">The Fleet: 1,207 Triremes</h3>
+                        <div class="chart-container">
+                            <canvas id="fleetChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-gray-500 mt-2">Source: Herodotus Bk. 7.89-99</p>
+                    </div>
+
+                    <!-- Army Numbers -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="serif-title text-xl font-bold mb-4 text-center">Herodotus's Count</h3>
+                        <div class="chart-container">
+                            <canvas id="armyChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-gray-500 mt-2">Total Estimate: 5,283,220 (Inc. followers)</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Catalogue -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-stone-200">
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-6 border-b pb-4">
+                        <h3 class="serif-title text-2xl font-bold text-stone-800">Catalogue of Nations</h3>
+                        <div class="mt-2 md:mt-0">
+                            <label class="mr-2 font-bold text-sm uppercase text-gray-500">Select Nation:</label>
+                            <select id="nationSelect" class="p-2 border rounded bg-stone-50 text-stone-900 font-bold" onchange="updateNationCard(this.value)">
+                                ${Object.keys(nationsCatalogue).map(n => `<option value="${n}">${n}</option>`).join('')}
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="nationCard" class="grid md:grid-cols-3 gap-6 animate-pulse">
+                        <!-- Content injected via updateNationCard -->
+                    </div>
+                </div>
+            `;
+
+            // Initialize Charts after DOM injection
+            setTimeout(() => {
+                initFleetChart();
+                initArmyChart();
+                updateNationCard('Persians'); // Initial render
+                document.getElementById('nationCard').classList.remove('animate-pulse');
+            }, 0);
+        }
+
+        function renderLogistics(container) {
+            container.innerHTML = `
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-[#c2410c]">Engineering the Invasion</h2>
+                    <p class="text-gray-700 max-w-3xl mx-auto">Xerxes did not just march; he reshaped the earth. Two massive engineering projects defined the advance: the Hellespont Bridges and the Athos Canal.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Hellespont Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="serif-title text-xl font-bold mb-4 text-stone-800">Bridging the Hellespont</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            After a storm destroyed the first bridge (leading Xerxes to whip the sea), two new bridges were constructed using 674 ships tied together.
+                        </p>
+                        <!-- CSS Diagram of Bridge -->
+                        <div class="bg-blue-100 p-4 h-48 rounded relative overflow-hidden border-b-4 border-blue-300">
+                            <div class="absolute top-2 left-2 text-xs font-bold text-blue-800">Europe (Abydos)</div>
+                            <div class="absolute bottom-2 right-2 text-xs font-bold text-blue-800">Asia</div>
+                            
+                            <!-- The Ships -->
+                            <div class="absolute top-1/2 left-0 w-full flex justify-between transform -translate-y-1/2 px-4">
+                                ${Array(10).fill(0).map(() => `<div class="w-8 h-4 bg-stone-700 rounded-b-lg"></div>`).join('')}
+                            </div>
+                            <!-- The Cables -->
+                            <div class="absolute top-1/2 left-0 w-full h-2 bg-yellow-700 transform -translate-y-full opacity-80"></div>
+                            <!-- The Roadway -->
+                            <div class="absolute top-1/2 left-0 w-full h-1 bg-stone-300 transform -translate-y-[150%]"></div>
+                            
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <span class="bg-white/80 px-2 py-1 text-xs rounded font-bold text-stone-800">7 Furlongs Wide</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-xs text-gray-500">
+                            <span class="font-bold">Materials:</span> White flax and papyrus cables. Wood planks. Brushwood and earth for surface.
+                        </div>
+                    </div>
+
+                    <!-- Athos Canal Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="serif-title text-xl font-bold mb-4 text-stone-800">The Athos Canal</h3>
+                        <p class="text-sm text-gray-600 mb-4">
+                            To avoid the dangerous cape where Darius's fleet was wrecked, Xerxes spent 3 years digging a canal through the peninsula.
+                        </p>
+                        <!-- CSS Diagram of Canal -->
+                        <div class="bg-green-100 p-4 h-48 rounded relative overflow-hidden">
+                            <div class="absolute inset-0 bg-[#a3b18a]"></div> <!-- Land -->
+                            <!-- The Canal Cut -->
+                            <div class="absolute top-0 bottom-0 left-1/2 w-16 bg-blue-200 border-l border-r border-stone-400 transform -translate-x-1/2 flex flex-col items-center justify-center">
+                                <span class="text-xs text-blue-800 font-bold rotate-90 whitespace-nowrap">Canal (12 Furlongs)</span>
+                                <div class="w-2 h-4 bg-stone-600 mt-2 rounded-full opacity-50"></div> <!-- Boat -->
+                            </div>
+                             <div class="absolute top-4 left-4 text-xs font-bold text-stone-800 bg-white/50 px-1 rounded">Sane</div>
+                             <div class="absolute bottom-4 right-4 text-xs font-bold text-stone-800 bg-white/50 px-1 rounded">Mt. Athos</div>
+                        </div>
+                        <div class="mt-4 text-xs text-gray-500">
+                            <span class="font-bold">Labor:</span> Bubares and Artachaees supervised men of all nations working under the lash.
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDefense(container) {
+            container.innerHTML = `
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-[#c2410c]">The Greek Response</h2>
+                    <p class="text-gray-700 max-w-3xl mx-auto">Terror gripped Greece. While many states submitted (giving Earth and Water), Athens and Sparta led the resistance, guided by dark prophecies.</p>
+                </div>
+
+                <div class="bg-stone-800 text-stone-100 p-8 rounded-lg shadow-xl mb-8">
+                    <h3 class="serif-title text-2xl text-center text-yellow-500 mb-6">The Delphic Oracles</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-stone-700 p-6 rounded border-l-4 border-red-500">
+                            <h4 class="font-bold text-red-300 mb-2">The First Oracle</h4>
+                            <p class="italic font-serif text-sm">"Wretches, why sit ye here? Fly, fly to the ends of creation... All is ruined and lost."</p>
+                            <p class="text-xs text-gray-400 mt-4">Reaction: Deep affliction. The envoys begged for a better answer.</p>
+                        </div>
+                        <div class="bg-stone-700 p-6 rounded border-l-4 border-yellow-500">
+                            <h4 class="font-bold text-yellow-300 mb-2">The Second Oracle</h4>
+                            <p class="italic font-serif text-sm">"Safe shall the wooden wall continue for thee and thy children... Holy Salamis, thou shalt destroy the offspring of women."</p>
+                            <div class="mt-4 pt-4 border-t border-stone-600">
+                                <span class="font-bold text-white">The Interpretation:</span>
+                                <p class="text-xs text-gray-300 mt-1">Old men thought it meant the Acropolis fence. <span class="text-yellow-400 font-bold">Themistocles</span> argued it meant the Fleet (Wooden Wall) and predicted victory at Salamis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded shadow text-center">
+                        <div class="text-4xl mb-2">🤝</div>
+                        <h4 class="font-bold">The Congress</h4>
+                        <p class="text-sm text-gray-600">Allies met at the Isthmus. Feuds (Athens vs Aegina) were reconciled for the common defense.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow text-center">
+                        <div class="text-4xl mb-2">⛰️</div>
+                        <h4 class="font-bold">Tempe Abandoned</h4>
+                        <p class="text-sm text-gray-600">First plan: Hold the Vale of Tempe. Abandoned on Alexander of Macedon's advice about inland paths.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow text-center">
+                        <div class="text-4xl mb-2">🛡️</div>
+                        <h4 class="font-bold">The Final Plan</h4>
+                        <p class="text-sm text-gray-600">Hold the narrow pass of Thermopylae (Land) and the straits of Artemisium (Sea).</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderThermopylae(container) {
+            container.innerHTML = `
+                <div class="grid lg:grid-cols-3 gap-8 h-full">
+                    <!-- Left: Context -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <div>
+                            <h2 class="text-3xl font-bold text-[#c2410c] mb-2">Thermopylae</h2>
+                            <p class="text-sm font-bold text-stone-500 uppercase">The Hot Gates</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold border-b pb-2 mb-2">The Defenders</h3>
+                            <ul class="text-sm space-y-2">
+                                <li class="flex justify-between"><span>Spartans</span> <span class="font-bold">300</span></li>
+                                <li class="flex justify-between"><span>Tegeans/Mantineans</span> <span class="font-bold">1,000</span></li>
+                                <li class="flex justify-between"><span>Thespians</span> <span class="font-bold">700</span></li>
+                                <li class="flex justify-between"><span>Thebans</span> <span class="font-bold">400</span></li>
+                                <li class="flex justify-between"><span>Others</span> <span class="font-bold">~4,000</span></li>
+                                <li class="pt-2 border-t font-bold flex justify-between"><span>Total</span> <span>~7,000</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-stone-800 text-stone-200 p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-red-400 mb-2">Leonidas's Prophecy</h3>
+                            <p class="italic text-sm">"Either your glorious town shall be sacked... Or, in exchange, must all... Mourn for the loss of a descendant of great Heracles."</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Battle Flow -->
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <div class="bg-[#7c2d12] text-white p-4 flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Battle Timeline</h3>
+                            <span class="text-xs bg-white/20 px-2 py-1 rounded">Phase ${state.battlePhase + 1} of ${battleTimeline.length}</span>
+                        </div>
+                        
+                        <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
+                            <h4 class="text-2xl font-bold text-stone-800 mb-4 fade-in" id="phaseTitle">${battleTimeline[state.battlePhase].phase}</h4>
+                            <p class="text-lg text-gray-600 mb-8 max-w-lg fade-in" id="phaseDesc">${battleTimeline[state.battlePhase].desc}</p>
+                            
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-8 max-w-md mx-auto">
+                                <div id="phaseProgress" class="bg-[#ea580c] h-2.5 rounded-full transition-all duration-500" style="width: ${(state.battlePhase + 1) / battleTimeline.length * 100}%"></div>
+                            </div>
+
+                            <div class="bg-red-50 border border-red-200 p-4 rounded fade-in">
+                                <span class="font-bold text-red-800">Outcome:</span> <span id="phaseOutcome">${battleTimeline[state.battlePhase].casualtyText}</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-100 p-4 flex justify-between border-t">
+                            <button onclick="changeBattlePhase(-1)" class="px-4 py-2 bg-white border border-gray-300 rounded shadow hover:bg-gray-50 disabled:opacity-50" ${state.battlePhase === 0 ? 'disabled' : ''}>← Previous</button>
+                            <button onclick="changeBattlePhase(1)" class="px-4 py-2 bg-[#c2410c] text-white rounded shadow hover:bg-[#9a3412] disabled:opacity-50" ${state.battlePhase === battleTimeline.length - 1 ? 'disabled' : ''}>Next →</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- HELPER FUNCTIONS ---
+
+        function updateNationCard(nation) {
+            state.nationSelection = nation;
+            const data = nationsCatalogue[nation];
+            const card = document.getElementById('nationCard');
+            if (!card) return;
+
+            card.innerHTML = `
+                <div class="md:col-span-1 flex flex-col justify-center items-center bg-stone-100 p-4 rounded text-center">
+                    <div class="text-6xl mb-4 text-stone-400">🛡️</div>
+                    <h4 class="text-2xl font-bold text-[#c2410c]">${nation}</h4>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">${data.region}</span>
+                </div>
+                <div class="md:col-span-2 flex flex-col justify-center">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-gray-400 uppercase">Equipment</span>
+                        <p class="text-lg text-gray-800 font-serif leading-relaxed">"${data.gear}"</p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-gray-400 uppercase">Commander</span>
+                        <p class="text-md font-bold text-stone-700">${data.commander}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function changeBattlePhase(delta) {
+            const newPhase = state.battlePhase + delta;
+            if (newPhase >= 0 && newPhase < battleTimeline.length) {
+                state.battlePhase = newPhase;
+                // Update DOM directly for smoother feel
+                document.getElementById('phaseTitle').innerText = battleTimeline[newPhase].phase;
+                document.getElementById('phaseDesc').innerText = battleTimeline[newPhase].desc;
+                document.getElementById('phaseOutcome').innerText = battleTimeline[newPhase].casualtyText;
+                document.getElementById('phaseProgress').style.width = `${(newPhase + 1) / battleTimeline.length * 100}%`;
+
+                // Re-render buttons logic (simple redraw of section for safety, or direct DOM manipulation)
+                renderThermopylae(document.getElementById('app-content'));
+            }
+        }
+
+        // --- CHART INITIALIZERS ---
+
+        function initFleetChart() {
+            const ctx = document.getElementById('fleetChart');
+            if (!ctx) return;
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: fleetData.labels,
+                    datasets: [{
+                        data: fleetData.data,
+                        backgroundColor: fleetData.colors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return `${context.label}: ${context.raw} Ships`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initArmyChart() {
+            const ctx = document.getElementById('armyChart');
+            if (!ctx) return;
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: armyData.labels,
+                    datasets: [{
+                        label: 'Number of Personnel',
+                        data: armyData.data,
+                        backgroundColor: '#78716c',
+                        hoverBackgroundColor: '#c2410c'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, ticks: { callback: (val) => val / 1000 + 'k' } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function (context) {
+                                    return armyData.tooltips[context.dataIndex];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Start App
+        init();
+
+    </script>
+</body>
+
+</html>

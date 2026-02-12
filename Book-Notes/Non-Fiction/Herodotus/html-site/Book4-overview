@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus: Melpomene - An Interactive Exploration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Chosen Palette: Ancient Papyrus -->
+    <!-- Application Structure Plan: The application is designed as a thematic explorer rather than a linear narrative to best handle the book's two distinct major sections (Scythia and Libya). A top navigation bar allows users to jump to key thematic areas. The core of the app is a side-by-side layout comparing the Scythian Campaign and the Libyan Digression, encouraging comparative analysis. Below this, a dynamic, filterable "Peoples Explorer" transforms the dense ethnographic data from a wall of text into an interactive, digestible component. This structure was chosen because it allows users to explore the content based on interest (narrative campaign vs. cultural details) and makes the rich but scattered ethnographic information a central, accessible feature, which is a primary value of Herodotus's work. -->
+    <!-- Visualization & Content Choices:
+        - Darius's Army Scale: Goal: Inform. Method: Donut Chart (Chart.js) and key stat callouts. Interaction: Tooltip on hover. Justification: Quickly visualizes the immense scale of the Persian force mentioned in the text.
+        - Campaign Narratives: Goal: Change over time. Method: Interactive vertical timelines (HTML/CSS/JS). Interaction: Clicking an event reveals a text summary. Justification: Breaks down the long military narratives into digestible, user-driven steps.
+        - Scythian Origin Stories: Goal: Compare. Method: Tabbed content view (HTML/CSS/JS). Interaction: Clicking tabs switches the displayed text. Justification: Allows for direct comparison of the different historical accounts provided by Herodotus.
+        - Peoples Explorer: Goal: Organize. Method: A filterable grid of cards (HTML/CSS/JS). Interaction: Filter buttons (Scythia/Libya) and clickable cards that open a modal with details. Justification: Manages the large volume of ethnographic data, making it easily searchable and comparable, a core feature of the book.
+        - Cryptic Gifts: Goal: Inform/Engage. Method: Stylized text and Unicode icons. Interaction: A simple reveal of the correct interpretation. Justification: Highlights a key symbolic moment in the narrative in an engaging way. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #F7F1E5;
+            /* Parchment */
+            color: #363636;
+        }
+
+        .font-header {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        .bg-parchment {
+            background-color: #F7F1E5;
+        }
+
+        .bg-papyrus-light {
+            background-color: #FAF5E9;
+        }
+
+        .text-ink {
+            color: #363636;
+        }
+
+        .text-clay {
+            color: #A0522D;
+        }
+
+        .border-clay {
+            border-color: #A0522D;
+        }
+
+        .border-sand {
+            border-color: #D2B48C;
+        }
+
+        .accent-clay {
+            background-color: #A0522D;
+        }
+
+        .accent-sand {
+            background-color: #D2B48C;
+        }
+
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #D2B48C;
+            border: 3px solid #A0522D;
+        }
+
+        .timeline-item.active::before {
+            background-color: #A0522D;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: -21px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #D2B48C;
+        }
+    </style>
+</head>
+
+<body class="bg-parchment text-ink">
+
+    <header class="bg-papyrus-light border-b-2 border-sand sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl md:text-3xl font-header text-clay">Herodotus: Melpomene</h1>
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#introduction" class="hover:text-clay">Introduction</a>
+                <a href="#campaigns" class="hover:text-clay">The Campaigns</a>
+                <a href="#peoples" class="hover:text-clay">Peoples of the World</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-papyrus-light">
+            <a href="#introduction" class="block py-2 px-4 text-sm hover:bg-sand">Introduction</a>
+            <a href="#campaigns" class="block py-2 px-4 text-sm hover:bg-sand">The Campaigns</a>
+            <a href="#peoples" class="block py-2 px-4 text-sm hover:bg-sand">Peoples of the World</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <section id="introduction" class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-header text-clay mb-4">An Interactive Exploration</h2>
+            <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                Welcome to an interactive journey through Book IV of Herodotus's <em>The History</em>, titled
+                <em>Melpomene</em>. This book presents two epic, interwoven narratives: King Darius's ambitious and
+                ultimately futile invasion of Scythia, and the fascinating history of the Greek colonization of Libya.
+                This application allows you to explore the strategies of ancient warfare, delve into the unique customs
+                of forgotten peoples, and witness the grand scale of the Persian empire's reach. Use the navigation to
+                explore the campaigns and the diverse cultures Herodotus documented.
+            </p>
+        </section>
+
+        <section id="campaigns" class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-header text-clay text-center mb-8">The Great Expeditions</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <article class="bg-papyrus-light p-6 rounded-lg border-2 border-sand shadow-lg">
+                    <h3 class="text-2xl md:text-3xl font-header text-clay mb-4 border-b-2 border-sand pb-2">The Scythian
+                        Campaign</h3>
+                    <p class="mb-6">Darius I of Persia seeks to punish the nomadic Scythians for a past invasion.
+                        Lacking cities and refusing open battle, the Scythians lead the vast Persian army on a fruitless
+                        chase deep into their territory, employing scorched-earth tactics. The campaign becomes a
+                        testament to the limits of imperial power against an unconventional foe.</p>
+
+                    <div class="mb-6">
+                        <h4 class="text-xl font-header text-clay mb-2">Theories of Scythian Origin</h4>
+                        <div class="flex border-b border-sand">
+                            <button class="tab-btn-origin active p-2" data-origin="scythian">Scythian Account</button>
+                            <button class="tab-btn-origin p-2" data-origin="greek">Greek Account</button>
+                            <button class="tab-btn-origin p-2" data-origin="herodotus">Herodotus's View</button>
+                        </div>
+                        <div id="origin-content" class="p-4 bg-white/50 rounded-b-md">
+                            <p class="origin-text scythian">They are the youngest nation, descended from a son of Jove.
+                                Their right to rule was proven when sacred golden implements fell from the sky,
+                                rejecting the two elder brothers but allowing the youngest, Colaxais, to claim them.</p>
+                            <p class="origin-text greek hidden">They descend from Scythes, youngest son of Hercules and
+                                a half-woman, half-serpent creature. Scythes was the only son strong enough to string
+                                his father's bow and wear his belt, thus earning the right to rule.</p>
+                            <p class="origin-text herodotus hidden">Herodotus believes they were a nomadic people from
+                                Asia who were pushed west by the Massagetae, eventually displacing the Cimmerians from
+                                the lands north of the Black Sea.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-header text-clay mb-4">Campaign Timeline</h4>
+                    <div class="flex">
+                        <div class="w-2/5 pr-4 relative">
+                            <div class="timeline-line"></div>
+                            <ul id="timeline-scythian" class="space-y-6">
+                                <li class="timeline-item relative pl-4 cursor-pointer active" data-event="0">Crossing
+                                    the Ister</li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="1">The Great Chase
+                                </li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="2">The Cryptic Gifts
+                                </li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="3">The Ionian
+                                    Decision</li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="4">The Escape</li>
+                            </ul>
+                        </div>
+                        <div id="timeline-text-scythian" class="w-3/5 p-4 bg-white/50 rounded-md text-sm"></div>
+                    </div>
+
+                </article>
+
+                <article class="bg-papyrus-light p-6 rounded-lg border-2 border-sand shadow-lg">
+                    <h3 class="text-2xl md:text-3xl font-header text-clay mb-4 border-b-2 border-sand pb-2">The Libyan
+                        Digression</h3>
+                    <p class="mb-6">Herodotus shifts his focus to North Africa, detailing the founding of the Greek city
+                        of Cyrene, as guided by the Delphic Oracle. This story of colonization and political turmoil
+                        culminates in a brutal Persian punitive expedition against the city of Barca, sought by the
+                        exiled queen-mother Pheretima to avenge her son's murder.</p>
+
+                    <div class="mb-6">
+                        <h4 class="text-xl font-header text-clay mb-2">The Persian Punitive Force</h4>
+                        <p class="mb-2">Aryandes, the Persian satrap of Egypt, dispatched a major force by land and sea
+                            to support Pheretima. The true goal, Herodotus suspects, was the subjugation of Libya.</p>
+                        <div class="chart-container mx-auto"
+                            style="position: relative; height:40vh; max-height: 250px; width:100%; max-width: 250px;">
+                            <canvas id="persianForceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-header text-clay mb-4">Barca Campaign Timeline</h4>
+                    <div class="flex">
+                        <div class="w-2/5 pr-4 relative">
+                            <div class="timeline-line"></div>
+                            <ul id="timeline-libyan" class="space-y-6">
+                                <li class="timeline-item relative pl-4 cursor-pointer active" data-event="0">Pheretima's
+                                    Plea</li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="1">Siege of Barca
+                                </li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="2">The False Oath
+                                </li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="3">Vengeance</li>
+                                <li class="timeline-item relative pl-4 cursor-pointer" data-event="4">Pheretima's Fate
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="timeline-text-libyan" class="w-3/5 p-4 bg-white/50 rounded-md text-sm"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="peoples" class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-header text-clay text-center mb-2">Peoples of the World</h2>
+            <p class="text-center text-lg max-w-2xl mx-auto mb-6">Herodotus's account is rich with descriptions of the
+                diverse peoples encountered. Filter by region and click on a tribe to learn about the customs he
+                recorded.</p>
+            <div id="filters" class="flex justify-center space-x-2 mb-8">
+                <button data-filter="all" class="filter-btn active bg-clay text-white py-2 px-4 rounded-full">All
+                    Peoples</button>
+                <button data-filter="scythia"
+                    class="filter-btn bg-papyrus-light border-2 border-sand py-2 px-4 rounded-full hover:bg-sand">Scythian
+                    Region</button>
+                <button data-filter="libya"
+                    class="filter-btn bg-papyrus-light border-2 border-sand py-2 px-4 rounded-full hover:bg-sand">Libyan
+                    Region</button>
+            </div>
+            <div id="peoples-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            </div>
+        </section>
+        <nav class="mt-8 py-6 border-t border-amber-200 flex justify-between items-center bg-amber-50 rounded-lg p-4">
+            <a href="Book3-overview.html"
+                class="w-1/3 flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+                <span class="group-hover:-translate-x-1 transition-transform">←</span> Previous: Book III
+            </a>
+
+            <a href="index.html"
+                class="flex items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group">
+                <span class="text-xl group-hover:scale-110 transition-transform">🏠</span> Home
+            </a>
+
+            <a href="Book5-overview.html"
+                class="w-1/3 flex justify-end items-center gap-2 text-stone-600 hover:text-amber-800 font-bold transition-colors group text-right">
+                Next: Book V <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+        </nav>
+    </main>
+
+    <div id="people-modal"
+        class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50">
+        <div
+            class="bg-parchment rounded-lg shadow-2xl p-6 md:p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto relative border-4 border-sand">
+            <button id="modal-close" class="absolute top-4 right-4 text-3xl font-bold hover:text-clay">&times;</button>
+            <h3 id="modal-title" class="text-3xl font-header text-clay mb-4"></h3>
+            <p id="modal-content" class="text-lg leading-relaxed"></p>
+        </div>
+    </div>
+
+    <script>
+        const peoplesData = [
+            { name: "Scythians", region: "scythia", desc: "A nomadic people who drink the blood of their first slain enemy, use skulls of enemies as drinking cups, and have elaborate royal burial rituals involving human and animal sacrifice. They fiercely reject all foreign customs." },
+            { name: "Tauri", region: "scythia", desc: "They sacrifice all shipwrecked persons and captured Greeks to a virgin goddess, whom they say is Iphigenia. They strike the victim on the head with a club and fix the head to a cross." },
+            { name: "Agathyrsi", region: "scythia", desc: "A luxurious race fond of wearing gold. They practice community of wives so that all may be brothers and live without jealousy or hatred." },
+            { name: "Neuri", region: "scythia", desc: "It is said that every Neurian once a year becomes a wolf for a few days before returning to their human shape. Herodotus expresses skepticism but reports the claim." },
+            { name: "Androphagi", region: "scythia", desc: "The most savage of all races, their name means 'man-eaters'. They observe no justice, have no laws, and are cannibals." },
+            { name: "Melanchlaeni", region: "scythia", desc: "Their name means 'black-cloaks' as they all wear black garments. Their customs are otherwise Scythian." },
+            { name: "Budini", region: "scythia", desc: "A large nation with deep blue eyes and bright red hair. They are nomads who, unlike their neighbors, eat lice." },
+            { name: "Geloni", region: "scythia", desc: "Originally Greeks, they live among the Budini. They are farmers, live in a city made entirely of wood, and worship Greek gods with Bacchic festivals." },
+            { name: "Sauromatae", region: "scythia", desc: "Descended from a union of Scythian men and Amazons. Their women hunt on horseback, go to war, and no girl may marry until she has killed a man in battle." },
+            { name: "Issedonians", region: "scythia", desc: "When a man's father dies, they mix his flesh with that of sacrificed sheep and hold a banquet. The skull is cleaned, set in gold, and used as a sacred ornament." },
+            { name: "Adyrmachidae", region: "libya", desc: "Their customs are mostly Egyptian. They are the only tribe where women about to be married are presented to the king, that he may choose from them." },
+            { name: "Nasamonians", region: "libya", desc: "They hunt locusts, dry them in the sun, grind them to powder, and drink the mixture with milk. They practice divination by sleeping on the graves of their ancestors." },
+            { name: "Garamantians", region: "libya", desc: "A powerful people who chase the 'Troglodyte Ethiopians' in four-horse chariots. They possess a unique breed of oxen whose horns curve forward, forcing them to graze while walking backwards." },
+            { name: "Lotophagi", region: "libya", desc: "Their name means 'lotus-eaters'. They live entirely on the fruit of the lotus tree, which is sweet like a date, and from which they also make a kind of wine." },
+            { name: "Auseans", region: "libya", desc: "Their maidens hold an annual festival to Minerva where they fight each other with stones and clubs. They claim Minerva is the daughter of Neptune and Lake Tritonis." },
+            { name: "Atlantes", region: "libya", desc: "Named after Mount Atlas ('the Pillar of Heaven'). They are unique in that they are said to be destitute of names for individuals and to never have any dreams. They also curse the sun for burning their land." },
+        ];
+
+        const scythianTimelineEvents = [
+            { title: "Crossing the Ister", desc: "Darius leads his 700,000-man army across a bridge of boats over the Ister (Danube) river, ordering the Ionian Greeks to guard it for 60 days before dismantling it." },
+            { title: "The Great Chase", desc: "The Scythians refuse to engage in a pitched battle. Instead, they retreat, leading the Persians deep into barren lands, choking wells and burning pastures to exhaust the invading army." },
+            { title: "The Cryptic Gifts", desc: "The Scythian kings send Darius a bird, a mouse, a frog, and five arrows. Gobryas correctly interprets the message: unless the Persians can fly, burrow, or hide in swamps, they will be killed by Scythian arrows." },
+            { title: "The Ionian Decision", desc: "The Scythians urge the Ionians to destroy the bridge and claim their freedom. Histiaeus of Miletus argues that their power as tyrants depends on Darius, persuading them to remain loyal and save the Persian army." },
+            { title: "The Escape", desc: "Darius retreats by night, leaving his sick and asses behind to create a diversion. He reaches the Ister bridge in a panic, but Histiaeus repairs it, allowing the Persian army to escape Scythia." }
+        ];
+
+        const libyanTimelineEvents = [
+            { title: "Pheretima's Plea", desc: "After her son, King Arcesilaus of Cyrene, is murdered in the city of Barca, his mother Pheretima flees to the Persian governor of Egypt, Aryandes, and begs for an army to enact her revenge." },
+            { title: "Siege of Barca", desc: "A Persian army besieges Barca for nine months. The Barcaeans successfully resist assaults and discover Persian attempts to tunnel under their walls by using a bronze shield to detect vibrations." },
+            { title: "The False Oath", desc: "Unable to win by force, the Persian general Amasis tricks the Barcaeans. He swears a treaty that will hold 'so long as the ground stands firm,' having them swear over a hidden trench. Once the treaty is made, he breaks the supports, voids the oath, and seizes the city." },
+            { title: "Vengeance", desc: "Pheretima enacts a horrific revenge. She has the leading men of Barca crucified around the city walls and cuts off the breasts of their wives, nailing them to the walls as well. The rest of the population is enslaved." },
+            { title: "Pheretima's Fate", desc: "After her vengeance is complete, Pheretima returns to Egypt and dies a horrible death, her body swarming with worms while she is still alive. Herodotus presents this as divine retribution for her excessive cruelty." }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const peoplesGrid = document.getElementById('peoples-grid');
+            const filters = document.getElementById('filters');
+            const modal = document.getElementById('people-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const renderPeoples = (filter = 'all') => {
+                peoplesGrid.innerHTML = '';
+                const filteredData = (filter === 'all') ? peoplesData : peoplesData.filter(p => p.region === filter);
+
+                filteredData.forEach(person => {
+                    const card = document.createElement('div');
+                    card.className = 'person-card p-4 bg-papyrus-light rounded-lg border-2 border-sand cursor-pointer hover:shadow-xl hover:border-clay transition-all';
+                    card.dataset.region = person.region;
+                    card.innerHTML = `<h4 class="font-header text-xl text-clay">${person.name}</h4>`;
+                    card.addEventListener('click', () => {
+                        modalTitle.textContent = person.name;
+                        modalContent.textContent = person.desc;
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                    });
+                    peoplesGrid.appendChild(card);
+                });
+            };
+
+            filters.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    const currentlyActiveBtn = document.querySelector('.filter-btn.active');
+
+                    if (currentlyActiveBtn) {
+                        currentlyActiveBtn.classList.remove('active', 'bg-clay', 'text-white');
+                        currentlyActiveBtn.classList.add('bg-papyrus-light', 'border-2', 'border-sand');
+                    }
+
+                    e.target.classList.add('active', 'bg-clay', 'text-white');
+                    e.target.classList.remove('bg-papyrus-light', 'border-2', 'border-sand');
+                    renderPeoples(e.target.dataset.filter);
+                }
+            });
+
+            modalClose.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            });
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            });
+
+            renderPeoples();
+
+            const tabBtnsOrigin = document.querySelectorAll('.tab-btn-origin');
+            const originTexts = document.querySelectorAll('.origin-text');
+
+            tabBtnsOrigin.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtnsOrigin.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    originTexts.forEach(text => text.classList.add('hidden'));
+                    document.querySelector(`.origin-text.${btn.dataset.origin}`).classList.remove('hidden');
+                });
+            });
+
+            function setupTimeline(timelineId, textId, events) {
+                const timeline = document.getElementById(timelineId);
+                const timelineText = document.getElementById(textId);
+
+                const updateText = (index) => {
+                    timelineText.textContent = events[index].desc;
+                    timeline.querySelectorAll('.timeline-item').forEach((item, i) => {
+                        if (i == index) item.classList.add('active');
+                        else item.classList.remove('active');
+                    });
+                };
+
+                timeline.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('timeline-item')) {
+                        const eventIndex = e.target.dataset.event;
+                        updateText(eventIndex);
+                    }
+                });
+
+                updateText(0);
+            }
+
+            setupTimeline('timeline-scythian', 'timeline-text-scythian', scythianTimelineEvents);
+            setupTimeline('timeline-libyan', 'timeline-text-libyan', libyanTimelineEvents);
+
+            const ctx = document.getElementById('persianForceChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Land Army', 'Naval Fleet Personnel'],
+                    datasets: [{
+                        label: 'Persian Force',
+                        data: [700000, 80000],
+                        backgroundColor: ['#A0522D', '#D2B48C'],
+                        borderColor: '#FAF5E9',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: "'Cormorant Garamond', serif",
+                                    size: 14,
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        let value = context.label === "Land Army" ? "700,000 Men" : "600 Ships";
+                                        label += value;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

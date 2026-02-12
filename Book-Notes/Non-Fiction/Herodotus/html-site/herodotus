@@ -1,0 +1,273 @@
+<!-- Chosen Palette: Parchment & Ink (Amber/Stone) with varied accent colors (Red, Blue, Green, Yellow) for visual separation. -->
+<!-- Application Structure Plan: Simple grid layout (responsive) to display all nine books of Herodotus's History. This serves as a central index, allowing users to select the chapter they want to explore. All books are now active links with unique colors, prioritizing navigation and exploration. -->
+<!-- Visualization & Content Choices: Card layout (Goal: Organize) -> HTML/Tailwind grid with distinct, pastel background and border colors for each book. All cards are now active <a> tags linking to the assumed separate chapter files. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herodotus: The History - Interactive Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefbec;
+            color: #292524;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: #92400e;
+        }
+
+        .book-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+            /* Ensure visual consistency */
+        }
+
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(146, 64, 14, 0.1), 0 4px 6px -2px rgba(146, 64, 14, 0.05);
+        }
+
+        .active-link {
+            background-color: #d97706;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-amber-50 text-stone-800 p-4 sm:p-8">
+
+    <header class="max-w-7xl mx-auto text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-2">Herodotus: The History</h1>
+        <p class="text-xl text-stone-600">Explore the nine books of the <em>Inquiries</em> (Histories)</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+            <!-- Book 1: Clio (Red Accent) -->
+            <!-- Book 1: Clio (Red Accent) -->
+            <div
+                class="book-card bg-red-50 rounded-xl shadow-lg p-6 border-t-4 border-red-400 hover:border-red-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book I</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Clio</h3>
+                    <p class="text-stone-700 mb-6">Covers the rise of the Lydian kingdom under Croesus, the Persian
+                        conquest of Lydia, and the early reign of Cyrus the Great.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-red-200">
+                    <a href="slides/Book1-Slides.pdf" target="_blank"
+                        class="text-red-700 hover:text-red-900 font-bold flex items-center gap-2 hover:bg-red-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book1-overview.html"
+                        class="active-link bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 2: Euterpe (Blue Accent) -->
+            <!-- Book 2: Euterpe (Blue Accent) -->
+            <div
+                class="book-card bg-blue-50 rounded-xl shadow-lg p-6 border-t-4 border-blue-400 hover:border-blue-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book II</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Euterpe</h3>
+                    <p class="text-stone-700 mb-6">A detailed geographical, cultural, and historical survey of Egypt,
+                        focusing on its rulers and unique customs.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-blue-200">
+                    <a href="slides/Book2-Slides.pdf" target="_blank"
+                        class="text-blue-700 hover:text-blue-900 font-bold flex items-center gap-2 hover:bg-blue-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book2-overview.html"
+                        class="active-link bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 3: Thalia (Green Accent) -->
+            <!-- Book 3: Thalia (Green Accent) -->
+            <div
+                class="book-card bg-green-50 rounded-xl shadow-lg p-6 border-t-4 border-green-400 hover:border-green-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book III</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Thalia</h3>
+                    <p class="text-stone-700 mb-6">Details the reign of Cambyses, the conquest of Egypt, the death of
+                        the Magian, and the accession of Darius I.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-green-200">
+                    <a href="slides/Book3-Slides.pdf" target="_blank"
+                        class="text-green-700 hover:text-green-900 font-bold flex items-center gap-2 hover:bg-green-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book3-overview.html"
+                        class="active-link bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 4: Melpomene (Indigo Accent) -->
+            <!-- Book 4: Melpomene (Indigo Accent) -->
+            <div
+                class="book-card bg-indigo-50 rounded-xl shadow-lg p-6 border-t-4 border-indigo-400 hover:border-indigo-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book IV</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Melpomene</h3>
+                    <p class="text-stone-700 mb-6">Focuses on Darius's expedition against the Scythians and a
+                        description of Libya and its various peoples.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-indigo-200">
+                    <a href="slides/Book4-Slides.pdf" target="_blank"
+                        class="text-indigo-700 hover:text-indigo-900 font-bold flex items-center gap-2 hover:bg-indigo-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book4-overview.html"
+                        class="active-link bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 5: Terpsichore (Amber/Orange Accent) -->
+            <!-- Book 5: Terpsichore (Amber/Orange Accent) -->
+            <div
+                class="book-card bg-amber-100 rounded-xl shadow-lg p-6 border-t-4 border-amber-500 hover:border-amber-700 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-amber-800">Book V</h2>
+                    <h3 class="text-lg text-amber-700 mb-4">Terpsichore</h3>
+                    <p class="text-stone-700 mb-6"><b>The Ionian Revolt Begins.</b> Covers the conquest of Thrace, the
+                        murder of Persian envoys in Macedon, and the events leading up to the burning of Sardis.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-amber-300">
+                    <a href="slides/Book5-Slides.pdf" target="_blank"
+                        class="text-amber-800 hover:text-amber-950 font-bold flex items-center gap-2 hover:bg-amber-200 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book5-overview.html"
+                        class="active-link bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 6: Erato (Yellow Accent) -->
+            <!-- Book 6: Erato (Yellow Accent) -->
+            <div
+                class="book-card bg-yellow-50 rounded-xl shadow-lg p-6 border-t-4 border-yellow-400 hover:border-yellow-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book VI</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Erato</h3>
+                    <p class="text-stone-700 mb-6">Details the end of the Ionian Revolt and the first Persian invasion
+                        of Greece, culminating in the Battle of Marathon.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-yellow-200">
+                    <a href="slides/Book6-Slides.pdf" target="_blank"
+                        class="text-yellow-700 hover:text-yellow-900 font-bold flex items-center gap-2 hover:bg-yellow-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book6-overview.html"
+                        class="active-link bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 7: Polymnia (Rose Accent) -->
+            <!-- Book 7: Polymnia (Rose Accent) -->
+            <div
+                class="book-card bg-rose-50 rounded-xl shadow-lg p-6 border-t-4 border-rose-400 hover:border-rose-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book VII</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Polymnia</h3>
+                    <p class="text-stone-700 mb-6">Focuses entirely on Xerxes' preparations and the massive Persian
+                        invasion, ending with the Battle of Thermopylae.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-rose-200">
+                    <a href="slides/Book7-Slides.pdf" target="_blank"
+                        class="text-rose-700 hover:text-rose-900 font-bold flex items-center gap-2 hover:bg-rose-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book7-overview.html"
+                        class="active-link bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 8: Urania (Sky Accent) -->
+            <!-- Book 8: Urania (Sky Accent) -->
+            <div
+                class="book-card bg-sky-50 rounded-xl shadow-lg p-6 border-t-4 border-sky-400 hover:border-sky-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book VIII</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Urania</h3>
+                    <p class="text-stone-700 mb-6">Covers the sea battles of Artemisium and the decisive Greek victory
+                        at the Battle of Salamis.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-sky-200">
+                    <a href="slides/Book8-Slides.pdf" target="_blank"
+                        class="text-sky-700 hover:text-sky-900 font-bold flex items-center gap-2 hover:bg-sky-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book8-overview.html"
+                        class="active-link bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+            <!-- Book 9: Calliope (Emerald Accent) -->
+            <!-- Book 9: Calliope (Emerald Accent) -->
+            <div
+                class="book-card bg-emerald-50 rounded-xl shadow-lg p-6 border-t-4 border-emerald-400 hover:border-emerald-600 transition-transform hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-stone-900">Book IX</h2>
+                    <h3 class="text-lg text-stone-600 mb-4">Calliope</h3>
+                    <p class="text-stone-700 mb-6">Concludes the history with the Greek victories at Plataea and Mycale,
+                        marking the end of the Persian invasion.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4 pt-4 border-t border-emerald-200">
+                    <a href="slides/Book9-Slides.pdf" target="_blank"
+                        class="text-emerald-700 hover:text-emerald-900 font-bold flex items-center gap-2 hover:bg-emerald-100 px-3 py-2 rounded transition-colors"
+                        title="View Slides PDF">
+                        <span>📄</span> Slides
+                    </a>
+                    <a href="Book9-overview.html"
+                        class="active-link bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded font-bold shadow hover:shadow-md transition-all">Explore
+                        →</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-6 mt-12 border-t border-amber-200">
+        <p class="text-stone-600">The first work of history in Western literature, by the Father of History.</p>
+    </footer>
+
+</body>
+
+</html>
